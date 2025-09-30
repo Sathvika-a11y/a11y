@@ -3,6 +3,30 @@ import json, os, time, re, pathlib, argparse
 from typing import Any, Dict, Optional, List
 from PIL import Image
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+import os, sys, json, time, pathlib, subprocess
+from playwright.sync_api import sync_playwright
+
+def _ensure_playwright_chromium():
+    """
+    Ensure Playwright Chromium binary is present (Streamlit Cloud doesn't run
+    'playwright install' automatically). If missing, download it.
+    """
+    cache_dir = pathlib.Path(os.environ.get("PLAYWRIGHT_BROWSERS_PATH", pathlib.Path.home() / ".cache" / "ms-playwright"))
+    # Heuristic: look for any chromium folder containing a 'headless_shell' or 'chrome' executable
+    found = False
+    for p in cache_dir.glob("chromium*/*/*"):
+        if p.name in ("headless_shell", "chrome", "chromium"):
+            found = True
+            break
+    if not found:
+        # Try a plain install first (no system deps, Cloud already has what we need)
+        try:
+            subprocess.run([sys.executable, "-m", "playwright", "install", "chromium"],
+                           check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        except Exception as e:
+            # Last resort: attempt with deps (may be a no-op on Cloud)
+            subprocess.run([sys.executable, "-m", "playwright", "install", "--with-deps", "chromium"],
+                           check=True)
 
 AXE_URLS = [
     "https://cdn.jsdelivr.net/npm/axe-core@4.7.2/axe.min.js",
@@ -118,6 +142,8 @@ def run_axe_on_url(url: str, out_dir: pathlib.Path, timeout_ms: int = 30000):
 
     # metadata with page URL (used in reports)
     (out_dir / "metadata.json").write_text(json.dumps({"page_url": url}, indent=2), encoding="utf-8")
+
+     _ensure_playwright_chromium()
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
