@@ -1,5 +1,5 @@
 streamlit
-playwright==1.55.0
+playwright
 pandas
 openpyxl
 XlsxWriter
