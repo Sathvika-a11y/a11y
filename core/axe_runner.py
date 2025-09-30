@@ -139,11 +139,9 @@ def run_axe_on_url(url: str, out_dir: pathlib.Path, timeout_ms: int = 30000):
     ensure_dir(out_dir)
     screenshots_dir = out_dir / "screenshots"
     ensure_dir(screenshots_dir)
-
     # metadata with page URL (used in reports)
     (out_dir / "metadata.json").write_text(json.dumps({"page_url": url}, indent=2), encoding="utf-8")
-
-     _ensure_playwright_chromium()
+    _ensure_playwright_chromium()
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
