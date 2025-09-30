@@ -1,0 +1,576 @@
+[
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-4.1.1",
+    "SC": "4.1.1",
+    "sc_list": [],
+    "selector": ".form_field-wrapper.is-menu > .form_submit-button-wrapper > .form_arrow.w-embed > svg[height=\"18\"][viewBox=\"0 0 24 18\"][width=\"24\"] > defs > clippath",
+    "axe_rule_id": "duplicate-id",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "decorative",
+      "verdict": "needs-change",
+      "reason": "The id attribute 'clip0_2551_20294' is not unique, violating SC 4.1.1. This can lead to confusion in accessibility tools and is flagged by axe diagnostics.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:duplicate-id"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
+    "prompt_hash": "b599f9fe62fbe7be"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-4.1.1",
+    "SC": "4.1.1",
+    "sc_list": [],
+    "selector": ".position-relative > .button-icon > .icon_pushdown.w-embed > svg[width=\"22\"][height=\"17\"] > defs > clippath",
+    "axe_rule_id": "duplicate-id",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "decorative",
+      "verdict": "needs-change",
+      "reason": "The id attribute 'a' is not unique, leading to potential confusion in accessibility. This violates SC 4.1.1 as per axe diagnostics.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:duplicate-id"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
+    "prompt_hash": "511cedfac24bc2b7"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-4.1.1",
+    "SC": "4.1.1",
+    "sc_list": [],
+    "selector": ".newsletter-form_heading-wrapper > .newsletter-form_icon.is-footer.w-embed > svg[width=\"42\"][height=\"42\"][viewBox=\"0 0 42 42\"] > defs > clippath",
+    "axe_rule_id": "duplicate-id",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "decorative",
+      "verdict": "needs-change",
+      "reason": "The id 'clip0_2551_20926' is not unique, violating SC 4.1.1. This can lead to confusion in accessibility tools and is flagged by axe for duplicate-id.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:duplicate-id"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
+    "prompt_hash": "3f90ebb42778aa41"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "iframe[width=\"100%\"]",
+    "axe_rule_id": "frame-title",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The iframe lacks an accessible name (title, aria-label, or aria-labelledby), violating SC 4.1.2. AXE diagnostics indicate missing attributes for accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:frame-title"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\frame-title__iframe_width_100_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/frame-title?application=axeAPI",
+    "prompt_hash": "25653e8a29914c4c"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": ".submit-button",
+    "axe_rule_id": "input-button-name",
+    "impact": "critical",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "needs-change",
+      "reason": "The input button has an empty value attribute and lacks an accessible name (aria-label or title), failing SC 4.1.2 requirements for discernible text.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "H44",
+        "G94",
+        "axe:input-button-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\input-button-name__.submit-button.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/input-button-name?application=axeAPI",
+    "prompt_hash": "088156dba52cb226"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": ".form_field-wrapper.is-footer > .form_submit-button-wrapper > .form_submit-button.w-button[data-wait=\"\"]",
+    "axe_rule_id": "input-button-name",
+    "impact": "critical",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "needs-change",
+      "reason": "The input button has an empty value attribute, resulting in no discernible name, violating SC 4.1.2. AXE diagnostics indicate the element lacks an accessible name.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "H44",
+        "G94",
+        "axe:input-button-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\input-button-name__.form_field-wrapper.is-footer_.form_submit-button-wrapper_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/input-button-name?application=axeAPI",
+    "prompt_hash": "59c870b37b5550b2"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".navbar_component",
+    "axe_rule_id": "landmark-no-duplicate-banner",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The document has more than one banner landmark, violating the axe rule for duplicate banners. This indicates a structural issue that needs correction.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:landmark-no-duplicate-banner"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\landmark-no-duplicate-banner__.navbar_component.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-no-duplicate-banner?application=axeAPI",
+    "prompt_hash": "1ff8399a99990377"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "html",
+    "axe_rule_id": "landmark-one-main",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The document lacks a main landmark, which is essential for accessibility. This violates the guideline for having a clear main content area.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:landmark-one-main"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\landmark-one-main__html.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI",
+    "prompt_hash": "45b878140736cf56"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".navbar_component",
+    "axe_rule_id": "landmark-unique",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'banner' is not unique; it lacks a unique aria-label, aria-labelledby, or title, violating landmark uniqueness requirements.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:landmark-unique"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\landmark-unique__.navbar_component.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-unique?application=axeAPI",
+    "prompt_hash": "839232123ee3ce4c"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block:nth-child(1)",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The link lacks discernible text for screen readers, failing SC 4.1.2. It has no accessible name, as indicated by the empty accessibility snapshot.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "prompt_hash": "e50be6538102550d"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block:nth-child(2)",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The link lacks discernible text for screen readers, failing SC 4.1.2. It has no accessible name, as indicated by the empty accessibility snapshot.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "prompt_hash": "70e4201b27182d2e"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block[href$=\"brandience\"]",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The link lacks discernible text for screen readers, as it has no accessible name or aria-label, violating SC 4.1.2.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "prompt_hash": "9bbfefb479cd71e3"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block:nth-child(4)",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The link lacks an accessible name, as it has no visible text or aria-label, violating SC 4.1.2. AXE diagnostics confirm it is in tab order without accessible text.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "prompt_hash": "523685001ed4c94b"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#w-node-cf3ed33f-bae7-cbe3-22b8-584f83498145-342c4d9e",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The content is not contained by landmarks, which violates the region SC. The div lacks a proper role or landmark designation.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region___w-node-cf3ed33f-bae7-cbe3-22b8-584f83498145-342c4d9e.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "724d99a0d72056dc"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "section:nth-child(6)",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The section lacks a proper landmark role, leading to content not being contained by landmarks, which violates SC 2.4.1.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region__section_nth-child_6_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "052149979173ecfb"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "section:nth-child(8) > .padding-x-md > .container-large > .w-layout-grid.grid_2up > .image-wrapper",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "decorative",
+      "verdict": "needs-change",
+      "reason": "The element lacks a meaningful role or accessible name, and it is not contained by landmarks, violating the region SC.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region__section_nth-child_8_.padding-x-md_.container-large_.w.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "2466737025e1db85"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e > .max-w-md",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The div with class 'max-w-md' lacks a landmark role, causing some content to be outside of landmarks, violating the axe rule for region.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region___w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e_.max.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "2e29ca980855202f"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e > .margin-top-lg",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The content is not contained by landmarks, which violates the axe rule for region. This affects navigation and accessibility for users relying on assistive technologies.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region___w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e_.mar.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "aaa63deef9d2e0d5"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".align-left.button.w--current > .uppercase",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "The element lacks a clear programmatic name and is not contained by landmarks, which violates SC 4.1.2. The opacity style also suggests it may not be perceivable.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:region",
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region__.align-left.button.w--current_.uppercase.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "51b2a4476edc3f8b"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".link_uppercase",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio for the link text 'LET'S TALK' is below the required threshold due to overlapping elements, as indicated by AXE diagnostics.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.link_uppercase.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "78ec676a829de014"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".quote_text_1",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for text in .quote_text_1 is below the required threshold due to overlapping elements, as indicated by AXE diagnostics.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.quote_text_1.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "576c8f3f8f3d268e"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".is-1 > .quote_source > .margin-y-none:nth-child(1)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for text 'Brett C., VP Field Marketing' is below the required threshold due to overlapping elements, as indicated by AXE diagnostics.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.is-1_.quote_source_.margin-y-none_nth-child_1_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "31cdb99d6e54e3b1"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".is-1 > .quote_source > .margin-y-none:nth-child(2) > strong",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for 'Tropical Smoothie Cafe' is below the required threshold due to overlapping elements, failing SC 1.4.3.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.is-1_.quote_source_.margin-y-none_nth-child_2_strong.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "7eb31421d1ed02e3"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#Message-2",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the placeholder text in the textarea is likely below 4.5:1 due to background obscuration, failing SC 1.4.3.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast___Message-2.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "b4b18d9a3ef16064"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".position-relative > .uppercase",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for 'Send Email' cannot be determined due to overlapping elements, likely failing SC 1.4.3.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.position-relative_.uppercase.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "8e375021fa52ba5d"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "iframe[width=\"100%\"]",
+    "axe_rule_id": "frame-tested",
+    "impact": "critical",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The iframe lacks an accessible name and needs to be tested with axe-core for compliance, indicating potential issues with SC 4.1.2.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:frame-tested"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\frame-tested__iframe_width_100_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/frame-tested?application=axeAPI",
+    "prompt_hash": "f1f0035617a928ea"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.1.1",
+    "SC": "1.1.1",
+    "sc_list": [],
+    "selector": ".image",
+    "axe_rule_id": "image-alt",
+    "impact": null,
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "redundant-ok",
+      "reason": "The alt text 'brandience logo' duplicates the purpose of the link, which is likely to navigate to the brand's homepage, making it redundant.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "H37",
+        "G94",
+        "axe:image-alt"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\image-alt__.image.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
+    "prompt_hash": "f0efa8a64306e289"
+  }
+]

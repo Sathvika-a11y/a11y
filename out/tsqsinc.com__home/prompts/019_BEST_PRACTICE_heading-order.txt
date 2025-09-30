@@ -1,0 +1,59 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: BEST_PRACTICE
+Techniques context (from curated library):
+{
+  "topic": "Unmapped rule",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
+    "Consider axe help: Heading levels should only increase by one",
+    "Ref: https://dequeuniversity.com/rules/axe/4.7/heading-order?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: h1
+- HTML snippet: <h1>Vision</h1>
+- Attributes: {}
+- Computed role/name (best-effort): h1 — Let's Connect
+- Nearby text window: Let's Connect
+
+Contact Us For More Information
+
+Read More
+- Accessibility snapshot (partial): {"role": "heading", "name": "Let's Connect"}
+- Axe ruleId: heading-order
+- Axe help: Heading levels should only increase by one
+- Axe impact: moderate
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Unable to determine previous heading",
+  "why_any": [
+    "heading-order: Unable to determine previous heading"
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://tsqsinc.com/"
+}

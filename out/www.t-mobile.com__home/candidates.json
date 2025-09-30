@@ -1,0 +1,1450 @@
+[
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2"
+    ],
+    "axe_rule_id": "button-name",
+    "axe_help": "Buttons must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/button-name?application=axeAPI",
+    "impact": "critical",
+    "selector": "#cardPromotion-e51389d441 > .xpr-promoCard__track > .xpr-promoCard__content > .xpr-promoCard__legal > button[x-data=\"a11yDialogButton()\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" x-data=\"a11yDialogButton()\" data-a11y-dialog-show=\"disclosure-cardPromotion-e51389d441\"> <span data-moengage-id=\"legalSeeFullTermsLabel\"></span> </button>",
+    "attributes": {
+      "type": "button",
+      "x-data": "a11yDialogButton()",
+      "data-a11y-dialog-show": "disclosure-cardPromotion-e51389d441"
+    },
+    "role_name_guess": "button \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\button-name___cardPromotion-e51389d441_.xpr-promoCard__track_.xpr-pro.png",
+    "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    "why_any": [
+      "button-has-visible-text: Element does not have inner text that is visible to screen readers",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute",
+      "presentational-role: Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "button[data-rte-modal-type=\"modal:xf\"]",
+    "html_snippet": "<button data-rte-modal-type=\"modal:xf\" x-data=\"a11yDialogButton('/content/experience-fragments/digx/tmobile/us/en/modals/xftmo-powerline-hp/master.html')\" type=\"button\" data-a11y-dialog-show=\"powerline\">Get full terms</button>",
+    "attributes": {
+      "data-rte-modal-type": "modal:xf",
+      "x-data": "a11yDialogButton('/content/experience-fragments/digx/tmobile/us/en/modals/xftmo-powerline-hp/master.html')",
+      "type": "button",
+      "data-a11y-dialog-show": "powerline"
+    },
+    "role_name_guess": "button \u2014 Get full terms",
+    "nearby_text": "Get full terms",
+    "acc_snapshot": {
+      "role": "button",
+      "name": "Get full terms"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__button_data-rte-modal-type_modal_xf_.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.29 (foreground color: #e20074, background color: #f5f5f5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 4.29 (foreground color: #e20074, background color: #f5f5f5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-analytics-index=\"Index26\"] > sup",
+    "html_snippet": "<sup>HOME INTERNET</sup>",
+    "attributes": {},
+    "role_name_guess": "sup \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index26_sup.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-analytics-index=\"Index27\"] > sup",
+    "html_snippet": "<sup>BUSINESS</sup>",
+    "attributes": {},
+    "role_name_guess": "sup \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index27_sup.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-analytics-index=\"Index28\"] > sup",
+    "html_snippet": "<sup>COVERAGE MAP</sup>",
+    "attributes": {},
+    "role_name_guess": "sup \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index28_sup.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-analytics-index=\"Index29\"] > sup",
+    "html_snippet": "<sup><nobr>T-MOBILE</nobr> TRAVEL</sup>",
+    "attributes": {},
+    "role_name_guess": "sup \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index29_sup.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-analytics-index=\"Index29\"] > sup > nobr",
+    "html_snippet": "<nobr>T-MOBILE</nobr>",
+    "attributes": {},
+    "role_name_guess": "nobr \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index29_sup_nobr.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-analytics-index=\"Index30\"] > sup",
+    "html_snippet": "<sup>MAGENTA STATUS</sup>",
+    "attributes": {},
+    "role_name_guess": "sup \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index30_sup.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-analytics-index=\"Index31\"] > sup",
+    "html_snippet": "<sup>FREE TRIAL</sup>",
+    "attributes": {},
+    "role_name_guess": "sup \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index31_sup.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-4.1.1",
+    "sc_list": [
+      "4.1.1"
+    ],
+    "axe_rule_id": "duplicate-id",
+    "axe_help": "id attribute value must be unique",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
+    "impact": "minor",
+    "selector": "#experiencefragment-44a44bbc77 > .wrapper--headline-AZY2P4Qp-eQ.xpr-headline[data-xpr-component=\"headline\"] > .xpr-headline__track.phx\\:ta-center[data-guid=\"plan-disrupter\"]",
+    "html_snippet": "<div id=\"plan-disrupter\" data-guid=\"plan-disrupter\" class=\"xpr-headline__track phx:ta-center     \"> \n                       <h3 data-xpr-headline-element=\"\" class=\"xpr-headline__title tdds:text-caption\">INTRODUCING EXPERIENCE PLANS </h3> \n                      </div>",
+    "attributes": {
+      "id": "plan-disrupter",
+      "data-guid": "plan-disrupter",
+      "class": "xpr-headline__track phx:ta-center     "
+    },
+    "role_name_guess": "div \u2014 INTRODUCING EXPERIENCE PLANS",
+    "nearby_text": "INTRODUCING EXPERIENCE PLANS",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute: plan-disrupter",
+    "why_any": [
+      "duplicate-id: Document has multiple static elements with the same id attribute: plan-disrupter"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "#headline-a2fb3f583d > h1",
+    "html_snippet": "<h1 data-xpr-headline-element=\"\" class=\"xpr-headline__title tdds:text-title-1\">Explore <nobr>T-Mobile</nobr>.</h1>",
+    "attributes": {
+      "data-xpr-headline-element": "",
+      "class": "xpr-headline__title tdds:text-title-1"
+    },
+    "role_name_guess": "h1 \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast___headline-a2fb3f583d_h1.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "h1 > nobr",
+    "html_snippet": "<nobr>T-Mobile</nobr>",
+    "attributes": {},
+    "role_name_guess": "nobr \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__h1_nobr.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "#navigation-158c5a964b",
+    "html_snippet": "<h2 class=\"unav-title\" id=\"navigation-158c5a964b\">Follow <nobr>T-Mobile</nobr></h2>",
+    "attributes": {
+      "class": "unav-title",
+      "id": "navigation-158c5a964b"
+    },
+    "role_name_guess": "h2 \u2014 Follow T-Mobile",
+    "nearby_text": "Follow T-Mobile\nInstagram\nFacebook\nX\nYou Tube",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Follow T-Mobile"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast___navigation-158c5a964b.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "#navigation-158c5a964b > nobr",
+    "html_snippet": "<nobr>T-Mobile</nobr>",
+    "attributes": {},
+    "role_name_guess": "nobr \u2014 T-Mobile",
+    "nearby_text": "Follow T-Mobile\nInstagram\nFacebook\nX\nYou Tube",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast___navigation-158c5a964b_nobr.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".lang-en",
+    "html_snippet": "<a @click=\"eventLanguageHandler\" @keyup.enter=\"eventLanguageHandler\" class=\"langLink lang-en\" data-analytics-navigation-name=\"|English\" target=\"_self\" tabindex=\"0\" data-lang=\"en\" mporgnav=\"true\" lang=\"en\" data-href=\"www.t-mobile.com\">English</a>",
+    "attributes": {
+      "@click": "eventLanguageHandler",
+      "@keyup.enter": "eventLanguageHandler",
+      "class": "langLink lang-en",
+      "data-analytics-navigation-name": "|English",
+      "target": "_self",
+      "tabindex": "0",
+      "data-lang": "en",
+      "mporgnav": "true",
+      "lang": "en",
+      "data-href": "www.t-mobile.com"
+    },
+    "role_name_guess": "a \u2014 English",
+    "nearby_text": "English",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "English"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.lang-en.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".lang-es",
+    "html_snippet": "<a @click=\"eventLanguageHandler\" @keyup.enter=\"eventLanguageHandler\" class=\"langLink lang-es\" data-analytics-navigation-name=\"|Espa\u00f1ol\" target=\"_self\" tabindex=\"0\" data-lang=\"es\" mporgnav=\"true\" lang=\"es\" data-href=\"es.t-mobile.com\">Espa\u00f1ol</a>",
+    "attributes": {
+      "@click": "eventLanguageHandler",
+      "@keyup.enter": "eventLanguageHandler",
+      "class": "langLink lang-es",
+      "data-analytics-navigation-name": "|Espa\u00f1ol",
+      "target": "_self",
+      "tabindex": "0",
+      "data-lang": "es",
+      "mporgnav": "true",
+      "lang": "es",
+      "data-href": "es.t-mobile.com"
+    },
+    "role_name_guess": "a \u2014 Espa\u00f1ol",
+    "nearby_text": "Espa\u00f1ol",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Espa\u00f1ol"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.lang-es.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(1) > .unav-nav__header > h3",
+    "html_snippet": "<h3> Even more plans </h3>",
+    "attributes": {},
+    "role_name_guess": "h3 \u2014 Even more plans",
+    "nearby_text": "Even more plans",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Even more plans"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(1) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/cell-phone-plans/international-roaming-plans?INTNAV=fNav%3AEvenMorePlans%3AInternationalPhonePlans\" data-analytics-navigation-name=\"Even more plans|International phone plans\" data-domain-mapping=\"none\" target=\"_self\">International phone plans</a>",
+    "attributes": {
+      "href": "/cell-phone-plans/international-roaming-plans?INTNAV=fNav%3AEvenMorePlans%3AInternationalPhonePlans",
+      "data-analytics-navigation-name": "Even more plans|International phone plans",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 International phone plans",
+    "nearby_text": "International phone plans",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "International phone plans"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(1) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[target=\"_self\"]",
+    "html_snippet": "<a href=\"/cell-phone-plans/international-roaming-plans/unlimited-calling-data-pass?INTNAV=fNav%3AEvenMorePlans%3AInternationalPasses\" data-analytics-navigation-name=\"Even more plans|International passes\" target=\"_self\">International passes</a>",
+    "attributes": {
+      "href": "/cell-phone-plans/international-roaming-plans/unlimited-calling-data-pass?INTNAV=fNav%3AEvenMorePlans%3AInternationalPasses",
+      "data-analytics-navigation-name": "Even more plans|International passes",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 International passes",
+    "nearby_text": "International passes",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "International passes"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(1) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(3) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/home-internet/plans?INTNAV=fNav%3AEvenMorePlans%3AHomeInternetPlans\" data-analytics-navigation-name=\"Even more plans|Home Internet plans\" data-domain-mapping=\"none\" target=\"_self\">Home Internet plans</a>",
+    "attributes": {
+      "href": "/home-internet/plans?INTNAV=fNav%3AEvenMorePlans%3AHomeInternetPlans",
+      "data-analytics-navigation-name": "Even more plans|Home Internet plans",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Home Internet plans",
+    "nearby_text": "Home Internet plans",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Home Internet plans"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(1) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(4) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/cell-phone-plans/phone-home-internet-bundle?INTNAV=fNav%3AEvenMorePlans%3APhoneInternetBundlePackage\" data-analytics-navigation-name=\"Even more plans|Phone and internet bundle package\" data-domain-mapping=\"none\" target=\"_self\">Phone and internet bundle package</a>",
+    "attributes": {
+      "href": "/cell-phone-plans/phone-home-internet-bundle?INTNAV=fNav%3AEvenMorePlans%3APhoneInternetBundlePackage",
+      "data-analytics-navigation-name": "Even more plans|Phone and internet bundle package",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Phone and internet bundle package",
+    "nearby_text": "Phone and internet bundle package",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Phone and internet bundle package"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(3) > .unav-nav__header > h3",
+    "html_snippet": "<h3> New featured cell phones </h3>",
+    "attributes": {},
+    "role_name_guess": "h3 \u2014 New featured cell phones",
+    "nearby_text": "New featured cell phones",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "New featured cell phones"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(3) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[target=\"_self\"]",
+    "html_snippet": "<a href=\"/cell-phone/apple-iphone-air?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3ANewAppleiPhoneAir\" data-analytics-navigation-name=\"New featured cell phones|New Apple iPhone Air\" target=\"_self\">New Apple iPhone Air</a>",
+    "attributes": {
+      "href": "/cell-phone/apple-iphone-air?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3ANewAppleiPhoneAir",
+      "data-analytics-navigation-name": "New featured cell phones|New Apple iPhone Air",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 New Apple iPhone Air",
+    "nearby_text": "New Apple iPhone Air",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "New Apple iPhone Air"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(3) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/cell-phone/apple-iphone-17?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3ANewAppleiPhone17\" data-analytics-navigation-name=\"New featured cell phones|New Apple iPhone 17\" data-domain-mapping=\"none\" target=\"_self\">New Apple iPhone 17</a>",
+    "attributes": {
+      "href": "/cell-phone/apple-iphone-17?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3ANewAppleiPhone17",
+      "data-analytics-navigation-name": "New featured cell phones|New Apple iPhone 17",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 New Apple iPhone 17",
+    "nearby_text": "New Apple iPhone 17",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "New Apple iPhone 17"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(3) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(3) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/cell-phone/apple-iphone-17-pro?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3ANewAppleiPhone17Pro\" data-analytics-navigation-name=\"New featured cell phones|New Apple iPhone 17 Pro\" data-domain-mapping=\"none\" target=\"_self\">New Apple iPhone 17 Pro</a>",
+    "attributes": {
+      "href": "/cell-phone/apple-iphone-17-pro?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3ANewAppleiPhone17Pro",
+      "data-analytics-navigation-name": "New featured cell phones|New Apple iPhone 17 Pro",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 New Apple iPhone 17 Pro",
+    "nearby_text": "New Apple iPhone 17 Pro",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "New Apple iPhone 17 Pro"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(3) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(4) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/cell-phone/apple-iphone-17-pro-max?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3ANewAppleiPhone17ProMax\" data-analytics-navigation-name=\"New featured cell phones|New Apple iPhone 17 Pro Max\" data-domain-mapping=\"none\" target=\"_self\">New Apple iPhone 17 Pro Max</a>",
+    "attributes": {
+      "href": "/cell-phone/apple-iphone-17-pro-max?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3ANewAppleiPhone17ProMax",
+      "data-analytics-navigation-name": "New featured cell phones|New Apple iPhone 17 Pro Max",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 New Apple iPhone 17 Pro Max",
+    "nearby_text": "New Apple iPhone 17 Pro Max",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "New Apple iPhone 17 Pro Max"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(4) > .unav-nav__header > h3",
+    "html_snippet": "<h3> New featured tablets, smartwatches &amp; more </h3>",
+    "attributes": {},
+    "role_name_guess": "h3 \u2014 New featured tablets, smartwatches & more",
+    "nearby_text": "New featured tablets, smartwatches & more",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "New featured tablets, smartwatches & more"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(4) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/smart-watch/apple-watch-series-11-42mm?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3AAppleWatchSeries1142mm\" data-analytics-navigation-name=\" New featured tablets, smartwatches &amp; more|Apple Watch Series 11 42mm\" data-domain-mapping=\"none\" target=\"_self\">",
+    "attributes": {
+      "href": "/smart-watch/apple-watch-series-11-42mm?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3AAppleWatchSeries1142mm",
+      "data-analytics-navigation-name": " New featured tablets, smartwatches & more|Apple Watch Series 11 42mm",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Apple Watch Series 11 42mm",
+    "nearby_text": "Apple Watch Series 11 42mm",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Apple Watch Series 11 42mm"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(4) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/smart-watch/apple-watch-series-11-46mm?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3AAppleWatchSeries1146mm\" data-analytics-navigation-name=\" New featured tablets, smartwatches &amp; more|Apple Watch Series 11 46mm\" data-domain-mapping=\"none\" target=\"_self\">",
+    "attributes": {
+      "href": "/smart-watch/apple-watch-series-11-46mm?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3AAppleWatchSeries1146mm",
+      "data-analytics-navigation-name": " New featured tablets, smartwatches & more|Apple Watch Series 11 46mm",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Apple Watch Series 11 46mm",
+    "nearby_text": "Apple Watch Series 11 46mm",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Apple Watch Series 11 46mm"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(4) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(3) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/smart-watch/apple-watch-se-3-40mm?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3AAppleWatchSe340mm\" data-analytics-navigation-name=\" New featured tablets, smartwatches &amp; more|Apple Watch SE 3 40mm\" data-domain-mapping=\"none\" target=\"_self\">Apple Watch SE 3 40mm</a>",
+    "attributes": {
+      "href": "/smart-watch/apple-watch-se-3-40mm?INTNAV=fNav%3ANewFeaturedTabletsSmartwatchesAndMore%3AAppleWatchSe340mm",
+      "data-analytics-navigation-name": " New featured tablets, smartwatches & more|Apple Watch SE 3 40mm",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Apple Watch SE 3 40mm",
+    "nearby_text": "Apple Watch SE 3 40mm",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Apple Watch SE 3 40mm"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(5) > .unav-nav__header > h3",
+    "html_snippet": "<h3> Helpful consumer guides </h3>",
+    "attributes": {},
+    "role_name_guess": "h3 \u2014 Helpful consumer guides",
+    "nearby_text": "Helpful consumer guides",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Helpful consumer guides"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(5) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[target=\"_self\"]",
+    "html_snippet": "<a href=\"/dialed-in?INTNAV=fNav%3AHelpfulConsumerGuides%3ADialedIn\" data-analytics-navigation-name=\"Helpful consumer guides|Dialed In\" target=\"_self\">Dialed In</a>",
+    "attributes": {
+      "href": "/dialed-in?INTNAV=fNav%3AHelpfulConsumerGuides%3ADialedIn",
+      "data-analytics-navigation-name": "Helpful consumer guides|Dialed In",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Dialed In",
+    "nearby_text": "Dialed In",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Dialed In"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(5) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/dialed-in/devices/samsung-galaxy-s25-vs-s24-series?INTNAV=fNav%3AHelpfulConsumerGuides%3Asamsunggalaxys25vss24series\" data-analytics-navigation-name=\"Helpful consumer guides|Samsung Galaxy S25 vs. S24 Series\" data-domain-mapping=\"none\" target=\"_self\">Samsung Galaxy S25 vs. S24 Series</a>",
+    "attributes": {
+      "href": "/dialed-in/devices/samsung-galaxy-s25-vs-s24-series?INTNAV=fNav%3AHelpfulConsumerGuides%3Asamsunggalaxys25vss24series",
+      "data-analytics-navigation-name": "Helpful consumer guides|Samsung Galaxy S25 vs. S24 Series",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Samsung Galaxy S25 vs. S24 Series",
+    "nearby_text": "Samsung Galaxy S25 vs. S24 Series",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Samsung Galaxy S25 vs. S24 Series"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(5) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(3) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"/dialed-in/devices/samsung-galaxy-s25-vs-s25-plus-vs-s25-ultra-whats-the-difference?INTNAV=fNav%3AHelpfulConsumerGuides%3Asamsunggalaxys25vss25plusvss25ultrawhatsthedifference\" data-analytics-navigation-name=\"Helpful consumer guides|Samsung Galaxy S25 vs. S25+ vs. S25 Ultra\" data-domain-mapping=\"none\" target=\"_self\">",
+    "attributes": {
+      "href": "/dialed-in/devices/samsung-galaxy-s25-vs-s25-plus-vs-s25-ultra-whats-the-difference?INTNAV=fNav%3AHelpfulConsumerGuides%3Asamsunggalaxys25vss25plusvss25ultrawhatsthedifference",
+      "data-analytics-navigation-name": "Helpful consumer guides|Samsung Galaxy S25 vs. S25+ vs. S25 Ultra",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Samsung Galaxy S25 vs. S25+ vs. S25 Ultra",
+    "nearby_text": "Samsung Galaxy S25 vs. S25+ vs. S25 Ultra",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Samsung Galaxy S25 vs. S25+ vs. S25 Ultra"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__header > h3",
+    "html_snippet": "<h3> <nobr>T-Mobile</nobr> customer benefits </h3>",
+    "attributes": {},
+    "role_name_guess": "h3 \u2014 T-Mobile customer benefits",
+    "nearby_text": "T-Mobile customer benefits",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "T-Mobile customer benefits"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__header > h3 > nobr",
+    "html_snippet": "<nobr>T-Mobile</nobr>",
+    "attributes": {},
+    "role_name_guess": "nobr \u2014 T-Mobile",
+    "nearby_text": "T-Mobile customer benefits",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[target=\"_self\"]",
+    "html_snippet": "<a href=\"/tv-streaming?INTNAV=fNav%3AT-MobileCustomerBenefits%3ATvStreamingDeals\" data-analytics-navigation-name=\"T-Mobile customer benefits|TV streaming deals\" target=\"_self\">TV streaming deals</a>",
+    "attributes": {
+      "href": "/tv-streaming?INTNAV=fNav%3AT-MobileCustomerBenefits%3ATvStreamingDeals",
+      "data-analytics-navigation-name": "T-Mobile customer benefits|TV streaming deals",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 TV streaming deals",
+    "nearby_text": "TV streaming deals",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "TV streaming deals"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[target=\"_self\"]",
+    "html_snippet": "<a href=\"/offers/t-mobile-tuesdays?INTNAV=fNav%3AT-MobileCustomerBenefits%3AT-MobileTuesdays\" data-analytics-navigation-name=\"T-Mobile customer benefits|T-Mobile Tuesdays\" target=\"_self\"><nobr>T-Mobile</nobr> Tuesdays</a>",
+    "attributes": {
+      "href": "/offers/t-mobile-tuesdays?INTNAV=fNav%3AT-MobileCustomerBenefits%3AT-MobileTuesdays",
+      "data-analytics-navigation-name": "T-Mobile customer benefits|T-Mobile Tuesdays",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 T-Mobile Tuesdays",
+    "nearby_text": "T-Mobile Tuesdays",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "T-Mobile Tuesdays"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[target=\"_self\"] > nobr",
+    "html_snippet": "<nobr>T-Mobile</nobr>",
+    "attributes": {},
+    "role_name_guess": "nobr \u2014 T-Mobile",
+    "nearby_text": "T-Mobile Tuesdays",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(3) > a[target=\"_self\"]",
+    "html_snippet": "<a href=\"/benefits/travel/in-flight-wifi?INTNAV=fNav%3AT-MobileCustomerBenefits%3AInFlightWi-Fi\" data-analytics-navigation-name=\"T-Mobile customer benefits|In-flight wi-fi\" target=\"_self\">In-flight <nobr>wi-fi</nobr></a>",
+    "attributes": {
+      "href": "/benefits/travel/in-flight-wifi?INTNAV=fNav%3AT-MobileCustomerBenefits%3AInFlightWi-Fi",
+      "data-analytics-navigation-name": "T-Mobile customer benefits|In-flight wi-fi",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 In-flight wi-fi",
+    "nearby_text": "In-flight wi-fi",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "In-flight wi-fi"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "li[data-customer=\"any\"]:nth-child(3) > a[target=\"_self\"] > nobr",
+    "html_snippet": "<nobr>wi-fi</nobr>",
+    "attributes": {},
+    "role_name_guess": "nobr \u2014 wi-fi",
+    "nearby_text": "In-flight wi-fi",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__li_data-customer_any_nth-child_3_a_target__self_n.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(4) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "html_snippet": "<a href=\"https://referral.t-mobile.com/?INTNAV=fNav%3AT-MobileCustomerBenefits%3ARefer-a-Friend\" data-analytics-navigation-name=\"T-Mobile customer benefits|Refer-a-Friend\" data-domain-mapping=\"none\" target=\"_self\">Refer-a-Friend</a>",
+    "attributes": {
+      "href": "https://referral.t-mobile.com/?INTNAV=fNav%3AT-MobileCustomerBenefits%3ARefer-a-Friend",
+      "data-analytics-navigation-name": "T-Mobile customer benefits|Refer-a-Friend",
+      "data-domain-mapping": "none",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Refer-a-Friend",
+    "nearby_text": "Refer-a-Friend",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Refer-a-Friend"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(8) > .unav-nav__header > h3",
+    "html_snippet": "<h3> Additional support </h3>",
+    "attributes": {},
+    "role_name_guess": "h3 \u2014 Additional support",
+    "nearby_text": "Additional support",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Additional support"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(8) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[target=\"_self\"]",
+    "html_snippet": "<a href=\"/responsibility/legal/return-policy?INTNAV=fNav%3AAdditionalSupport%3AViewReturnPolicy\" data-analytics-navigation-name=\"Additional support|View return policy\" target=\"_self\">View return policy</a>",
+    "attributes": {
+      "href": "/responsibility/legal/return-policy?INTNAV=fNav%3AAdditionalSupport%3AViewReturnPolicy",
+      "data-analytics-navigation-name": "Additional support|View return policy",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 View return policy",
+    "nearby_text": "View return policy",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "View return policy"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-analytics-navigation-name=\"Additional support|Contact us\"]",
+    "html_snippet": "<a href=\"/contact-us?INTNAV=fNav%3AAdditionalSupport%3AContactUs\" data-analytics-navigation-name=\"Additional support|Contact us\" target=\"_self\">Contact us</a>",
+    "attributes": {
+      "href": "/contact-us?INTNAV=fNav%3AAdditionalSupport%3AContactUs",
+      "data-analytics-navigation-name": "Additional support|Contact us",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Contact us",
+    "nearby_text": "Contact us",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Contact us"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-navigation-name_Additional_support_Contact.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-analytics-navigation-name=\"Additional support|Billing\"]",
+    "html_snippet": "<a href=\"/support/account/whats-impacting-your-bill?INTNAV=fNav%3AAdditionalSupport%3ABilling\" data-analytics-navigation-name=\"Additional support|Billing\" target=\"_self\">Billing</a>",
+    "attributes": {
+      "href": "/support/account/whats-impacting-your-bill?INTNAV=fNav%3AAdditionalSupport%3ABilling",
+      "data-analytics-navigation-name": "Additional support|Billing",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Billing",
+    "nearby_text": "Billing",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Billing"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-navigation-name_Additional_support_Billing.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(8) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(4) > a[target=\"_self\"]",
+    "html_snippet": "<a href=\"/customers/emergency-broadband-benefit?INTNAV=fNav%3AAdditionalSupport%3AEmergencyBroadbandBenefit\" data-analytics-navigation-name=\"Additional support|Emergency Broadband Benefit\" target=\"_self\">Emergency Broadband Benefit</a>",
+    "attributes": {
+      "href": "/customers/emergency-broadband-benefit?INTNAV=fNav%3AAdditionalSupport%3AEmergencyBroadbandBenefit",
+      "data-analytics-navigation-name": "Additional support|Emergency Broadband Benefit",
+      "target": "_self"
+    },
+    "role_name_guess": "a \u2014 Emergency Broadband Benefit",
+    "nearby_text": "Emergency Broadband Benefit",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Emergency Broadband Benefit"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "bucket": "semantic_review",
+    "topic": "SC-1.1.1",
+    "sc_list": [
+      "1.1.1"
+    ],
+    "axe_rule_id": "image-alt",
+    "axe_help": "Images must have alternate text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
+    "impact": null,
+    "selector": "a[href=\"/?INTNAV=tNav:Home\"][data-domain-mapping=\"tmo\"][target=\"_self\"] > img[width=\"52\"][height=\"52\"][alt=\"T-Mobile\"]",
+    "html_snippet": "<img src=\"/content/dam/t-mobile/ntm/branding/logos/corporate/tmo-logo-v4.svg\" alt=\"T-Mobile\" width=\"52\" height=\"52\">",
+    "attributes": {
+      "src": "/content/dam/t-mobile/ntm/branding/logos/corporate/tmo-logo-v4.svg",
+      "alt": "T-Mobile",
+      "width": "52",
+      "height": "52"
+    },
+    "role_name_guess": "img \u2014 T-Mobile",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\image-alt__a_href_INTNAV_tNav_Home_data-domain-mapping_tmo_targ.png",
+    "failureSummary": null,
+    "why_any": [
+      "has-alt: Element has an alt attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "alt-space-value: Element has a valid alt attribute value"
+    ]
+  }
+]

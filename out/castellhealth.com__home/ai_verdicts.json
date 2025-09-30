@@ -1,0 +1,257 @@
+[
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".uk-navbar",
+    "axe_rule_id": "landmark-unique",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The nav element lacks a unique aria-label, aria-labelledby, or title, making it indistinguishable from other landmarks, violating axe:landmark-unique.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:landmark-unique"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\landmark-unique__.uk-navbar.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-unique?application=axeAPI",
+    "prompt_hash": "7e3cbf26a858c8f7"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": ".uk-navbar-item",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The link lacks discernible text for screen readers, as indicated by the empty accessible name and the axe diagnostics stating it has no visible text.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\link-name__.uk-navbar-item.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "prompt_hash": "fab14abee7174416"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "a[href$=\"#scrolltome\"]",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The link lacks discernible text for screen readers, as the accessible name is empty. This violates SC 4.1.2 regarding accessible names for links.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\link-name__a_href_scrolltome_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "prompt_hash": "5691980529296f4a"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "a[target=\"_social\"]:nth-child(1)",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The link lacks discernible text for screen readers, as indicated by the empty accessible name and AXE diagnostics stating it has no visible text.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\link-name__a_target__social_nth-child_1_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "prompt_hash": "f463218ea2dfcf38"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "a[target=\"_social\"]:nth-child(2)",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The link lacks discernible text for screen readers, as indicated by the empty accessible name and AXE diagnostics stating it has no visible text.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\link-name__a_target__social_nth-child_2_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "prompt_hash": "4a716d5df7a2f719"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-1.3.1",
+    "SC": "1.3.1",
+    "sc_list": [],
+    "selector": "#feedcontainer > .slick-dots[role=\"tablist\"]",
+    "axe_rule_id": "aria-required-children",
+    "impact": "critical",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'tablist' is missing required child roles 'tab', violating SC 1.3.1 as per axe diagnostics.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-required-children"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\aria-required-children___feedcontainer_.slick-dots_role_tablist_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-required-children?application=axeAPI",
+    "prompt_hash": "1b0f056d90c2f4b4"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "#slick-slide20",
+    "axe_rule_id": "aria-valid-attr-value",
+    "impact": "critical",
+    "ai_verdict": {
+      "type": "complex",
+      "verdict": "needs-change",
+      "reason": "The element has an invalid aria-describedby attribute pointing to a non-existent ID, violating SC 4.1.2. The role is correct, but the accessible name is missing.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "G93",
+        "axe:aria-valid-attr-value"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\aria-valid-attr-value___slick-slide20.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-valid-attr-value?application=axeAPI",
+    "prompt_hash": "7bffa1ec2628cf0f"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[autoplay=\"\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for 'Watch Video' cannot be determined due to a pseudo element, likely failing SC 1.4.3 thresholds.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\color-contrast__a_autoplay_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "d05c45eeba21e14b"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "div:nth-child(2) > p:nth-child(1)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio for the text 'Healthcare is changing.' is below the required threshold of 4.5:1 due to undetermined background color.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\color-contrast__div_nth-child_2_p_nth-child_1_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "5bc5cd785e9c3613"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "div:nth-child(2) > p:nth-child(2)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio for the text 'Evolve faster with Castell' is below the required threshold due to undetermined background color.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\color-contrast__div_nth-child_2_p_nth-child_2_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "1286fd661d8d31ba"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-1.1.1",
+    "SC": "1.1.1",
+    "sc_list": [],
+    "selector": "img[alt=\"Play Button\"]",
+    "axe_rule_id": "image-alt",
+    "impact": null,
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "redundant-ok",
+      "reason": "The alt text 'Play Button' duplicates the nearby text 'Watch Video', which already conveys the same action. No additional description is needed.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "G94",
+        "axe:image-alt"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\image-alt__img_alt_Play_Button_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
+    "prompt_hash": "4ac7ed9b1109ea09"
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "#post-750 > .text > .post__link > a",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The link text 'READ MORE' lacks sufficient context to convey its purpose, failing SC 2.4.4. The title attribute provides additional information but does not replace the need for a meaningful link name.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "G94",
+        "axe:link-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\link-name___post-750_.text_.post__link_a.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "prompt_hash": "5aa6d1b6af755c62"
+  }
+]

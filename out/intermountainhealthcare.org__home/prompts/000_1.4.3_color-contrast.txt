@@ -1,0 +1,55 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 1.4.3
+Techniques context (from curated library):
+{
+  "topic": "SC 1.4.3",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
+    "Consider axe help: Elements must meet minimum color contrast ratio thresholds",
+    "Ref: https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: .swiper-slide:nth-child(4) > .PublicationCard_wrapper__h6BoM > .MuiCard-root.PublicationCard_inner__Ym3DL.css-h4ugdf > .PublicationCard_body__cJmPT > .PublicationCard_summary__d1QYN.css-casq6l.MuiTypography-body
+- HTML snippet: <p class="MuiTypography-root MuiTypography-body PublicationCard_summary__d1QYN css-casq6l">Stay sun-safe this summer with essential tips on sunscreen use, shade, and protective clothing.</p>
+- Attributes: {"class": "MuiTypography-root MuiTypography-body PublicationCard_summary__d1QYN css-casq6l"}
+- Computed role/name (best-effort): p — Stay sun-safe this summer with essential tips on sunscreen use, shade, and protective clothing.
+- Nearby text window: Stay sun-safe this summer with essential tips on sunscreen use, shade, and protective clothing.
+- Accessibility snapshot (partial): {}
+- Axe ruleId: color-contrast
+- Axe help: Elements must meet minimum color contrast ratio thresholds
+- Axe impact: serious
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.66 (foreground color: #8880ab, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
+  "why_any": [
+    "color-contrast: Element has insufficient color contrast of 3.66 (foreground color: #8880ab, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://intermountainhealthcare.org/"
+}

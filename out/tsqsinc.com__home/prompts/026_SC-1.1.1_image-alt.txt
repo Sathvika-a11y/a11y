@@ -1,0 +1,49 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC-1.1.1
+Techniques context (from curated library):
+{
+  "topic": "SC 1.1.1 Non-text Content",
+  "do": [
+    "Decorative images: use empty alt ('').",
+    "Functional images (in links/buttons): alt describes action or destination (e.g., 'Search', 'View product').",
+    "Informative images: alt conveys the information/meaning succinctly.",
+    "Text-in-image: alt includes the visible text.",
+    "Complex images (charts): provide a brief alt and reference a nearby longer description."
+  ],
+  "dont": [
+    "Avoid generic terms like 'image', 'photo', or filenames in alt.",
+    "Do not duplicate nearby link/button labels in alt unless it\u2019s the only accessible name."
+  ],
+  "edge_cases": [
+    "If a link/button already has a clear accessible name, the image alt may be empty to avoid redundancy.",
+    "Company logos: alt should usually be the company name unless purely decorative."
+  ]
+}
+
+Element context:
+- Selector: .model-section:nth-child(4) > .model-row > .model-item:nth-child(1) > img[alt=""]
+- HTML snippet: <img alt="" src="/static/media/archtect.4a15eba8a3a076342b4d.png">
+- Attributes: {"alt": "", "src": "/static/media/archtect.4a15eba8a3a076342b4d.png"}
+- Computed role/name (best-effort): img — 
+- Nearby text window: Architectural Solution
+
+Excellent STLC architecture is construed in an organization through the usage of the finest tools, superior processes...
+- Accessibility snapshot (partial): {}
+- Axe ruleId: image-alt
+- Axe help: Images must have alternate text
+- Axe impact: None
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.

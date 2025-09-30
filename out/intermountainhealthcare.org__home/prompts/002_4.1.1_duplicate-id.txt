@@ -1,0 +1,55 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 4.1.1
+Techniques context (from curated library):
+{
+  "topic": "SC 4.1.1",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
+    "Consider axe help: id attribute value must be unique",
+    "Ref: https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: .EnterpriseNavigation_linksPanelContainer__c6K5Z > svg > lineargradient[x1="6.5"][y1="22"][x2="39.5"]:nth-child(2)
+- HTML snippet: <linearGradient id="onLightGradient" x1="6.5" y1="22" x2="39.5" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0.09" stop-color="#FF003B"></stop><stop offset=".39" stop-color="#DF36FF"></stop></linearGradient>
+- Attributes: {"id": "onLightGradient", "x1": "6.5", "y1": "22", "x2": "39.5", "y2": "22", "gradientUnits": "userSpaceOnUse"}
+- Computed role/name (best-effort): lineargradient — 
+- Nearby text window: 
+- Accessibility snapshot (partial): {}
+- Axe ruleId: duplicate-id
+- Axe help: id attribute value must be unique
+- Axe impact: minor
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute: onLightGradient",
+  "why_any": [
+    "duplicate-id: Document has multiple static elements with the same id attribute: onLightGradient"
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://intermountainhealthcare.org/"
+}

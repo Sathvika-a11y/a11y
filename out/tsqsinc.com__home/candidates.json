@@ -1,0 +1,646 @@
+[
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".nav-active",
+    "html_snippet": "<a aria-current=\"page\" class=\"nav-active\" href=\"/\" data-discover=\"true\">Home</a>",
+    "attributes": {
+      "aria-current": "page",
+      "class": "nav-active",
+      "href": "/",
+      "data-discover": "true"
+    },
+    "role_name_guess": "a \u2014 Home",
+    "nearby_text": "Home",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Home"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.nav-active.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.07 (foreground color: #e67320, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.07 (foreground color: #e67320, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".about-text > .know-more-btn[role=\"link\"]",
+    "html_snippet": "<button class=\"know-more-btn\" role=\"link\">Download e-Book</button>",
+    "attributes": {
+      "class": "know-more-btn",
+      "role": "link"
+    },
+    "role_name_guess": "link \u2014 Download e-Book",
+    "nearby_text": "Download e-Book",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Download e-Book"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.about-text_.know-more-btn_role_link_.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #e67320, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #e67320, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".read-more-container > .read-more-btn[role=\"link\"]",
+    "html_snippet": "<button class=\"read-more-btn\" role=\"link\" aria-label=\"Read More About Model Based Testing\">Read More</button>",
+    "attributes": {
+      "class": "read-more-btn",
+      "role": "link",
+      "aria-label": "Read More About Model Based Testing"
+    },
+    "role_name_guess": "link \u2014 Read More About Model Based Testing",
+    "nearby_text": "Read More",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Read More About Model Based Testing"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.read-more-container_.read-more-btn_role_link_.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.53 (foreground color: #ffffff, background color: #d9680e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.53 (foreground color: #ffffff, background color: #d9680e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "button[aria-label=\"Read More About Our Expertise\"]",
+    "html_snippet": "<button class=\"read-more-btn\" role=\"link\" aria-label=\"Read More About Our Expertise\">Read More</button>",
+    "attributes": {
+      "class": "read-more-btn",
+      "role": "link",
+      "aria-label": "Read More About Our Expertise"
+    },
+    "role_name_guess": "link \u2014 Read More About Our Expertise",
+    "nearby_text": "Read More",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Read More About Our Expertise"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__button_aria-label_Read_More_About_Our_Expertise_.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.53 (foreground color: #ffffff, background color: #d9680e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.53 (foreground color: #ffffff, background color: #d9680e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".card:nth-child(1) > h3",
+    "html_snippet": "<h3>Quality Transformation</h3>",
+    "attributes": {},
+    "role_name_guess": "h3 \u2014 Quality Transformation",
+    "nearby_text": "Quality Transformation\n\nWe have a tremendous experience dealing with transformation in organisations that have legacy issues related to usage of tools and processes.\n\nKnow More",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Quality Transformation"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_1_h3.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.91 (foreground color: #e67320, background color: #f9f9f9, font size: 14.0pt (18.72px), font weight: bold). Expected contrast ratio of 3:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 2.91 (foreground color: #e67320, background color: #f9f9f9, font size: 14.0pt (18.72px), font weight: bold). Expected contrast ratio of 3:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".card:nth-child(1) > .know-more-btn[role=\"link\"]",
+    "html_snippet": "<button class=\"know-more-btn\" aria-label=\"Know More About Quality Transformation\" role=\"link\">Know More</button>",
+    "attributes": {
+      "class": "know-more-btn",
+      "aria-label": "Know More About Quality Transformation",
+      "role": "link"
+    },
+    "role_name_guess": "link \u2014 Know More About Quality Transformation",
+    "nearby_text": "Know More",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Know More About Quality Transformation"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_1_.know-more-btn_role_link_.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #e67320, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #e67320, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".card:nth-child(2) > h3",
+    "html_snippet": "<h3>Quality Service</h3>",
+    "attributes": {},
+    "role_name_guess": "h3 \u2014 Quality Service",
+    "nearby_text": "Quality Service\n\nYou can be certain that the services you receive from us are of the highest standards. Our workforce consists of professionals who are\u2026\n\nKnow More",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Quality Service"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_2_h3.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.91 (foreground color: #e67320, background color: #f9f9f9, font size: 14.0pt (18.72px), font weight: bold). Expected contrast ratio of 3:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 2.91 (foreground color: #e67320, background color: #f9f9f9, font size: 14.0pt (18.72px), font weight: bold). Expected contrast ratio of 3:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".card:nth-child(2) > .know-more-btn[role=\"link\"]",
+    "html_snippet": "<button class=\"know-more-btn\" aria-label=\"Know More About Quality Service\" role=\"link\">Know More</button>",
+    "attributes": {
+      "class": "know-more-btn",
+      "aria-label": "Know More About Quality Service",
+      "role": "link"
+    },
+    "role_name_guess": "link \u2014 Know More About Quality Service",
+    "nearby_text": "Know More",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Know More About Quality Service"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_2_.know-more-btn_role_link_.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #e67320, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #e67320, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".card:nth-child(3) > h3",
+    "html_snippet": "<h3>Quality Consulting</h3>",
+    "attributes": {},
+    "role_name_guess": "h3 \u2014 Quality Consulting",
+    "nearby_text": "Quality Consulting\n\nWe often wonder why companies pay millions of dollars per year as \u201cConsulting fees\u201d to several firms who often provide advisory services.\n\nKnow More",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Quality Consulting"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_3_h3.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.91 (foreground color: #e67320, background color: #f9f9f9, font size: 14.0pt (18.72px), font weight: bold). Expected contrast ratio of 3:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 2.91 (foreground color: #e67320, background color: #f9f9f9, font size: 14.0pt (18.72px), font weight: bold). Expected contrast ratio of 3:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".card:nth-child(3) > .know-more-btn[role=\"link\"]",
+    "html_snippet": "<button class=\"know-more-btn\" aria-label=\"Know More About Quality Consulting\" role=\"link\">Know More</button>",
+    "attributes": {
+      "class": "know-more-btn",
+      "aria-label": "Know More About Quality Consulting",
+      "role": "link"
+    },
+    "role_name_guess": "link \u2014 Know More About Quality Consulting",
+    "nearby_text": "Know More",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Know More About Quality Consulting"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_3_.know-more-btn_role_link_.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #e67320, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #e67320, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "landmark-contentinfo-is-top-level",
+    "axe_help": "Contentinfo landmark should not be contained in another landmark",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-contentinfo-is-top-level?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".footer",
+    "html_snippet": "<footer class=\"footer\">",
+    "attributes": {
+      "class": "footer"
+    },
+    "role_name_guess": "footer \u2014 Business Model\nQuality Transformation\nQuality Service\nQuality Consulting\nQuick Links\nHome\nQuality Engineering\nExpertise\nAcademy\nBusiness Model\ne-Book\nCareers\nContact Us\nContact Us\n\ntsQs Inc\n\n",
+    "nearby_text": "Skip to main content\nSkip to footer\n\nTransforming Software Quality Services\n\nAn ISO 9001:2015 | ISO/IEC 27001:2022 Certified Company\n\nHome\nQuality Engineering\nExpertise\nAcademy\nBusiness Model\ne-Book\nCareers\nContact Us\nWe're Quality Engineers\n\nOptimized solutions meeting all your business needs\n\nRead More\n\u276e\n\u276f\nAbout tsQs\n\nOur vision at tsQs is to embed our expertise and problem-solving experience across the Software delivery life cycle ensuing transformation of Software testing teams to Quality en",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\landmark-contentinfo-is-top-level__.footer.png",
+    "failureSummary": "Fix any of the following:\n  The contentinfo landmark is contained in another landmark.",
+    "why_any": [
+      "landmark-is-top-level: The contentinfo landmark is contained in another landmark."
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "landmark-no-duplicate-contentinfo",
+    "axe_help": "Document should not have more than one contentinfo landmark",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-no-duplicate-contentinfo?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#footer",
+    "html_snippet": "<footer id=\"footer\">",
+    "attributes": {
+      "id": "footer"
+    },
+    "role_name_guess": "footer \u2014 \ud83d\udee1\ufe0f Consent\nBusiness Model\nQuality Transformation\nQuality Service\nQuality Consulting\nQuick Links\nHome\nQuality Engineering\nExpertise\nAcademy\nBusiness Model\ne-Book\nCareers\nContact Us\nContact Us",
+    "nearby_text": "Skip to main content\nSkip to footer\n\nTransforming Software Quality Services\n\nAn ISO 9001:2015 | ISO/IEC 27001:2022 Certified Company\n\nHome\nQuality Engineering\nExpertise\nAcademy\nBusiness Model\ne-Book\nCareers\nContact Us\nWe're Quality Engineers\n\nOptimized solutions meeting all your business needs\n\nRead More\n\u276e\n\u276f\nAbout tsQs\n\nOur vision at tsQs is to embed our expertise and problem-solving experience across the Software delivery life cycle ensuing transformation of Software testing teams to Quality en",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\landmark-no-duplicate-contentinfo___footer.png",
+    "failureSummary": "Fix any of the following:\n  Document has more than one contentinfo landmark",
+    "why_any": [
+      "page-no-duplicate-contentinfo: Document has more than one contentinfo landmark"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "landmark-unique",
+    "axe_help": "Ensures landmarks are unique",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-unique?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#footer",
+    "html_snippet": "<footer id=\"footer\">",
+    "attributes": {
+      "id": "footer"
+    },
+    "role_name_guess": "footer \u2014 \ud83d\udee1\ufe0f Consent\nBusiness Model\nQuality Transformation\nQuality Service\nQuality Consulting\nQuick Links\nHome\nQuality Engineering\nExpertise\nAcademy\nBusiness Model\ne-Book\nCareers\nContact Us\nContact Us",
+    "nearby_text": "Skip to main content\nSkip to footer\n\nTransforming Software Quality Services\n\nAn ISO 9001:2015 | ISO/IEC 27001:2022 Certified Company\n\nHome\nQuality Engineering\nExpertise\nAcademy\nBusiness Model\ne-Book\nCareers\nContact Us\nWe're Quality Engineers\n\nOptimized solutions meeting all your business needs\n\nRead More\n\u276e\n\u276f\nAbout tsQs\n\nOur vision at tsQs is to embed our expertise and problem-solving experience across the Software delivery life cycle ensuing transformation of Software testing teams to Quality en",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\landmark-unique___footer.png",
+    "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    "why_any": [
+      "landmark-is-unique: The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2"
+    ],
+    "axe_rule_id": "aria-allowed-attr",
+    "axe_help": "Elements must only use allowed ARIA attributes",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-attr?application=axeAPI",
+    "impact": "serious",
+    "selector": ".carousel-indicators",
+    "html_snippet": "<div class=\"carousel-indicators\" aria-label=\"Slide indicators\">",
+    "attributes": {
+      "class": "carousel-indicators",
+      "aria-label": "Slide indicators"
+    },
+    "role_name_guess": "div \u2014 Slide indicators",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\aria-allowed-attr__.carousel-indicators.png",
+    "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute.",
+    "why_any": [],
+    "why_all": [],
+    "why_none": [
+      "aria-prohibited-attr: aria-label attribute is not well supported on a div with no valid role attribute."
+    ]
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".iso-tagline",
+    "html_snippet": "<p class=\"iso-tagline\">An ISO 9001:2015 | ISO/IEC 27001:2022 Certified Company</p>",
+    "attributes": {
+      "class": "iso-tagline"
+    },
+    "role_name_guess": "p \u2014 An ISO 9001:2015 | ISO/IEC 27001:2022 Certified Company",
+    "nearby_text": "An ISO 9001:2015 | ISO/IEC 27001:2022 Certified Company",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.iso-tagline.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "h1",
+    "html_snippet": "<h1>Vision</h1>",
+    "attributes": {},
+    "role_name_guess": "h1 \u2014 We're Quality Engineers",
+    "nearby_text": "We're Quality Engineers\n\nOptimized solutions meeting all your business needs\n\nRead More",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "We're Quality Engineers"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__h1.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "p",
+    "html_snippet": "<p>Our business model is unique and is positioned around fulfillment of client requirements</p>",
+    "attributes": {
+      "class": "company-name"
+    },
+    "role_name_guess": "p \u2014 Transforming Software Quality Services",
+    "nearby_text": "Transforming Software Quality Services",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__p.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".prev",
+    "html_snippet": "<button class=\"carousel-btn prev\" aria-label=\"Previous slide\">\u276e</button>",
+    "attributes": {
+      "class": "carousel-btn prev",
+      "aria-label": "Previous slide"
+    },
+    "role_name_guess": "button \u2014 Previous slide",
+    "nearby_text": "\u276e",
+    "acc_snapshot": {
+      "role": "button",
+      "name": "Previous slide"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.prev.png",
+    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+    "why_any": [
+      "color-contrast: Element content contains only non-text characters"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".next",
+    "html_snippet": "<button class=\"carousel-btn next\" aria-label=\"Next Slide\">\u276f</button>",
+    "attributes": {
+      "class": "carousel-btn next",
+      "aria-label": "Next Slide"
+    },
+    "role_name_guess": "button \u2014 Next Slide",
+    "nearby_text": "\u276f",
+    "acc_snapshot": {
+      "role": "button",
+      "name": "Next Slide"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.next.png",
+    "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters",
+    "why_any": [
+      "color-contrast: Element content contains only non-text characters"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "heading-order",
+    "axe_help": "Heading levels should only increase by one",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/heading-order?application=axeAPI",
+    "impact": "moderate",
+    "selector": "h1",
+    "html_snippet": "<h1>Vision</h1>",
+    "attributes": {},
+    "role_name_guess": "h1 \u2014 Let's Connect",
+    "nearby_text": "Let's Connect\n\nContact Us For More Information\n\nRead More",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Let's Connect"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\heading-order__h1.png",
+    "failureSummary": "Fix any of the following:\n  Unable to determine previous heading",
+    "why_any": [
+      "heading-order: Unable to determine previous heading"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.2.2",
+    "sc_list": [
+      "1.2.2"
+    ],
+    "axe_rule_id": "video-caption",
+    "axe_help": "<video> elements must have captions",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/video-caption?application=axeAPI",
+    "impact": "critical",
+    "selector": "video",
+    "html_snippet": "<video controls=\"\" width=\"100%\" aria-label=\"tsQs introduction video with voice-over explaining company services\"><source src=\"/static/media/tsQs_HomePage_Cap.fd6c683257f264f751de.mp4\" type=\"video/mp4\">Your browser does not support the video tag.</video>",
+    "attributes": {
+      "controls": "",
+      "width": "100%",
+      "aria-label": "tsQs introduction video with voice-over explaining company services"
+    },
+    "role_name_guess": "video \u2014 tsQs introduction video with voice-over explaining company services",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "Video",
+      "name": "Unable to play media."
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\video-caption__video.png",
+    "failureSummary": "Fix all of the following:\n  Check that captions is available for the element",
+    "why_any": [],
+    "why_all": [],
+    "why_none": [
+      "caption: Check that captions is available for the element"
+    ]
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "bucket": "semantic_review",
+    "topic": "SC-1.1.1",
+    "sc_list": [
+      "1.1.1"
+    ],
+    "axe_rule_id": "image-alt",
+    "axe_help": "Images must have alternate text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
+    "impact": null,
+    "selector": ".logo-link > .logo-img[alt=\"tsQs Logo\"]",
+    "html_snippet": "<img alt=\"tsQs Logo\" class=\"logo-img\" src=\"/static/media/logo-transparent.1f4456ea770d124c21cb.gif\">",
+    "attributes": {
+      "alt": "tsQs Logo",
+      "class": "logo-img",
+      "src": "/static/media/logo-transparent.1f4456ea770d124c21cb.gif"
+    },
+    "role_name_guess": "img \u2014 tsQs Logo",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\image-alt__.logo-link_.logo-img_alt_tsQs_Logo_.png",
+    "failureSummary": null,
+    "why_any": [
+      "has-alt: Element has an alt attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "alt-space-value: Element has a valid alt attribute value"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "topic": "SC 1.4.3 — Contrast (Minimum)",
+  "tags": ["SC-1.4.3", "1.4.3", "wcag143"],
+  "do": [
+    "Ensure contrast ≥ 4.5:1 for normal text and ≥ 3:1 for large text (≈ 18pt regular / 14pt bold).",
+    "Check text over images/gradients; add an overlay or change colors to meet thresholds.",
+    "Include images of text in checks (logos are exempt)."
+  ],
+  "dont": [
+    "Don’t use very light placeholder/help text that falls below thresholds.",
+    "Don’t rely on user zoom or bolding to pass contrast.",
+    "Don’t put important text over busy imagery without sufficient overlay."
+  ],
+  "edge_cases": [
+    "Large-scale text qualifies for 3:1; verify actual computed size/weight.",
+    "Semi-transparent overlays and gradients can change effective contrast.",
+    "Disabled controls are out-of-scope for 1.4.3 (but consider 1.4.11 for non-text contrast separately).",
+    "Logotypes/images of text that are logos are exempt."
+  ],
+  "techniques": ["G18", "G145"],
+  "axe_rules_hint": ["color-contrast"]
+}

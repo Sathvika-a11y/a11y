@@ -1,0 +1,832 @@
+[
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-4.1.1",
+    "sc_list": [
+      "4.1.1"
+    ],
+    "axe_rule_id": "duplicate-id",
+    "axe_help": "id attribute value must be unique",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
+    "impact": "minor",
+    "selector": ".form_field-wrapper.is-menu > .form_submit-button-wrapper > .form_arrow.w-embed > svg[height=\"18\"][viewBox=\"0 0 24 18\"][width=\"24\"] > defs > clippath",
+    "html_snippet": "<clipPath id=\"clip0_2551_20294\">\n<rect width=\"24\" height=\"17.6842\" fill=\"white\"></rect>\n</clipPath>",
+    "attributes": {
+      "id": "clip0_2551_20294"
+    },
+    "role_name_guess": "clippath \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute: clip0_2551_20294",
+    "why_any": [
+      "duplicate-id: Document has multiple static elements with the same id attribute: clip0_2551_20294"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-4.1.1",
+    "sc_list": [
+      "4.1.1"
+    ],
+    "axe_rule_id": "duplicate-id",
+    "axe_help": "id attribute value must be unique",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
+    "impact": "minor",
+    "selector": ".position-relative > .button-icon > .icon_pushdown.w-embed > svg[width=\"22\"][height=\"17\"] > defs > clippath",
+    "html_snippet": "<clipPath id=\"a\">\n      <path fill=\"currentColor\" d=\"M0 .438h22v16H0z\"></path>\n    </clipPath>",
+    "attributes": {
+      "id": "a"
+    },
+    "role_name_guess": "clippath \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute: a",
+    "why_any": [
+      "duplicate-id: Document has multiple static elements with the same id attribute: a"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-4.1.1",
+    "sc_list": [
+      "4.1.1"
+    ],
+    "axe_rule_id": "duplicate-id",
+    "axe_help": "id attribute value must be unique",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
+    "impact": "minor",
+    "selector": ".newsletter-form_heading-wrapper > .newsletter-form_icon.is-footer.w-embed > svg[width=\"42\"][height=\"42\"][viewBox=\"0 0 42 42\"] > defs > clippath",
+    "html_snippet": "<clipPath id=\"clip0_2551_20926\">\n<rect width=\"35.2653\" height=\"35.2653\" fill=\"white\" transform=\"matrix(-0.980297 0.197528 0.197528 0.980297 34.5705 0)\"></rect>\n</clipPath>",
+    "attributes": {
+      "id": "clip0_2551_20926"
+    },
+    "role_name_guess": "clippath \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute: clip0_2551_20926",
+    "why_any": [
+      "duplicate-id: Document has multiple static elements with the same id attribute: clip0_2551_20926"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2"
+    ],
+    "axe_rule_id": "frame-title",
+    "axe_help": "Frames must have an accessible name",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/frame-title?application=axeAPI",
+    "impact": "serious",
+    "selector": "iframe[width=\"100%\"]",
+    "html_snippet": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.4873124444953!2d-84.4455610479628!3d39.11814097943676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b15759e6f7eb%3A0xd5ba2d25d31ee5e8!2sBrandience!5e0!3m2!1sen!2sus!4v1637610371248!5m2!1sen!2sus\" width=\"100%\" height=\"450\" allowfullscreen=\"allowfullscreen\" loading=\"lazy\" style=\"border: 0px;\">",
+    "attributes": {
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.4873124444953!2d-84.4455610479628!3d39.11814097943676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b15759e6f7eb%3A0xd5ba2d25d31ee5e8!2sBrandience!5e0!3m2!1sen!2sus!4v1637610371248!5m2!1sen!2sus",
+      "width": "100%",
+      "height": "450",
+      "allowfullscreen": "allowfullscreen",
+      "loading": "lazy",
+      "style": "border: 0px;"
+    },
+    "role_name_guess": "iframe \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\frame-title__iframe_width_100_.png",
+    "failureSummary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    "why_any": [
+      "non-empty-title: Element has no title attribute",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "presentational-role: Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2"
+    ],
+    "axe_rule_id": "input-button-name",
+    "axe_help": "Input buttons must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/input-button-name?application=axeAPI",
+    "impact": "critical",
+    "selector": ".submit-button",
+    "html_snippet": "<input type=\"submit\" data-wait=\"  \" class=\"submit-button w-button\" value=\"\">",
+    "attributes": {
+      "type": "submit",
+      "data-wait": "  ",
+      "class": "submit-button w-button",
+      "value": "",
+      "style": ""
+    },
+    "role_name_guess": "input \u2014 ",
+    "nearby_text": "SEND EMAIL",
+    "acc_snapshot": {
+      "role": "button",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\input-button-name__.submit-button.png",
+    "failureSummary": "Fix any of the following:\n  Element has a value attribute and the value attribute is empty\n  Element has an empty value attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    "why_any": [
+      "non-empty-if-present: Element has a value attribute and the value attribute is empty",
+      "non-empty-value: Element has an empty value attribute",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute",
+      "presentational-role: Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2"
+    ],
+    "axe_rule_id": "input-button-name",
+    "axe_help": "Input buttons must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/input-button-name?application=axeAPI",
+    "impact": "critical",
+    "selector": ".form_field-wrapper.is-footer > .form_submit-button-wrapper > .form_submit-button.w-button[data-wait=\"\"]",
+    "html_snippet": "<input type=\"submit\" data-wait=\"\" class=\"form_submit-button w-button\" value=\"\">",
+    "attributes": {
+      "type": "submit",
+      "data-wait": "",
+      "class": "form_submit-button w-button",
+      "value": "",
+      "style": ""
+    },
+    "role_name_guess": "input \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "button",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\input-button-name__.form_field-wrapper.is-footer_.form_submit-button-wrapper_.png",
+    "failureSummary": "Fix any of the following:\n  Element has a value attribute and the value attribute is empty\n  Element has an empty value attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    "why_any": [
+      "non-empty-if-present: Element has a value attribute and the value attribute is empty",
+      "non-empty-value: Element has an empty value attribute",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute",
+      "presentational-role: Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "landmark-no-duplicate-banner",
+    "axe_help": "Document should not have more than one banner landmark",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-no-duplicate-banner?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".navbar_component",
+    "html_snippet": "<div data-animation=\"default\" class=\"navbar_component w-nav\" data-easing2=\"ease-in-quad\" data-easing=\"ease-in-quad\" data-collapse=\"all\" data-w-id=\"f839a7d3-09e8-5899-4c55-b323aa7dea02\" role=\"banner\" data-no-scroll=\"1\" data-duration=\"400\" data-doc-height=\"1\">",
+    "attributes": {
+      "data-animation": "default",
+      "class": "navbar_component w-nav",
+      "data-easing2": "ease-in-quad",
+      "data-easing": "ease-in-quad",
+      "data-collapse": "all",
+      "data-w-id": "f839a7d3-09e8-5899-4c55-b323aa7dea02",
+      "role": "banner",
+      "data-no-scroll": "1",
+      "data-duration": "400",
+      "data-doc-height": "1"
+    },
+    "role_name_guess": "banner \u2014 BRANDIENCE\nLET'S TALK",
+    "nearby_text": "BRANDIENCE\nLET'S TALK",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\landmark-no-duplicate-banner__.navbar_component.png",
+    "failureSummary": "Fix any of the following:\n  Document has more than one banner landmark",
+    "why_any": [
+      "page-no-duplicate-banner: Document has more than one banner landmark"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "landmark-one-main",
+    "axe_help": "Document should have one main landmark",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI",
+    "impact": "moderate",
+    "selector": "html",
+    "html_snippet": "<html data-wf-domain=\"www.brandience.com\" data-wf-page=\"65e7472de2b8b230342c4d9e\" data-wf-site=\"64dac5e842f08e9c77939f4b\" lang=\"en\" class=\" w-mod-js w-mod-ix\">",
+    "attributes": {
+      "data-wf-domain": "www.brandience.com",
+      "data-wf-page": "65e7472de2b8b230342c4d9e",
+      "data-wf-site": "64dac5e842f08e9c77939f4b",
+      "lang": "en",
+      "class": " w-mod-js w-mod-ix"
+    },
+    "role_name_guess": "html \u2014 BRANDIENCE\nLET'S TALK\nCONNECT\nLet\u2019s talk about your next big idea\n\n\nBrandience is my go-to agency. They have a deep understanding of our business.\n\nBrett C., VP Field Marketing\n\nTropical Smooth",
+    "nearby_text": "BRANDIENCE\nLET'S TALK\nCONNECT\nLet\u2019s talk about your next big idea\n\n\nBrandience is my go-to agency. They have a deep understanding of our business.\n\nBrett C., VP Field Marketing\n\nTropical Smoothie Cafe\n\n\nYour name\nOrganization\nEmail address\nPhone number\nTell us some details!\nSubscribe to our newsletter\nSEND EMAIL\nLOCATION\n\nVisit our office\n\n\nBrandience\n\u200d3251 Riverside Drive\nCincinnati, OH\n45226\nUnited States\n\n\n513-333-4100\n\nCAREERS\n\nWe like to get worked up\n\n\nWhen people talk about marketing, dat",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\landmark-one-main__html.png",
+    "failureSummary": "Fix all of the following:\n  Document does not have a main landmark",
+    "why_any": [],
+    "why_all": [
+      "page-has-main: Document does not have a main landmark"
+    ],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "landmark-unique",
+    "axe_help": "Ensures landmarks are unique",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-unique?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".navbar_component",
+    "html_snippet": "<div data-animation=\"default\" class=\"navbar_component w-nav\" data-easing2=\"ease-in-quad\" data-easing=\"ease-in-quad\" data-collapse=\"all\" data-w-id=\"f839a7d3-09e8-5899-4c55-b323aa7dea02\" role=\"banner\" data-no-scroll=\"1\" data-duration=\"400\" data-doc-height=\"1\">",
+    "attributes": {
+      "data-animation": "default",
+      "class": "navbar_component w-nav",
+      "data-easing2": "ease-in-quad",
+      "data-easing": "ease-in-quad",
+      "data-collapse": "all",
+      "data-w-id": "f839a7d3-09e8-5899-4c55-b323aa7dea02",
+      "role": "banner",
+      "data-no-scroll": "1",
+      "data-duration": "400",
+      "data-doc-height": "1"
+    },
+    "role_name_guess": "banner \u2014 BRANDIENCE\nLET'S TALK",
+    "nearby_text": "BRANDIENCE\nLET'S TALK",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\landmark-unique__.navbar_component.png",
+    "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    "why_any": [
+      "landmark-is-unique: The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2",
+      "2.4.4"
+    ],
+    "axe_rule_id": "link-name",
+    "axe_help": "Links must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "impact": "serious",
+    "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block:nth-child(1)",
+    "html_snippet": "<a href=\"https://www.facebook.com/Brandience/\" class=\"social_iconlink w-inline-block\">",
+    "attributes": {
+      "href": "https://www.facebook.com/Brandience/",
+      "class": "social_iconlink w-inline-block"
+    },
+    "role_name_guess": "a \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "link",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+    "why_any": [
+      "has-visible-text: Element does not have text that is visible to screen readers",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "focusable-no-name: Element is in tab order and does not have accessible text"
+    ]
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2",
+      "2.4.4"
+    ],
+    "axe_rule_id": "link-name",
+    "axe_help": "Links must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "impact": "serious",
+    "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block:nth-child(2)",
+    "html_snippet": "<a href=\"https://www.linkedin.com/company/brandience/\" class=\"social_iconlink w-inline-block\">",
+    "attributes": {
+      "href": "https://www.linkedin.com/company/brandience/",
+      "class": "social_iconlink w-inline-block"
+    },
+    "role_name_guess": "a \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "link",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+    "why_any": [
+      "has-visible-text: Element does not have text that is visible to screen readers",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "focusable-no-name: Element is in tab order and does not have accessible text"
+    ]
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2",
+      "2.4.4"
+    ],
+    "axe_rule_id": "link-name",
+    "axe_help": "Links must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "impact": "serious",
+    "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block[href$=\"brandience\"]",
+    "html_snippet": "<a href=\"https://twitter.com/brandience\" class=\"social_iconlink w-inline-block\">",
+    "attributes": {
+      "href": "https://twitter.com/brandience",
+      "class": "social_iconlink w-inline-block"
+    },
+    "role_name_guess": "a \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "link",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+    "why_any": [
+      "has-visible-text: Element does not have text that is visible to screen readers",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "focusable-no-name: Element is in tab order and does not have accessible text"
+    ]
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2",
+      "2.4.4"
+    ],
+    "axe_rule_id": "link-name",
+    "axe_help": "Links must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "impact": "serious",
+    "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block:nth-child(4)",
+    "html_snippet": "<a href=\"https://www.youtube.com/channel/UC3uVpvVVf86fWdq5U7f333Q\" class=\"social_iconlink w-inline-block\">",
+    "attributes": {
+      "href": "https://www.youtube.com/channel/UC3uVpvVVf86fWdq5U7f333Q",
+      "class": "social_iconlink w-inline-block"
+    },
+    "role_name_guess": "a \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "link",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+    "why_any": [
+      "has-visible-text: Element does not have text that is visible to screen readers",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "focusable-no-name: Element is in tab order and does not have accessible text"
+    ]
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#w-node-cf3ed33f-bae7-cbe3-22b8-584f83498145-342c4d9e",
+    "html_snippet": "<div id=\"w-node-cf3ed33f-bae7-cbe3-22b8-584f83498145-342c4d9e\" class=\"content\">",
+    "attributes": {
+      "id": "w-node-cf3ed33f-bae7-cbe3-22b8-584f83498145-342c4d9e",
+      "class": "content"
+    },
+    "role_name_guess": "div \u2014 LOCATION\n\nVisit our office\n\n\nBrandience\n\u200d3251 Riverside Drive\nCincinnati, OH\n45226\nUnited States\n\n\n513-333-4100",
+    "nearby_text": "LOCATION\n\nVisit our office\n\n\nBrandience\n\u200d3251 Riverside Drive\nCincinnati, OH\n45226\nUnited States\n\n\n513-333-4100",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region___w-node-cf3ed33f-bae7-cbe3-22b8-584f83498145-342c4d9e.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "section:nth-child(6)",
+    "html_snippet": "<section class=\"section\" style=\"opacity: 0;\">",
+    "attributes": {
+      "class": "section",
+      "style": "opacity: 0;"
+    },
+    "role_name_guess": "section \u2014 CAREERS\n\nWe like to get worked up\n\n\nWhen people talk about marketing, data and creativity we get all worked up. In a good way. We\u2019re very passionate about what we do. Ours is a fast-paced, h",
+    "nearby_text": "CAREERS\n\nWe like to get worked up\n\n\nWhen people talk about marketing, data and creativity we get all worked up. In a good way. We\u2019re very passionate about what we do. Ours is a fast-paced, high-energy world and we wouldn\u2019t have it any other way. Creating brand value is serious business, and we have serious fun doing it.\n\n\nThe CODE we live by consists of three things.\n\n\nAll in. One team. Go beyond.\n\n\nView available positions on our Careers Page.",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region__section_nth-child_6_.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "section:nth-child(8) > .padding-x-md > .container-large > .w-layout-grid.grid_2up > .image-wrapper",
+    "html_snippet": "<div class=\"image-wrapper\">",
+    "attributes": {
+      "class": "image-wrapper"
+    },
+    "role_name_guess": "div \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region__section_nth-child_8_.padding-x-md_.container-large_.w.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e > .max-w-md",
+    "html_snippet": "<div class=\"max-w-md\">",
+    "attributes": {
+      "class": "max-w-md"
+    },
+    "role_name_guess": "div \u2014 PARTNERSHIPS\n\nReady to get started?",
+    "nearby_text": "PARTNERSHIPS\n\nReady to get started?",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region___w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e_.max.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e > .margin-top-lg",
+    "html_snippet": "<div class=\"margin-top-lg\"><div class=\"max-w-md\"><p>If you\u2019d like to connect with someone in Business Development, please fill out our contact form and we'll be in touch.<br></p></div></div>",
+    "attributes": {
+      "class": "margin-top-lg"
+    },
+    "role_name_guess": "div \u2014 If you\u2019d like to connect with someone in Business Development, please fill out our contact form and we'll be in touch.",
+    "nearby_text": "If you\u2019d like to connect with someone in Business Development, please fill out our contact form and we'll be in touch.",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region___w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e_.mar.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".align-left.button.w--current > .uppercase",
+    "html_snippet": "<div data-w-id=\"9195a9c9-0823-decd-7ee3-ada92f4cacd8\" class=\"uppercase\" style=\"opacity: 0;\">Let's talk</div>",
+    "attributes": {
+      "data-w-id": "9195a9c9-0823-decd-7ee3-ada92f4cacd8",
+      "class": "uppercase",
+      "style": "opacity: 0;"
+    },
+    "role_name_guess": "div \u2014 LET'S TALK",
+    "nearby_text": "LET'S TALK",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region__.align-left.button.w--current_.uppercase.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".link_uppercase",
+    "html_snippet": "<a href=\"/connect\" aria-current=\"page\" class=\"link_uppercase w--current\">Let's talk</a>",
+    "attributes": {
+      "href": "/connect",
+      "aria-current": "page",
+      "class": "link_uppercase w--current"
+    },
+    "role_name_guess": "a \u2014 LET'S TALK",
+    "nearby_text": "LET'S TALK",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "LET'S TALK"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.link_uppercase.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".quote_text_1",
+    "html_snippet": "<p class=\"quote_text_1\">Brandience is my go-to agency. They have a deep understanding of our business.</p>",
+    "attributes": {
+      "class": "quote_text_1"
+    },
+    "role_name_guess": "p \u2014 Brandience is my go-to agency. They have a deep understanding of our business.",
+    "nearby_text": "Brandience is my go-to agency. They have a deep understanding of our business.",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.quote_text_1.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".is-1 > .quote_source > .margin-y-none:nth-child(1)",
+    "html_snippet": "<p class=\"margin-y-none\">Brett C., VP Field Marketing</p>",
+    "attributes": {
+      "class": "margin-y-none"
+    },
+    "role_name_guess": "p \u2014 Brett C., VP Field Marketing",
+    "nearby_text": "Brett C., VP Field Marketing",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.is-1_.quote_source_.margin-y-none_nth-child_1_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".is-1 > .quote_source > .margin-y-none:nth-child(2) > strong",
+    "html_snippet": "<strong>Tropical Smoothie Cafe</strong>",
+    "attributes": {},
+    "role_name_guess": "strong \u2014 Tropical Smoothie Cafe",
+    "nearby_text": "Tropical Smoothie Cafe",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.is-1_.quote_source_.margin-y-none_nth-child_2_strong.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "#Message-2",
+    "html_snippet": "<textarea class=\"textarea w-input\" data-wfhsfieldname=\"Tell-us-some-details!\" maxlength=\"5000\" name=\"Message\" data-name=\"Message\" placeholder=\"Example Text\" id=\"Message-2\"></textarea>",
+    "attributes": {
+      "class": "textarea w-input",
+      "data-wfhsfieldname": "Tell-us-some-details!",
+      "maxlength": "5000",
+      "name": "Message",
+      "data-name": "Message",
+      "placeholder": "Example Text",
+      "id": "Message-2",
+      "style": ""
+    },
+    "role_name_guess": "textarea \u2014 ",
+    "nearby_text": "Tell us some details!",
+    "acc_snapshot": {
+      "role": "textbox",
+      "name": "Tell us some details!"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast___Message-2.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it's partially obscured by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".position-relative > .uppercase",
+    "html_snippet": "<div class=\"uppercase\">Send Email</div>",
+    "attributes": {
+      "class": "uppercase"
+    },
+    "role_name_guess": "div \u2014 SEND EMAIL",
+    "nearby_text": "SEND EMAIL",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.position-relative_.uppercase.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it is overlapped by another element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "frame-tested",
+    "axe_help": "Frames should be tested with axe-core",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/frame-tested?application=axeAPI",
+    "impact": "critical",
+    "selector": "iframe[width=\"100%\"]",
+    "html_snippet": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.4873124444953!2d-84.4455610479628!3d39.11814097943676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b15759e6f7eb%3A0xd5ba2d25d31ee5e8!2sBrandience!5e0!3m2!1sen!2sus!4v1637610371248!5m2!1sen!2sus\" width=\"100%\" height=\"450\" allowfullscreen=\"allowfullscreen\" loading=\"lazy\" style=\"border: 0px;\">",
+    "attributes": {
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.4873124444953!2d-84.4455610479628!3d39.11814097943676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b15759e6f7eb%3A0xd5ba2d25d31ee5e8!2sBrandience!5e0!3m2!1sen!2sus!4v1637610371248!5m2!1sen!2sus",
+      "width": "100%",
+      "height": "450",
+      "allowfullscreen": "allowfullscreen",
+      "loading": "lazy",
+      "style": "border: 0px;"
+    },
+    "role_name_guess": "iframe \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\frame-tested__iframe_width_100_.png",
+    "failureSummary": "Fix all of the following:\n  The iframe still has to be tested with axe-core",
+    "why_any": [],
+    "why_all": [
+      "frame-tested: The iframe still has to be tested with axe-core"
+    ],
+    "why_none": []
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "bucket": "semantic_review",
+    "topic": "SC-1.1.1",
+    "sc_list": [
+      "1.1.1"
+    ],
+    "axe_rule_id": "image-alt",
+    "axe_help": "Images must have alternate text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
+    "impact": null,
+    "selector": ".image",
+    "html_snippet": "<img src=\"https://cdn.prod.website-files.com/64dac5e842f08e9c77939f4b/64dae2e0829926e4222cc709_logo.png\" loading=\"lazy\" alt=\"brandience logo\" class=\"image\">",
+    "attributes": {
+      "src": "https://cdn.prod.website-files.com/64dac5e842f08e9c77939f4b/64dae2e0829926e4222cc709_logo.png",
+      "loading": "lazy",
+      "alt": "brandience logo",
+      "class": "image"
+    },
+    "role_name_guess": "img \u2014 brandience logo",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\image-alt__.image.png",
+    "failureSummary": null,
+    "why_any": [
+      "has-alt: Element has an alt attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "alt-space-value: Element has a valid alt attribute value"
+    ]
+  }
+]

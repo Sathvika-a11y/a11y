@@ -1,0 +1,33 @@
+{
+  "topic": "SC 4.1.2 — Name, Role, Value",
+  "tags": ["SC-4.1.2", "4.1.2", "wcag412"],
+  "do": [
+    "Custom widgets expose correct role (native or ARIA) with a meaningful accessible name.",
+    "State and value are programmatically determinable and update when the UI changes.",
+    "Form controls have labels (label/for, aria-label, or aria-labelledby) that match purpose.",
+    "Only use ARIA attributes that are valid for the chosen role; keep IDs unique."
+  ],
+  "dont": [
+    "Don’t put aria-hidden on focusable/operable elements.",
+    "Don’t rely on placeholder as the only label.",
+    "Don’t assign invalid/unsupported roles or attributes.",
+    "Don’t let DOM state drift from the accessibility tree (e.g., toggles not updating aria-pressed)."
+  ],
+  "edge_cases": [
+    "Icon-only buttons need an accessible name (aria-label) even if visually obvious.",
+    "Composite widgets (menus, tabs) require required children/parents per the ARIA spec.",
+    "Dynamic components must update name/state without requiring focus loss/repaint."
+  ],
+  "techniques": ["ARIA6", "ARIA9", "ARIA14", "H44"],
+  "axe_rules_hint": [
+    "aria-allowed-attr",
+    "aria-required-attr",
+    "aria-required-children",
+    "aria-required-parent",
+    "aria-roles",
+    "aria-valid-attr",
+    "aria-valid-attr-value",
+    "aria-hidden-focus",
+    "duplicate-id-aria"
+  ]
+}

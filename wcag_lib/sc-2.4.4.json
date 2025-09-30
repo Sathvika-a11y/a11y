@@ -1,0 +1,53 @@
+{
+  "topic": "SC 2.4.4 — Link Purpose (In Context)",
+  "tags": ["SC-2.4.4","2.4.4","wcag244"],
+  "do": [
+    "Use link text that clearly describes the destination or action (e.g., “Download annual report PDF”)",
+    "Ensure link context (surrounding text) clarifies link purpose when text alone is ambiguous",
+    "Include file type and size for downloadable resources (e.g., “Download brochure (PDF, 2 MB)”)","Use active verbs that describe the action (e.g., “Register for webinar”, “View seating chart”)",
+    "Use unique link text within a page to avoid repetition (e.g., “View privacy policy” vs. “View cookie policy”)",
+    "If link text is an image, provide alt text conveying the same purpose","For links opening new windows, indicate this in link text or context (e.g., “Read more (opens in new tab)”)",
+    "Combine visible link text with aria-label when additional context is needed","For “Learn more” type links, ensure adjacent heading or sentence provides specific topic context",
+    "Use breadcrumbs as links with descriptive labels (e.g., “Home > Products > Lenses”)",
+    "Group related links under a meaningful heading or list context","For pagination links, include page numbers and context (e.g., “Page 2 of 10”)",
+    "For error summary links, describe target field (e.g., “Go to error: Email address missing”)",
+    "Use link text for skip-links that describe section (e.g., “Skip to main navigation”)",
+    "In tables, use link text plus column/row context (e.g., “Edit row 3 details”)",
+    "Use meaningful link text in navigation menus (e.g., “Services”, “Contact us”)",
+    "For video playlists, link text should describe content (e.g., “Watch tutorial: Accessibility basics”)",
+    "For archived posts, include year/month context (e.g., “Blog archives: August 2025”)",
+    "Use descriptive labels for social media links (e.g., “Follow us on Twitter”)",
+    "When linking to external sites, indicate external context (e.g., “View report on W3C site”)"
+  ],
+  "dont": [
+    "Do not use generic link text like “Click here”, “Read more”, “More info” without context","Do not repeat the same link text for different destinations on the same page",
+    "Do not rely on page position or number to convey purpose (e.g., “Link #4”)",
+    "Do not rely on color, underlining alone to indicate link purpose","Do not hide link purpose in tooltip only",
+    "Do not omit indication when link opens in a new tab/window","Do not use non-descriptive link text within buttons (e.g., “Submit” as link)",
+    "Do not depend on surrounding visual context that screen readers may not announce","Do not use long URLs as link text","Do not use icon-only links without aria-label or visible text",
+    "Do not include entire sentences as link text","Do not use repeated phrases like “More details” without context","Do not assume users know file extensions or acronyms used in link text",
+    "Do not use link text that duplicates heading text for different purposes"
+  ],
+  "edge_cases": [
+    "Links in a navigation bar that use only icons (e.g., home icon): must include aria-label","Accordion “Read more” links: aria-label should describe section (e.g., “Read more about pricing plans”)",
+    "Image-based links (e.g., banner ads): alt text must convey target page purpose","Links in form error summaries: include field name and error type","Links in tooltips or popovers: ensure visible context and link text clarity",
+    "Links in data tables: include row and column context (e.g., “Download invoice for Order #12345”)",
+    "Links generated dynamically (e.g., infinite scroll ‘Load more’): include context of content loaded","Links in carousels/sliders: each slide’s link text must be unique and descriptive",
+    "Downloadable CSV/Excel export links: include file format (e.g., “Export data to CSV”)",
+    "Links to email addresses: use “Email support at support@example.com” rather than raw “support@example.com”",
+    "Links in footers: ensure descriptive text (e.g., “Terms of service”)","Links to maps: describe purpose (e.g., “View office location on Google Maps”)",
+    "Links for screen reader only: ensure aria-label describes purpose","Links within captions/figures: include context (e.g., “View full-size image of chart”)",
+    "Links to PDFs embedded in iframes: include format in text (e.g., “Open site map (PDF)”)","Links in multi-lingual sites: include language code when linking cross-language pages",
+    "Links that trigger downloads via scripting: ensure link text indicates download","Links that launch applications or protocols (e.g., “Open in Zoom”): include application name"
+  ],
+  "techniques": [
+    "H64: Link text should describe purpose","G91: Using link context to clarify ambiguous link text","G162: Providing link context before or after the link",
+    "H67: Using title attribute to explain ambiguous link text (use sparingly)","ARIA9: Using aria-labelledby to add context to link text",
+    "ARIA10: Using aria-describedby to provide additional link context","H30: Using descriptive link text for anchor elements",
+    "PDF6: Providing link description in PDF with /ActualText entry"
+  ],
+  "axe_rules_hint": [
+    "link-name: Ensures links have accessible, descriptive names","region: Ensures landmark regions have labels",
+    "page-has-heading-one: Context for skip links","aria-allowed-attr: Flags inappropriate ARIA on links"
+  ]
+}

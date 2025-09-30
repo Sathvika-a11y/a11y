@@ -1,0 +1,73 @@
+[
+  {
+    "page_url": "https://example.com",
+    "bucket": "must_review",
+    "topic": "SC-3.1.1",
+    "sc_list": [
+      "3.1.1"
+    ],
+    "axe_rule_id": "html-has-lang",
+    "axe_help": "<html> element must have a lang attribute",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/html-has-lang?application=axeAPI",
+    "impact": "serious",
+    "selector": "html",
+    "html_snippet": "<html>",
+    "attributes": {},
+    "role_name_guess": "html \u2014 Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "nearby_text": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\html-has-lang__html.png",
+    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute",
+    "why_any": [
+      "has-lang: The <html> element does not have a lang attribute"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://example.com",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "landmark-one-main",
+    "axe_help": "Document should have one main landmark",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI",
+    "impact": "moderate",
+    "selector": "html",
+    "html_snippet": "<html>",
+    "attributes": {},
+    "role_name_guess": "html \u2014 Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "nearby_text": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\landmark-one-main__html.png",
+    "failureSummary": "Fix all of the following:\n  Document does not have a main landmark",
+    "why_any": [],
+    "why_all": [
+      "page-has-main: Document does not have a main landmark"
+    ],
+    "why_none": []
+  },
+  {
+    "page_url": "https://example.com",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "div",
+    "html_snippet": "<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>",
+    "attributes": {},
+    "role_name_guess": "div \u2014 Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "nearby_text": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\region__div.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  }
+]

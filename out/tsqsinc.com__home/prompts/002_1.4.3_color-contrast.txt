@@ -1,0 +1,55 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 1.4.3
+Techniques context (from curated library):
+{
+  "topic": "SC 1.4.3",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
+    "Consider axe help: Elements must meet minimum color contrast ratio thresholds",
+    "Ref: https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: .read-more-container > .read-more-btn[role="link"]
+- HTML snippet: <button class="read-more-btn" role="link" aria-label="Read More About Model Based Testing">Read More</button>
+- Attributes: {"class": "read-more-btn", "role": "link", "aria-label": "Read More About Model Based Testing"}
+- Computed role/name (best-effort): link — Read More About Model Based Testing
+- Nearby text window: Read More
+- Accessibility snapshot (partial): {"role": "link", "name": "Read More About Model Based Testing"}
+- Axe ruleId: color-contrast
+- Axe help: Elements must meet minimum color contrast ratio thresholds
+- Axe impact: serious
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.53 (foreground color: #ffffff, background color: #d9680e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+  "why_any": [
+    "color-contrast: Element has insufficient color contrast of 3.53 (foreground color: #ffffff, background color: #d9680e, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://tsqsinc.com/"
+}

@@ -1,0 +1,61 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 1.1.1
+Techniques context (from curated library):
+{
+  "topic": "SC 1.1.1 Non-text Content",
+  "do": [
+    "Decorative images: use empty alt ('').",
+    "Functional images (in links/buttons): alt describes action or destination (e.g., 'Search', 'View product').",
+    "Informative images: alt conveys the information/meaning succinctly.",
+    "Text-in-image: alt includes the visible text.",
+    "Complex images (charts): provide a brief alt and reference a nearby longer description."
+  ],
+  "dont": [
+    "Avoid generic terms like 'image', 'photo', or filenames in alt.",
+    "Do not duplicate nearby link/button labels in alt unless it\u2019s the only accessible name."
+  ],
+  "edge_cases": [
+    "If a link/button already has a clear accessible name, the image alt may be empty to avoid redundancy.",
+    "Company logos: alt should usually be the company name unless purely decorative."
+  ]
+}
+
+Element context:
+- Selector: .ImageCard_link__Pimer.IhLink_link__B1NPM[href$="childrens-health"] > .ImageCard_wrapper__Kc2FR.css-p4afvr.MuiPaper-root > .ImageCard_imageWrapper__2P7UV.css-0[data-attribte="ImageCard"] > .ImageCard_image__6wk2g[width="350"][height="262.5"]
+- HTML snippet: <img alt="Doctor checking toddler's heart" sizes="(max-width: 768px) 100vw, 350px" srcset="/_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D
+- Attributes: {"alt": "Doctor checking toddler's heart", "sizes": "(max-width: 768px) 100vw, 350px", "srcset": "/_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&w=640&q=75 640w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&w=750&q=75 750w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&w=828&q=75 828w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&w=1080&q=75 1080w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&w=1200&q=75 1200w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&w=1920&q=75 1920w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&w=2048&q=75 2048w, /_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&w=3840&q=75 3840w", "src": "/_next/image?url=%2Fsc10media%2Fimages%2Fintermountain-health%2Fhome%2Ffinal%2F489362313r105x.ashx%3Fh%3D400%26iar%3D0%26w%3D599%26hash%3D035CAB7EAC744E425EF1DD9887863885&w=3840&q=75", "width": "350", "height": "262.5", "decoding": "async", "data-nimg": "1", "class": "ImageCard_image__6wk2g", "loading": "lazy", "style": "color:transparent"}
+- Computed role/name (best-effort): img — Doctor checking toddler's heart
+- Nearby text window: 
+- Accessibility snapshot (partial): {}
+- Axe ruleId: image-alt
+- Axe help: Images must have alternate text
+- Axe impact: None
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": null,
+  "why_any": [
+    "has-alt: Element has an alt attribute"
+  ],
+  "why_all": [],
+  "why_none": [
+    "alt-space-value: Element has a valid alt attribute value"
+  ],
+  "page_url": "https://intermountainhealthcare.org/"
+}

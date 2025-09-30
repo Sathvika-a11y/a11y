@@ -1,0 +1,410 @@
+[
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "landmark-unique",
+    "axe_help": "Ensures landmarks are unique",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-unique?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".uk-navbar",
+    "html_snippet": "<nav class=\"uk-container uk-navbar\" uk-navbar=\"\">",
+    "attributes": {
+      "class": "uk-container uk-navbar",
+      "uk-navbar": ""
+    },
+    "role_name_guess": "nav \u2014 OUR SOLUTIONS\nAnalytics\nFor Payers\nGovernment Programs\nPractice Transformation\nWHY WORK WITH US\nWorking at Castell\nOUR STORY\nNEWS\nCONTACT US\nPORTAL LOG-IN",
+    "nearby_text": "OUR SOLUTIONS\nAnalytics\nFor Payers\nGovernment Programs\nPractice Transformation\nWHY WORK WITH US\nWorking at Castell\nOUR STORY\nNEWS\nCONTACT US\nPORTAL LOG-IN",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\landmark-unique__.uk-navbar.png",
+    "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+    "why_any": [
+      "landmark-is-unique: The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2",
+      "2.4.4"
+    ],
+    "axe_rule_id": "link-name",
+    "axe_help": "Links must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "impact": "serious",
+    "selector": ".uk-navbar-item",
+    "html_snippet": "<a class=\"uk-navbar-item uk-logo\" href=\"https://castellhealth.com\">",
+    "attributes": {
+      "class": "uk-navbar-item uk-logo",
+      "href": "https://castellhealth.com"
+    },
+    "role_name_guess": "a \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "link",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\link-name__.uk-navbar-item.png",
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+    "why_any": [
+      "has-visible-text: Element does not have text that is visible to screen readers",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "focusable-no-name: Element is in tab order and does not have accessible text"
+    ]
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2",
+      "2.4.4"
+    ],
+    "axe_rule_id": "link-name",
+    "axe_help": "Links must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[href$=\"#scrolltome\"]",
+    "html_snippet": "<a href=\"#scrolltome\" uk-scroll=\"offset: 100;\">\n      <img src=\"https://castellhealth.com/wp-content/themes/castell-2019/images/learn-more-arrow.png\" alt=\"\">\n    </a>",
+    "attributes": {
+      "href": "#scrolltome",
+      "uk-scroll": "offset: 100;"
+    },
+    "role_name_guess": "a \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "link",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\link-name__a_href_scrolltome_.png",
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+    "why_any": [
+      "has-visible-text: Element does not have text that is visible to screen readers",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "focusable-no-name: Element is in tab order and does not have accessible text"
+    ]
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2",
+      "2.4.4"
+    ],
+    "axe_rule_id": "link-name",
+    "axe_help": "Links must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[target=\"_social\"]:nth-child(1)",
+    "html_snippet": "<a href=\"https://www.linkedin.com/company/castellhealth/\" target=\"_social\">",
+    "attributes": {
+      "href": "https://www.linkedin.com/company/castellhealth/",
+      "target": "_social"
+    },
+    "role_name_guess": "a \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "link",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\link-name__a_target__social_nth-child_1_.png",
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+    "why_any": [
+      "has-visible-text: Element does not have text that is visible to screen readers",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "focusable-no-name: Element is in tab order and does not have accessible text"
+    ]
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2",
+      "2.4.4"
+    ],
+    "axe_rule_id": "link-name",
+    "axe_help": "Links must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[target=\"_social\"]:nth-child(2)",
+    "html_snippet": "<a href=\"https://twitter.com/CastellHealth\" target=\"_social\">",
+    "attributes": {
+      "href": "https://twitter.com/CastellHealth",
+      "target": "_social"
+    },
+    "role_name_guess": "a \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "link",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\link-name__a_target__social_nth-child_2_.png",
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+    "why_any": [
+      "has-visible-text: Element does not have text that is visible to screen readers",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "focusable-no-name: Element is in tab order and does not have accessible text"
+    ]
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.3.1",
+    "sc_list": [
+      "1.3.1"
+    ],
+    "axe_rule_id": "aria-required-children",
+    "axe_help": "Certain ARIA roles must contain particular children",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-required-children?application=axeAPI",
+    "impact": "critical",
+    "selector": "#feedcontainer > .slick-dots[role=\"tablist\"]",
+    "html_snippet": "<ul class=\"slick-dots\" style=\"\" role=\"tablist\">",
+    "attributes": {
+      "class": "slick-dots",
+      "style": "",
+      "role": "tablist"
+    },
+    "role_name_guess": "tablist \u2014 ",
+    "nearby_text": "DECEMBER 7, 2021\nNew Survey Shows Consumers Want Increased Access to Clinical Care at Home\nWASHINGTON \u2013 On December 2, Moving Health Home (MHH), a coalition of health care organizations advocating for improved access to home-based care,...\nREAD MORE\u00a0\nSEPTEMBER 2, 2021\nCastell\u2019s ACO Helps Intermountain Healthcare Achieve $11.5 Million in Medicare Cost Savings While Achieving 97 Percent Score for Quality\nThe U.S. Centers for Medicare and Medicaid Services (CMS) have announced the 2020 results for ",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\aria-required-children___feedcontainer_.slick-dots_role_tablist_.png",
+    "failureSummary": "Fix any of the following:\n  Expecting ARIA child role to be added: tab",
+    "why_any": [
+      "aria-required-children: Expecting ARIA child role to be added: tab"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2"
+    ],
+    "axe_rule_id": "aria-valid-attr-value",
+    "axe_help": "ARIA attributes must conform to valid values",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-valid-attr-value?application=axeAPI",
+    "impact": "critical",
+    "selector": "#slick-slide20",
+    "html_snippet": "<div class=\"news-article slick-slide slick-current slick-active\" style=\"width: 654px;\" data-slick-index=\"0\" aria-hidden=\"false\" tabindex=\"0\" role=\"tabpanel\" id=\"slick-slide20\" aria-describedby=\"slick-slide-control20\">",
+    "attributes": {
+      "class": "news-article slick-slide slick-current slick-active",
+      "style": "width: 654px;",
+      "data-slick-index": "0",
+      "aria-hidden": "false",
+      "tabindex": "0",
+      "role": "tabpanel",
+      "id": "slick-slide20",
+      "aria-describedby": "slick-slide-control20"
+    },
+    "role_name_guess": "tabpanel \u2014 NOVEMBER 22, 2023\nCastell Among Top National Leaders in Medicare ACO Savings and Quality Performance for 2022, Marking Five Consecutive Years of Savings\nCastell, Intermountain Health\u2019s popu",
+    "nearby_text": "NOVEMBER 22, 2023\nCastell Among Top National Leaders in Medicare ACO Savings and Quality Performance for 2022, Marking Five Consecutive Years of Savings\nCastell, Intermountain Health\u2019s population heath subsidiary, announced that its Castell Accountable Care value-based Medicare program has generated $46.8 million in savings for...\nREAD MORE",
+    "acc_snapshot": {
+      "role": "tabpanel",
+      "name": "",
+      "children": [
+        {
+          "role": "text",
+          "name": "NOVEMBER 22, 2023"
+        },
+        {
+          "role": "link",
+          "name": "Castell Among Top National Leaders in Medicare ACO Savings and Quality Performance for 2022, Marking Five Consecutive Years of Savings"
+        },
+        {
+          "role": "text",
+          "name": "Castell, Intermountain Health\u2019s population heath subsidiary, announced that its Castell Accountable Care value-based Medicare program has generated $46.8 million in savings for..."
+        },
+        {
+          "role": "link",
+          "name": "READ MORE\u00a0",
+          "description": "Castell Among Top National Leaders in Medicare ACO Savings and Quality Performance for 2022, Marking Five Consecutive Years of Savings"
+        }
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\aria-valid-attr-value___slick-slide20.png",
+    "failureSummary": "Fix all of the following:\n  ARIA attribute element ID does not exist on the page: aria-describedby=\"slick-slide-control20\"",
+    "why_any": [],
+    "why_all": [
+      "aria-valid-attr-value: ARIA attribute element ID does not exist on the page: aria-describedby=\"slick-slide-control20\""
+    ],
+    "why_none": []
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[autoplay=\"\"]",
+    "html_snippet": "<a href=\"https://castellhealth.com/wp-content/themes/castell-2019/videos/evolve.mp4\" autoplay=\"\"><img src=\"https://castellhealth.com/wp-content/themes/castell-2019/images/play-btn.png\" alt=\"Play Button\" class=\"\"><br>Watch Video</a>",
+    "attributes": {
+      "href": "https://castellhealth.com/wp-content/themes/castell-2019/videos/evolve.mp4",
+      "autoplay": ""
+    },
+    "role_name_guess": "a \u2014 Watch Video",
+    "nearby_text": "Watch Video",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Play Button Watch Video"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\color-contrast__a_autoplay_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a pseudo element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "div:nth-child(2) > p:nth-child(1)",
+    "html_snippet": "<p>\n              Healthcare is changing.            </p>",
+    "attributes": {},
+    "role_name_guess": "p \u2014 Healthcare is changing.",
+    "nearby_text": "Healthcare is changing.",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\color-contrast__div_nth-child_2_p_nth-child_1_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a pseudo element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "div:nth-child(2) > p:nth-child(2)",
+    "html_snippet": "<p>\n              Evolve faster with Castell.            </p>",
+    "attributes": {},
+    "role_name_guess": "p \u2014 Evolve faster with Castell.",
+    "nearby_text": "Evolve faster with Castell.",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\color-contrast__div_nth-child_2_p_nth-child_2_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a pseudo element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "semantic_review",
+    "topic": "SC-1.1.1",
+    "sc_list": [
+      "1.1.1"
+    ],
+    "axe_rule_id": "image-alt",
+    "axe_help": "Images must have alternate text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
+    "impact": null,
+    "selector": "img[alt=\"Play Button\"]",
+    "html_snippet": "<img src=\"https://castellhealth.com/wp-content/themes/castell-2019/images/play-btn.png\" alt=\"Play Button\" class=\"\">",
+    "attributes": {
+      "src": "https://castellhealth.com/wp-content/themes/castell-2019/images/play-btn.png",
+      "alt": "Play Button",
+      "class": ""
+    },
+    "role_name_guess": "img \u2014 Play Button",
+    "nearby_text": "Watch Video",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\image-alt__img_alt_Play_Button_.png",
+    "failureSummary": null,
+    "why_any": [
+      "has-alt: Element has an alt attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "alt-space-value: Element has a valid alt attribute value"
+    ]
+  },
+  {
+    "page_url": "https://castellhealth.com/",
+    "bucket": "semantic_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2",
+      "2.4.4"
+    ],
+    "axe_rule_id": "link-name",
+    "axe_help": "Links must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "impact": "serious",
+    "selector": "#post-750 > .text > .post__link > a",
+    "html_snippet": "<a href=\"https://castellhealth.com/castell-aco-2022-results/\" title=\"Castell Among Top National Leaders in Medicare ACO Savings and Quality Performance for 2022, Marking Five Consecutive Years of Savings\" tabindex=\"0\">",
+    "attributes": {
+      "href": "https://castellhealth.com/castell-aco-2022-results/",
+      "title": "Castell Among Top National Leaders in Medicare ACO Savings and Quality Performance for 2022, Marking Five Consecutive Years of Savings",
+      "tabindex": "0"
+    },
+    "role_name_guess": "a \u2014 READ MORE",
+    "nearby_text": "READ MORE",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "READ MORE\u00a0",
+      "description": "Castell Among Top National Leaders in Medicare ACO Savings and Quality Performance for 2022, Marking Five Consecutive Years of Savings"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\castellhealth.com__home\\screenshots\\link-name___post-750_.text_.post__link_a.png",
+    "failureSummary": null,
+    "why_any": [
+      "has-visible-text: Element has text that is visible to screen readers",
+      "non-empty-title: Element has a title attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "focusable-no-name: Element is not in tab order or has accessible text"
+    ]
+  }
+]

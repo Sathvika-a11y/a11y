@@ -1,0 +1,149 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 1.1.1
+Techniques context (from curated library):
+{
+  "topic": "SC 1.1.1 — Non-text Content",
+  "do": [
+    "Provide meaningful, descriptive text alternatives that convey the same information or purpose as the non-text content",
+    "For informational images: describe the content and meaning of the image accurately and concisely",
+    "For functional images (inside links/buttons): describe the action or destination (e.g., 'Search', 'Go to Pricing', 'Home page')",
+    "For complex images (charts, diagrams, graphs): provide both short alt text and a detailed long description using figure/figcaption, adjacent text, or aria-describedby",
+    "Mark purely decorative images with empty alt (alt=\"\") or role=\"presentation\" to hide from assistive technology",
+    "Use aria-label or aria-labelledby when native alt attribute is not available (e.g., SVG icons, CSS background images)",
+    "For image maps: provide alternative text for each area element that describes the link destination or function",
+    "For CAPTCHA: provide text that identifies the purpose AND offer alternative forms for different sensory modalities (audio, cognitive tests)",
+    "For time-based media: provide descriptive identification at minimum (full alternatives covered under 1.2)",
+    "For form controls with images (input type='image'): ensure accessible name describes the button's purpose/function, not appearance",
+    "Update alt text when the image content or purpose changes dynamically",
+    "Include color information in alt text when color conveys meaning or is essential to understanding",
+    "For mathematical expressions: use MathML when possible, or provide comprehensive text alternatives using mathematical notation conventions",
+    "For ASCII art and text-look-alikes: provide complete text alternative that conveys the same information",
+    "For test/exercise images: provide descriptive identification without giving away answers",
+    "For sensory experiences (art, music): provide descriptive identification and context when feasible",
+    "Keep simple alt text concise (under 125-250 characters) and move longer descriptions to separate mechanisms",
+    "For image buttons and controls: describe the action/function, not the visual appearance",
+    "For linked images: describe the link destination or purpose, not just image content",
+    "For thumbnail images: describe what the full-size version contains or where clicking leads",
+    "Use appropriate semantic markup (figure/figcaption) for complex image descriptions",
+    "Test alt text by having it read aloud to ensure it makes sense in context"
+  ],
+  "dont": [
+    "Do not use generic, placeholder, or filename text like 'image', 'photo', 'graphic', 'IMG_1234.png', 'click here'",
+    "Do not duplicate adjacent visible text in alt when it already names the same control or target",
+    "Do not put long descriptions (over 125-250 characters) in alt; use separate long descriptions instead",
+    "Do not leave functional images (buttons, links) with empty or missing alt text",
+    "Do not use redundant phrases like 'image of', 'picture of', 'graphic showing' - screen readers already announce element type",
+    "Do not provide alt text for purely decorative images - use alt=\"\" or role=\"presentation\" instead",
+    "Do not use CSS background images for informational content without providing alternative text mechanism",
+    "Do not use text-look-alikes or ASCII art without comprehensive text alternatives",
+    "Do not rely solely on color to convey information in images without describing color relationships in alt text",
+    "Do not use meaningless alt text like 'spacer', 'bullet', 'separator' for decorative images",
+    "Do not fail to update alt text when image content changes (F20 failure)",
+    "Do not omit alt attribute entirely on img, area, and input type='image' elements (F65 failure)",
+    "Do not use alt text that doesn't include information conveyed by color differences (F13 failure)",
+    "Do not provide long descriptions that don't serve the same purpose as the original content (F67 failure)",
+    "Do not use CSS to include informational images without providing text alternatives (F3 failure)",
+    "Do not use filenames or placeholder text as alternatives (F30 failure)",
+    "Do not incorrectly mark informational images as decorative (F38/F39 failures)",
+    "Do not use title attribute alone as text alternative - it's not reliably accessible",
+    "Do not assume all users will see hover states or tooltips",
+    "Do not use longdesc attribute (deprecated/obsolete in HTML5)"
+  ],
+  "edge_cases": [
+    "Linked logos: alt should describe destination or organization (e.g., 'ACME Corporation home page', not just 'ACME logo')",
+    "CSS background images: ensure separate text label exists via aria-label, visible text, or other programmatically determinable means",
+    "Icon-only controls: provide accessible name via aria-label, aria-labelledby, or adjacent visible text",
+    "Image groups: one image can describe the entire group, others marked as decorative with alt=\"\"",
+    "Live video/audio: provide descriptive identification, full alternatives covered under 1.2",
+    "Sensory experiences (art, music): provide descriptive identification and context when possible without diminishing the experience",
+    "Test/exercise images: provide descriptive identification but not answers that would invalidate the test",
+    "Decorative spacers/bullets/borders: use alt=\"\" or role=\"presentation\"",
+    "Images within links: describe the link destination, not just the image content",
+    "Thumbnail images: describe what the full-size version contains or where the link leads",
+    "Charts/graphs: short alt summarizes the data trend, long description provides detailed data points and relationships",
+    "Emotional/atmospheric content: describe the emotion or atmosphere the image conveys when relevant to content purpose",
+    "Mathematical equations: simple equations can use alt text, complex ones need MathML or detailed textual representation",
+    "Infographics: require both summary alt text and comprehensive long description covering all information presented",
+    "Image carousels: each image needs appropriate alt text, carousel controls need functional descriptions",
+    "Screenshots: describe the relevant content and interface elements shown",
+    "Memes and social media images: describe visual content and any text shown in the image",
+    "QR codes and barcodes: provide the encoded information in text form",
+    "Company logos in navigation: describe destination (e.g., 'Home') rather than just company name",
+    "Image-based form inputs: alt text should describe the button's function (e.g., 'Submit form', 'Search')",
+    "Repeated decorative elements: consistently mark as decorative throughout the site",
+    "Context-dependent images: same image may need different alt text depending on surrounding content and purpose",
+    "Progressive disclosure images: alt text should indicate the action (e.g., 'Show more details')",
+    "Before/after comparison images: alt text should indicate which version is shown and key differences"
+  ]
+}
+
+Element context:
+- Selector: .logo-img
+- HTML snippet: <img src="https://nems.org/wp-content/themes/nems/img/logo.png" alt="Logo" class="logo-img">
+- Attributes: {"src": "https://nems.org/wp-content/themes/nems/img/logo.png", "alt": "Logo", "class": "logo-img"}
+- Computed role/name (best-effort): img — Logo
+- Nearby text window: 
+- Accessibility snapshot (partial): {}
+- Axe ruleId: image-alt
+- Axe help: Images must have alternate text
+- Axe impact: None
+
+AXE_DIAGNOSTICS:
+(failureSummary/why_any/why_all/why_none and page_url are appended below this prompt; you MUST consider them.)
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+
+2) Decide a verdict. Allowed values (choose ONE):
+   - "needs-change"  → Likely fails the referenced SC in context. Prefer this when uncertain or evidence is conflicting.
+   - "redundant-ok"  → Technically passes AND additional description would only duplicate already-available text for the same control/target.
+   - "decorative-ok" → Image is purely decorative (e.g., empty alt or role=presentation is appropriate).
+   - "complex-needs-longdesc" → Complex image (charts/diagrams) needs extended description/longdesc per WCAG techniques.
+   - "pass"          → Clearly meets the SC with no caveats.
+
+3) Use these decision boundaries by SC (when applicable):
+   • SC 1.1.1 (Non-text Content)
+     - needs-change: alt missing/vague ("image", "photo", filename), or functional image’s alt fails to communicate action/target.
+     - redundant-ok: alt would ONLY duplicate visible adjacent text that already names the same thing for the same control.
+     - decorative-ok: purely decorative images (empty alt or role=presentation) are acceptable.
+   • SC 2.4.4 (Link Purpose, In Context)
+     - needs-change: "click here / learn more / read more" with no disambiguating context in the same sentence/container or accessible name.
+     - redundant-ok: link text would only duplicate a unique nearby title/heading already included in the link’s accessible name.
+   • SC 1.4.3 (Contrast Minimum)
+     - needs-change: computed contrast < 4.5:1 (normal) or < 3:1 (large) per diagnostics; do not guess if no data—explain briefly.
+     - pass: thresholds met or text is decorative/disabled.
+   • SC 4.1.2 (Name, Role, Value)
+     - needs-change: custom widget lacks accessible name, wrong/missing role, or state/value not exposed.
+     - pass: correct role + meaningful name + state.
+
+4) Output a concise JSON object EXACTLY with keys:
+{
+  "type": "<one of the element types above>",
+  "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+  "reason": "<<=200 chars; cite concrete evidence from provided context/diagnostics>>",
+  "confidence": 0.0-1.0,
+  "techniques_used": ["<e.g., H37>", "<e.g., G94>", "<or axe:image-alt>"]
+}
+
+Rules:
+- Consider AXE_DIAGNOSTICS. Do not invent page content beyond what’s provided.
+- Keep "reason" specific (mention attribute/phrase/role), not generic.
+- Prefer "needs-change" when evidence is ambiguous.
+- Use "redundant-ok" narrowly: only true duplication for the same control/destination.
+- If no technique is clearly applicable, still return a verdict and include ["fallback"].
+- Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": null,
+  "why_any": [
+    "has-alt: Element has an alt attribute"
+  ],
+  "why_all": [],
+  "why_none": [
+    "alt-space-value: Element has a valid alt attribute value"
+  ],
+  "page_url": "https://nems.org/"
+}

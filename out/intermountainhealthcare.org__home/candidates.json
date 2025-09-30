@@ -1,0 +1,98 @@
+[
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "bucket": "must_review",
+    "topic": "SC-2.4.2",
+    "sc_list": [
+      "2.4.2"
+    ],
+    "axe_rule_id": "document-title",
+    "axe_help": "Documents must have <title> element to aid in navigation",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/document-title?application=axeAPI",
+    "impact": "serious",
+    "selector": "html",
+    "html_snippet": "<html><head><script src=\"https://cdn.jsdelivr.net/npm/axe-core@4.7.2/axe.min.js\"></script></head><body></body></html>",
+    "attributes": {},
+    "role_name_guess": "html \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\document-title__html.png",
+    "failureSummary": "Fix any of the following:\n  Document does not have a non-empty <title> element",
+    "why_any": [
+      "doc-has-title: Document does not have a non-empty <title> element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "bucket": "must_review",
+    "topic": "SC-3.1.1",
+    "sc_list": [
+      "3.1.1"
+    ],
+    "axe_rule_id": "html-has-lang",
+    "axe_help": "<html> element must have a lang attribute",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/html-has-lang?application=axeAPI",
+    "impact": "serious",
+    "selector": "html",
+    "html_snippet": "<html><head><script src=\"https://cdn.jsdelivr.net/npm/axe-core@4.7.2/axe.min.js\"></script></head><body></body></html>",
+    "attributes": {},
+    "role_name_guess": "html \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\html-has-lang__html.png",
+    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute",
+    "why_any": [
+      "has-lang: The <html> element does not have a lang attribute"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "landmark-one-main",
+    "axe_help": "Document should have one main landmark",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI",
+    "impact": "moderate",
+    "selector": "html",
+    "html_snippet": "<html><head><script src=\"https://cdn.jsdelivr.net/npm/axe-core@4.7.2/axe.min.js\"></script></head><body></body></html>",
+    "attributes": {},
+    "role_name_guess": "html \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\landmark-one-main__html.png",
+    "failureSummary": "Fix all of the following:\n  Document does not have a main landmark",
+    "why_any": [],
+    "why_all": [
+      "page-has-main: Document does not have a main landmark"
+    ],
+    "why_none": []
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "page-has-heading-one",
+    "axe_help": "Page should contain a level-one heading",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/page-has-heading-one?application=axeAPI",
+    "impact": "moderate",
+    "selector": "html",
+    "html_snippet": "<html><head><script src=\"https://cdn.jsdelivr.net/npm/axe-core@4.7.2/axe.min.js\"></script></head><body></body></html>",
+    "attributes": {},
+    "role_name_guess": "html \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\page-has-heading-one__html.png",
+    "failureSummary": "Fix all of the following:\n  Page must have a level-one heading",
+    "why_any": [],
+    "why_all": [
+      "page-has-heading-one: Page must have a level-one heading"
+    ],
+    "why_none": []
+  }
+]

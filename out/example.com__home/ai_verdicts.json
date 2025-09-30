@@ -1,0 +1,53 @@
+[
+  {
+    "topic": "UNMAPPED",
+    "selector": "html",
+    "axe_rule_id": "html-has-lang",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (wire your LLM in core/rag_reviewer.py).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\html-has-lang__html.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/html-has-lang?application=axeAPI"
+  },
+  {
+    "topic": "UNMAPPED",
+    "selector": "html",
+    "axe_rule_id": "landmark-one-main",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (wire your LLM in core/rag_reviewer.py).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\landmark-one-main__html.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI"
+  },
+  {
+    "topic": "UNMAPPED",
+    "selector": "div",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (wire your LLM in core/rag_reviewer.py).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\region__div.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI"
+  }
+]

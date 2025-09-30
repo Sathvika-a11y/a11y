@@ -1,0 +1,59 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 4.1.2
+Techniques context (from curated library):
+{
+  "topic": "SC 4.1.2",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
+    "Consider axe help: Buttons must have discernible text",
+    "Ref: https://dequeuniversity.com/rules/axe/4.7/button-name?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: #cardPromotion-e51389d441 > .xpr-promoCard__track > .xpr-promoCard__content > .xpr-promoCard__legal > button[x-data="a11yDialogButton()"][type="button"]
+- HTML snippet: <button type="button" x-data="a11yDialogButton()" data-a11y-dialog-show="disclosure-cardPromotion-e51389d441"> <span data-moengage-id="legalSeeFullTermsLabel"></span> </button>
+- Attributes: {"type": "button", "x-data": "a11yDialogButton()", "data-a11y-dialog-show": "disclosure-cardPromotion-e51389d441"}
+- Computed role/name (best-effort): button — 
+- Nearby text window: 
+- Accessibility snapshot (partial): {}
+- Axe ruleId: button-name
+- Axe help: Buttons must have discernible text
+- Axe impact: critical
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+  "why_any": [
+    "button-has-visible-text: Element does not have inner text that is visible to screen readers",
+    "aria-label: aria-label attribute does not exist or is empty",
+    "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+    "non-empty-title: Element has no title attribute",
+    "presentational-role: Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://www.t-mobile.com/"
+}

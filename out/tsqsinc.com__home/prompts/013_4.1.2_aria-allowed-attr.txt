@@ -1,0 +1,55 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 4.1.2
+Techniques context (from curated library):
+{
+  "topic": "SC 4.1.2",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
+    "Consider axe help: Elements must only use allowed ARIA attributes",
+    "Ref: https://dequeuniversity.com/rules/axe/4.7/aria-allowed-attr?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: .carousel-indicators
+- HTML snippet: <div class="carousel-indicators" aria-label="Slide indicators">
+- Attributes: {"class": "carousel-indicators", "aria-label": "Slide indicators"}
+- Computed role/name (best-effort): div — Slide indicators
+- Nearby text window: 
+- Accessibility snapshot (partial): {}
+- Axe ruleId: aria-allowed-attr
+- Axe help: Elements must only use allowed ARIA attributes
+- Axe impact: serious
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute.",
+  "why_any": [],
+  "why_all": [],
+  "why_none": [
+    "aria-prohibited-attr: aria-label attribute is not well supported on a div with no valid role attribute."
+  ],
+  "page_url": "https://tsqsinc.com/"
+}

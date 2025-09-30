@@ -1,0 +1,57 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 4.1.2
+Techniques context (from curated library):
+{
+  "topic": "SC 4.1.2",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
+    "Consider axe help: Links must have discernible text",
+    "Ref: https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: .Features_primaryCTA__EiDcv.css-6gxhid[href$="childrens-health"]
+- HTML snippet: <a class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary Features_primaryCTA__EiDcv css-6gxhid" tabindex="-1" target="" href="/childrens-health">
+- Attributes: {"class": "MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary Features_primaryCTA__EiDcv css-6gxhid", "tabindex": "-1", "target": "", "href": "/childrens-health"}
+- Computed role/name (best-effort): a — Learn more
+- Nearby text window: Learn more
+- Accessibility snapshot (partial): {"role": "link", "name": "Learn more"}
+- Axe ruleId: link-name
+- Axe help: Links must have discernible text
+- Axe impact: None
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": null,
+  "why_any": [
+    "has-visible-text: Element has text that is visible to screen readers"
+  ],
+  "why_all": [],
+  "why_none": [
+    "focusable-no-name: Element is not in tab order or has accessible text"
+  ],
+  "page_url": "https://intermountainhealthcare.org/"
+}

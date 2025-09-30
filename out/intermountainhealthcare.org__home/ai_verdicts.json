@@ -1,0 +1,86 @@
+[
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.4.2",
+    "SC": "2.4.2",
+    "sc_list": [],
+    "selector": "html",
+    "axe_rule_id": "document-title",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The document lacks a non-empty <title> element, which is essential for navigation and fails SC 2.4.2 as per axe diagnostics.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:document-title"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\document-title__html.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/document-title?application=axeAPI",
+    "prompt_hash": "e4019def35f1757b"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-3.1.1",
+    "SC": "3.1.1",
+    "sc_list": [],
+    "selector": "html",
+    "axe_rule_id": "html-has-lang",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The <html> element is missing a lang attribute, which is required for SC 3.1.1 compliance. This impacts accessibility for screen readers.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:html-has-lang"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\html-has-lang__html.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/html-has-lang?application=axeAPI",
+    "prompt_hash": "573f957af399ed1b"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "html",
+    "axe_rule_id": "landmark-one-main",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The document lacks a main landmark, which is required for accessibility. This violates the axe rule for landmark-one-main.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:landmark-one-main"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\landmark-one-main__html.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI",
+    "prompt_hash": "0291e6dc76b28b64"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "html",
+    "axe_rule_id": "page-has-heading-one",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The page lacks a level-one heading, which is required for accessibility (axe:page-has-heading-one). This impacts the document structure and navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:page-has-heading-one"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\page-has-heading-one__html.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/page-has-heading-one?application=axeAPI",
+    "prompt_hash": "cfe6983bec832beb"
+  }
+]

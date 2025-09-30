@@ -1,0 +1,96 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 1.1.1
+Techniques context (from curated library):
+{
+  "topic": "SC 1.1.1 — Non-text Content",
+  "do": [
+    "Provide a short, accurate text alternative that conveys the purpose or information.",
+    "For functional images (inside links/buttons), describe the action or destination (e.g., “Search”, “Go to Pricing”).",
+    "Mark purely decorative images with empty alt (alt=\"\") or role=\"presentation\".",
+    "For complex images (charts/diagrams), give a short alt AND a nearby long description/caption.",
+    "Use aria-label/aria-labelledby only when native alt is not available (e.g., SVG icons)."
+  ],
+  "dont": [
+    "Do not use generic or file-name alts like “image”, “photo”, “IMG_1234.png”.",
+    "Do not duplicate adjacent visible text in alt when it already names the same control/target.",
+    "Do not put long paragraphs in alt; move long text into a caption or nearby text.",
+    "Do not leave functional images with empty or vague alt."
+  ],
+  "edge_cases": [
+    "Linked logos: alt should be the brand or destination (e.g., “ACME Home”).",
+    "CSS background images: ensure a separate text label exists (no alt on CSS background).",
+    "Icon-only controls: ensure an accessible name via aria-label/labelledby or visible text.",
+    "Decorative separators/bullets: alt=\"\" or role=\"presentation\" is appropriate."
+  ]
+}
+
+Element context:
+- Selector: .logo-link > .logo-img[alt="tsQs Logo"]
+- HTML snippet: <img alt="tsQs Logo" class="logo-img" src="/static/media/logo-transparent.1f4456ea770d124c21cb.gif">
+- Attributes: {"alt": "tsQs Logo", "class": "logo-img", "src": "/static/media/logo-transparent.1f4456ea770d124c21cb.gif"}
+- Computed role/name (best-effort): img — tsQs Logo
+- Nearby text window: 
+- Accessibility snapshot (partial): {}
+- Axe ruleId: image-alt
+- Axe help: Images must have alternate text
+- Axe impact: None
+
+AXE_DIAGNOSTICS:
+(failureSummary/why_any/why_all/why_none and page_url are appended below this prompt; you MUST consider them.)
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+
+2) Decide a verdict. Allowed values (choose ONE):
+   - "needs-change"  → Likely fails the referenced SC in context. Prefer this when uncertain or evidence is conflicting.
+   - "redundant-ok"  → Technically passes AND additional description would only duplicate already-available text for the same control/target.
+   - "decorative-ok" → Image is purely decorative (e.g., empty alt or role=presentation is appropriate).
+   - "complex-needs-longdesc" → Complex image (charts/diagrams) needs extended description/longdesc per WCAG techniques.
+   - "pass"          → Clearly meets the SC with no caveats.
+
+3) Use these decision boundaries by SC (when applicable):
+   • SC 1.1.1 (Non-text Content)
+     - needs-change: alt missing/vague ("image", "photo", filename), or functional image’s alt fails to communicate action/target.
+     - redundant-ok: alt would ONLY duplicate visible adjacent text that already names the same thing for the same control.
+     - decorative-ok: purely decorative images (empty alt or role=presentation) are acceptable.
+   • SC 2.4.4 (Link Purpose, In Context)
+     - needs-change: "click here / learn more / read more" with no disambiguating context in the same sentence/container or accessible name.
+     - redundant-ok: link text would only duplicate a unique nearby title/heading already included in the link’s accessible name.
+   • SC 1.4.3 (Contrast Minimum)
+     - needs-change: computed contrast < 4.5:1 (normal) or < 3:1 (large) per diagnostics; do not guess if no data—explain briefly.
+     - pass: thresholds met or text is decorative/disabled.
+   • SC 4.1.2 (Name, Role, Value)
+     - needs-change: custom widget lacks accessible name, wrong/missing role, or state/value not exposed.
+     - pass: correct role + meaningful name + state.
+
+4) Output a concise JSON object EXACTLY with keys:
+{
+  "type": "<one of the element types above>",
+  "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+  "reason": "<<=200 chars; cite concrete evidence from provided context/diagnostics>>",
+  "confidence": 0.0-1.0,
+  "techniques_used": ["<e.g., H37>", "<e.g., G94>", "<or axe:image-alt>"]
+}
+
+Rules:
+- Consider AXE_DIAGNOSTICS. Do not invent page content beyond what’s provided.
+- Keep "reason" specific (mention attribute/phrase/role), not generic.
+- Prefer "needs-change" when evidence is ambiguous.
+- Use "redundant-ok" narrowly: only true duplication for the same control/destination.
+- If no technique is clearly applicable, still return a verdict and include ["fallback"].
+- Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": null,
+  "why_any": [
+    "has-alt: Element has an alt attribute"
+  ],
+  "why_all": [],
+  "why_none": [
+    "alt-space-value: Element has a valid alt attribute value"
+  ],
+  "page_url": "https://www.tsqsinc.com/"
+}

@@ -1,0 +1,48 @@
+{ 
+"topic": "SC 2.4.6 — Headings and Labels", 
+"tags": ["SC-2.4.6","2.4.6","wcag246"], 
+"do": [ 
+"Use clear, descriptive text for headings that convey the topic or purpose of the section", 
+"Ensure every form control has a visible label that describes its purpose",
+"Keep labels brief while conveying enough context to distinguish identical controls", 
+"Use aria-label for icon-only controls when no visible text exists", 
+"Ensure heading text accurately matches the content that follows" 
+],
+
+"dont": [ 
+"Do not use generic labels like 'Click here', 'More', 'Submit' without context", 
+"Do not omit labels on form controls, including image buttons and SVG icons", 
+"Do not skip heading levels (e.g., jump from h1 to h3 without h2)", 
+"Do not use <div> or <span> as headings without ARIA roles", 
+"Do not rely on placeholder text alone as a label", 
+"Do not rely solely on color, position, or font size to denote headings or labels", 
+"Do not duplicate the same heading text for unrelated sections", 
+"Do not visually hide headings (<display:none>) when they are needed for structure", 
+"Do not use aria-label when a native <label> element can provide the same functionality", 
+"Do not abbreviate or truncate labels in ways that reduce clarity", 
+"Do not inject heading or label text using CSS pseudo-elements only", 
+"Do not leave empty headings (no text content) to create spacing" 
+], 
+"edge_cases": [ 
+"Repeated links with identical label text but different URLs: prepend context (e.g., 'Blog: Article Title')", 
+"Language switcher links: include language name and region code (e.g., 'Español (ES)')", 
+"Image-based submit controls: use aria-label matching the input’s function (e.g., 'Search')",
+"Custom dropdown controls: ensure trigger element has an accessible name reflecting current selection", 
+"Notification banners: include a heading level and aria-label for close buttons", 
+"Video player controls: each button (play, mute, captions) must have aria-label", 
+"Pagination controls: 'Next'/'Previous' must include context (e.g., 'Next page of results')",  
+"Data visualizations: controls to filter data must have descriptive labels", 
+"Language attribute changes: headings and labels must update visible and accessible text", 
+"Geolocation permission prompts: label indicates permission and purpose" 
+], 
+"techniques": [ 
+"G131: Ensuring visible text labels for interactive controls", 
+"ARIA20: Using aria-labelledby for programmatic label association", 
+"ARIA21: Using aria-label for programmatic labels"
+], 
+"axe_rules_hint": [ 
+"label: Ensures every form control has an associated label", 
+"aria-allowed-attr: Flags disallowed ARIA attributes on headings/labels", 
+"region: Ensures regions have accessible names"
+] 
+}

@@ -1,0 +1,2269 @@
+[
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2"
+    ],
+    "axe_rule_id": "aria-hidden-focus",
+    "axe_help": "ARIA hidden element must not be focusable or contain focusable elements",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-hidden-focus?application=axeAPI",
+    "impact": "serious",
+    "selector": "#access_container",
+    "html_snippet": "<div id=\"access_container\" aria-hidden=\"true\">",
+    "attributes": {
+      "id": "access_container",
+      "aria-hidden": "true"
+    },
+    "role_name_guess": "div \u2014 Close\n Clear cookies\n Table of contents.\n Dark/light scheme\nVISION IMPAIRED PROFILE TITLE\nVISION IMPAIRED PROFILE DESCRIPTION\nADHD PROFILE\nSET MORE FOCUS ON THE CONTENT.\nCOGNITIVE DISABILITY PRO",
+    "nearby_text": "Close\n Clear cookies\n Table of contents.\n Dark/light scheme\nVISION IMPAIRED PROFILE TITLE\nVISION IMPAIRED PROFILE DESCRIPTION\nADHD PROFILE\nSET MORE FOCUS ON THE CONTENT.\nCOGNITIVE DISABILITY PROFILE\nKEYBOARD NAVIGATION\nUNDERLINE ALL LINKS ON THIS PAGE\nMONOCHROME\nENABLE MONOCHROME VIEW.\nSEPIA\nENABLE SEPIA VIEW.\nFonts settings\nReadable Font\nALIGN LEFT\nALIGN CENTER\nALIGN RIGHT\n Color adjustment settings\nLETTER SPACING\nENABLE LETTER SPACING MODE.\nENABLE WORD SPACING MODE.\nENABLE LINE HEIGHT MODE.\nUN",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\aria-hidden-focus___access_container.png",
+    "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex='-1' or be removed from the DOM",
+    "why_any": [],
+    "why_all": [
+      "focusable-disabled: Focusable content should be disabled or be removed from the DOM",
+      "focusable-not-tabbable: Focusable content should have tabindex='-1' or be removed from the DOM"
+    ],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".active.owl-item:nth-child(1) > .locitem.item > .locitem-inner > .lci-content > .lci-area",
+    "html_snippet": "<div class=\"lci-area\">CHINATOWN</div>",
+    "attributes": {
+      "class": "lci-area"
+    },
+    "role_name_guess": "div \u2014 CHINATOWN",
+    "nearby_text": "CHINATOWN",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_1_.locitem.item_.locitem-inn.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".active.owl-item:nth-child(1) > .locitem.item > .locitem-inner > .lci-content > .lci-hours > .lci-hourstitle",
+    "html_snippet": "<div class=\"lci-hourstitle\">Clinic Hours</div>",
+    "attributes": {
+      "class": "lci-hourstitle"
+    },
+    "role_name_guess": "div \u2014 CLINIC HOURS",
+    "nearby_text": "CLINIC HOURS",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_1_.locitem.item_.locitem-inn.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".active.owl-item:nth-child(2) > .locitem.item > .locitem-inner > .lci-content > .lci-area",
+    "html_snippet": "<div class=\"lci-area\">CHINATOWN</div>",
+    "attributes": {
+      "class": "lci-area"
+    },
+    "role_name_guess": "div \u2014 CHINATOWN",
+    "nearby_text": "CHINATOWN",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_2_.locitem.item_.locitem-inn.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".active.owl-item:nth-child(2) > .locitem.item > .locitem-inner > .lci-content > .lci-hours > .lci-hourstitle",
+    "html_snippet": "<div class=\"lci-hourstitle\">Clinic Hours</div>",
+    "attributes": {
+      "class": "lci-hourstitle"
+    },
+    "role_name_guess": "div \u2014 CLINIC HOURS",
+    "nearby_text": "CLINIC HOURS",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_2_.locitem.item_.locitem-inn.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".active.owl-item:nth-child(3) > .locitem.item > .locitem-inner > .lci-content > .lci-area",
+    "html_snippet": "<div class=\"lci-area\">PORTOLA</div>",
+    "attributes": {
+      "class": "lci-area"
+    },
+    "role_name_guess": "div \u2014 PORTOLA",
+    "nearby_text": "PORTOLA",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_3_.locitem.item_.locitem-inn.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".active.owl-item:nth-child(3) > .locitem.item > .locitem-inner > .lci-content > .lci-hours > .lci-hourstitle",
+    "html_snippet": "<div class=\"lci-hourstitle\">Clinic Hours</div>",
+    "attributes": {
+      "class": "lci-hourstitle"
+    },
+    "role_name_guess": "div \u2014 CLINIC HOURS",
+    "nearby_text": "CLINIC HOURS",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_3_.locitem.item_.locitem-inn.png",
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+    "why_any": [
+      "color-contrast: Element has insufficient color contrast of 3.06 (foreground color: #8b93ab, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "heading-order",
+    "axe_help": "Heading levels should only increase by one",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/heading-order?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".homeabout-content > h5",
+    "html_snippet": "<h5 class=\"smallintro\" style=\"font-size: 18px;\" data-wahpro-titles-style=\"font-size: 18px;\">About NEMS</h5>",
+    "attributes": {
+      "class": "smallintro",
+      "style": "font-size: 18px;",
+      "data-wahpro-titles-style": "font-size: 18px;"
+    },
+    "role_name_guess": "h5 \u2014 ABOUT NEMS",
+    "nearby_text": "ABOUT NEMS\nHealth Care from the Heart\n\nNorth East Medical Services (NEMS) is a non-profit community health center serving the San Francisco Bay Area. Our mission is to provide affordable, comprehensive, compassionate and quality health care services in a linguistically competent and culturally sensitive manner to improve the health and well-being of our community.\n\nLearn More",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "ABOUT NEMS"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\heading-order__.homeabout-content_h5.png",
+    "failureSummary": "Fix any of the following:\n  Heading order invalid",
+    "why_any": [
+      "heading-order: Heading order invalid"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "heading-order",
+    "axe_help": "Heading levels should only increase by one",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/heading-order?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".quotes-intro > h5",
+    "html_snippet": "<h5 class=\"smallintro\" style=\"font-size: 18px;\" data-wahpro-titles-style=\"font-size: 18px;\">TESTIMONIALS</h5>",
+    "attributes": {
+      "class": "smallintro",
+      "style": "font-size: 18px;",
+      "data-wahpro-titles-style": "font-size: 18px;"
+    },
+    "role_name_guess": "h5 \u2014 TESTIMONIALS",
+    "nearby_text": "TESTIMONIALS\nWhat Our Members Say About Us",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "TESTIMONIALS"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\heading-order__.quotes-intro_h5.png",
+    "failureSummary": "Fix any of the following:\n  Heading order invalid",
+    "why_any": [
+      "heading-order: Heading order invalid"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "landmark-one-main",
+    "axe_help": "Document should have one main landmark",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI",
+    "impact": "moderate",
+    "selector": "html",
+    "html_snippet": "<html lang=\"en-US\" class=\" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths\" style=\"\">",
+    "attributes": {
+      "lang": "en-US",
+      "class": " js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths",
+      "style": ""
+    },
+    "role_name_guess": "html \u2014 About Us\nBusiness Providers\nCommunity\nContact Us\nCOVID-19\nHome\nMedia Resources\nNews & Events\nNorth East Medical Services \u2013 Las Vegas Clinic\nPrivacy & Legal Disclosures\nPrograms\nComprehensive Pe",
+    "nearby_text": "About Us\nBusiness Providers\nCommunity\nContact Us\nCOVID-19\nHome\nMedia Resources\nNews & Events\nNorth East Medical Services \u2013 Las Vegas Clinic\nPrivacy & Legal Disclosures\nPrograms\nComprehensive Perinatal Services Program\nHepatitis B and C Elimination Program\nInternal Medicine Residency Program\nPublications & Research\nProvider Search\nResources\nBecome a Member\nEpic Electronic Medical System\nHealth Education Resources\nPaying For Your Care\nServices\nAncillary Services\nBehavioral Health\nDental\nIntegrativ",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\landmark-one-main__html.png",
+    "failureSummary": "Fix all of the following:\n  Document does not have a main landmark",
+    "why_any": [],
+    "why_all": [
+      "page-has-main: Document does not have a main landmark"
+    ],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-4.1.2",
+    "sc_list": [
+      "4.1.2",
+      "2.4.4"
+    ],
+    "axe_rule_id": "link-name",
+    "axe_help": "Links must have discernible text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "impact": "serious",
+    "selector": ".btn-menu",
+    "html_snippet": "<a href=\"#\" class=\"btn-menu\" role=\"link\" style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">\n\t\t\t\t\t\t<span style=\"font-size: 20px;\"></span>\n\t\t\t\t\t\t<span style=\"font-size: 20px;\"></span>\n\t\t\t\t\t\t<span style=\"font-size: 20px;\"></span>\n\t\t\t\t\t</a>",
+    "attributes": {
+      "href": "#",
+      "class": "btn-menu",
+      "role": "link",
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "link \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {
+      "role": "link",
+      "name": ""
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\link-name__.btn-menu.png",
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+    "why_any": [
+      "has-visible-text: Element does not have text that is visible to screen readers",
+      "aria-label: aria-label attribute does not exist or is empty",
+      "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+      "non-empty-title: Element has no title attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "focusable-no-name: Element is in tab order and does not have accessible text"
+    ]
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#hbslides > .owl-stage-outer",
+    "html_snippet": "<div class=\"owl-stage-outer\">",
+    "attributes": {
+      "class": "owl-stage-outer"
+    },
+    "role_name_guess": "div \u2014 LOCATIONS\n\nNow open: serving the community at our Linden Avenue Clinic\n\nLearn More\n\nCONTACT US\n\nNEMS Call Center: Now available 24/7 to assist you\n\nLearn More\n\nLOCATIONS\n\nNow open for extended h",
+    "nearby_text": "LOCATIONS\n\nNow open: serving the community at our Linden Avenue Clinic\n\nLearn More\n\nCONTACT US\n\nNEMS Call Center: Now available 24/7 to assist you\n\nLearn More\n\nLOCATIONS\n\nNow open for extended hours at our 2574 San Bruno Avenue Clinic\n\nLearn More\n\nNOW AVAILABLE\n\nSkip the line! Check in using our new Welcome Kiosks\n\nLearn More\n\nNOW AVAILABLE\n\nMyChart \u2013 A new way for NEMS members to access health records online\n\nLearn More\n\nLOCATIONS\n\nNow open: serving the community at our Linden Avenue Clinic\n\nLe",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___hbslides_.owl-stage-outer.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#counter",
+    "html_snippet": "<div id=\"counter\">1/5</div>",
+    "attributes": {
+      "id": "counter"
+    },
+    "role_name_guess": "div \u2014 4/5",
+    "nearby_text": "4/5",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___counter.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".hbcurve",
+    "html_snippet": "<img class=\"hbcurve\" src=\"https://nems.org/wp-content/themes/nems/img/hbcurve.png\" alt=\"\">",
+    "attributes": {
+      "class": "hbcurve",
+      "src": "https://nems.org/wp-content/themes/nems/img/hbcurve.png",
+      "alt": ""
+    },
+    "role_name_guess": "img \u2014 ",
+    "nearby_text": "LOCATIONS\n\nNow open: serving the community at our Linden Avenue Clinic\n\nLearn More\n\nCONTACT US\n\nNEMS Call Center: Now available 24/7 to assist you\n\nLearn More\n\nLOCATIONS\n\nNow open for extended hours at our 2574 San Bruno Avenue Clinic\n\nLearn More\n\nNOW AVAILABLE\n\nSkip the line! Check in using our new Welcome Kiosks\n\nLearn More\n\nNOW AVAILABLE\n\nMyChart \u2013 A new way for NEMS members to access health records online\n\nLearn More\n\nLOCATIONS\n\nNow open: serving the community at our Linden Avenue Clinic\n\nLe",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region__.hbcurve.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#home-about",
+    "html_snippet": "<section id=\"home-about\">",
+    "attributes": {
+      "id": "home-about"
+    },
+    "role_name_guess": "section \u2014 ABOUT NEMS\nHealth Care from the Heart\n\nNorth East Medical Services (NEMS) is a non-profit community health center serving the San Francisco Bay Area. Our mission is to provide affordable, co",
+    "nearby_text": "ABOUT NEMS\nHealth Care from the Heart\n\nNorth East Medical Services (NEMS) is a non-profit community health center serving the San Francisco Bay Area. Our mission is to provide affordable, comprehensive, compassionate and quality health care services in a linguistically competent and culturally sensitive manner to improve the health and well-being of our community.\n\nLearn More",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___home-about.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".hs-intro",
+    "html_snippet": "<div class=\"hs-intro\">\n\t\t\t\t<h2 style=\"font-size: 70px;\" data-wahpro-titles-style=\"font-size: 70px;\">Services</h2>\n\t\t\t\t<p style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">\n\t\t\t\t\tFind a variety of health care services under one roof at NEMS\n\t\t\t\t</p>\n\t\t\t</div>",
+    "attributes": {
+      "class": "hs-intro"
+    },
+    "role_name_guess": "div \u2014 Services\n\nFind a variety of health care services under one roof at NEMS",
+    "nearby_text": "Services\n\nFind a variety of health care services under one roof at NEMS",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region__.hs-intro.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".hs-desktop",
+    "html_snippet": "<div class=\"hs-desktop\">",
+    "attributes": {
+      "class": "hs-desktop"
+    },
+    "role_name_guess": "div \u2014 Medical\n\nNEMS provides primary and specialty medical care for people of all ages.\n\nLearn More\nDental\n\nOur dental professionals provide comprehensive oral health care for adults and children.\n\nLe",
+    "nearby_text": "Medical\n\nNEMS provides primary and specialty medical care for people of all ages.\n\nLearn More\nDental\n\nOur dental professionals provide comprehensive oral health care for adults and children.\n\nLearn More\nBehavioral Health\n\nOur behavioral health professionals provide confidential consultations and work with your primary care provider to address your concerns holistically.\n\nLearn More\nOptometry\n\nThe optometry team provides vision care services including eye exams, contact lens fitting, frames and s",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region__.hs-desktop.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#homelocations > .basic",
+    "html_snippet": "<div class=\"basic\">",
+    "attributes": {
+      "class": "basic"
+    },
+    "role_name_guess": "div \u2014 A Location Near You\n\nNEMS has locations throughout the San Francisco Bay Area as well as in Las Vegas\n\nSan Francisco Daly City San Jose Las Vegas South San Francisco",
+    "nearby_text": "A Location Near You\n\nNEMS has locations throughout the San Francisco Bay Area as well as in Las Vegas\n\nSan Francisco Daly City San Jose Las Vegas South San Francisco",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___homelocations_.basic.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#sfslides > .owl-stage-outer",
+    "html_snippet": "<div class=\"owl-stage-outer\">",
+    "attributes": {
+      "class": "owl-stage-outer"
+    },
+    "role_name_guess": "div \u2014 CHINATOWN\n1520 Stockton Clinic\n1520 Stockton Street\nSan Francisco, CA 94133\n415-391-9686\nCLINIC HOURS\nMon to Fri 8:00 AM - 6:00 PM\nSat 8:00 AM - 12:00 PM, 1:00 PM - 5:00 PM\nSun Closed\nMore Info\n",
+    "nearby_text": "CHINATOWN\n1520 Stockton Clinic\n1520 Stockton Street\nSan Francisco, CA 94133\n415-391-9686\nCLINIC HOURS\nMon to Fri 8:00 AM - 6:00 PM\nSat 8:00 AM - 12:00 PM, 1:00 PM - 5:00 PM\nSun Closed\nMore Info\nCHINATOWN\n728 Pacific Clinic\n728 Pacific Avenue, Suite 115, 201, 303, 503, & 602\nSan Francisco, CA 94133\n415-391-9686\nCLINIC HOURS\nMon to Fri 8:00 AM - 12:00 PM, 1:00 PM - 5:00 PM\nSat to Sun Closed\nMore Info\nPORTOLA\n2574 San Bruno Clinic\n2574 San Bruno Avenue\nSan Francisco, CA 94134\n415-391-9686\nCLINIC HO",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___sfslides_.owl-stage-outer.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": ".quotes-intro",
+    "html_snippet": "<div class=\"quotes-intro\">\n\t\t\t\t<h5 class=\"smallintro\" style=\"font-size: 18px;\" data-wahpro-titles-style=\"font-size: 18px;\">TESTIMONIALS</h5>\n<h2 style=\"font-size: 70px;\" data-wahpro-titles-style=\"font-size: 70px;\">What Our Members Say About Us</h2>\n\t\t\t</div>",
+    "attributes": {
+      "class": "quotes-intro"
+    },
+    "role_name_guess": "div \u2014 TESTIMONIALS\nWhat Our Members Say About Us",
+    "nearby_text": "TESTIMONIALS\nWhat Our Members Say About Us",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region__.quotes-intro.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#quoteslides > .owl-stage-outer",
+    "html_snippet": "<div class=\"owl-stage-outer\">",
+    "attributes": {
+      "class": "owl-stage-outer"
+    },
+    "role_name_guess": "div \u2014 \"NEMS will help you. You become part of the NEMS family.\"\nSuzanne Cheung\nNEMS member since 1999 and current board member\n\"I like their comprehensive services, emphasis on early detection and pre",
+    "nearby_text": "\"NEMS will help you. You become part of the NEMS family.\"\nSuzanne Cheung\nNEMS member since 1999 and current board member\n\"I like their comprehensive services, emphasis on early detection and prevention, and coordinated care approach. NEMS saved my life.\"\nMarian Wallace\nNEMS member since 2004\n\"The doctors and staff at NEMS take time out of their busy schedules to help me. I am touched that everyone really cares about me and my family.\"\nYi Ran Cai\nNEMS member since 2003",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___quoteslides_.owl-stage-outer.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#careers > .basic:nth-child(1)",
+    "html_snippet": "<div class=\"basic\">",
+    "attributes": {
+      "class": "basic"
+    },
+    "role_name_guess": "div \u2014 CAREERS\nJoin a passionate team\n\nView current NEMS job opportunities\n\nVolunteer Opportunities See All Opportunities",
+    "nearby_text": "CAREERS\nJoin a passionate team\n\nView current NEMS job opportunities\n\nVolunteer Opportunities See All Opportunities",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___careers_.basic_nth-child_1_.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#careerslides > .owl-stage-outer",
+    "html_snippet": "<div class=\"owl-stage-outer\">",
+    "attributes": {
+      "class": "owl-stage-outer"
+    },
+    "role_name_guess": "div \u2014 Dentist\nFull Time\nDaly City, CA\nMammographer I ($20,000 Sign On Bonus)\nFull Time\nSan Francisco, CA\nPhysician (Family Practitioner/Internist)\nFull Time\nDaly City and San Jose, CA\nPACE Occupationa",
+    "nearby_text": "Dentist\nFull Time\nDaly City, CA\nMammographer I ($20,000 Sign On Bonus)\nFull Time\nSan Francisco, CA\nPhysician (Family Practitioner/Internist)\nFull Time\nDaly City and San Jose, CA\nPACE Occupational Therapist ($20,000 Sign On Bonus)\nFull Time\nSan Francisco, CA\nMedical Assistant I - P\nFull Time\nSan Jose, CA\nClinic Operations Manager\nFull Time\nLas Vegas, NV",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___careerslides_.owl-stage-outer.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#seniors",
+    "html_snippet": "<section id=\"seniors\">",
+    "attributes": {
+      "id": "seniors"
+    },
+    "role_name_guess": "section \u2014 Programs for Seniors\nPACE\n\nNEMS Program of All-Inclusive Care for the Elderly (PACE) provides health and community-based services for older adults with chronic health needs.\n\nLearn More",
+    "nearby_text": "Programs for Seniors\nPACE\n\nNEMS Program of All-Inclusive Care for the Elderly (PACE) provides health and community-based services for older adults with chronic health needs.\n\nLearn More",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___seniors.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "region",
+    "axe_help": "All page content should be contained by landmarks",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "impact": "moderate",
+    "selector": "#scrollup",
+    "html_snippet": "<div id=\"scrollup\">\n\t<img src=\"https://nems.org/wp-content/themes/nems/img/arrowup.png\" alt=\"Up\">\n</div>",
+    "attributes": {
+      "id": "scrollup"
+    },
+    "role_name_guess": "div \u2014 ",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___scrollup.png",
+    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+    "why_any": [
+      "region: Some page content is not contained by landmarks"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#hbslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-prev\"><span aria-label=\"Previous\">\u2039</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-prev"
+    },
+    "role_name_guess": "presentation \u2014 \u2039",
+    "nearby_text": "\u2039",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#hbslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-next\"><span aria-label=\"Next\">\u203a</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-next"
+    },
+    "role_name_guess": "presentation \u2014 \u203a",
+    "nearby_text": "\u203a",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#sfslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-prev\"><span aria-label=\"Previous\">\u2039</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-prev"
+    },
+    "role_name_guess": "presentation \u2014 \u2039",
+    "nearby_text": "\u2039",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#sfslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-next\"><span aria-label=\"Next\">\u203a</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-next"
+    },
+    "role_name_guess": "presentation \u2014 \u203a",
+    "nearby_text": "\u203a",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#dalyslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-prev\"><span aria-label=\"Previous\">\u2039</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-prev"
+    },
+    "role_name_guess": "presentation \u2014 \u2039",
+    "nearby_text": "\u2039",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#dalyslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-next\"><span aria-label=\"Next\">\u203a</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-next"
+    },
+    "role_name_guess": "presentation \u2014 \u203a",
+    "nearby_text": "\u203a",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#sjslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-prev\"><span aria-label=\"Previous\">\u2039</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-prev"
+    },
+    "role_name_guess": "presentation \u2014 \u2039",
+    "nearby_text": "\u2039",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#sjslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-next\"><span aria-label=\"Next\">\u203a</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-next"
+    },
+    "role_name_guess": "presentation \u2014 \u203a",
+    "nearby_text": "\u203a",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#lvslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-prev\"><span aria-label=\"Previous\">\u2039</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-prev"
+    },
+    "role_name_guess": "presentation \u2014 \u2039",
+    "nearby_text": "\u2039",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#lvslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-next\"><span aria-label=\"Next\">\u203a</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-next"
+    },
+    "role_name_guess": "presentation \u2014 \u203a",
+    "nearby_text": "\u203a",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#ssfslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-prev\"><span aria-label=\"Previous\">\u2039</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-prev"
+    },
+    "role_name_guess": "presentation \u2014 \u2039",
+    "nearby_text": "\u2039",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#ssfslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-next\"><span aria-label=\"Next\">\u203a</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-next"
+    },
+    "role_name_guess": "presentation \u2014 \u203a",
+    "nearby_text": "\u203a",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#quoteslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-prev\"><span aria-label=\"Previous\">\u2039</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-prev"
+    },
+    "role_name_guess": "presentation \u2014 \u2039",
+    "nearby_text": "\u2039",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#quoteslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-next\"><span aria-label=\"Next\">\u203a</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-next"
+    },
+    "role_name_guess": "presentation \u2014 \u203a",
+    "nearby_text": "\u203a",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#careerslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-prev\"><span aria-label=\"Previous\">\u2039</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-prev"
+    },
+    "role_name_guess": "presentation \u2014 \u2039",
+    "nearby_text": "\u2039",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "BEST_PRACTICE",
+    "sc_list": [],
+    "axe_rule_id": "aria-allowed-role",
+    "axe_help": "ARIA role should be appropriate for the element",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "impact": "minor",
+    "selector": "#careerslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "html_snippet": "<button type=\"button\" role=\"presentation\" class=\"owl-next\"><span aria-label=\"Next\">\u203a</span></button>",
+    "attributes": {
+      "type": "button",
+      "role": "presentation",
+      "class": "owl-next"
+    },
+    "role_name_guess": "presentation \u2014 \u203a",
+    "nearby_text": "\u203a",
+    "acc_snapshot": {},
+    "screenshot": null,
+    "failureSummary": "Fix any of the following:\n  ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element",
+    "why_any": [
+      "aria-allowed-role: ARIA role presentation must be removed when the element is made visible, as it is not allowed for the element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".btn-navbar[data-wahpro-txt-style=\"font-size: 15px;\"]:nth-child(1)",
+    "html_snippet": "<a href=\"https://nems.org/provider-search\" class=\"btn-navbar\" role=\"link\" style=\"font-size: 15px;\" data-wahpro-txt-style=\"font-size: 15px;\">FIND A PROVIDER OR SERVICE</a>",
+    "attributes": {
+      "href": "https://nems.org/provider-search",
+      "class": "btn-navbar",
+      "role": "link",
+      "style": "font-size: 15px;",
+      "data-wahpro-txt-style": "font-size: 15px;"
+    },
+    "role_name_guess": "link \u2014 FIND A PROVIDER OR SERVICE",
+    "nearby_text": "FIND A PROVIDER OR SERVICE",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "FIND A PROVIDER OR SERVICE"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.btn-navbar_data-wahpro-txt-style_font-size_15px_nth-ch.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".btn-navbar.btn-appt[data-wahpro-txt-style=\"font-size: 15px;\"]",
+    "html_snippet": "<a href=\"#\" class=\"btn-navbar btn-appt\" role=\"link\" style=\"font-size: 15px;\" data-wahpro-txt-style=\"font-size: 15px;\">MAKE AN APPOINTMENT</a>",
+    "attributes": {
+      "href": "#",
+      "class": "btn-navbar btn-appt",
+      "role": "link",
+      "style": "font-size: 15px;",
+      "data-wahpro-txt-style": "font-size: 15px;"
+    },
+    "role_name_guess": "link \u2014 MAKE AN APPOINTMENT",
+    "nearby_text": "MAKE AN APPOINTMENT",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "MAKE AN APPOINTMENT"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.btn-navbar.btn-appt_data-wahpro-txt-style_font-size_15px_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[href$=\"nems.org/\"][data-wahpro-txt-style=\"font-size: 16px;\"] > span[data-no-translation=\"\"] > .trp-ls-language-name",
+    "html_snippet": "<span class=\"trp-ls-language-name\" style=\"font-size: 16px;\">English</span>",
+    "attributes": {
+      "class": "trp-ls-language-name",
+      "style": "font-size: 16px;"
+    },
+    "role_name_guess": "span \u2014 English",
+    "nearby_text": "English",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_href_nems.org_data-wahpro-txt-style_font-size_16px_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background image"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".owl-item:nth-child(4) > .hbslide.item > .hbslide-content > .smallintro[data-wahpro-txt-style=\"font-size: 18px;\"]",
+    "html_snippet": "<p class=\"smallintro\" style=\"font-size: 18px;\" data-wahpro-txt-style=\"font-size: 18px;\">NOW AVAILABLE</p>",
+    "attributes": {
+      "class": "smallintro",
+      "style": "font-size: 18px;",
+      "data-wahpro-txt-style": "font-size: 18px;"
+    },
+    "role_name_guess": "p \u2014 NOW AVAILABLE",
+    "nearby_text": "NOW AVAILABLE",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.owl-item_nth-child_4_.hbslide.item_.hbslide-content_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because element contains an image node"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".owl-item:nth-child(4) > .hbslide.item > .hbslide-content > h1[data-wahpro-titles-style=\"font-size: 60px;\"]",
+    "html_snippet": "<h1 style=\"font-size: 60px;\" data-wahpro-titles-style=\"font-size: 60px;\">Skip the line! Check in using our new Welcome Kiosks</h1>",
+    "attributes": {
+      "style": "font-size: 60px;",
+      "data-wahpro-titles-style": "font-size: 60px;"
+    },
+    "role_name_guess": "h1 \u2014 Skip the line! Check in using our new Welcome Kiosks",
+    "nearby_text": "NOW AVAILABLE\n\nSkip the line! Check in using our new Welcome Kiosks\n\nLearn More",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Skip the line! Check in using our new Welcome Kiosks"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.owl-item_nth-child_4_.hbslide.item_.hbslide-content_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because element contains an image node"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".owl-item:nth-child(4) > .hbslide.item > .hbslide-content > p:nth-child(3) > .btn[rel=\"noopener\"][target=\"_blank\"]",
+    "html_snippet": "<a class=\"btn\" href=\"https://nems.org/resources/epic/#welcomekiosk\" target=\"_blank\" rel=\"noopener\" role=\"link\" style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">Learn More</a>",
+    "attributes": {
+      "class": "btn",
+      "href": "https://nems.org/resources/epic/#welcomekiosk",
+      "target": "_blank",
+      "rel": "noopener",
+      "role": "link",
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "link \u2014 Learn More",
+    "nearby_text": "Learn More",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Learn More"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.owl-item_nth-child_4_.hbslide.item_.hbslide-content_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "#counter",
+    "html_snippet": "<div id=\"counter\">1/5</div>",
+    "attributes": {
+      "id": "counter"
+    },
+    "role_name_guess": "div \u2014 4/5",
+    "nearby_text": "4/5",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast___counter.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because element contains an image node"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".homeabout-content > h5",
+    "html_snippet": "<h5 class=\"smallintro\" style=\"font-size: 18px;\" data-wahpro-titles-style=\"font-size: 18px;\">About NEMS</h5>",
+    "attributes": {
+      "class": "smallintro",
+      "style": "font-size: 18px;",
+      "data-wahpro-titles-style": "font-size: 18px;"
+    },
+    "role_name_guess": "h5 \u2014 ABOUT NEMS",
+    "nearby_text": "ABOUT NEMS\nHealth Care from the Heart\n\nNorth East Medical Services (NEMS) is a non-profit community health center serving the San Francisco Bay Area. Our mission is to provide affordable, comprehensive, compassionate and quality health care services in a linguistically competent and culturally sensitive manner to improve the health and well-being of our community.\n\nLearn More",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "ABOUT NEMS"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.homeabout-content_h5.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because element contains an image node"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".homeabout-content > h2[data-wahpro-titles-style=\"font-size: 70px;\"]",
+    "html_snippet": "<h2 style=\"font-size: 70px;\" data-wahpro-titles-style=\"font-size: 70px;\">Health Care from the Heart</h2>",
+    "attributes": {
+      "style": "font-size: 70px;",
+      "data-wahpro-titles-style": "font-size: 70px;"
+    },
+    "role_name_guess": "h2 \u2014 Health Care from the Heart",
+    "nearby_text": "ABOUT NEMS\nHealth Care from the Heart\n\nNorth East Medical Services (NEMS) is a non-profit community health center serving the San Francisco Bay Area. Our mission is to provide affordable, comprehensive, compassionate and quality health care services in a linguistically competent and culturally sensitive manner to improve the health and well-being of our community.\n\nLearn More",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Health Care from the Heart"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.homeabout-content_h2_data-wahpro-titles-style_font-size_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because element contains an image node"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".homeabout-content > p:nth-child(3)",
+    "html_snippet": "<p style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">",
+    "attributes": {
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "p \u2014 North East Medical Services (NEMS) is a non-profit community health center serving the San Francisco Bay Area. Our mission is to provide affordable, comprehensive, compassionate and quality health",
+    "nearby_text": "North East Medical Services (NEMS) is a non-profit community health center serving the San Francisco Bay Area. Our mission is to provide affordable, comprehensive, compassionate and quality health care services in a linguistically competent and culturally sensitive manner to improve the health and well-being of our community.",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.homeabout-content_p_nth-child_3_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because element contains an image node"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".btn[href$=\"about-us/\"][data-wahpro-txt-style=\"font-size: 20px;\"]",
+    "html_snippet": "<a class=\"btn\" href=\"https://nems.org/about-us/\" role=\"link\" style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">Learn More</a>",
+    "attributes": {
+      "class": "btn",
+      "href": "https://nems.org/about-us/",
+      "role": "link",
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "link \u2014 Learn More",
+    "nearby_text": "Learn More",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Learn More"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.btn_href_about-us_data-wahpro-txt-style_font-size_20.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".hs-intro > h2[data-wahpro-titles-style=\"font-size: 70px;\"]",
+    "html_snippet": "<h2 style=\"font-size: 70px;\" data-wahpro-titles-style=\"font-size: 70px;\">Services</h2>",
+    "attributes": {
+      "style": "font-size: 70px;",
+      "data-wahpro-titles-style": "font-size: 70px;"
+    },
+    "role_name_guess": "h2 \u2014 Services",
+    "nearby_text": "Services\n\nFind a variety of health care services under one roof at NEMS",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Services"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hs-intro_h2_data-wahpro-titles-style_font-size_70px_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".hs-intro > p",
+    "html_snippet": "<p style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">\n\t\t\t\t\tFind a variety of health care services under one roof at NEMS\n\t\t\t\t</p>",
+    "attributes": {
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "p \u2014 Find a variety of health care services under one roof at NEMS",
+    "nearby_text": "Find a variety of health care services under one roof at NEMS",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hs-intro_p.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".topcol-1 > .hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"] > .hsd-content > .hsd-title",
+    "html_snippet": "<div class=\"hsd-title\">Medical</div>",
+    "attributes": {
+      "class": "hsd-title"
+    },
+    "role_name_guess": "div \u2014 Medical",
+    "nearby_text": "Medical",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.topcol-1_.hsd-card_data-wahpro-txt-style_font-size_20px.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a pseudo element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".tc2-row1 > .hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"] > .hsd-content > .hsd-title",
+    "html_snippet": "<div class=\"hsd-title\">Dental</div>",
+    "attributes": {
+      "class": "hsd-title"
+    },
+    "role_name_guess": "div \u2014 Dental",
+    "nearby_text": "Dental",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.tc2-row1_.hsd-card_data-wahpro-txt-style_font-size_20px.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a pseudo element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".tc2-row2 > .hsd-light.hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"] > .hsd-content > .hsd-title",
+    "html_snippet": "<div class=\"hsd-title\">Behavioral Health</div>",
+    "attributes": {
+      "class": "hsd-title"
+    },
+    "role_name_guess": "div \u2014 Behavioral Health",
+    "nearby_text": "Behavioral Health",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.tc2-row2_.hsd-light.hsd-card_data-wahpro-txt-style_font-.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a pseudo element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".tc2-row2 > .hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"]:nth-child(2) > .hsd-content > .hsd-title",
+    "html_snippet": "<div class=\"hsd-title\">Optometry</div>",
+    "attributes": {
+      "class": "hsd-title"
+    },
+    "role_name_guess": "div \u2014 Optometry",
+    "nearby_text": "Optometry",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.tc2-row2_.hsd-card_data-wahpro-txt-style_font-size_20px.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a pseudo element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".hsd-btmrow > .hsd-light.hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"]:nth-child(1) > .hsd-content > .hsd-title",
+    "html_snippet": "<div class=\"hsd-title\">Ancillary Services</div>",
+    "attributes": {
+      "class": "hsd-title"
+    },
+    "role_name_guess": "div \u2014 Ancillary Services",
+    "nearby_text": "Ancillary Services",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hsd-btmrow_.hsd-light.hsd-card_data-wahpro-txt-style_fon.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a pseudo element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".hsd-light.hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"]:nth-child(2) > .hsd-content > .hsd-title",
+    "html_snippet": "<div class=\"hsd-title\">Integrative Medicine</div>",
+    "attributes": {
+      "class": "hsd-title"
+    },
+    "role_name_guess": "div \u2014 Integrative Medicine",
+    "nearby_text": "Integrative Medicine",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hsd-light.hsd-card_data-wahpro-txt-style_font-size_20px_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a pseudo element"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".hl-intro > h2[data-wahpro-titles-style=\"font-size: 70px;\"]",
+    "html_snippet": "<h2 style=\"font-size: 70px;\" data-wahpro-titles-style=\"font-size: 70px;\">A Location Near You</h2>",
+    "attributes": {
+      "style": "font-size: 70px;",
+      "data-wahpro-titles-style": "font-size: 70px;"
+    },
+    "role_name_guess": "h2 \u2014 A Location Near You",
+    "nearby_text": "A Location Near You\n\nNEMS has locations throughout the San Francisco Bay Area as well as in Las Vegas",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "A Location Near You"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hl-intro_h2_data-wahpro-titles-style_font-size_70px_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".hl-intro > p",
+    "html_snippet": "<p style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">NEMS has locations throughout the San Francisco Bay Area as well as in Las Vegas</p>",
+    "attributes": {
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "p \u2014 NEMS has locations throughout the San Francisco Bay Area as well as in Las Vegas",
+    "nearby_text": "NEMS has locations throughout the San Francisco Bay Area as well as in Las Vegas",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hl-intro_p.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-tab=\"tab-sf\"]",
+    "html_snippet": "<a class=\"tabctrl active\" href=\"#\" data-tab=\"tab-sf\" role=\"link\" style=\"font-size: 30px;\" data-wahpro-txt-style=\"font-size: 30px;\">San Francisco</a>",
+    "attributes": {
+      "class": "tabctrl active",
+      "href": "#",
+      "data-tab": "tab-sf",
+      "role": "link",
+      "style": "font-size: 30px;",
+      "data-wahpro-txt-style": "font-size: 30px;"
+    },
+    "role_name_guess": "link \u2014 San Francisco",
+    "nearby_text": "San Francisco",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "San Francisco"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_data-tab_tab-sf_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-tab=\"tab-daly\"]",
+    "html_snippet": "<a class=\"tabctrl\" href=\"#\" data-tab=\"tab-daly\" role=\"link\" style=\"font-size: 30px;\" data-wahpro-txt-style=\"font-size: 30px;\">Daly City</a>",
+    "attributes": {
+      "class": "tabctrl",
+      "href": "#",
+      "data-tab": "tab-daly",
+      "role": "link",
+      "style": "font-size: 30px;",
+      "data-wahpro-txt-style": "font-size: 30px;"
+    },
+    "role_name_guess": "link \u2014 Daly City",
+    "nearby_text": "Daly City",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Daly City"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_data-tab_tab-daly_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-tab=\"tab-sj\"]",
+    "html_snippet": "<a class=\"tabctrl\" href=\"#\" data-tab=\"tab-sj\" role=\"link\" style=\"font-size: 30px;\" data-wahpro-txt-style=\"font-size: 30px;\">San Jose</a>",
+    "attributes": {
+      "class": "tabctrl",
+      "href": "#",
+      "data-tab": "tab-sj",
+      "role": "link",
+      "style": "font-size: 30px;",
+      "data-wahpro-txt-style": "font-size: 30px;"
+    },
+    "role_name_guess": "link \u2014 San Jose",
+    "nearby_text": "San Jose",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "San Jose"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_data-tab_tab-sj_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-tab=\"tab-lv\"]",
+    "html_snippet": "<a class=\"tabctrl\" href=\"#\" data-tab=\"tab-lv\" role=\"link\" style=\"font-size: 30px;\" data-wahpro-txt-style=\"font-size: 30px;\">Las Vegas</a>",
+    "attributes": {
+      "class": "tabctrl",
+      "href": "#",
+      "data-tab": "tab-lv",
+      "role": "link",
+      "style": "font-size: 30px;",
+      "data-wahpro-txt-style": "font-size: 30px;"
+    },
+    "role_name_guess": "link \u2014 Las Vegas",
+    "nearby_text": "Las Vegas",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Las Vegas"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_data-tab_tab-lv_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": "a[data-tab=\"tab-ssf\"]",
+    "html_snippet": "<a class=\"tabctrl\" href=\"#\" data-tab=\"tab-ssf\" role=\"link\" style=\"font-size: 30px;\" data-wahpro-txt-style=\"font-size: 30px;\">South San Francisco</a>",
+    "attributes": {
+      "class": "tabctrl",
+      "href": "#",
+      "data-tab": "tab-ssf",
+      "role": "link",
+      "style": "font-size: 30px;",
+      "data-wahpro-txt-style": "font-size: 30px;"
+    },
+    "role_name_guess": "link \u2014 South San Francisco",
+    "nearby_text": "South San Francisco",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "South San Francisco"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_data-tab_tab-ssf_.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".active.owl-item:nth-child(1) > .locitem.item > .locitem-inner > .lci-content > .lci-btns > .btn[data-wahpro-txt-style=\"font-size: 16px;\"]",
+    "html_snippet": "<a class=\"btn\" href=\"https://nems.org/about-us#locations\" role=\"link\" style=\"font-size: 16px;\" data-wahpro-txt-style=\"font-size: 16px;\">More Info</a>",
+    "attributes": {
+      "class": "btn",
+      "href": "https://nems.org/about-us#locations",
+      "role": "link",
+      "style": "font-size: 16px;",
+      "data-wahpro-txt-style": "font-size: 16px;"
+    },
+    "role_name_guess": "link \u2014 More Info",
+    "nearby_text": "More Info",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "More Info"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_1_.locitem.item_.locitem-inn.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".active.owl-item:nth-child(2) > .locitem.item > .locitem-inner > .lci-content > .lci-btns > .btn[data-wahpro-txt-style=\"font-size: 16px;\"]",
+    "html_snippet": "<a class=\"btn\" href=\"https://nems.org/about-us#locations\" role=\"link\" style=\"font-size: 16px;\" data-wahpro-txt-style=\"font-size: 16px;\">More Info</a>",
+    "attributes": {
+      "class": "btn",
+      "href": "https://nems.org/about-us#locations",
+      "role": "link",
+      "style": "font-size: 16px;",
+      "data-wahpro-txt-style": "font-size: 16px;"
+    },
+    "role_name_guess": "link \u2014 More Info",
+    "nearby_text": "More Info",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "More Info"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_2_.locitem.item_.locitem-inn.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".active.owl-item:nth-child(3) > .locitem.item > .locitem-inner > .lci-content > .lci-btns > .btn[data-wahpro-txt-style=\"font-size: 16px;\"]",
+    "html_snippet": "<a class=\"btn\" href=\"https://nems.org/about-us#locations\" role=\"link\" style=\"font-size: 16px;\" data-wahpro-txt-style=\"font-size: 16px;\">More Info</a>",
+    "attributes": {
+      "class": "btn",
+      "href": "https://nems.org/about-us#locations",
+      "role": "link",
+      "style": "font-size: 16px;",
+      "data-wahpro-txt-style": "font-size: 16px;"
+    },
+    "role_name_guess": "link \u2014 More Info",
+    "nearby_text": "More Info",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "More Info"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_3_.locitem.item_.locitem-inn.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".quotes-intro > h2[data-wahpro-titles-style=\"font-size: 70px;\"]",
+    "html_snippet": "<h2 style=\"font-size: 70px;\" data-wahpro-titles-style=\"font-size: 70px;\">What Our Members Say About Us</h2>",
+    "attributes": {
+      "style": "font-size: 70px;",
+      "data-wahpro-titles-style": "font-size: 70px;"
+    },
+    "role_name_guess": "h2 \u2014 What Our Members Say About Us",
+    "nearby_text": "TESTIMONIALS\nWhat Our Members Say About Us",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "What Our Members Say About Us"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.quotes-intro_h2_data-wahpro-titles-style_font-size_70px.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined because it partially overlaps other elements"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".topbtn",
+    "html_snippet": "<a target=\"_blank\" href=\"https://nems.org/volunteers/\" class=\"btn topbtn\" role=\"link\" style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">Volunteer Opportunities</a>",
+    "attributes": {
+      "target": "_blank",
+      "href": "https://nems.org/volunteers/",
+      "class": "btn topbtn",
+      "role": "link",
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "link \u2014 Volunteer Opportunities",
+    "nearby_text": "Volunteer Opportunities",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "Volunteer Opportunities"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.topbtn.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".btn[target=\"_blank\"][data-wahpro-txt-style=\"font-size: 20px;\"]:nth-child(2)",
+    "html_snippet": "<a target=\"_blank\" href=\"https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=1DA826A2B5C0422DE079E2034FD43D44&amp;fromClientSide=true\" class=\"btn\" role=\"link\" style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">See All Opportunities</a>",
+    "attributes": {
+      "target": "_blank",
+      "href": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=1DA826A2B5C0422DE079E2034FD43D44&fromClientSide=true",
+      "class": "btn",
+      "role": "link",
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "link \u2014 See All Opportunities",
+    "nearby_text": "See All Opportunities",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "See All Opportunities"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.btn_target__blank_data-wahpro-txt-style_font-size_20px.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background gradient"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".fc-section:nth-child(2) > .footer-phone > .fp-numbers:nth-child(1) > a[href=\"tel:415-391-9686\"][data-wahpro-txt-style=\"font-size: 20px;\"]",
+    "html_snippet": "<a href=\"tel:415-391-9686\" role=\"link\" style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">415-391-9686</a>",
+    "attributes": {
+      "href": "tel:415-391-9686",
+      "role": "link",
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "link \u2014 415-391-9686",
+    "nearby_text": "415-391-9686",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "415-391-9686"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.fc-section_nth-child_2_.footer-phone_.fp-numbers_nth-c.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background image"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".fc-section:nth-child(2) > .footer-phone > .fp-numbers:nth-child(2) > a[href=\"tel:650-550-3923\"][data-wahpro-txt-style=\"font-size: 20px;\"]",
+    "html_snippet": "<a href=\"tel:650-550-3923\" role=\"link\" style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">650-550-3923</a>",
+    "attributes": {
+      "href": "tel:650-550-3923",
+      "role": "link",
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "link \u2014 650-550-3923",
+    "nearby_text": "650-550-3923",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "650-550-3923"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.fc-section_nth-child_2_.footer-phone_.fp-numbers_nth-c.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background image"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".fc-section:nth-child(2) > .footer-phone > .fp-numbers:nth-child(3) > a[href=\"tel:408-573-9686\"][data-wahpro-txt-style=\"font-size: 20px;\"]",
+    "html_snippet": "<a href=\"tel:408-573-9686\" role=\"link\" style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">408-573-9686</a>",
+    "attributes": {
+      "href": "tel:408-573-9686",
+      "role": "link",
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "link \u2014 408-573-9686",
+    "nearby_text": "408-573-9686",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "408-573-9686"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.fc-section_nth-child_2_.footer-phone_.fp-numbers_nth-c.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background image"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "must_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "color-contrast",
+    "axe_help": "Elements must meet minimum color contrast ratio thresholds",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "impact": "serious",
+    "selector": ".fc-section:nth-child(2) > .footer-phone > .fp-numbers:nth-child(4) > a[href=\"tel:702-589-9686\"][data-wahpro-txt-style=\"font-size: 20px;\"]",
+    "html_snippet": "<a href=\"tel:702-589-9686\" role=\"link\" style=\"font-size: 20px;\" data-wahpro-txt-style=\"font-size: 20px;\">702-589-9686</a>",
+    "attributes": {
+      "href": "tel:702-589-9686",
+      "role": "link",
+      "style": "font-size: 20px;",
+      "data-wahpro-txt-style": "font-size: 20px;"
+    },
+    "role_name_guess": "link \u2014 702-589-9686",
+    "nearby_text": "702-589-9686",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "702-589-9686"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.fc-section_nth-child_2_.footer-phone_.fp-numbers_nth-c.png",
+    "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+    "why_any": [
+      "color-contrast: Element's background color could not be determined due to a background image"
+    ],
+    "why_all": [],
+    "why_none": []
+  },
+  {
+    "page_url": "https://nems.org/",
+    "bucket": "semantic_review",
+    "topic": "SC-1.1.1",
+    "sc_list": [
+      "1.1.1"
+    ],
+    "axe_rule_id": "image-alt",
+    "axe_help": "Images must have alternate text",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
+    "impact": null,
+    "selector": ".logo-img",
+    "html_snippet": "<img src=\"https://nems.org/wp-content/themes/nems/img/logo.png\" alt=\"Logo\" class=\"logo-img\">",
+    "attributes": {
+      "src": "https://nems.org/wp-content/themes/nems/img/logo.png",
+      "alt": "Logo",
+      "class": "logo-img"
+    },
+    "role_name_guess": "img \u2014 Logo",
+    "nearby_text": "",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\image-alt__.logo-img.png",
+    "failureSummary": null,
+    "why_any": [
+      "has-alt: Element has an alt attribute"
+    ],
+    "why_all": [],
+    "why_none": [
+      "alt-space-value: Element has a valid alt attribute value"
+    ]
+  }
+]

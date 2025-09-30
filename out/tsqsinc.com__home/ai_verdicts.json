@@ -1,0 +1,464 @@
+[
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".nav-active",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.nav-active.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "2cb0f3b47761d8a6"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".about-text > .know-more-btn[role=\"link\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.about-text_.know-more-btn_role_link_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "55b369a014f9fdc9"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".read-more-container > .read-more-btn[role=\"link\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.read-more-container_.read-more-btn_role_link_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "54a9dfff668a32a6"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "button[aria-label=\"Read More About Our Expertise\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__button_aria-label_Read_More_About_Our_Expertise_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "37df33cd7f99152d"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".card:nth-child(1) > h3",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_1_h3.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "f41e958032a26276"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".card:nth-child(1) > .know-more-btn[role=\"link\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_1_.know-more-btn_role_link_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "0449b92d227490e1"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".card:nth-child(2) > h3",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_2_h3.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "528806db27c96cf7"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".card:nth-child(2) > .know-more-btn[role=\"link\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_2_.know-more-btn_role_link_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "a6afce5ccfd7cb77"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".card:nth-child(3) > h3",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_3_h3.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "2082af2b9c002b0f"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".card:nth-child(3) > .know-more-btn[role=\"link\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.card_nth-child_3_.know-more-btn_role_link_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "197add8e3f9501e1"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".footer",
+    "axe_rule_id": "landmark-contentinfo-is-top-level",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\landmark-contentinfo-is-top-level__.footer.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-contentinfo-is-top-level?application=axeAPI",
+    "prompt_hash": "f664f0ec20b8d787"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#footer",
+    "axe_rule_id": "landmark-no-duplicate-contentinfo",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\landmark-no-duplicate-contentinfo___footer.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-no-duplicate-contentinfo?application=axeAPI",
+    "prompt_hash": "30787a5e3af4dd81"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#footer",
+    "axe_rule_id": "landmark-unique",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\landmark-unique___footer.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-unique?application=axeAPI",
+    "prompt_hash": "afc52283ebe57e5d"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": ".carousel-indicators",
+    "axe_rule_id": "aria-allowed-attr",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\aria-allowed-attr__.carousel-indicators.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-attr?application=axeAPI",
+    "prompt_hash": "22108cf829e8d274"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".iso-tagline",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.iso-tagline.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "76cb545ce908ca66"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "h1",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__h1.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "46664fb11db8b60d"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "p",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__p.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "7197f8347d9d590a"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".prev",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.prev.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "a5d6c418b52d37de"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".next",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\color-contrast__.next.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "5ca6a9723f782ba1"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "h1",
+    "axe_rule_id": "heading-order",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\heading-order__h1.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/heading-order?application=axeAPI",
+    "prompt_hash": "4607732a800470bf"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.2.2",
+    "SC": "1.2.2",
+    "sc_list": [],
+    "selector": "video",
+    "axe_rule_id": "video-caption",
+    "impact": "critical",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\video-caption__video.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/video-caption?application=axeAPI",
+    "prompt_hash": "f6edcae7ff7e85cc"
+  },
+  {
+    "page_url": "https://tsqsinc.com/",
+    "topic": "SC-1.1.1",
+    "SC": "1.1.1",
+    "sc_list": [],
+    "selector": ".logo-link > .logo-img[alt=\"tsQs Logo\"]",
+    "axe_rule_id": "image-alt",
+    "impact": null,
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
+      "confidence": 0.5,
+      "techniques_used": [
+        "demo-only"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\tsqsinc.com__home\\screenshots\\image-alt__.logo-link_.logo-img_alt_tsQs_Logo_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
+    "prompt_hash": "4198f0399f04c972"
+  }
+]

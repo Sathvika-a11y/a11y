@@ -1,0 +1,92 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 1.4.3
+Techniques context (from curated library):
+{
+  "topic": "SC 1.4.3 — Contrast (Minimum)",
+  "do": [
+    "Ensure contrast ≥ 4.5:1 for normal text and ≥ 3:1 for large text (≈ 18pt regular / 14pt bold).",
+    "Check text over images/gradients; add an overlay or change colors to meet thresholds.",
+    "Include images of text in checks (logos are exempt)."
+  ],
+  "dont": [
+    "Don’t use very light placeholder/help text that falls below thresholds.",
+    "Don’t rely on user zoom or bolding to pass contrast.",
+    "Don’t put important text over busy imagery without sufficient overlay."
+  ],
+  "edge_cases": [
+    "Large-scale text qualifies for 3:1; verify actual computed size/weight.",
+    "Semi-transparent overlays and gradients can change effective contrast.",
+    "Disabled controls are out-of-scope for 1.4.3 (but consider 1.4.11 for non-text contrast separately).",
+    "Logotypes/images of text that are logos are exempt."
+  ]
+}
+
+Element context:
+- Selector: div:nth-child(2) > p:nth-child(2)
+- HTML snippet: <p>
+              Evolve faster with Castell.            </p>
+- Attributes: {}
+- Computed role/name (best-effort): p — Evolve faster with Castell.
+- Nearby text window: Evolve faster with Castell.
+- Accessibility snapshot (partial): {}
+- Axe ruleId: color-contrast
+- Axe help: Elements must meet minimum color contrast ratio thresholds
+- Axe impact: serious
+
+AXE_DIAGNOSTICS:
+(failureSummary/why_any/why_all/why_none and page_url are appended below this prompt; you MUST consider them.)
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+
+2) Decide a verdict. Allowed values (choose ONE):
+   - "needs-change"  → Likely fails the referenced SC in context. Prefer this when uncertain or evidence is conflicting.
+   - "redundant-ok"  → Technically passes AND additional description would only duplicate already-available text for the same control/target.
+   - "decorative-ok" → Image is purely decorative (e.g., empty alt or role=presentation is appropriate).
+   - "complex-needs-longdesc" → Complex image (charts/diagrams) needs extended description/longdesc per WCAG techniques.
+   - "pass"          → Clearly meets the SC with no caveats.
+
+3) Use these decision boundaries by SC (when applicable):
+   • SC 1.1.1 (Non-text Content)
+     - needs-change: alt missing/vague ("image", "photo", filename), or functional image’s alt fails to communicate action/target.
+     - redundant-ok: alt would ONLY duplicate visible adjacent text that already names the same thing for the same control.
+     - decorative-ok: purely decorative images (empty alt or role=presentation) are acceptable.
+   • SC 2.4.4 (Link Purpose, In Context)
+     - needs-change: "click here / learn more / read more" with no disambiguating context in the same sentence/container or accessible name.
+     - redundant-ok: link text would only duplicate a unique nearby title/heading already included in the link’s accessible name.
+   • SC 1.4.3 (Contrast Minimum)
+     - needs-change: computed contrast < 4.5:1 (normal) or < 3:1 (large) per diagnostics; do not guess if no data—explain briefly.
+     - pass: thresholds met or text is decorative/disabled.
+   • SC 4.1.2 (Name, Role, Value)
+     - needs-change: custom widget lacks accessible name, wrong/missing role, or state/value not exposed.
+     - pass: correct role + meaningful name + state.
+
+4) Output a concise JSON object EXACTLY with keys:
+{
+  "type": "<one of the element types above>",
+  "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+  "reason": "<<=200 chars; cite concrete evidence from provided context/diagnostics>>",
+  "confidence": 0.0-1.0,
+  "techniques_used": ["<e.g., H37>", "<e.g., G94>", "<or axe:color-contrast>"]
+}
+
+Rules:
+- Consider AXE_DIAGNOSTICS. Do not invent page content beyond what’s provided.
+- Keep "reason" specific (mention attribute/phrase/role), not generic.
+- Prefer "needs-change" when evidence is ambiguous.
+- Use "redundant-ok" narrowly: only true duplication for the same control/destination.
+- If no technique is clearly applicable, still return a verdict and include ["fallback"].
+- Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+  "why_any": [
+    "color-contrast: Element's background color could not be determined due to a pseudo element"
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://castellhealth.com/"
+}

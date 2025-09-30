@@ -1,0 +1,93 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: BEST_PRACTICE
+Techniques context (from curated library):
+{
+  "topic": "Unmapped rule",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
+    "Consider axe help: Document should not have more than one contentinfo landmark",
+    "Ref: https://dequeuniversity.com/rules/axe/4.7/landmark-no-duplicate-contentinfo?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: #footer
+- HTML snippet: <footer id="footer">
+- Attributes: {"id": "footer"}
+- Computed role/name (best-effort): footer — 🛡️ Consent
+Business Model
+Quality Transformation
+Quality Service
+Quality Consulting
+Quick Links
+Home
+Quality Engineering
+Expertise
+Academy
+Business Model
+e-Book
+Careers
+Contact Us
+Contact Us
+- Nearby text window: Skip to main content
+Skip to footer
+
+Transforming Software Quality Services
+
+An ISO 9001:2015 | ISO/IEC 27001:2022 Certified Company
+
+Home
+Quality Engineering
+Expertise
+Academy
+Business Model
+e-Book
+Careers
+Contact Us
+We're Quality Engineers
+
+Optimized solutions meeting all your business needs
+
+Read More
+❮
+❯
+About tsQs
+
+Our vision at tsQs is to embed our expertise and problem-solving experience across the Software delivery life cycle ensuing transformation of Software testing teams to Quality en
+- Accessibility snapshot (partial): {}
+- Axe ruleId: landmark-no-duplicate-contentinfo
+- Axe help: Document should not have more than one contentinfo landmark
+- Axe impact: moderate
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Document has more than one contentinfo landmark",
+  "why_any": [
+    "page-no-duplicate-contentinfo: Document has more than one contentinfo landmark"
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://tsqsinc.com/"
+}

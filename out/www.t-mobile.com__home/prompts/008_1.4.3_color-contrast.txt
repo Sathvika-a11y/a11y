@@ -1,0 +1,55 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 1.4.3
+Techniques context (from curated library):
+{
+  "topic": "SC 1.4.3",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
+    "Consider axe help: Elements must meet minimum color contrast ratio thresholds",
+    "Ref: https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: a[data-analytics-index="Index31"] > sup
+- HTML snippet: <sup>FREE TRIAL</sup>
+- Attributes: {}
+- Computed role/name (best-effort): sup — 
+- Nearby text window: 
+- Accessibility snapshot (partial): {}
+- Axe ruleId: color-contrast
+- Axe help: Elements must meet minimum color contrast ratio thresholds
+- Axe impact: serious
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1",
+  "why_any": [
+    "color-contrast: Element has insufficient color contrast of 1.66 (foreground color: #000000, background color: #333333, font size: 12.5pt (16.6667px), font weight: bold). Expected contrast ratio of 4.5:1"
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://www.t-mobile.com/"
+}

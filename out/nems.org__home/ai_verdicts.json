@@ -1,0 +1,1644 @@
+[
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "#access_container",
+    "axe_rule_id": "aria-hidden-focus",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The element has aria-hidden='true' but is focusable, violating SC 4.1.2. Focusable elements should not be hidden from accessibility tools.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-hidden-focus"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\aria-hidden-focus___access_container.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-hidden-focus?application=axeAPI",
+    "prompt_hash": "7384ba90a30bc275"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".active.owl-item:nth-child(1) > .locitem.item > .locitem-inner > .lci-content > .lci-area",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio is 3.06, below the required 4.5:1 for normal text, indicating insufficient contrast for readability.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_1_.locitem.item_.locitem-inn.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "d4251fffe079925b"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".active.owl-item:nth-child(1) > .locitem.item > .locitem-inner > .lci-content > .lci-hours > .lci-hourstitle",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio is 3.06, below the required 4.5:1 for normal text, indicating insufficient contrast for 'Clinic Hours'.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_1_.locitem.item_.locitem-inn.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "d26860f86f834c5d"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".active.owl-item:nth-child(2) > .locitem.item > .locitem-inner > .lci-content > .lci-area",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio is 3.06, below the required 4.5:1 for normal text. This violates SC 1.4.3 requirements.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_2_.locitem.item_.locitem-inn.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "7c2a1737d63ccb7b"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".active.owl-item:nth-child(2) > .locitem.item > .locitem-inner > .lci-content > .lci-hours > .lci-hourstitle",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio is 3.06, below the required 4.5:1 for normal text. This violates SC 1.4.3.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_2_.locitem.item_.locitem-inn.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "913bc28b1008da44"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".active.owl-item:nth-child(3) > .locitem.item > .locitem-inner > .lci-content > .lci-area",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast is 3.06, below the required 4.5:1 for normal text. This violates SC 1.4.3.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_3_.locitem.item_.locitem-inn.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "734506442b072352"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".active.owl-item:nth-child(3) > .locitem.item > .locitem-inner > .lci-content > .lci-hours > .lci-hourstitle",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio is 3.06, below the required 4.5:1 for normal text. This violates SC 1.4.3.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_3_.locitem.item_.locitem-inn.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "39170e8701d54efb"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".homeabout-content > h5",
+    "axe_rule_id": "heading-order",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "The heading order is invalid as per axe diagnostics, indicating a need for adjustment in heading levels.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:heading-order"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\heading-order__.homeabout-content_h5.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/heading-order?application=axeAPI",
+    "prompt_hash": "cc72d874712a9fec"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".quotes-intro > h5",
+    "axe_rule_id": "heading-order",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "The heading order is invalid as per axe diagnostics, indicating a need for adjustment in heading levels.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:heading-order"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\heading-order__.quotes-intro_h5.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/heading-order?application=axeAPI",
+    "prompt_hash": "82acaca30cb6650d"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "html",
+    "axe_rule_id": "landmark-one-main",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The document lacks a main landmark, which is essential for accessibility. This violates the guideline for having a clear main content area.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:landmark-one-main"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\landmark-one-main__html.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI",
+    "prompt_hash": "227c19eea6b3e81c"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": ".btn-menu",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element has no discernible text or accessible name, violating SC 4.1.2. It is in tab order but lacks an aria-label or visible text.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-name"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\link-name__.btn-menu.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
+    "prompt_hash": "1eceb4ab2572195c"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#hbslides > .owl-stage-outer",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element lacks a defined role and is not contained by landmarks, which violates the requirement for all page content to be contained by landmarks.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___hbslides_.owl-stage-outer.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "54d7745805c69a83"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#counter",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element lacks a landmark role, which is necessary for accessibility. It does not provide a clear programmatic name or context, failing to meet SC 4.1.2.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___counter.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "9a7e3f65aed3903a"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".hbcurve",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The alt attribute is empty, failing to provide context for the image, which is likely informative given the nearby text 'LOCATIONS'.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "H37",
+        "G94",
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region__.hbcurve.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "cf2c69785484f3a0"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#home-about",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The section lacks a landmark role, which is necessary for accessibility. All page content should be contained by landmarks as per axe guidance.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___home-about.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "a143b61ba74f0f4c"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".hs-intro",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The content is not contained by landmarks, which violates the axe rule for regions. The div lacks a proper role or landmark designation.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region__.hs-intro.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "b27071c301d67f63"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".hs-desktop",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The div with class 'hs-desktop' lacks a landmark role, causing some content to be uncontained by landmarks, violating accessibility guidelines.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region__.hs-desktop.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "9f846651ecfbcf23"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#homelocations > .basic",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The content is not contained by landmarks, which violates the axe rule for region. This affects navigation and accessibility for users relying on assistive technologies.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___homelocations_.basic.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "dda1ebdbe376a79c"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#sfslides > .owl-stage-outer",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element lacks a landmark role, causing some content to be uncontained by landmarks, which violates accessibility standards.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___sfslides_.owl-stage-outer.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "ddd8c142396c5bca"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": ".quotes-intro",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The content is not contained by landmarks, which violates the axe rule for region. The div lacks a proper role or landmark designation.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region__.quotes-intro.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "c1376a6e253de0f7"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#quoteslides > .owl-stage-outer",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element lacks a landmark role, causing some content to be outside of landmarks, which violates SC 4.1.2. It needs a proper role to ensure accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___quoteslides_.owl-stage-outer.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "a3a980d94fad464b"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#careers > .basic:nth-child(1)",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The div lacks a landmark role, causing content to not be contained by landmarks, violating axe:region guidance.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___careers_.basic_nth-child_1_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "7dde283048679aa2"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#careerslides > .owl-stage-outer",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element lacks a landmark role, causing some content to be uncontained, which violates the axe rule for regions.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___careerslides_.owl-stage-outer.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "40a9fd3885a26666"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#seniors",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The section with id 'seniors' lacks a landmark role, causing some content to be outside of landmarks, violating SC 2.4.1.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___seniors.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "8aaa972cfe0d0622"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#scrollup",
+    "axe_rule_id": "region",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The alt text 'Up' is vague and does not clearly communicate the action or target of the image, which is meant to scroll up. This violates SC 1.1.1.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "H37",
+        "axe:region"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\region___scrollup.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "prompt_hash": "2cb04256ad98a262"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#hbslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button element, which must have a functional role. This violates the aria-allowed-role guideline.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "1d950adb107fb692"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#hbslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is functional; it must be removed as per axe diagnostics.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "7d3c3d06bb621b85"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#sfslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is functional; it must be removed to comply with ARIA role requirements.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "47b547ced12fb1ab"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#sfslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is visible and functional, violating aria-allowed-role guidance.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "f71c91687e24d245"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#dalyslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is functional; it must be removed to comply with ARIA role requirements.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "834f538374ea8a44"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#dalyslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is functional; it must be removed to comply with ARIA role requirements.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "f240aaba96d0cb6f"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#sjslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is visible and functional, violating aria-allowed-role guidelines.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "d4c8e279d99f7a08"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#sjslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is functional; it must be removed as per axe diagnostics.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "d70f5a25a8e71d50"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#lvslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button element, which should convey functionality. This violates the aria-allowed-role guideline.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "25bbc89ac225c032"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#lvslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is visible and functional, violating ARIA role guidelines.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "902d0b5ddb012ec0"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#ssfslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button element, which must have a functional role. This violates the aria-allowed-role guideline.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "8b541d93e162e4e3"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#ssfslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is functional; it must be removed to comply with ARIA role requirements.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "15ab99864a5a238d"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#quoteslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is functional; it must be removed to comply with ARIA role requirements.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "1674b5c77f387e1e"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#quoteslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is functional; it must be removed as per axe diagnostics.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "54aee1678ddd8e35"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#careerslides > .owl-nav.disabled > .owl-prev[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is functional; it must be removed as per axe diagnostics.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "4a071058b2453fd2"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "BEST_PRACTICE",
+    "SC": "",
+    "sc_list": [],
+    "selector": "#careerslides > .owl-nav.disabled > .owl-next[role=\"presentation\"][type=\"button\"]",
+    "axe_rule_id": "aria-allowed-role",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The role 'presentation' is inappropriate for a button that is functional; it must be removed as per ARIA guidelines.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:aria-allowed-role"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/aria-allowed-role?application=axeAPI",
+    "prompt_hash": "aacf41ca08d707d4"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".btn-navbar[data-wahpro-txt-style=\"font-size: 15px;\"]:nth-child(1)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio for the link's text is below the required 4.5:1 due to an undetermined background color from a gradient.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.btn-navbar_data-wahpro-txt-style_font-size_15px_nth-ch.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "c51f84038abadb56"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".btn-navbar.btn-appt[data-wahpro-txt-style=\"font-size: 15px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio for the text 'MAKE AN APPOINTMENT' is likely below 4.5:1 due to an undetermined background gradient.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.btn-navbar.btn-appt_data-wahpro-txt-style_font-size_15px_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "c74c977c766b4565"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[href$=\"nems.org/\"][data-wahpro-txt-style=\"font-size: 16px;\"] > span[data-no-translation=\"\"] > .trp-ls-language-name",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for text 'English' is below the required 4.5:1 due to an undetermined background color from an image.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_href_nems.org_data-wahpro-txt-style_font-size_16px_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "55fcefa5ceae59d5"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".owl-item:nth-child(4) > .hbslide.item > .hbslide-content > .smallintro[data-wahpro-txt-style=\"font-size: 18px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for text 'NOW AVAILABLE' is below the required 4.5:1 due to background image, as indicated by AXE diagnostics.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.owl-item_nth-child_4_.hbslide.item_.hbslide-content_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "16c4d1ff6a9ef7a1"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".owl-item:nth-child(4) > .hbslide.item > .hbslide-content > h1[data-wahpro-titles-style=\"font-size: 60px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the text 'Skip the line! Check in using our new Welcome Kiosks' is below the required 4.5:1 due to background image, as per AXE diagnostics.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.owl-item_nth-child_4_.hbslide.item_.hbslide-content_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "d395ad27802bfd09"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".owl-item:nth-child(4) > .hbslide.item > .hbslide-content > p:nth-child(3) > .btn[rel=\"noopener\"][target=\"_blank\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio cannot be determined due to a background gradient, likely failing SC 1.4.3 thresholds.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.owl-item_nth-child_4_.hbslide.item_.hbslide-content_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "9bfead8b9ec82f22"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#counter",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for #counter is below the required threshold of 4.5:1 due to undetermined background color from an image node.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast___counter.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "9e256d13d77b6db8"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".homeabout-content > h5",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for 'About NEMS' is below 4.5:1 due to undetermined background color from an image node, failing SC 1.4.3.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.homeabout-content_h5.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "6b79d27e521aa1ab"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".homeabout-content > h2[data-wahpro-titles-style=\"font-size: 70px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the text 'Health Care from the Heart' is below the required 3:1 for large text, as indicated by AXE diagnostics.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.homeabout-content_h2_data-wahpro-titles-style_font-size_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "fd5665de06da6e6b"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".homeabout-content > p:nth-child(3)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio cannot be determined due to an image node, likely failing SC 1.4.3 thresholds for text readability.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.homeabout-content_p_nth-child_3_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "ddc3837759a39df4"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".btn[href$=\"about-us/\"][data-wahpro-txt-style=\"font-size: 20px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio for the link's text is unclear due to a background gradient, likely failing SC 1.4.3 thresholds.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.btn_href_about-us_data-wahpro-txt-style_font-size_20.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "0f54fc080ca6f1f7"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".hs-intro > h2[data-wahpro-titles-style=\"font-size: 70px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the heading 'Services' is below the required 3:1 for large text due to an undetermined background gradient.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hs-intro_h2_data-wahpro-titles-style_font-size_70px_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "6da0d1066a995713"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".hs-intro > p",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio cannot be determined due to a background gradient, likely failing the 4.5:1 threshold for normal text.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hs-intro_p.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "9cf7f57d18b9cc45"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".topcol-1 > .hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"] > .hsd-content > .hsd-title",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the text 'Medical' cannot be determined due to a pseudo element, likely failing SC 1.4.3 thresholds.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.topcol-1_.hsd-card_data-wahpro-txt-style_font-size_20px.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "0bbf1b2ce2c579d5"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".tc2-row1 > .hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"] > .hsd-content > .hsd-title",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the text 'Dental' is below the required threshold due to undetermined background color from a pseudo element.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.tc2-row1_.hsd-card_data-wahpro-txt-style_font-size_20px.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "c07835f6b7c4b111"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".tc2-row2 > .hsd-light.hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"] > .hsd-content > .hsd-title",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for 'Behavioral Health' is below 4.5:1 due to undetermined background color from a pseudo element.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.tc2-row2_.hsd-light.hsd-card_data-wahpro-txt-style_font-.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "68370b8ce1880355"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".tc2-row2 > .hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"]:nth-child(2) > .hsd-content > .hsd-title",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for 'Optometry' is below the required threshold due to undetermined background color from a pseudo element.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.tc2-row2_.hsd-card_data-wahpro-txt-style_font-size_20px.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "203aba1e3923a486"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".hsd-btmrow > .hsd-light.hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"]:nth-child(1) > .hsd-content > .hsd-title",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for 'Ancillary Services' is likely below 4.5:1 due to undetermined background color from a pseudo element, failing SC 1.4.3.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hsd-btmrow_.hsd-light.hsd-card_data-wahpro-txt-style_fon.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "3711ff8de8a728f7"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".hsd-light.hsd-card[data-wahpro-txt-style=\"font-size: 20px;\"]:nth-child(2) > .hsd-content > .hsd-title",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the text 'Integrative Medicine' is below the required threshold due to undetermined background color from a pseudo element.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hsd-light.hsd-card_data-wahpro-txt-style_font-size_20px_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "1a8bfe88c96d4b5e"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".hl-intro > h2[data-wahpro-titles-style=\"font-size: 70px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the text 'A Location Near You' cannot be determined due to a background gradient, likely failing SC 1.4.3.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hl-intro_h2_data-wahpro-titles-style_font-size_70px_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "80cf95b0d67e2bc6"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".hl-intro > p",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio cannot be determined due to a background gradient, likely failing the 4.5:1 requirement for normal text.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.hl-intro_p.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "b6c3fe5058e538b2"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-tab=\"tab-sf\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio for the link 'San Francisco' could not be determined due to a background gradient, likely failing SC 1.4.3.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_data-tab_tab-sf_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "11a193d65af19bfb"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-tab=\"tab-daly\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio cannot be determined due to a background gradient, likely failing SC 1.4.3 thresholds.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_data-tab_tab-daly_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "9628a1238f7b7c77"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-tab=\"tab-sj\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio cannot be determined due to a background gradient, likely failing SC 1.4.3 thresholds.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_data-tab_tab-sj_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "8e692ca512077781"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-tab=\"tab-lv\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio cannot be determined due to a background gradient, likely failing SC 1.4.3 thresholds.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_data-tab_tab-lv_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "24fe7682da46de7a"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-tab=\"tab-ssf\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio cannot be determined due to a background gradient, likely failing SC 1.4.3 thresholds.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__a_data-tab_tab-ssf_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "85e818185ee9d484"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".active.owl-item:nth-child(1) > .locitem.item > .locitem-inner > .lci-content > .lci-btns > .btn[data-wahpro-txt-style=\"font-size: 16px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio cannot be determined due to a background gradient, likely failing SC 1.4.3 thresholds.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_1_.locitem.item_.locitem-inn.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "294669d1e237dee1"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".active.owl-item:nth-child(2) > .locitem.item > .locitem-inner > .lci-content > .lci-btns > .btn[data-wahpro-txt-style=\"font-size: 16px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the link's text is likely below 4.5:1 due to an undetermined background gradient, as indicated by AXE diagnostics.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_2_.locitem.item_.locitem-inn.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "b49eec9cbec4a99d"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".active.owl-item:nth-child(3) > .locitem.item > .locitem-inner > .lci-content > .lci-btns > .btn[data-wahpro-txt-style=\"font-size: 16px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the link 'More Info' cannot be determined due to a background gradient, likely failing SC 1.4.3.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.active.owl-item_nth-child_3_.locitem.item_.locitem-inn.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "036da5e641025548"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".quotes-intro > h2[data-wahpro-titles-style=\"font-size: 70px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the text 'What Our Members Say About Us' cannot be determined due to overlapping elements, likely failing SC 1.4.3.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.quotes-intro_h2_data-wahpro-titles-style_font-size_70px.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "7a62c3188413d41e"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".topbtn",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio cannot be determined due to a background gradient, likely failing SC 1.4.3 thresholds.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.topbtn.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "8f43f01df7a2fde8"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".btn[target=\"_blank\"][data-wahpro-txt-style=\"font-size: 20px;\"]:nth-child(2)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio for the link's text is likely below 4.5:1 due to an undetermined background gradient, failing SC 1.4.3.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.btn_target__blank_data-wahpro-txt-style_font-size_20px.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "7b0b384abc452dea"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".fc-section:nth-child(2) > .footer-phone > .fp-numbers:nth-child(1) > a[href=\"tel:415-391-9686\"][data-wahpro-txt-style=\"font-size: 20px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast ratio for the link text '415-391-9686' is below the required 4.5:1 due to an undetermined background color from an image.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.fc-section_nth-child_2_.footer-phone_.fp-numbers_nth-c.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "71f9a4630b4d163e"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".fc-section:nth-child(2) > .footer-phone > .fp-numbers:nth-child(2) > a[href=\"tel:650-550-3923\"][data-wahpro-txt-style=\"font-size: 20px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the link text '650-550-3923' could not be determined due to a background image, likely failing SC 1.4.3.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.fc-section_nth-child_2_.footer-phone_.fp-numbers_nth-c.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "72fc78b6f5910d98"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".fc-section:nth-child(2) > .footer-phone > .fp-numbers:nth-child(3) > a[href=\"tel:408-573-9686\"][data-wahpro-txt-style=\"font-size: 20px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the link text '408-573-9686' cannot be determined due to a background image, likely failing SC 1.4.3.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.fc-section_nth-child_2_.footer-phone_.fp-numbers_nth-c.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "85effbc014e69d96"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".fc-section:nth-child(2) > .footer-phone > .fp-numbers:nth-child(4) > a[href=\"tel:702-589-9686\"][data-wahpro-txt-style=\"font-size: 20px;\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "Computed contrast for the link text '702-589-9686' is below the required threshold due to an undetermined background color from an image.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:color-contrast"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\color-contrast__.fc-section_nth-child_2_.footer-phone_.fp-numbers_nth-c.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "d020f898aabd129e"
+  },
+  {
+    "page_url": "https://nems.org/",
+    "topic": "SC-1.1.1",
+    "SC": "1.1.1",
+    "sc_list": [],
+    "selector": ".logo-img",
+    "axe_rule_id": "image-alt",
+    "impact": null,
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The alt text 'Logo' is vague and does not describe the link's destination or purpose, which is required for functional images.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "G94",
+        "axe:image-alt"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\nems.org__home\\screenshots\\image-alt__.logo-img.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
+    "prompt_hash": "fde6689adfbb7e2c"
+  }
+]

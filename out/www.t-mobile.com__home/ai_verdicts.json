@@ -1,0 +1,1024 @@
+[
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "#cardPromotion-e51389d441 > .xpr-promoCard__track > .xpr-promoCard__content > .xpr-promoCard__legal > button[x-data=\"a11yDialogButton()\"][type=\"button\"]",
+    "axe_rule_id": "button-name",
+    "impact": "critical",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The button lacks discernible text for screen readers, making it inaccessible. It does not meet the requirement for having a visible name or label.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Buttons must have discernible text"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\button-name___cardPromotion-e51389d441_.xpr-promoCard__track_.xpr-pro.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/button-name?application=axeAPI",
+    "prompt_hash": "05c8007b0e751c54"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "button[data-rte-modal-type=\"modal:xf\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "needs-change",
+      "reason": "The button has insufficient color contrast, failing to meet the minimum ratio required for accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__button_data-rte-modal-type_modal_xf_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "d2b368c888b4cd65"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-analytics-index=\"Index26\"] > sup",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element has insufficient color contrast, failing to meet the minimum ratio required for accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index26_sup.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "7154c08bf2d6a91b"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-analytics-index=\"Index27\"] > sup",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element has insufficient color contrast, failing to meet the minimum ratio required for accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index27_sup.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "5974b792aed1eee3"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-analytics-index=\"Index28\"] > sup",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element has insufficient color contrast, failing to meet the minimum ratio required for accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index28_sup.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "82297eae95f2b7fb"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-analytics-index=\"Index29\"] > sup",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element has insufficient color contrast, failing to meet the minimum ratio required for accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index29_sup.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "3dfd976056a33915"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-analytics-index=\"Index29\"] > sup > nobr",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "The element has insufficient color contrast (1.66) against the background, failing to meet the minimum required contrast ratio of 4.5:1.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index29_sup_nobr.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "60d3c6b476c83909"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-analytics-index=\"Index30\"] > sup",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element has insufficient color contrast, failing to meet the minimum ratio required for accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index30_sup.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "cfb9cab6cdd81a1d"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-analytics-index=\"Index31\"] > sup",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The element has insufficient color contrast, failing to meet the minimum ratio required for accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-index_Index31_sup.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "25a60f6889463471"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-4.1.1",
+    "SC": "4.1.1",
+    "sc_list": [],
+    "selector": "#experiencefragment-44a44bbc77 > .wrapper--headline-AZY2P4Qp-eQ.xpr-headline[data-xpr-component=\"headline\"] > .xpr-headline__track.phx\\:ta-center[data-guid=\"plan-disrupter\"]",
+    "axe_rule_id": "duplicate-id",
+    "impact": "minor",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "needs-change",
+      "reason": "The id attribute 'plan-disrupter' is not unique, which violates SC 4.1.1 requirements for programmatic names.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: id attribute value must be unique"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
+    "prompt_hash": "1f5e22a80b25bce8"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#headline-a2fb3f583d > h1",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast___headline-a2fb3f583d_h1.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "919c2e577317f15f"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "h1 > nobr",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "The element does not meet minimum color contrast ratio thresholds, which affects readability and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__h1_nobr.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "93334db0ef50db40"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#navigation-158c5a964b",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast___navigation-158c5a964b.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "62745e3c7307ec87"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#navigation-158c5a964b > nobr",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "The element does not meet minimum color contrast ratio thresholds, which affects its accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast___navigation-158c5a964b_nobr.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "cb958557bdb20e17"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".lang-en",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element fails to meet the minimum color contrast ratio thresholds, which affects its accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.lang-en.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "814c9811ad18be77"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".lang-es",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds, which is critical for accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.lang-es.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "bd97e4c46ff270ae"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(1) > .unav-nav__header > h3",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "c69541806b6e9a02"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(1) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "ae3142807297c626"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(1) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element fails to meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "9828ff2312f13a5a"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(1) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(3) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "0d60e1356d48cd8b"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(1) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(4) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds, which is essential for accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "062538dc8e64736b"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(3) > .unav-nav__header > h3",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "085c88865580b65a"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(3) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds",
+        "Apply WCAG techniques conservatively for this SC."
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "448e6afe2b78fa85"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(3) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "a384abb7ae96fb4a"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(3) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(3) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "f4636c175f986fe1"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(3) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(4) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "bff4cbee92ec5219"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(4) > .unav-nav__header > h3",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "36eee18089e11a0d"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(4) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "087a8334eef7e77e"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(4) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "99fc87100e3af5aa"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(4) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(3) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "77343d1e615436fc"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(5) > .unav-nav__header > h3",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds, which is essential for accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "172958c698a58583"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(5) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "e375d0376d192e80"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(5) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds",
+        "Apply WCAG techniques conservatively for this SC."
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "54c6c0ec3968ae89"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(5) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(3) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element fails to meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "2d04ed02cfff8841"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__header > h3",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds, which is critical for accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "106292cf0b0ffbfa"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__header > h3 > nobr",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text-in-image",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds, which is critical for readability and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "1b72c84c6215299c"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet minimum color contrast ratio thresholds due to overlapping elements, which affects visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "6822a7205353fdab"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "0c8a99ac67529b43"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(2) > a[target=\"_self\"] > nobr",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds, which is critical for accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "14420e9d44bcb66c"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(3) > a[target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "b60615ffaf564a4d"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "li[data-customer=\"any\"]:nth-child(3) > a[target=\"_self\"] > nobr",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element's color contrast cannot be determined due to overlap, which may lead to accessibility issues. Additionally, the use of 'nobr' does not provide a clear programmatic name.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__li_data-customer_any_nth-child_3_a_target__self_n.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "85665a996a7ff578"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(6) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(4) > a[data-domain-mapping=\"none\"][target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "ec5fb78affd0dcaf"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(8) > .unav-nav__header > h3",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Apply WCAG techniques conservatively for this SC.",
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "a5bb16078d82d98c"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(8) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(1) > a[target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "0de14249687c2416"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-analytics-navigation-name=\"Additional support|Contact us\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-navigation-name_Additional_support_Contact.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "c9a4e92466ce9d2c"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a[data-analytics-navigation-name=\"Additional support|Billing\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element fails to meet the minimum color contrast ratio thresholds, which affects its accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__a_data-analytics-navigation-name_Additional_support_Billing.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "ceafb990db78ade5"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".unav-nav__item[x-data=\"{ open: false }\"][data-customer=\"any\"]:nth-child(8) > .unav-nav__children > li[data-customer=\"any\"]:nth-child(4) > a[target=\"_self\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "needs-change",
+      "reason": "The element does not meet the minimum color contrast ratio thresholds due to overlapping elements, which affects its visibility and accessibility.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "Consider axe help: Elements must meet minimum color contrast ratio thresholds"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\color-contrast__.unav-nav__item_x-data_open_false_data-customer_any.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
+    "prompt_hash": "503dbd27830ddf07"
+  },
+  {
+    "page_url": "https://www.t-mobile.com/",
+    "topic": "SC-1.1.1",
+    "SC": "1.1.1",
+    "sc_list": [],
+    "selector": "a[href=\"/?INTNAV=tNav:Home\"][data-domain-mapping=\"tmo\"][target=\"_self\"] > img[width=\"52\"][height=\"52\"][alt=\"T-Mobile\"]",
+    "axe_rule_id": "image-alt",
+    "impact": null,
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "redundant-ok",
+      "reason": "The image serves as a company logo and the alt text 'T-Mobile' is appropriate as it conveys the brand name. Since the link itself likely has a clear accessible name, the alt text does not introduce redundancy.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "Company logos: alt should usually be the company name unless purely decorative."
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.t-mobile.com__home\\screenshots\\image-alt__a_href_INTNAV_tNav_Home_data-domain-mapping_tmo_targ.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
+    "prompt_hash": "af37cdc4acb98dc9"
+  }
+]

@@ -1,0 +1,57 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 4.1.1
+Techniques context (from curated library):
+{
+  "topic": "SC 4.1.1",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
+    "Consider axe help: id attribute value must be unique",
+    "Ref: https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: #experiencefragment-44a44bbc77 > .wrapper--headline-AZY2P4Qp-eQ.xpr-headline[data-xpr-component="headline"] > .xpr-headline__track.phx\:ta-center[data-guid="plan-disrupter"]
+- HTML snippet: <div id="plan-disrupter" data-guid="plan-disrupter" class="xpr-headline__track phx:ta-center     "> 
+                       <h3 data-xpr-headline-element="" class="xpr-headline__title tdds:text-caption">INTRODUCING EXPERIENCE PLANS </h3> 
+                      </div>
+- Attributes: {"id": "plan-disrupter", "data-guid": "plan-disrupter", "class": "xpr-headline__track phx:ta-center     "}
+- Computed role/name (best-effort): div — INTRODUCING EXPERIENCE PLANS
+- Nearby text window: INTRODUCING EXPERIENCE PLANS
+- Accessibility snapshot (partial): {}
+- Axe ruleId: duplicate-id
+- Axe help: id attribute value must be unique
+- Axe impact: minor
+
+TASK:
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
+3) Return a concise JSON object with:
+   {
+     "type": "...",
+     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
+     "reason": "...",
+     "confidence": 0.0-1.0,
+     "techniques_used": ["...","..."]
+   }
+
+Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute: plan-disrupter",
+  "why_any": [
+    "duplicate-id: Document has multiple static elements with the same id attribute: plan-disrupter"
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://www.t-mobile.com/"
+}
