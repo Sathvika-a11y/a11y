@@ -1,6 +1,7 @@
 # --- make project root importable (must be first) ---
 import sys, os, asyncio
 from pathlib import Path
+
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -21,6 +22,39 @@ from core.report_builders.excel_report import build_excel
 from core.report_builders.word_report import build_word
 
 st.set_page_config(page_title="A11y Audit — axe + RAG", layout="wide")
+
+# ======================= secrets → env =======================
+def _apply_secrets_to_env():
+    """
+    Read Streamlit secrets and expose as environment variables so core/*
+    modules can use them without importing Streamlit.
+    """
+    flat = st.secrets
+    nested = flat.get("openai", {}) if hasattr(st, "secrets") else {}
+
+    def set_if_missing(name, value, default=None):
+        if os.environ.get(name):
+            return
+        if value is not None and str(value).strip():
+            os.environ[name] = str(value)
+        elif default is not None:
+            os.environ[name] = str(default)
+
+    # creds + model
+    set_if_missing("OPENAI_API_KEY", flat.get("OPENAI_API_KEY") or nested.get("api_key"))
+    set_if_missing("OPENAI_MODEL",   flat.get("OPENAI_MODEL")   or nested.get("model"), "gpt-4o-mini")
+
+    # feature flags
+    # default ON if a key is present; otherwise force OFF
+    if os.environ.get("OPENAI_API_KEY"):
+        set_if_missing("A11Y_USE_LLM", flat.get("A11Y_USE_LLM"), "1")
+    else:
+        os.environ["A11Y_USE_LLM"] = "0"
+
+    # optional knob: skip best-practice (non-WCAG-tagged) items
+    set_if_missing("A11Y_SKIP_BEST_PRACTICE", flat.get("A11Y_SKIP_BEST_PRACTICE"), "0")
+
+_apply_secrets_to_env()
 
 # ======================= helpers =======================
 BASE_OUT = (ROOT / "out")
@@ -61,66 +95,66 @@ def show_preview_tables(out_dir: Path):
     except Exception as e:
         st.info(f"Preview not available yet: {e}")
 
+def build_reports(out_dir: Path, url: str):
+    xlsx = out_dir / "report.xlsx"
+    docx = out_dir / "report.docx"
+    build_excel(out_dir, xlsx)
+    build_word(out_dir, docx, url)
+    return xlsx, docx
+
 # ======================= UI =======================
 st.title("Accessibility Audit (axe-core + RAG)")
 
 # ---- Sidebar controls ----
-# ---- Sidebar controls ----
 with st.sidebar:
     st.header("AI Settings")
 
-    # 1) API key (kept in memory only; not written to disk)
-    saved_key = st.session_state.get("OPENAI_API_KEY", os.environ.get("OPENAI_API_KEY", ""))
-    api_key = st.text_input("OpenAI API key", type="password", value=saved_key, help="We keep this only in memory for this session.")
-    if api_key:
-        st.session_state["OPENAI_API_KEY"] = api_key
-        os.environ["OPENAI_API_KEY"] = api_key
-
-    # 2) Model name
-    default_model = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
-    model = st.text_input("OpenAI model", value=st.session_state.get("OPENAI_MODEL", default_model))
-    if model:
-        st.session_state["OPENAI_MODEL"] = model
-        os.environ["OPENAI_MODEL"] = model
-
-    # 3) Live AI toggle (controls A11Y_USE_LLM)
-    key_present = bool(os.environ.get("OPENAI_API_KEY"))
+    has_key = bool(os.environ.get("OPENAI_API_KEY"))
+    # Simple toggle; disabled if no key present in secrets/env
     use_live_ai = st.checkbox(
         "Use live AI",
-        value=key_present and True,
-        help="When enabled and an API key is set, the reviewer will call your model; otherwise it uses the offline stub."
+        value=(os.environ.get("A11Y_USE_LLM") == "1" and has_key),
+        disabled=not has_key,
+        help="Runs the semantic reviewer with your OpenAI key from Streamlit Secrets."
     )
-    os.environ["A11Y_USE_LLM"] = "1" if (use_live_ai and key_present) else "0"
+    os.environ["A11Y_USE_LLM"] = "1" if (use_live_ai and has_key) else "0"
 
-    # 4) Skip non-WCAG (best-practice) items in AI
     skip_bp = st.checkbox(
         "Skip non-WCAG (best-practice) rules in AI",
-        value=False,
+        value=(os.environ.get("A11Y_SKIP_BEST_PRACTICE") == "1"),
         help="If ON, AI runs only for candidates with WCAG SC tags (reduces noise)."
     )
     os.environ["A11Y_SKIP_BEST_PRACTICE"] = "1" if skip_bp else "0"
 
-    # Status
-    if key_present:
-        st.success("API key set. Live AI is " + ("ON" if use_live_ai else "OFF"))
-    else:
-        st.warning("No API key set. AI uses the safe stub.")
-        
+    st.caption(f"Model: {os.environ.get('OPENAI_MODEL', 'gpt-4o-mini')}")
+    st.caption(f"AI reviewer: {'ON' if os.environ.get('A11Y_USE_LLM')=='1' and has_key else 'OFF'}")
+
+    st.divider()
     st.header("Import WCAG Techniques")
     xls = st.file_uploader("Upload WCAG_Checklist.xlsx", type=["xlsx", "xls"])
-    merge_existing = st.checkbox("Merge with existing JSONs (append/unique)", value=True,
-                                 help="If off, existing files will be overwritten with the Excel content.")
+    merge_existing = st.checkbox(
+        "Merge with existing JSONs (append/unique)",
+        value=True,
+        help="If off, existing files will be overwritten."
+    )
     if xls and st.button("Import techniques"):
         from core.wcag_importer import import_wcag_from_excel, WCAG_LIB_DIR
-        # Read file-like into importer
         result = import_wcag_from_excel(xls.getvalue(), out_dir=WCAG_LIB_DIR, merge_existing=merge_existing)
         st.success(f"Imported: {result['created']} created, {result['updated']} updated, {result['skipped']} skipped")
-        # Optional: show a few paths
         for p in result["files"][:10]:
             st.write("•", p)
         if len(result["files"]) > 10:
             st.write(f"... and {len(result['files']) - 10} more")
 
+    # Tiny status of loaded technique files
+    try:
+        wcag_dir = ROOT / "core" / "wcag_lib"
+        files = list(wcag_dir.glob("sc-*.json"))
+        st.caption(f"WCAG techniques loaded: {len(files)}")
+        if not files:
+            st.warning("No technique JSONs found. Using minimal fallback context.")
+    except Exception:
+        pass
 
 # ---- Main controls ----
 if "last_url" not in st.session_state:
@@ -130,7 +164,7 @@ if "last_run" not in st.session_state:
 
 url = st.text_input("Enter a URL to audit", value=st.session_state.last_url, help="Single page for now. We’ll add crawling later.")
 colA, colB, colC = st.columns([1, 1, 1])
-run_clicked = colA.button("Run Full Audit", type="primary", key="run_audit")
+run_clicked  = colA.button("Run Full Audit", type="primary", key="run_audit")
 reai_clicked = colB.button("Rebuild AI Verdicts Only", key="reai")  # doesn’t rerun axe
 clear_clicked = colC.button("Clear Session", key="clear")
 
@@ -141,13 +175,6 @@ if clear_clicked:
     st.success("Session cleared.")
 
 # ======================= actions =======================
-def build_reports(out_dir: Path, url: str):
-    xlsx = out_dir / "report.xlsx"
-    docx = out_dir / "report.docx"
-    build_excel(out_dir, xlsx)
-    build_word(out_dir, docx, url)
-    return xlsx, docx
-
 if run_clicked and url:
     st.session_state.last_url = url
     slug = slugify(url)
@@ -158,7 +185,7 @@ if run_clicked and url:
         run_axe_on_url(url, out_dir)
 
     with st.spinner("Building RAG prompts & AI verdicts…"):
-        rag_review(out_dir)  # will use live AI or stub based on env A11Y_USE_LLM
+        rag_review(out_dir)  # live or stub based on env A11Y_USE_LLM
 
     with st.spinner("Generating Excel & Word reports…"):
         xlsx, docx = build_reports(out_dir, url)
