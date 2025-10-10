@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "tab_stops": 2,
+    "trace_steps": 9,
+    "trap_suspected": false,
+    "activation_checks": 4,
+    "unreachable": 0
+  },
+  "unreachable": [],
+  "activations": [
+    {
+      "selector": "body",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "body",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "body",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "body",
+      "enter_ok": false,
+      "space_ok": false
+    }
+  ],
+  "tabindex_neg1": []
+}

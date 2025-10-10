@@ -3,44 +3,148 @@ You are an accessibility reviewer applying WCAG techniques precisely and conserv
 Topic: SC 1.4.3
 Techniques context (from curated library):
 {
-  "topic": "SC 1.4.3",
+  "topic": "SC 1.4.3 — Contrast (Minimum)",
   "do": [
-    "Apply WCAG techniques conservatively for this SC.",
-    "Prefer 'needs-change' when meaning or programmatic name is unclear.",
-    "Consider axe help: Elements must meet minimum color contrast ratio thresholds",
-    "Ref: https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI"
+    "Ensure text has a contrast ratio of at least 4.5:1 against its background for normal text",
+    "Ensure large text (18pt/24px or 14pt/19px bold) has a contrast ratio of at least 3:1 against its background",
+    "Test all text colors against their actual rendered background colors, including gradients",
+    "Use contrast checking tools to verify ratios meet WCAG requirements (WebAIM, Stark, Deque, etc.)",
+    "Calculate contrast using the WCAG formula: (L1 + 0.05) / (L2 + 0.05) where L1 is lighter luminance",
+    "Test contrast in both light and dark mode themes if your application supports them",
+    "Verify contrast ratios for text over background images by testing against darkest/lightest areas",
+    "Ensure hover and focus states maintain sufficient contrast ratios",
+    "Test contrast on high-DPI displays and various device screen sizes",
+    "Use relative luminance calculation based on sRGB color space values",
+    "Test text contrast in different browser rendering modes (with/without font smoothing)",
+    "Verify contrast for dynamic content that changes color based on user interaction",
+    "Test link text contrast in both visited and unvisited states",
+    "Ensure error messages and validation text meet contrast requirements",
+    "Test button text contrast against button background colors including gradients",
+    "Verify placeholder text contrast meets requirements (avoid using placeholder as sole label)",
+    "Test contrast for text within custom UI components like tabs, accordions, and modals",
+    "Use automated testing tools (axe-core, WAVE) to catch obvious contrast failures",
+    "Perform manual testing for complex backgrounds and edge cases",
+    "Document color palettes with their contrast ratios for design system consistency",
+    "Specify both text and background colors explicitly (don’t rely on defaults)",
+    "On state changes (like hover, focus, active), maintain or increase contrast",
+    "Ensure text and images of text have a contrast ratio of at least 4.5:1 against their background (unless exempt)",
+    "Provide sufficient contrast for placeholder text, hover text, and focus text too (if visible)",
+    "Ensure visual indicators (e.g., focus outlines, selected states) meet at least 3:1 contrast with adjacent colors",
+    "When gradients or background images are used behind text, ensure the contrast holds across the background"
   ],
   "dont": [
-    "Do not approve ambiguous or redundant alternatives.",
-    "Do not rely on visual presentation alone."
+    "Do not rely solely on visual inspection - always use contrast calculation tools",
+    "Do not assume that dark text on light backgrounds automatically passes (e.g., #777777 on white fails)",
+    "Do not round up contrast ratios - 4.49:1 does not meet the 4.5:1 requirement",
+    "Do not forget to specify both foreground and background colors in CSS (F24 failure)",
+    "Do not use text over background images without ensuring adequate contrast throughout (F83 failure)",
+    "Do not rely on browser default colors - always specify both text and background colors",
+    "Do not assume OS-level high contrast settings meet WCAG requirements",
+    "Do not use color alone to convey information critical to understanding",
+    "Do not forget to test contrast in different user-selected themes or modes",
+    "Do not overlook contrast requirements for form validation messages and error text",
+    "Do not assume that larger font sizes automatically have better contrast perception",
+    "Do not use transparent backgrounds without considering the underlying content",
+    "Do not rely on CSS filters or opacity to achieve contrast - test the final rendered result",
+    "Do not ignore contrast requirements for interactive states (hover, focus, active)",
+    "Do not use automatic color generation without contrast verification",
+    "Do not assume that complementary colors have good contrast",
+    "Do not forget to test contrast on actual devices, not just desktop browsers",
+    "Do not use pure red text on pure green backgrounds or similar problematic combinations",
+    "Do not rely on bold or italic styling alone to meet contrast requirements",
+    "Do not ignore contrast testing for dynamically generated content",
+    "Do not use low-contrast colors (e.g., light grey on white) for body text or important labels",
+    "Do not assume an element is exempt when it still conveys meaningful information",
+    "Do not let contrast fall below the threshold on responsiveness or theming",
+    "Do not leave controls or icons without sufficient contrast, even if they are small or decorative"
   ],
-  "edge_cases": []
+  "edge_cases": [
+    "Text over gradient backgrounds: Test contrast against both lightest and darkest parts of gradient",
+    "Text over complex background images: Test against areas where text actually appears",
+    "Dynamic theming: Test contrast ratios in all available theme variations (light/dark/high-contrast)",
+    "Transparent overlays: Calculate final rendered colors including transparency effects",
+    "Text with CSS shadows or outlines: Consider shadow/outline contribution to contrast perception",
+    "Mobile responsive designs: Test contrast on various screen sizes and pixel densities",
+    "Text within SVG graphics: Ensure programmatic color values meet contrast requirements",
+    "Animated or transitioning colors: Verify contrast requirements are met throughout animation",
+    "Text over video backgrounds: Provide sufficient contrast or alternative overlay solutions",
+    "Custom font rendering: Test with various font-smoothing and anti-aliasing settings",
+    "Print stylesheets: Ensure contrast works for both screen and print media",
+    "High-DPI displays: Test that contrast calculations account for different pixel densities",
+    "Text selection colors: Ensure selected text maintains readable contrast ratios",
+    "Disabled form elements: While exempt, consider user experience for partially disabled states",
+    "Link text within paragraphs: Ensure sufficient contrast for both visited/unvisited states",
+    "Text over pattern backgrounds: Test against dominant colors in repetitive patterns",
+    "Color-shifted displays: Consider how contrast appears on different monitor calibrations",
+    "Text in data visualizations: Ensure chart labels meet contrast requirements against backgrounds",
+    "Modal dialog overlays: Test text contrast against both modal background and underlying content",
+    "Notification banners: Test contrast for temporary messaging overlays",
+    "Progressive web app themes: Test contrast in browser-managed theme environments",
+    "Text within iframes: Ensure contrast requirements are met in embedded content",
+    "CSS-generated content: Test contrast for ::before and ::after pseudo-element text",
+    "Text within canvas elements: Verify programmatic color combinations meet requirements",
+    "Thin or light-weight fonts: Even if numerical contrast passes, thin strokes may still be hard to read",
+    "Hover and focus overlays: UI overlays or shadows might reduce contrast — evaluate after effect",
+    "Inactive UI components (disabled buttons): May be exempt, but ensure legibility where possible",
+    "Subpixel rendering / anti-aliasing may reduce effective contrast; design with margin"
+  ]
 }
 
 Element context:
-- Selector: .HomepageHeroSection_card__6XbjH.IhLink_link__B1NPM[href$="find-a-doctor"] > .HomepageHeroSection_inner__9XjZ5[data-attribute="HomepageHeroSectionSectionCard"] > .MuiTypography-paragraph.HomepageHeroSection_cardSubCopy__8TiOH.css-u80pdr
-- HTML snippet: <p class="MuiTypography-root MuiTypography-body MuiTypography-paragraph HomepageHeroSection_cardSubCopy__8TiOH css-u80pdr">Looking for a primary care provider or a specialist? Start here.</p>
-- Attributes: {"class": "MuiTypography-root MuiTypography-body MuiTypography-paragraph HomepageHeroSection_cardSubCopy__8TiOH css-u80pdr"}
-- Computed role/name (best-effort): p — Looking for a primary care provider or a specialist? Start here.
-- Nearby text window: Looking for a primary care provider or a specialist? Start here.
+- Selector: .swiper-slide-next.swiper-slide-visible.swiper-slide > .PublicationCard_wrapper__h6BoM > .MuiCard-root.PublicationCard_inner__Ym3DL.css-h4ugdf > .PublicationCard_body__cJmPT > .PublicationCard_topic__MaDGz > .undefined.IhLink_link__B1NPM[href="/"] > .IhLink_linkInner__QwFmJ.linkInner
+- HTML snippet: <div class="IhLink_linkInner__QwFmJ linkInner">Nutrition and weight loss</div>
+- Attributes: {"class": "IhLink_linkInner__QwFmJ linkInner"}
+- Computed role/name (best-effort): div — Nutrition and weight loss
+- Nearby text window: Nutrition and weight loss
 - Accessibility snapshot (partial): {}
 - Axe ruleId: color-contrast
 - Axe help: Elements must meet minimum color contrast ratio thresholds
 - Axe impact: serious
 
-TASK:
-1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
-2) Judge adequacy against the techniques. Consider redundancy (e.g., if link/button already has a good accessible name).
-3) Return a concise JSON object with:
-   {
-     "type": "...",
-     "verdict": "pass | needs-change | decorative-ok | redundant-ok | complex-needs-longdesc",
-     "reason": "...",
-     "confidence": 0.0-1.0,
-     "techniques_used": ["...","..."]
-   }
+AXE_DIAGNOSTICS:
+(failureSummary/why_any/why_all/why_none and page_url are appended below this prompt; you MUST consider them.)
 
-Only output the JSON.
+TASK
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+
+2) Decide ONE verdict (string): "pass" | "fail" | "review".
+   - pass   → clearly meets the SC (e.g., decorative image correctly hidden; redundant alternative truly duplicates visible text for the same control/target; contrast thresholds met)
+   - fail   → clearly violates the SC (cite the concrete reason)
+   - review → borderline/ambiguous/incomplete evidence; AI checked but manual verification is warranted
+
+3) Decision boundaries to guide judgement (non-exhaustive):
+   • SC 1.1.1 (Non-text Content)
+     - fail: missing/empty/placeholder alt for informative/functional images; functional image label doesn’t convey action/target
+     - pass: purely decorative (empty alt or role=presentation); or alt would ONLY duplicate adjacent visible text for the same control/target (note “redundant” in reason)
+   • SC 2.4.4 (Link Purpose, In Context)
+     - fail: “click here / learn more / read more” without disambiguating context in the same sentence/container or accessible name
+     - review: context may disambiguate but evidence is thin in provided snippet
+   • SC 1.4.3 (Contrast Minimum)
+     - fail: computed contrast < 4.5:1 (normal) or < 3:1 (large) based on diagnostics/evidence
+     - review: dynamic/unknown background or insufficient data to compute reliably
+   • SC 4.1.2 (Name, Role, Value)
+     - fail: custom widget lacks name, wrong/missing role, or state/value not exposed
+     - pass: correct role + meaningful name + state
+   • SC 2.5.3 (Label in Name)
+     - fail: visible label text not found in accessible name for controls
+     - review: partial match or name derived by ids/ARIA is truncated/uncertain
+
+4) Output a compact JSON object EXACTLY with keys:
+{
+  "type": "<element type>",
+  "verdict": "pass" | "fail" | "review",
+  "reason": "<<=200 chars; cite concrete evidence from context/diagnostics (e.g., alt='image'; link text 'learn more' without context; contrast 2.8:1)>>",
+  "confidence": 0.0-1.0,
+  "techniques_used": ["<e.g., H37>", "<e.g., G94>", "<or axe:RULE_ID>"]
+}
+
+
+Rules:
+- Use the provided evidence only; do not invent page content.
+- Keep the reason specific (mention the attribute/phrase/metric).
+- Prefer "review" (not "fail") when evidence is borderline/insufficient or background is dynamic/unknown.
+- If no technique matches, still return a verdict and include ["fallback"] in techniques_used.
+- Only output the JSON.
 
 
 AXE_DIAGNOSTICS:

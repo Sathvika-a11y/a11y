@@ -1,0 +1,21 @@
+[
+  {
+    "type": "heading",
+    "selector": "h1",
+    "level": 1,
+    "visibleText": "Example Domain",
+    "region": "body",
+    "nearbyText": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "source": "main"
+  },
+  {
+    "type": "label",
+    "selector": "a",
+    "controlType": "a",
+    "visibleLabel": "More information...",
+    "accessibleName": "More information...",
+    "region": "body",
+    "nearbyText": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "source": "main"
+  }
+]

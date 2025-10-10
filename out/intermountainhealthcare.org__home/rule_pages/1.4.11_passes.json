@@ -1,0 +1,20 @@
+[
+  {
+    "selector": "span.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "sc": "1.4.11",
+    "note": "Non-text (UI) contrast 4.10 >= 3.0 threshold.",
+    "evidence": {
+      "contrast_ratio": 4.1,
+      "inside_rgb": [
+        13,
+        0,
+        69
+      ],
+      "outside_rgb": [
+        121,
+        112,
+        142
+      ]
+    }
+  }
+]

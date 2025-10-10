@@ -1,3 +1,11 @@
 {
-  "page_url": "https://intermountainhealthcare.org/"
+  "page_url": "https://intermountainhealthcare.org/",
+  "axe_version_requested": "4.10.0",
+  "fast_mode": false,
+  "include_frames": true,
+  "capture_dom": true,
+  "screenshot_elements": true,
+  "screenshot_keyboard": true,
+  "quick_scan": false,
+  "ultra_quick": false
 }

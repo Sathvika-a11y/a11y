@@ -1,0 +1,139 @@
+{ 
+
+    "SC": "2.5.8 Target Size (Minimum)", 
+
+    "Topic": "Ensure touch targets are large enough for easy interaction", 
+
+    "Do": [ 
+
+      "Make interactive elements at least 24x24 CSS pixels.", 
+
+      "Provide adequate spacing between touch targets.", 
+
+      "Use padding to increase tappable area.", 
+
+      "Ensure button icons have sufficient clickable size.", 
+
+      "Use visual cues for touch targets.", 
+
+      "Maintain consistent target size across views.", 
+
+      "Check touch targets on all screen sizes.", 
+
+      "Increase spacing for densely packed items.", 
+
+      "Ensure form inputs have sufficient touch area.", 
+
+      "Provide minimum 8px spacing between adjacent targets.", 
+
+      "Design for finger tap, not mouse click precision.", 
+
+      "Include focus outlines for small targets.", 
+
+      "Align visual and actual clickable areas.", 
+
+      "Use labels for icons to increase hit area.", 
+
+      "Ensure mobile-friendly button size.", 
+
+      "Support orientation changes with consistent target sizes.",
+
+      "Test touch areas using mobile devices.", 
+
+      "Use accessible tap zones on icons and links." 
+
+    ], 
+
+    "Dont": [ 
+
+      "Don’t use very small touch targets (<24px).", 
+
+      "Don’t place links too close together.", 
+
+      "Don’t rely on hover effects for mobile.", 
+
+      "Don’t hide touch areas behind visual elements.", 
+
+      "Don’t assume users have precise touch control.", 
+
+      "Don’t overlap interactive elements.", 
+
+      "Don’t reduce padding to save space.", 
+
+      "Don’t remove focus outlines.", 
+
+      "Don’t rely on text-only links for touch devices.", 
+
+      "Don’t make non-functional visual buttons.", 
+
+      "Don’t stack multiple interactive elements.", 
+
+      "Don’t use transparent buttons with invisible edges.", 
+
+      "Don’t use hover-only dropdowns.", 
+
+      "Don’t reduce clickable area on responsive layouts.", 
+
+      "Don’t make small close icons hard to press.", 
+
+      "Don’t put links near screen edges.", 
+
+      "Don’t use too tight tap spacing.", 
+
+      "Don’t allow scrolling elements to cover buttons.", 
+
+      "Don’t create inconsistent target sizes." 
+
+    ], 
+
+"Edge cases": [ 
+
+      "Visible button looks large but CSS padding not included in clickable area", 
+
+      "SVG path interactive area is small though icon appears large", 
+
+      "Icon inside link is large but only the text is clickable", 
+
+      "Browser zoom reduces clickable area below threshold", 
+
+      "Sticky footer covers part of tap zone making it smaller effectively", 
+
+      "Overlapping transparent element intercepts touch events", 
+
+      "Dynamic resizing shrinks target on certain breakpoints", 
+
+      "Device safe area (notch) cuts into target area near edges", 
+
+      "SVG viewBox scaling makes reported CSS size different from actual touch target", 
+
+      "Pseudo-element used to expand area not recognized by hit testing in some browsers", 
+
+      "Custom control uses margin instead of padding so hit area is smaller", 
+
+      "Close icon inside crowded toolbar becomes too small to tap", 
+
+      "Floating action button overlaps with other controls reducing effective area", 
+
+      "On high-DPI screens CSS pixel size differs from physical pixels causing misestimation", 
+
+      "Zoomed users need to pan to reach target causing usability drop", 
+
+      "Checkbox/Radio inputs styled small but native control area still small", 
+
+      "Gesture zones near screen edges conflict with OS gestures", 
+
+      "Third-party ads inject small clickable elements near main controls", 
+
+      "Nested clickable elements cause hit testing ambiguity", 
+
+      "Browser accessibility overlay reduces effective clickable region" 
+
+    ], 
+
+    "Techniques": ["G210", "G208", "C40", "G174"], 
+
+    "Axe rules": ["target-size"], 
+
+    "Tags": ["mobile", "touch", "usability", "pointer", "tap-targets"] 
+
+  }

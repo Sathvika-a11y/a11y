@@ -1,87 +1,45 @@
 [
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "SC-4.1.1",
-    "SC": "4.1.1",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
     "sc_list": [],
-    "selector": ".form_field-wrapper.is-menu > .form_submit-button-wrapper > .form_arrow.w-embed > svg[height=\"18\"][viewBox=\"0 0 24 18\"][width=\"24\"] > defs > clippath",
-    "axe_rule_id": "duplicate-id",
-    "impact": "minor",
+    "selector": "iframe",
+    "axe_rule_id": "frame-title",
+    "impact": "serious",
     "ai_verdict": {
-      "type": "decorative",
-      "verdict": "needs-change",
-      "reason": "The id attribute 'clip0_2551_20294' is not unique, violating SC 4.1.1. This can lead to confusion in accessibility tools and is flagged by axe diagnostics.",
-      "confidence": 0.8,
+      "type": "functional",
+      "verdict": "fail",
+      "reason": "The iframe lacks an accessible name, as it has no title attribute or aria-label/aria-labelledby, violating SC 4.1.2.",
+      "confidence": 0.9,
       "techniques_used": [
-        "axe:duplicate-id"
+        "axe:frame-title"
       ]
     },
     "screenshot": null,
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
-    "prompt_hash": "b599f9fe62fbe7be"
-  },
-  {
-    "page_url": "https://www.brandience.com/connect",
-    "topic": "SC-4.1.1",
-    "SC": "4.1.1",
-    "sc_list": [],
-    "selector": ".position-relative > .button-icon > .icon_pushdown.w-embed > svg[width=\"22\"][height=\"17\"] > defs > clippath",
-    "axe_rule_id": "duplicate-id",
-    "impact": "minor",
-    "ai_verdict": {
-      "type": "decorative",
-      "verdict": "needs-change",
-      "reason": "The id attribute 'a' is not unique, leading to potential confusion in accessibility. This violates SC 4.1.1 as per axe diagnostics.",
-      "confidence": 0.8,
-      "techniques_used": [
-        "axe:duplicate-id"
-      ]
-    },
-    "screenshot": null,
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
-    "prompt_hash": "511cedfac24bc2b7"
-  },
-  {
-    "page_url": "https://www.brandience.com/connect",
-    "topic": "SC-4.1.1",
-    "SC": "4.1.1",
-    "sc_list": [],
-    "selector": ".newsletter-form_heading-wrapper > .newsletter-form_icon.is-footer.w-embed > svg[width=\"42\"][height=\"42\"][viewBox=\"0 0 42 42\"] > defs > clippath",
-    "axe_rule_id": "duplicate-id",
-    "impact": "minor",
-    "ai_verdict": {
-      "type": "decorative",
-      "verdict": "needs-change",
-      "reason": "The id 'clip0_2551_20926' is not unique, violating SC 4.1.1. This can lead to confusion in accessibility tools and is flagged by axe for duplicate-id.",
-      "confidence": 0.8,
-      "techniques_used": [
-        "axe:duplicate-id"
-      ]
-    },
-    "screenshot": null,
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/duplicate-id?application=axeAPI",
-    "prompt_hash": "3f90ebb42778aa41"
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/frame-title?application=axeAPI",
+    "prompt_hash": "de5f33672510f738"
   },
   {
     "page_url": "https://www.brandience.com/connect",
     "topic": "SC-4.1.2",
     "SC": "4.1.2",
     "sc_list": [],
-    "selector": "iframe[width=\"100%\"]",
-    "axe_rule_id": "frame-title",
-    "impact": "serious",
+    "selector": ".form_field-wrapper.is-menu > .form_submit-button-wrapper > .form_submit-button.w-button[data-wait=\"\"]",
+    "axe_rule_id": "input-button-name",
+    "impact": "critical",
     "ai_verdict": {
-      "type": "functional",
-      "verdict": "needs-change",
-      "reason": "The iframe lacks an accessible name (title, aria-label, or aria-labelledby), violating SC 4.1.2. AXE diagnostics indicate missing attributes for accessibility.",
+      "type": "input",
+      "verdict": "fail",
+      "reason": "Element has an empty value attribute, which means it lacks a discernible name for assistive technologies. Axe rule input-button-name indicates critical impact.",
       "confidence": 0.9,
       "techniques_used": [
-        "axe:frame-title"
+        "axe:input-button-name"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\frame-title__iframe_width_100_.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/frame-title?application=axeAPI",
-    "prompt_hash": "25653e8a29914c4c"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/input-button-name?application=axeAPI",
+    "prompt_hash": "d2a3eda75c74edec"
   },
   {
     "page_url": "https://www.brandience.com/connect",
@@ -93,18 +51,17 @@
     "impact": "critical",
     "ai_verdict": {
       "type": "input",
-      "verdict": "needs-change",
-      "reason": "The input button has an empty value attribute and lacks an accessible name (aria-label or title), failing SC 4.1.2 requirements for discernible text.",
+      "verdict": "fail",
+      "reason": "Element has an empty value attribute, resulting in no discernible name for the button. Axe rule input-button-name indicates critical impact.",
       "confidence": 0.9,
       "techniques_used": [
-        "H44",
         "G94",
         "axe:input-button-name"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\input-button-name__.submit-button.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/input-button-name?application=axeAPI",
-    "prompt_hash": "088156dba52cb226"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/input-button-name?application=axeAPI",
+    "prompt_hash": "6094850b9fd421ed"
   },
   {
     "page_url": "https://www.brandience.com/connect",
@@ -116,292 +73,271 @@
     "impact": "critical",
     "ai_verdict": {
       "type": "input",
-      "verdict": "needs-change",
-      "reason": "The input button has an empty value attribute, resulting in no discernible name, violating SC 4.1.2. AXE diagnostics indicate the element lacks an accessible name.",
+      "verdict": "fail",
+      "reason": "The input button has an empty value attribute, resulting in no discernible text for assistive technologies, violating SC 4.1.2.",
       "confidence": 0.9,
       "techniques_used": [
-        "H44",
-        "G94",
         "axe:input-button-name"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\input-button-name__.form_field-wrapper.is-footer_.form_submit-button-wrapper_.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/input-button-name?application=axeAPI",
-    "prompt_hash": "59c870b37b5550b2"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/input-button-name?application=axeAPI",
+    "prompt_hash": "92ee3ca18d8bdf7c"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
+    "topic": "SC-2.4.4",
+    "SC": "2.4.4",
     "sc_list": [],
-    "selector": ".navbar_component",
-    "axe_rule_id": "landmark-no-duplicate-banner",
-    "impact": "moderate",
+    "selector": ".is-nav > .social_iconlink.w-inline-block:nth-child(1)",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
     "ai_verdict": {
-      "type": "functional",
-      "verdict": "needs-change",
-      "reason": "The document has more than one banner landmark, violating the axe rule for duplicate banners. This indicates a structural issue that needs correction.",
-      "confidence": 0.8,
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Link has no discernible text; computed role/name is empty, violating SC 2.4.4. Accessibility snapshot shows no visible text for screen readers.",
+      "confidence": 0.9,
       "techniques_used": [
-        "axe:landmark-no-duplicate-banner"
+        "axe:link-name"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\landmark-no-duplicate-banner__.navbar_component.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-no-duplicate-banner?application=axeAPI",
-    "prompt_hash": "1ff8399a99990377"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+    "prompt_hash": "ddd87e80c2f6a507"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
+    "topic": "SC-2.4.4",
+    "SC": "2.4.4",
     "sc_list": [],
-    "selector": "html",
-    "axe_rule_id": "landmark-one-main",
-    "impact": "moderate",
+    "selector": ".is-nav > .social_iconlink.w-inline-block:nth-child(2)",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
     "ai_verdict": {
-      "type": "informative",
-      "verdict": "needs-change",
-      "reason": "The document lacks a main landmark, which is essential for accessibility. This violates the guideline for having a clear main content area.",
-      "confidence": 0.8,
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Link has no discernible text; computed role/name is empty, violating SC 2.4.4. Accessibility snapshot shows no visible text for screen readers.",
+      "confidence": 0.9,
       "techniques_used": [
-        "axe:landmark-one-main"
+        "axe:link-name"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\landmark-one-main__html.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI",
-    "prompt_hash": "45b878140736cf56"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+    "prompt_hash": "a7f194dfc5d82dd3"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
+    "topic": "SC-2.4.4",
+    "SC": "2.4.4",
     "sc_list": [],
-    "selector": ".navbar_component",
-    "axe_rule_id": "landmark-unique",
-    "impact": "moderate",
+    "selector": ".is-nav > .social_iconlink.w-inline-block[href$=\"brandience\"]",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
     "ai_verdict": {
-      "type": "functional",
-      "verdict": "needs-change",
-      "reason": "The role 'banner' is not unique; it lacks a unique aria-label, aria-labelledby, or title, violating landmark uniqueness requirements.",
-      "confidence": 0.8,
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Link has no discernible text; computed role/name is empty, violating SC 2.4.4. It does not provide context or purpose for screen readers.",
+      "confidence": 0.9,
       "techniques_used": [
-        "axe:landmark-unique"
+        "axe:link-name"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\landmark-unique__.navbar_component.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-unique?application=axeAPI",
-    "prompt_hash": "839232123ee3ce4c"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+    "prompt_hash": "51e325dc7b0e4442"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "SC-4.1.2",
-    "SC": "4.1.2",
+    "topic": "SC-2.4.4",
+    "SC": "2.4.4",
+    "sc_list": [],
+    "selector": ".is-nav > .social_iconlink.w-inline-block:nth-child(4)",
+    "axe_rule_id": "link-name",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Link has no discernible text; computed role/name is empty, violating SC 2.4.4. It lacks accessible text for screen readers.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-name"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+    "prompt_hash": "862133e33d08482b"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.4.4",
+    "SC": "2.4.4",
     "sc_list": [],
     "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block:nth-child(1)",
     "axe_rule_id": "link-name",
     "impact": "serious",
     "ai_verdict": {
       "type": "link",
-      "verdict": "needs-change",
-      "reason": "The link lacks discernible text for screen readers, failing SC 4.1.2. It has no accessible name, as indicated by the empty accessibility snapshot.",
-      "confidence": 0.9,
+      "verdict": "fail",
+      "reason": "Link has no discernible text; computed role/name is empty, violating SC 2.4.4. It lacks accessible text for screen readers.",
+      "confidence": 1.0,
       "techniques_used": [
         "axe:link-name"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
-    "prompt_hash": "e50be6538102550d"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+    "prompt_hash": "e60355f1430ec270"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "SC-4.1.2",
-    "SC": "4.1.2",
+    "topic": "SC-2.4.4",
+    "SC": "2.4.4",
     "sc_list": [],
     "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block:nth-child(2)",
     "axe_rule_id": "link-name",
     "impact": "serious",
     "ai_verdict": {
       "type": "link",
-      "verdict": "needs-change",
-      "reason": "The link lacks discernible text for screen readers, failing SC 4.1.2. It has no accessible name, as indicated by the empty accessibility snapshot.",
+      "verdict": "fail",
+      "reason": "Link has no discernible text; it fails to provide accessible name for screen readers, violating SC 2.4.4.",
       "confidence": 0.9,
       "techniques_used": [
         "axe:link-name"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
-    "prompt_hash": "70e4201b27182d2e"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+    "prompt_hash": "f676ca8c8624da27"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "SC-4.1.2",
-    "SC": "4.1.2",
+    "topic": "SC-2.4.4",
+    "SC": "2.4.4",
     "sc_list": [],
     "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block[href$=\"brandience\"]",
     "axe_rule_id": "link-name",
     "impact": "serious",
     "ai_verdict": {
       "type": "link",
-      "verdict": "needs-change",
-      "reason": "The link lacks discernible text for screen readers, as it has no accessible name or aria-label, violating SC 4.1.2.",
+      "verdict": "fail",
+      "reason": "Link has no discernible text; computed role/name is empty, violating SC 2.4.4. It lacks accessible text for screen readers.",
       "confidence": 0.9,
       "techniques_used": [
         "axe:link-name"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
-    "prompt_hash": "9bbfefb479cd71e3"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+    "prompt_hash": "e68d56330064656e"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "SC-4.1.2",
-    "SC": "4.1.2",
+    "topic": "SC-2.4.4",
+    "SC": "2.4.4",
     "sc_list": [],
     "selector": "#w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79 > .social_iconlink.w-inline-block:nth-child(4)",
     "axe_rule_id": "link-name",
     "impact": "serious",
     "ai_verdict": {
       "type": "link",
-      "verdict": "needs-change",
-      "reason": "The link lacks an accessible name, as it has no visible text or aria-label, violating SC 4.1.2. AXE diagnostics confirm it is in tab order without accessible text.",
+      "verdict": "fail",
+      "reason": "Link has no discernible text; computed name is empty, violating SC 2.4.4. It lacks context for screen readers, making it inaccessible.",
       "confidence": 0.9,
       "techniques_used": [
         "axe:link-name"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\link-name___w-node-_60edc9dd-e0e3-e27a-fc78-23f8f2b49fab-f2b49f79_.so.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/link-name?application=axeAPI",
-    "prompt_hash": "523685001ed4c94b"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+    "prompt_hash": "40e722120c59de4a"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
+    "topic": "SC-2.4.2",
+    "SC": "2.4.2",
     "sc_list": [],
-    "selector": "#w-node-cf3ed33f-bae7-cbe3-22b8-584f83498145-342c4d9e",
-    "axe_rule_id": "region",
-    "impact": "moderate",
+    "selector": "html",
+    "axe_rule_id": "document-title",
+    "impact": "serious",
     "ai_verdict": {
       "type": "informative",
-      "verdict": "needs-change",
-      "reason": "The content is not contained by landmarks, which violates the region SC. The div lacks a proper role or landmark designation.",
-      "confidence": 0.8,
+      "verdict": "fail",
+      "reason": "Document does not have a non-empty <title> element, which is required for navigation (axe ruleId: document-title).",
+      "confidence": 1.0,
       "techniques_used": [
-        "axe:region"
+        "axe:document-title"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region___w-node-cf3ed33f-bae7-cbe3-22b8-584f83498145-342c4d9e.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
-    "prompt_hash": "724d99a0d72056dc"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/document-title?application=axeAPI",
+    "prompt_hash": "3bfb2c130c48af4b"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
+    "topic": "SC-3.1.1",
+    "SC": "3.1.1",
     "sc_list": [],
-    "selector": "section:nth-child(6)",
-    "axe_rule_id": "region",
-    "impact": "moderate",
+    "selector": "html",
+    "axe_rule_id": "html-has-lang",
+    "impact": "serious",
     "ai_verdict": {
-      "type": "informative",
-      "verdict": "needs-change",
-      "reason": "The section lacks a proper landmark role, leading to content not being contained by landmarks, which violates SC 2.4.1.",
-      "confidence": 0.8,
+      "type": "html",
+      "verdict": "fail",
+      "reason": "The <html> element does not have a lang attribute, violating SC 3.1.1 as it lacks language identification.",
+      "confidence": 0.9,
       "techniques_used": [
-        "axe:region"
+        "axe:html-has-lang"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region__section_nth-child_6_.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
-    "prompt_hash": "052149979173ecfb"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/html-has-lang?application=axeAPI",
+    "prompt_hash": "779481d857263afa"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
     "sc_list": [],
-    "selector": "section:nth-child(8) > .padding-x-md > .container-large > .w-layout-grid.grid_2up > .image-wrapper",
-    "axe_rule_id": "region",
-    "impact": "moderate",
+    "selector": ".uui-navbar01_menu-button",
+    "axe_rule_id": "aria-valid-attr-value",
+    "impact": "critical",
     "ai_verdict": {
-      "type": "decorative",
-      "verdict": "needs-change",
-      "reason": "The element lacks a meaningful role or accessible name, and it is not contained by landmarks, violating the region SC.",
-      "confidence": 0.8,
+      "type": "functional",
+      "verdict": "fail",
+      "reason": "aria-controls references an ID that cannot be verified as existing on the page, violating SC 4.1.2 for programmatically determinable values.",
+      "confidence": 0.9,
       "techniques_used": [
-        "axe:region"
+        "H43",
+        "G88",
+        "axe:aria-valid-attr-value"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region__section_nth-child_8_.padding-x-md_.container-large_.w.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
-    "prompt_hash": "2466737025e1db85"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/aria-valid-attr-value?application=axeAPI",
+    "prompt_hash": "de5d210089a3918d"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
     "sc_list": [],
-    "selector": "#w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e > .max-w-md",
-    "axe_rule_id": "region",
-    "impact": "moderate",
+    "selector": ".logotext",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
     "ai_verdict": {
-      "type": "informative",
-      "verdict": "needs-change",
-      "reason": "The div with class 'max-w-md' lacks a landmark role, causing some content to be outside of landmarks, violating the axe rule for region.",
-      "confidence": 0.8,
-      "techniques_used": [
-        "axe:region"
-      ]
-    },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region___w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e_.max.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
-    "prompt_hash": "2e29ca980855202f"
-  },
-  {
-    "page_url": "https://www.brandience.com/connect",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
-    "sc_list": [],
-    "selector": "#w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e > .margin-top-lg",
-    "axe_rule_id": "region",
-    "impact": "moderate",
-    "ai_verdict": {
-      "type": "informative",
-      "verdict": "needs-change",
-      "reason": "The content is not contained by landmarks, which violates the axe rule for region. This affects navigation and accessibility for users relying on assistive technologies.",
-      "confidence": 0.8,
-      "techniques_used": [
-        "axe:region"
-      ]
-    },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region___w-node-d43bd073-bb7c-e2db-05ed-864700448a7d-342c4d9e_.mar.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
-    "prompt_hash": "aaa63deef9d2e0d5"
-  },
-  {
-    "page_url": "https://www.brandience.com/connect",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
-    "sc_list": [],
-    "selector": ".align-left.button.w--current > .uppercase",
-    "axe_rule_id": "region",
-    "impact": "moderate",
-    "ai_verdict": {
-      "type": "text-in-image",
-      "verdict": "needs-change",
-      "reason": "The element lacks a clear programmatic name and is not contained by landmarks, which violates SC 4.1.2. The opacity style also suggests it may not be perceivable.",
+      "type": "text",
+      "verdict": "review",
+      "reason": "Background color for .logotext could not be determined due to overlap, preventing reliable contrast calculation.",
       "confidence": 0.7,
       "techniques_used": [
-        "axe:region",
+        "axe:color-contrast",
         "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\region__.align-left.button.w--current_.uppercase.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
-    "prompt_hash": "51b2a4476edc3f8b"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "9bcd9672fa2c5613"
   },
   {
     "page_url": "https://www.brandience.com/connect",
@@ -413,16 +349,83 @@
     "impact": "serious",
     "ai_verdict": {
       "type": "link",
-      "verdict": "needs-change",
-      "reason": "Computed contrast ratio for the link text 'LET'S TALK' is below the required threshold due to overlapping elements, as indicated by AXE diagnostics.",
-      "confidence": 0.8,
+      "verdict": "review",
+      "reason": "Background color for the link could not be determined due to overlap, making contrast assessment ambiguous.",
+      "confidence": 0.7,
       "techniques_used": [
-        "axe:color-contrast"
+        "axe:color-contrast",
+        "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.link_uppercase.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
-    "prompt_hash": "78ec676a829de014"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "fa53fef2490c9b5e"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".form_field-wrapper.is-menu > .form_submit-button-wrapper > .form_submit-button.w-button[data-wait=\"\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "review",
+      "reason": "Background color undetermined due to image node; contrast cannot be reliably computed.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "a748b709d543ff7c"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".max-w-lg > .text-red-500 > h2",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "review",
+      "reason": "Background color for text 'CONNECT' could not be determined due to overlap, preventing reliable contrast calculation.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "6e7ae45807354703"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "h1",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "heading",
+      "verdict": "review",
+      "reason": "Background color for h1 could not be determined due to overlap, preventing reliable contrast calculation.",
+      "confidence": 0.5,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "00cc94326595eaf5"
   },
   {
     "page_url": "https://www.brandience.com/connect",
@@ -433,17 +436,18 @@
     "axe_rule_id": "color-contrast",
     "impact": "serious",
     "ai_verdict": {
-      "type": "text-in-image",
-      "verdict": "needs-change",
-      "reason": "Computed contrast for text in .quote_text_1 is below the required threshold due to overlapping elements, as indicated by AXE diagnostics.",
-      "confidence": 0.8,
+      "type": "text",
+      "verdict": "review",
+      "reason": "Background color for text '.quote_text_1' could not be determined due to overlap, preventing reliable contrast calculation.",
+      "confidence": 0.5,
       "techniques_used": [
-        "axe:color-contrast"
+        "axe:color-contrast",
+        "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.quote_text_1.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
-    "prompt_hash": "576c8f3f8f3d268e"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "ef38ef910a78fbe7"
   },
   {
     "page_url": "https://www.brandience.com/connect",
@@ -455,16 +459,17 @@
     "impact": "serious",
     "ai_verdict": {
       "type": "text",
-      "verdict": "needs-change",
-      "reason": "Computed contrast for text 'Brett C., VP Field Marketing' is below the required threshold due to overlapping elements, as indicated by AXE diagnostics.",
-      "confidence": 0.8,
+      "verdict": "review",
+      "reason": "Background color for text 'Brett C., VP Field Marketing' could not be determined due to overlap, making contrast assessment ambiguous.",
+      "confidence": 0.6,
       "techniques_used": [
-        "axe:color-contrast"
+        "axe:color-contrast",
+        "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.is-1_.quote_source_.margin-y-none_nth-child_1_.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
-    "prompt_hash": "31cdb99d6e54e3b1"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "8217a129195bfed7"
   },
   {
     "page_url": "https://www.brandience.com/connect",
@@ -475,17 +480,216 @@
     "axe_rule_id": "color-contrast",
     "impact": "serious",
     "ai_verdict": {
-      "type": "text-in-image",
-      "verdict": "needs-change",
-      "reason": "Computed contrast for 'Tropical Smoothie Cafe' is below the required threshold due to overlapping elements, failing SC 1.4.3.",
-      "confidence": 0.8,
+      "type": "text",
+      "verdict": "review",
+      "reason": "Background color for the text 'Tropical Smoothie Cafe' could not be determined due to overlap, making contrast assessment ambiguous.",
+      "confidence": 0.5,
       "techniques_used": [
-        "axe:color-contrast"
+        "axe:color-contrast",
+        "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.is-1_.quote_source_.margin-y-none_nth-child_2_strong.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
-    "prompt_hash": "7eb31421d1ed02e3"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "2fb8f5696c848b51"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "label[for=\"name\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text",
+      "verdict": "review",
+      "reason": "Background color for the label could not be determined due to overlap with another element, making contrast assessment ambiguous.",
+      "confidence": 0.6,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "874259bb326a7cc2"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#name",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "review",
+      "reason": "Background color for the input element could not be determined due to overlap, making contrast assessment ambiguous.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "a7164fcc78513b69"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "label[for=\"Organization-2\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text",
+      "verdict": "review",
+      "reason": "Background color for the label 'Organization' could not be determined due to overlap, preventing reliable contrast calculation.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "e23e6d4498c96d44"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#Organization-2",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "review",
+      "reason": "Background color for input element cannot be determined due to overlap, making contrast assessment ambiguous.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "3e282b1b45419448"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "label[for=\"Email\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text",
+      "verdict": "review",
+      "reason": "Background color for the label could not be determined due to overlap, preventing reliable contrast calculation.",
+      "confidence": 0.5,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "e3bf3b52627779b0"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#Email",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "review",
+      "reason": "Background color for the input element could not be determined due to overlap, making contrast assessment ambiguous.",
+      "confidence": 0.6,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "e525009e441b428e"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "label[for=\"Phone\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text",
+      "verdict": "review",
+      "reason": "Background color for the label 'Phone number' could not be determined due to overlap, making contrast assessment ambiguous.",
+      "confidence": 0.6,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "c5298e62840985dd"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#Phone",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "review",
+      "reason": "Background color for the input element could not be determined due to overlap, making contrast assessment ambiguous.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "38307f7aa4a03c62"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "label[for=\"Message-2\"]",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text",
+      "verdict": "review",
+      "reason": "Background color for label 'Tell us some details!' could not be determined due to overlap, preventing reliable contrast calculation.",
+      "confidence": 0.6,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "c6ca1485de8e8b04"
   },
   {
     "page_url": "https://www.brandience.com/connect",
@@ -497,16 +701,60 @@
     "impact": "serious",
     "ai_verdict": {
       "type": "input",
-      "verdict": "needs-change",
-      "reason": "Computed contrast for the placeholder text in the textarea is likely below 4.5:1 due to background obscuration, failing SC 1.4.3.",
-      "confidence": 0.8,
+      "verdict": "review",
+      "reason": "Background color for the textarea could not be determined due to overlap, making contrast assessment ambiguous.",
+      "confidence": 0.7,
       "techniques_used": [
-        "axe:color-contrast"
+        "axe:color-contrast",
+        "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast___Message-2.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
-    "prompt_hash": "b4b18d9a3ef16064"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "f5f687d9d4dcb801"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "span",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "text",
+      "verdict": "review",
+      "reason": "Background color for the text 'Subscribe to our newsletter' could not be determined due to overlap with another element, making contrast assessment ambiguous.",
+      "confidence": 0.5,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "ba8bf8219667cee5"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".submit-button",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "review",
+      "reason": "Background color for the submit button could not be determined due to overlap, preventing reliable contrast calculation.",
+      "confidence": 0.7,
+      "techniques_used": [
+        "axe:color-contrast",
+        "fallback"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "d23afef2448e0682"
   },
   {
     "page_url": "https://www.brandience.com/connect",
@@ -517,60 +765,668 @@
     "axe_rule_id": "color-contrast",
     "impact": "serious",
     "ai_verdict": {
-      "type": "text-in-image",
-      "verdict": "needs-change",
-      "reason": "Computed contrast for 'Send Email' cannot be determined due to overlapping elements, likely failing SC 1.4.3.",
+      "type": "text",
+      "verdict": "review",
+      "reason": "Background color for '.uppercase' could not be determined due to overlap, preventing reliable contrast calculation.",
       "confidence": 0.7,
       "techniques_used": [
-        "axe:color-contrast"
+        "axe:color-contrast",
+        "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\color-contrast__.position-relative_.uppercase.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/color-contrast?application=axeAPI",
-    "prompt_hash": "8e375021fa52ba5d"
+    "screenshot": null,
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "c22af3fc38c6c3a6"
   },
   {
     "page_url": "https://www.brandience.com/connect",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
     "sc_list": [],
-    "selector": "iframe[width=\"100%\"]",
-    "axe_rule_id": "frame-tested",
-    "impact": "critical",
-    "ai_verdict": {
-      "type": "functional",
-      "verdict": "needs-change",
-      "reason": "The iframe lacks an accessible name and needs to be tested with axe-core for compliance, indicating potential issues with SC 4.1.2.",
-      "confidence": 0.8,
-      "techniques_used": [
-        "axe:frame-tested"
-      ]
-    },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\frame-tested__iframe_width_100_.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/frame-tested?application=axeAPI",
-    "prompt_hash": "f1f0035617a928ea"
-  },
-  {
-    "page_url": "https://www.brandience.com/connect",
-    "topic": "SC-1.1.1",
-    "SC": "1.1.1",
-    "sc_list": [],
-    "selector": ".image",
-    "axe_rule_id": "image-alt",
-    "impact": null,
+    "selector": "a.menu_link.w-nav-link.w--current",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
     "ai_verdict": {
       "type": "link",
-      "verdict": "redundant-ok",
-      "reason": "The alt text 'brandience logo' duplicates the purpose of the link, which is likely to navigate to the brand's homepage, making it redundant.",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
       "confidence": 0.9,
       "techniques_used": [
-        "H37",
-        "G94",
-        "axe:image-alt"
+        "axe:keyboard-probe:unreachable"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\www.brandience.com__connect\\screenshots\\image-alt__.image.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/image-alt?application=axeAPI",
-    "prompt_hash": "f0efa8a64306e289"
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "38d7dea11cb6b6e4"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a.nav_link",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "f27177277dbbc2de"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "#Email-4",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "b4503a995e752025"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "input.form_submit-button.w-button",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "fail",
+      "reason": "The input element is unreachable by Tab navigation, violating SC 2.1.1 as it cannot be accessed via keyboard.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "c0fa12debb67630f"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a.social_iconlink.w-inline-block",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "6d5bc3207c5164d4"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "#name",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "fail",
+      "reason": "The input element is unreachable by Tab navigation, violating SC 2.1.1 as it cannot be accessed via keyboard.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "e5acdcfca20b3509"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "#Organization-2",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "63edc769479b75ee"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "#Email",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "45bb830630e5ff92"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "#Phone",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "fail",
+      "reason": "The input element is unreachable by Tab navigation, violating SC 2.1.1. Axe diagnostics indicate it cannot be focused using the keyboard.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "50fbc0b348949fd7"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "#Message-2",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "fail",
+      "reason": "The textarea with id 'Message-2' is unreachable by Tab navigation, violating SC 2.1.1 for keyboard accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "582fd47f9f5eea26"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "#Newsletter-Checkbox",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "fail",
+      "reason": "The checkbox input is unreachable by Tab navigation, violating SC 2.1.1 for keyboard accessibility.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "e214016c41e29003"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "input.submit-button.w-button",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "fail",
+      "reason": "The input element is unreachable by Tab navigation, violating SC 2.1.1 as it cannot be accessed via keyboard.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "48579d771f8b32e5"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "18bfbfde75ac10a0"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a.text-red-500",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "3a1113fcbac7783c"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a.button.align-left.w-inline-block",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "bccd6abbf21aaa2e"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "#Email-5",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "input",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "38116cccdcfe0cf9"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a.w-inline-block",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "638fa53908a5052a"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a.footer_link",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "1b48b03edb4e2ba0"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a.footer_link.w--current",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Interactive element appears unreachable by Tab, violating SC 2.1.1 as it cannot be accessed via keyboard navigation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:unreachable"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "240f2ac71a9f12f8"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "div.uui-navbar01_menu-button.w-nav-button.w--open",
+    "axe_rule_id": "keyboard-probe:activation",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "functional",
+      "verdict": "fail",
+      "reason": "Enter/Space did not activate the button, violating SC 2.1.1 as it fails to respond to keyboard activation.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:keyboard-probe:activation"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "df7c0052c56c379a"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.3.1",
+    "SC": "1.3.1",
+    "sc_list": [],
+    "selector": "a.menu_link.w-nav-link.w--nav-link-open",
+    "axe_rule_id": "runner:info-relationships-list-missing",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Navigation links are grouped but not conveyed via list semantics, violating SC 1.3.1 for info and relationships.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:runner:info-relationships-list-missing"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "5cf5b1b009d1191c"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.3.1",
+    "SC": "1.3.1",
+    "sc_list": [],
+    "selector": "a.social_iconlink.w-inline-block",
+    "axe_rule_id": "runner:info-relationships-list-missing",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Navigation links are grouped but lack list semantics, violating SC 1.3.1. The element does not convey relationships properly as per Axe diagnostics.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:info-relationships-list-missing"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "54cbf77848f93c34"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.3.1",
+    "SC": "1.3.1",
+    "sc_list": [],
+    "selector": "a.footer_link",
+    "axe_rule_id": "runner:info-relationships-list-missing",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Navigation links appear grouped but not conveyed via list semantics; fails to use <ul> or <ol> for grouping links.",
+      "confidence": 0.8,
+      "techniques_used": [
+        "axe:runner:info-relationships-list-missing"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "c257b1c0e25eb28c"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.menu_link.w-nav-link.w--nav-link-open",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Visible label text 'Home' not present in the accessible name; axe diagnostics indicate a failure for SC 2.5.3.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:label-in-name"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "071c0ff318bd39d2"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.nav_link",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Visible label text '513-333-4100' not present in the accessible name; axe diagnostics indicate a failure for SC 2.5.3.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:label-in-name"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "3aa29bb5ea0bc8ad"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Visible label text not found in accessible name; aria-label='home' does not match any visible text.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:runner:label-in-name"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "d084f04b749c1a15"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.footer_link",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Visible label text 'Home' not present in the accessible name; axe diagnostics indicate a failure for label-in-name.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:label-in-name"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "1bb0011eeef6f67a"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.menu_link.w-nav-link.w--nav-link-open",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Inline link not visually distinguished (no underline and no color difference); fails to meet SC 1.4.1 requirements.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-indicator:style"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "73e1eb66c5de870e"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.nav_link",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Inline link not visually distinguished (no underline and no color difference); fails to meet SC 1.4.1 requirements.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-indicator:style"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "0484563f79d554df"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.footer_link",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Inline link not visually distinguished (no underline and no color difference); fails to meet SC 1.4.1 requirements.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-indicator:style"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "3c3ece035a4d8ce3"
+  },
+  {
+    "page_url": "https://www.brandience.com/connect",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.footer_link.w--current",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "link",
+      "verdict": "fail",
+      "reason": "Inline link not visually distinguished (no underline and no color difference); fails to meet SC 1.4.1 requirements.",
+      "confidence": 0.9,
+      "techniques_used": [
+        "axe:link-indicator:style"
+      ]
+    },
+    "screenshot": null,
+    "axe_help_url": "",
+    "prompt_hash": "632ea8b4b55f180a"
   }
 ]

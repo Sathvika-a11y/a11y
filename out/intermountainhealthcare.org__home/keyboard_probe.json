@@ -1,0 +1,296 @@
+{
+  "summary": {
+    "tab_stops": 14,
+    "trace_steps": 42,
+    "trap_suspected": false,
+    "activation_checks": 3,
+    "unreachable": 22
+  },
+  "unreachable": [
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+      "tag": "a",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabled": false,
+      "ariaDisabled": false,
+      "visible": true
+    }
+  ],
+  "activations": [
+    {
+      "selector": "#city-selection-container-\\:r2\\:",
+      "role": "button",
+      "enter_ok": true,
+      "space_ok": true
+    },
+    {
+      "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+      "role": "button",
+      "enter_ok": true,
+      "space_ok": true
+    },
+    {
+      "selector": "div.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+      "role": "button",
+      "enter_ok": false,
+      "space_ok": false
+    }
+  ],
+  "tabindex_neg1": []
+}

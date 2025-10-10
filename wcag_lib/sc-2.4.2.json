@@ -1,0 +1,131 @@
+ { 
+
+    "SC": "2.4.2 Page Titled", 
+
+    "Topic": "Provide descriptive and unique page titles", 
+
+    "Do": [ 
+
+      "Ensure each page has a unique title.", 
+
+      "Make title descriptive of page content.", 
+
+      "Include brand name consistently in title.", 
+
+      "Use concise and clear page titles.", 
+
+      "Ensure title loads before user interaction.", 
+
+      "Maintain title consistency across site sections.", 
+
+      "Reflect content changes in title.", 
+
+      "Localize titles for language versions.", 
+
+      "Test title readability with screen readers.", 
+
+      "Ensure title identifies page purpose.", 
+
+      "Avoid all-caps titles.", 
+
+      "Ensure titles are unique in browser tabs.", 
+
+      "Add document title via <title> tag only once.", 
+
+      "Avoid long or misleading titles.", 
+
+      "Check dynamic changes via JavaScript update document.title." 
+
+    ], 
+
+    "Dont": [ 
+
+      "Don’t leave the title blank.", 
+
+      "Don’t duplicate titles across pages.", 
+
+      "Don’t use generic titles like 'Home' or 'Page 1'.",
+
+       "Don’t overload title with keywords.", 
+
+      "Don’t use titles unrelated to content.", 
+
+      "Don’t truncate titles unnecessarily.", 
+
+      "Don’t use multiple <title> tags.", 
+
+      "Don’t change title mid-navigation without reason.", 
+
+      "Don’t use emojis or symbols as titles.", 
+
+      "Don’t dynamically remove title on reload.", 
+
+      "Don’t use title attributes instead of page titles.", 
+
+      "Don’t let scripts overwrite correct titles.", 
+
+      "Don’t mislead users with incorrect titles.", 
+
+      "Don’t put version numbers in every title.", 
+
+      "Don’t reuse same title in different modules.", 
+
+      "Don’t hide <title> tag in head.", 
+
+      "Don’t include redundant punctuation in title." 
+
+    ], 
+
+    
+ 
+"Edge cases": [ 
+
+      "SPA changes content but document.title remains old", 
+
+      "Multiple title tags inserted by third-party script", 
+
+      "Title updated after async content load but too late for screen reader", 
+
+      "Iframe lacks title attribute or has generic title", 
+
+      "CMS template sets identical title for product variations", 
+
+      "Title localized incorrectly compared to on-page language", 
+
+      "Browser caching shows an old title after deployment", 
+
+      "Title contains invisible whitespace or control characters", 
+
+      "Title truncated on mobile hiding critical info", 
+
+      "Title set by meta robots or SEO tool instead of <title>", 
+
+      "Popups that behave like pages lack distinct titles", 
+
+      "Title includes encoded HTML entities rendering poorly", 
+
+      "Title changed by analytics script unintentionally", 
+
+      "Title missing for print/PDF export view", 
+
+      "Title mismatch between server-rendered and client-rendered pages", 
+
+      "Title present but screen reader misses it due to early focus change", 
+
+      "Multilingual pages showing wrong title due to routing error", 
+
+      "Title dynamically set then removed on error handling", 
+
+      "Title exists but not within head due to template bug", 
+
+      "Title uses unsupported characters causing encoding errors" 
+
+    ], 
+
+    "Techniques": ["G88", "H25", "G115"], 
+
+    "Axe rules": ["document-title"], 
+
+    "Tags": ["page-structure", "SEO", "metadata", "title"] 
+
+  }

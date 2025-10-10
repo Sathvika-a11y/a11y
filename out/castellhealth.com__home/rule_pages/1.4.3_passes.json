@@ -1,0 +1,380 @@
+[
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.20 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.2,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.20 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.2,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 5.28 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 5.28,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 5.28 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 5.28,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 5.28 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 5.28,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 5.28 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 5.28,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 7.74 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 7.74,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 7.74 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 7.74,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 5.28 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 5.28,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 9.76 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 9.76,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 9.76 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 9.76,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 9.73 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 9.73,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 9.73 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 9.73,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 6.43 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 6.43,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 6.43 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 6.43,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 6.77 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 6.77,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 11.32 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 11.32,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 5.28 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 5.28,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 3.52 >= threshold 3.0.",
+    "evidence": {
+      "contrast_ratio": 3.52,
+      "is_large_text": true
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 9.30 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 9.3,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 9.94 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 9.94,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 10.12 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 10.12,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 10.22 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 10.22,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "",
+    "sc": "1.4.3",
+    "note": "Text contrast 8.71 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 8.71,
+      "is_large_text": false
+    }
+  }
+]

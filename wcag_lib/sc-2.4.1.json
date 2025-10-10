@@ -1,0 +1,134 @@
+{ 
+
+    "SC": "2.4.1 Bypass Blocks", 
+
+    "Topic": "Provide mechanisms to skip repeated content", 
+
+    "Do": [ 
+
+      "Provide a visible 'Skip to main content' link at the top of the page.", 
+
+      "Use landmarks like <header>, <nav>, <main>, <footer> for structure.", 
+
+      "Ensure screen readers can detect skip link navigation.", 
+
+      "Ensure skip link remains visible when focused.", 
+
+      "Provide a logical focus order for skip links.", 
+
+      "Allow users to skip navigation menus and repetitive sections.", 
+
+      "Implement ARIA landmarks for assistive technologies.", 
+
+      "Use clear and descriptive labels for skip links.", 
+
+      "Ensure skip link works across all browsers.", 
+
+      "Place skip link before repeated navigation elements.", 
+
+      "Use CSS to make skip links visible on focus.", 
+
+      "Ensure that focus correctly lands on main content.", 
+
+      "Test skip link using keyboard only navigation.", 
+
+      "Add multiple skip options if there are long sections.", 
+
+      "Ensure skip link is not hidden using display:none.", 
+
+      "Verify with screen reader navigation.", 
+
+      "Ensure link destination uses an ID or named anchor properly." 
+
+    ], 
+
+    "Dont": [ 
+
+      "Don’t hide skip links permanently.", 
+
+      "Don’t use JavaScript-only navigation without fallbacks.", 
+
+      "Don’t skip key content unintentionally.", 
+
+      "Don’t place skip link after the main content.", 
+
+      "Don’t use duplicate IDs for skip targets.", 
+
+      "Don’t disable focus outlines for skip links.", 
+
+      "Don’t use confusing skip link text like 'Click here'.", 
+
+      "Don’t break focus when skip link is activated.", 
+
+      "Don’t make skip links that don’t work on keyboard.", 
+
+      "Don’t put skip link inside hidden containers.", 
+
+      "Don’t change URL hash without focus adjustment.", 
+
+      "Don’t depend on JavaScript scroll for skip actions.", 
+
+      "Don’t style skip link invisibly on focus.", 
+
+      "Don’t make skip link navigate to wrong section.", 
+
+      "Don’t use role='presentation' on key landmarks.", 
+
+      "Don’t assume users will know about skip links.", 
+
+      "Don’t remove skip links from mobile view.", 
+
+      "Don’t add multiple conflicting skip links.", 
+
+      "Don’t hide skip link behind overlays." 
+
+    ], 
+ 
+ 
+"Edge cases": [ 
+
+      "Skip link scrolls to the target but focus remains on the link", 
+
+      "Sticky header covers the skip target after jump", 
+
+      "Skip link exists only on desktop and not on mobile", 
+
+      "Multiple skip links exist but all point to the same ID", 
+
+      "Skip link's target is inside an iframe with different origin", 
+
+      "Skip link text duplicated leading to confusion in screen readers", 
+
+      "Focus moves outside viewport after skip on zoomed pages", 
+
+      "Skip link target is hidden via aria-hidden='true'", 
+
+      "Animation or scroll smoothing steals focus after skip", 
+
+      "Skip link added by CMS only on certain templates", 
+
+      "Skip link interferes with keyboard shortcuts of widgets", 
+
+      "Skip link is present, but the main content is not properly landmarked", 
+
+      "Screen reader reads skip link as 'link' without description", 
+
+      "Focus jumps to the target but content is loaded lazily and empty", 
+
+      "Skip links break when CSS custom properties alter positioning", 
+
+      "Navigational landmark duplicated (two role='main') causing confusion", 
+
+      "Skip link appears in DOM after header due to server rendering race", 
+
+      "Mobile assistive tech ignores skip link due to touch-first behavior" 
+
+    ], 
+
+       "Techniques": ["G1", "G123", "G124", "ARIA11", "H69"], 
+
+    "Axe rules": ["bypass", "landmark-one-main"], 
+
+    "Tags": ["navigation", "keyboard", "skip-link", "structure"] 
+
+  }

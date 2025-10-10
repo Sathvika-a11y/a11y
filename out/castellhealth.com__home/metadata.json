@@ -1,3 +1,8 @@
 {
-  "page_url": "https://castellhealth.com/"
+  "page_url": "https://castellhealth.com/",
+  "axe_version_requested": "4.10.0",
+  "fast_mode": true,
+  "include_frames": false,
+  "capture_dom": false,
+  "screenshot_elements": true
 }

@@ -1,0 +1,106 @@
+{  
+
+"topic": "Focus Visible",  
+
+"tags": ["SC-2.4.7", "2.4.7", "wcag247", "focus-visible", "focus-indicator", "keyboard-focus", "keyboard-accessibility"],  
+
+"do": [  
+
+"Ensure every interactive element (links, buttons, form controls, custom widgets) has a clearly visible focus indicator when receiving keyboard focus.",  
+
+"Use CSS pseudo-classes (:focus and :focus-visible) to provide strong and clearly perceivable outlines or styles.",  
+
+"Provide focus indicators with sufficient color contrast against adjacent backgrounds (minimum 3:1).",  
+
+"Ensure custom focus indicators are at least as visible as the default user agent focus outline.",  
+
+"Maintain or enhance the browser's default focus styles if custom styles are applied.",  
+
+"Use consistent focus styles across the website or application for predictability.",  
+
+"Design focus indicators with enough padding, glow, or border thickness to be distinguishable.",  
+
+"Ensure focus indicators remain visible regardless of scrolling, sticky headers, or fixed containers.",  
+
+"Confirm that focus indicators do not get cut off by overflow clipping, transforms, or container styling.",  
+
+"Test keyboard navigation thoroughly using Tab, Shift+Tab, and arrow keys to ensure focus is always visible.",  
+
+"Check focus visibility in light and dark themes, and under high-contrast or forced-color modes.",  
+
+"Provide consistent focus styles across the site or application for predictability.",  
+
+"Use techniques such as thick outlines, background highlights, or underline changes for better visibility.",  
+
+"For custom components, use JavaScript to manage and expose focus states properly.",  
+
+"Test focus visibility at different zoom levels and in OS/browser high contrast modes."  
+
+],  
+
+"dont": [  
+
+"Don’t remove default browser focus styles (outline: none) without providing a visible, accessible alternative.",  
+
+"Don’t rely solely on subtle visual changes (e.g., small color shifts) that may be imperceptible to low-vision users.",  
+
+"Don’t create focus indicators that disappear against backgrounds with insufficient contrast.",  
+
+"Don’t design custom widgets (e.g., carousels, modals, dropdowns) without visible focus states.",  
+
+"Don’t override focus styles in a way that makes them thinner, faint, or less visible than default styles.",  
+
+"Don’t rely only on hover styles to signal interactivity; focus must be clearly distinguishable from hover.",  
+
+"Don’t hide or clip focus indicators using overflow: hidden, transforms, or clipping regions.",  
+
+"Don’t rely on transparent or off-screen outlines as a replacement for a visible indicator.",  
+
+"Don’t depend solely on color to indicate focus — use additional visual cues like shape, border, or thickness.",  
+
+"Don’t move focus unexpectedly with JavaScript without informing the user.",  
+
+"Don’t apply focus styles only for hover states — keyboard focus must always be handled separately."  
+
+],  
+
+"edge_cases": [  
+
+"Custom JavaScript components may not inherit default focus styles if tabindex or ARIA roles are misused.",  
+
+"Low-contrast hover/focus schemes may look acceptable to designers but fail for users with low vision.",  
+
+"Single-page applications may temporarily lose visible focus indicators when routes change or elements re-render.",  
+
+"Sticky or fixed-position elements can push focus indicators off-screen during scrolling.",  
+
+"Touch-device hybrid interactions may cause developers to disable focus outlines incorrectly, harming keyboard users.",  
+
+"High-contrast or forced-color modes may override or hide custom focus styles; ensure indicators remain perceivable.",  
+
+"For non-native controls built with <div> or <span>, developers must add custom focus styles explicitly.",  
+
+"Focus indicators may be lost if CSS frameworks reset or override browser defaults without accessible replacements.",  
+
+"Using complex CSS (clip-path, transform, overflow-hidden) may unintentionally hide focus outlines.",  
+
+"Some browsers apply different focus behaviors (e.g., Chrome uses :focus-visible, Safari uses :focus), so cross-browser testing is necessary.",  
+
+"Third-party widgets or embedded components (iframes) may not expose visible focus correctly." ,
+"Keyboard focus indicators are removed or have insufficient visual contrast.", 
+
+      "Focus outline is visible only in certain color themes or disappears during animation.", 
+
+      "Focus indicators appear off-screen or are hidden by other interface elements.", 
+
+      "Users navigating by keyboard cannot visually track their position.", 
+
+      "Automation detects CSS focus styles but cannot assess actual visibility for human users.", 
+
+      "Focus visibility issues on specific element types (logos, custom buttons).", 
+
+      "Dynamic focus states that change visibility based on user interaction."  
+
+],  
+
+"techniques": ["G149", "G165", "G195", "C15", "C19", "C40", "SCR31", "F55", "F73", "H91"], "axe_rules_hint": ["focus-visible", "focus-indicator", "focus-order", "focus-order-semantics", "active-focus", "interactive-supports-focus"] } 

@@ -1,0 +1,249 @@
+{ 
+   "topic": "SC 1.3.1 — Info and Relationships", 
+   "tags": ["SC-1.3.1", "1.3.1", "wcag131"], 
+
+"do": [  
+
+"Use semantic HTML elements to convey structure (h1-h6 for headings, ul/ol/dl for lists, table/th/td for tabular data)",  
+
+"Use HTML heading tags (h1–h6) to represent content hierarchy in a meaningful order",  
+
+"Associate form labels with controls using <label for='id'> or aria-labelledby",  
+
+"Group related form controls using <fieldset> and <legend> elements",  
+
+"Use proper table markup with <th> elements for headers and scope/headers attributes for complex tables",  
+
+"Use ARIA landmarks (main, navigation, banner, contentinfo) to identify page regions",  
+
+"Provide programmatic associations between related content using aria-describedby",  
+
+"Use semantic list markup (<ul>, <ol>, <dl>) for grouped related items",  
+
+"Associate table captions with tables using <caption> element",  
+
+"Use headings to create logical document structure and hierarchy",  
+
+"Group radio buttons and checkboxes with fieldset/legend when they share a common question",  
+
+"Use aria-labelledby to connect multiple text elements that describe a single control",  
+
+"Implement ARIA roles (button, link, heading) when semantic HTML isn't available",  
+
+"Use scope='row' or scope='col' to associate simple table headers with data cells",  
+
+"Provide table summaries for complex tables using aria-describedby referencing detailed description",  
+
+"Implement proper nesting of headings (don't skip levels: h1→h2→h3)",  
+
+"Use aria-required='true' to indicate required form fields programmatically",  
+
+"Group related sections with <section> elements and descriptive headings",  
+
+"Use role='group' with aria-labelledby for custom grouped controls when fieldset isn't suitable",  
+
+"Use ARIA roles and properties only when native HTML doesn’t convey the necessary relationships"
+
+],  
+
+"dont": [  
+
+"Do not rely on visual formatting alone (bold, italics, color) to convey structural meaning",  
+
+"Do not use <br> or &nbsp; to create visual spacing that implies structure",  
+
+"Do not use tables for layout purposes (use CSS for visual layout)",  
+
+"Do not omit <label> elements or proper associations for form controls",  
+
+"Do not use <div> or <span> elements as headings without role='heading' and aria-level",  
+
+"Do not use placeholder text as the sole label for form inputs",  
+
+"Do not create fake lists using <br> or bullet characters without proper list markup",  
+
+"Do not use <th> elements in layout tables (F46 failure)",  
+
+"Do not insert meaningful content using CSS :before/:after pseudo-elements (F87 failure)", 
+
+"Do not use structural markup for purely presentational effects (F43 failure)",  
+
+"Do not fail to update id/headers associations in complex tables (F90 failure)",  
+
+"Do not use changes in text presentation alone to convey information (F2 failure)",  
+
+"Do not associate data cells with headers using id/headers incorrectly",  
+
+"Do not create visual hierarchies without corresponding semantic markup",  
+
+"Do not use font size or color alone to indicate headings",  
+
+"Do not omit fieldset/legend for radio button groups that share a question",  
+
+"Do not use title attribute alone as the primary labeling mechanism",  
+
+"Do not create custom controls without proper ARIA roles and properties",  
+
+"Do not use whitespace or positioning to indicate relationships between elements",  
+
+"Do not skip heading levels in document structure (h1 to h3 without h2)",  
+
+"Do not use visual styling (e.g., bold text, larger font, spacing) to imply structure without semantic markup",  
+
+"Do not use <div> or <span> in place of semantic elements unless ARIA roles are properly applied",  
+
+"Do not duplicate content visually and programmatically unless hidden from assistive tech",  
+
+"Do not use empty heading tags to create spacing — headings must convey meaning",  
+
+"Do not rely solely on placeholder text for labeling form controls"  
+
+],  
+
+"edge_cases": [  
+
+"Complex data tables: Use id/headers attributes when scope isn't sufficient for multi-level headers",  
+
+"Dynamic content: Ensure programmatic relationships are maintained when content changes via JavaScript",  
+
+"Custom controls: Implement proper ARIA roles, states, and properties for non-standard widgets",  
+
+"Multi-part forms: Use fieldset/legend for each logical section with related controls",  
+
+"Error messages: Associate error text with form controls using aria-describedby",  
+
+"Progressive disclosure: Maintain semantic relationships when content is revealed/hidden",  
+
+"Date inputs: Group day/month/year fields with fieldset/legend for screen reader context",  
+
+"Address forms: Group street, city, state, zip fields under fieldset with 'Address' legend",  
+
+"Payment forms: Separate billing/shipping address sections with distinct fieldsets",  
+
+"Search forms: Use role='search' on form element containing search functionality",  
+
+"Data visualizations: Provide structured data alternatives (tables, lists) for charts and graphs",  
+
+"Card layouts: Use proper heading hierarchy within each card for scannable structure",  
+
+"Tabs interface: Implement proper ARIA tablist/tab/tabpanel relationships",  
+
+"Accordion widgets: Use proper button/region relationships with aria-controls and aria-expanded",  
+
+"Breadcrumb navigation: Use ordered list markup with proper link relationships",  
+
+"Multi-column layouts: Ensure reading order makes sense when CSS is disabled",  
+
+"Form validation: Associate validation messages with specific fields using aria-describedby",  
+
+"Required field indicators: Use aria-required='true' plus visual indicators",  
+
+"Table sorting: Update aria-sort attribute values when column sort changes",  
+
+"Nested lists: Properly structure sub-lists within parent list items",  
+
+"Definition terms: Use <dl><dt><dd> structure for glossaries and specification lists",  
+
+"Mathematical expressions: Use MathML or structured text alternatives",  
+
+"Code examples: Use <pre><code> with proper language identification",  
+
+"Survey forms: Group rating scale questions with fieldset/legend structure",  
+
+"Multiple navigation regions: use aria-label to differentiate (e.g., 'Primary navigation', 'Footer navigation')" ,
+
+"Information presented visually as headings, tables, or groups is not represented programmatically in structure.", 
+
+"Elements rely on visual layout alone to convey hierarchy, not semantic or ARIA markup.", 
+
+"Form inputs that belong to a single question group are not programmatically linked together.", 
+
+"Improper use of structural elements like lists or tables breaks expected relationships.", 
+
+"Automation tools often confirm presence of markup but not correctness of logical hierarchy.", 
+
+"Improper heading implementation using spans with CSS styling instead of semantic HTML.", 
+
+"Complex heading structures broken across multiple elements with line breaks.", 
+
+"Semantic meaning preservation when headings are styled rather than marked up properly."  
+
+],  
+
+"techniques": [  
+
+"H42: Using h1-h6 to identify headings",  
+
+"H44: Using label elements to associate text labels with form controls",  
+
+"H51: Using table markup to present tabular information",  
+
+"H71: Providing a description for groups of form controls using fieldset and legend elements",  
+
+"H49: Using semantic markup to mark emphasized or special text",  
+
+"G115: Using semantic elements to mark up structure",  
+
+"ARIA11: Using ARIA landmarks to identify regions of a page",  
+
+"ARIA13: Using aria-labelledby to name regions and landmarks",  
+
+"ARIA16: Using aria-labelledby to provide a name for user interface controls",  
+
+"ARIA17: Using grouping roles to identify related form controls",  
+
+"ARIA20: Using the region role to identify a region of the page",  
+
+"H39: Using caption elements to associate data table captions with data tables",  
+
+"H63: Using the scope attribute to associate header cells with data cells",  
+
+"H43: Using id and headers attributes to associate data cells with header cells in data tables",  
+
+"G117: Using text to convey information that is conveyed by variations in presentation of text",  
+
+"G140: Separating information and structure from presentation to enable different presentations",  
+
+"H48: Using ol, ul, and dl for lists or groups of links",  
+
+"H85: Using fieldset and legend elements to group form controls",  
+
+"ARIA9: Using aria-labelledby to associate text with controls",  
+
+"ARIA10: Using aria-describedby to provide descriptive information"  
+
+],  
+
+"axe_rules_hint": [  
+
+"landmark-one-main: Ensures only one main landmark exists",  
+
+"region: Ensures all page content is contained by landmarks",  
+
+"list: Ensures <ul>, <ol> and <dl> elements are structured correctly",  
+
+"listitem: Ensures <li> elements are used semantically",  
+
+"definition-list: Ensures <dl> elements are structured correctly",  
+
+"dlitem: Ensures <dt> and <dd> elements are used correctly",  
+
+"th-has-data-cells: Ensures table headers have data cells they describe",  
+
+"td-headers-attr: Ensures table data cells use headers attribute correctly",  
+
+"table-fake-caption: Ensures fake table captions are not used",  
+
+"scope-attr-valid: Ensures scope attribute is used correctly on tables",  
+
+"label: Ensures every form element has an associated label",  
+
+"fieldset: Ensures fieldsets have legend elements",  
+
+"heading-order: Ensures heading elements follow a logical, sequential order",  
+
+"form-field-multiple-labels: Ensures form fields are not associated with multiple labels incorrectly"  
+
+]  
+
+} 

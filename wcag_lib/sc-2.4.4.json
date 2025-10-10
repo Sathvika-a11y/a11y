@@ -38,7 +38,20 @@
     "Links in footers: ensure descriptive text (e.g., “Terms of service”)","Links to maps: describe purpose (e.g., “View office location on Google Maps”)",
     "Links for screen reader only: ensure aria-label describes purpose","Links within captions/figures: include context (e.g., “View full-size image of chart”)",
     "Links to PDFs embedded in iframes: include format in text (e.g., “Open site map (PDF)”)","Links in multi-lingual sites: include language code when linking cross-language pages",
-    "Links that trigger downloads via scripting: ensure link text indicates download","Links that launch applications or protocols (e.g., “Open in Zoom”): include application name"
+    "Links that trigger downloads via scripting: ensure link text indicates download","Links that launch applications or protocols (e.g., “Open in Zoom”): include application name",
+    "Links identified only by icons or color differences lack clear meaning when read aloud.", 
+
+      "Repeated link text leads to ambiguity when multiple links point to different destinations.", 
+
+      "Context around a link is required to determine its purpose but not conveyed programmatically.", 
+
+      "Automation tools may confirm presence of links but cannot interpret descriptive clarity.", 
+
+      "Dynamic text updates or hidden labels change link meaning after page load.", 
+
+      "Generic link text without sufficient surrounding context.", 
+
+      "Download links missing file type and size information."
   ],
   "techniques": [
     "H64: Link text should describe purpose","G91: Using link context to clarify ambiguous link text","G162: Providing link context before or after the link",

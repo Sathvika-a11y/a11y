@@ -1,0 +1,406 @@
+[
+  {
+    "selector": "h2.uppercase",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The heading 'CONNECT' does not provide a clear description of the topic or purpose."
+    ],
+    "suggestion": "Use a more descriptive heading that indicates what users can expect to find in this section."
+  },
+  {
+    "selector": "h1.heading-xlarge",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.heading-medium",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h2.uppercase",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The heading 'LOCATION' does not provide a clear description of the topic or purpose."
+    ],
+    "suggestion": "Use a more descriptive heading that indicates what users can expect to find in this section."
+  },
+  {
+    "selector": "h2.heading-large",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The heading 'Visit our office' does not provide a clear description of the topic or purpose."
+    ],
+    "suggestion": "Use a more descriptive heading that indicates what users can expect to find in this section."
+  },
+  {
+    "selector": "h2.uppercase",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The heading 'CAREERS' does not provide a clear description of the topic or purpose."
+    ],
+    "suggestion": "Use a more descriptive heading that indicates what users can expect to find in this section."
+  },
+  {
+    "selector": "h2.heading-large",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The heading 'We like to get worked up' does not provide a clear description of the topic or purpose."
+    ],
+    "suggestion": "Use a more descriptive heading that indicates what users can expect to find in this section."
+  },
+  {
+    "selector": "h2.uppercase",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The heading 'PARTNERSHIPS' does not provide a clear description of the topic or purpose."
+    ],
+    "suggestion": "Use a more descriptive heading that indicates what users can expect to find in this section."
+  },
+  {
+    "selector": "h2.heading-large",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The heading 'Ready to get started?' does not provide a clear description of the topic or purpose."
+    ],
+    "suggestion": "Use a more descriptive heading that indicates what users can expect to find in this section."
+  },
+  {
+    "selector": "a.logo.w-nav-brand",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The label is empty and does not indicate the purpose of the link."
+    ],
+    "suggestion": "Provide a visible label that clearly indicates the purpose of the link."
+  },
+  {
+    "selector": "a.link_uppercase.w--current",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "div.uui-navbar01_menu-button.w-nav-button.w--open",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The label is empty and does not indicate the purpose of the button."
+    ],
+    "suggestion": "Provide a visible label that clearly indicates the purpose of the button."
+  },
+  {
+    "selector": "a.menu_link.w-nav-link.w--nav-link-open",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#Email-4",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The label is empty and does not indicate the purpose of the input."
+    ],
+    "suggestion": "Provide a visible label that clearly indicates the purpose of the input."
+  },
+  {
+    "selector": "input.form_submit-button.w-button",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The label is empty and does not indicate the purpose of the input."
+    ],
+    "suggestion": "Provide a visible label that clearly indicates the purpose of the input."
+  },
+  {
+    "selector": "a.social_iconlink.w-inline-block",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The label is empty and does not indicate the purpose of the link."
+    ],
+    "suggestion": "Provide a visible label that clearly indicates the purpose of the link."
+  },
+  {
+    "selector": "#name",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#Organization-2",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#Email",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#Phone",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#Message-2",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The label 'Tell us some details!' does not have an accessible name associated with it."
+    ],
+    "suggestion": "Add an accessible name to the textarea to clearly indicate its purpose."
+  },
+  {
+    "selector": "input.submit-button.w-button",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The button does not have a visible label or accessible name indicating its action."
+    ],
+    "suggestion": "Provide a visible label or accessible name such as 'Send Email' for the submit button."
+  },
+  {
+    "selector": "a",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.text-red-500",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The link 'what we do.' does not clearly indicate its purpose or action."
+    ],
+    "suggestion": "Change the link text to something more descriptive, such as 'Learn more about what we do.'"
+  },
+  {
+    "selector": "a",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.button.align-left.w-inline-block",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#Email-5",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The input does not have a visible label or accessible name indicating its purpose."
+    ],
+    "suggestion": "Add a visible label or accessible name such as 'Email Address' for the email input."
+  },
+  {
+    "selector": "input.form_submit-button.w-button",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The button does not have a visible label or accessible name indicating its action."
+    ],
+    "suggestion": "Provide a visible label or accessible name for the submit button."
+  },
+  {
+    "selector": "a.w-inline-block",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The link does not have a visible label or accessible name."
+    ],
+    "suggestion": "Add a visible label or accessible name to indicate the link's purpose."
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.footer_link",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "pass",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.social_iconlink.w-inline-block",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The social icon links do not have visible labels or accessible names."
+    ],
+    "suggestion": "Add accessible names to the social icon links to indicate their purpose."
+  },
+  {
+    "selector": "a.social_iconlink.w-inline-block",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The social icon links do not have visible labels or accessible names."
+    ],
+    "suggestion": "Add accessible names to the social icon links to indicate their purpose."
+  },
+  {
+    "selector": "a.social_iconlink.w-inline-block",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The social icon links do not have visible labels or accessible names."
+    ],
+    "suggestion": "Add accessible names to the social icon links to indicate their purpose."
+  },
+  {
+    "selector": "a.social_iconlink.w-inline-block",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "The social icon links do not have visible labels or accessible names."
+    ],
+    "suggestion": "Add accessible names to the social icon links to indicate their purpose."
+  }
+]

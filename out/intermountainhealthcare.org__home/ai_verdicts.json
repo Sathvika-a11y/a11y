@@ -1,86 +1,1451 @@
 [
   {
     "page_url": "https://intermountainhealthcare.org/",
-    "topic": "SC-2.4.2",
-    "SC": "2.4.2",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
     "sc_list": [],
-    "selector": "html",
-    "axe_rule_id": "document-title",
+    "selector": ".swiper-slide:nth-child(4) > .PublicationCard_wrapper__h6BoM > .MuiCard-root.PublicationCard_inner__Ym3DL.css-h4ugdf > .PublicationCard_body__cJmPT > .PublicationCard_summary__d1QYN.css-casq6l.MuiTypography-body",
+    "axe_rule_id": "color-contrast",
     "impact": "serious",
     "ai_verdict": {
       "type": "informative",
-      "verdict": "needs-change",
-      "reason": "The document lacks a non-empty <title> element, which is essential for navigation and fails SC 2.4.2 as per axe diagnostics.",
-      "confidence": 0.9,
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
       "techniques_used": [
-        "axe:document-title"
+        "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\document-title__html.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/document-title?application=axeAPI",
-    "prompt_hash": "e4019def35f1757b"
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\color-contrast__.swiper-slide_nth-child_4_.PublicationCard_wrapper__h6BoM.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "4779da90ccc83860"
   },
   {
     "page_url": "https://intermountainhealthcare.org/",
-    "topic": "SC-3.1.1",
-    "SC": "3.1.1",
+    "topic": "SC-2.4.4",
+    "SC": "2.4.4",
     "sc_list": [],
-    "selector": "html",
-    "axe_rule_id": "html-has-lang",
+    "selector": ".undefined.IhLink_link__B1NPM[target=\"\"]",
+    "axe_rule_id": "link-name",
     "impact": "serious",
     "ai_verdict": {
       "type": "informative",
-      "verdict": "needs-change",
-      "reason": "The <html> element is missing a lang attribute, which is required for SC 3.1.1 compliance. This impacts accessibility for screen readers.",
-      "confidence": 0.9,
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
       "techniques_used": [
-        "axe:html-has-lang"
+        "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\html-has-lang__html.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/html-has-lang?application=axeAPI",
-    "prompt_hash": "573f957af399ed1b"
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\link-name__.undefined.IhLink_link__B1NPM_target_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+    "prompt_hash": "a3ced72a7cf5f00f"
   },
   {
     "page_url": "https://intermountainhealthcare.org/",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
     "sc_list": [],
-    "selector": "html",
-    "axe_rule_id": "landmark-one-main",
-    "impact": "moderate",
+    "selector": ".ImageCardCollection_wrapper__Jin7c",
+    "axe_rule_id": "aria-prohibited-attr",
+    "impact": "serious",
     "ai_verdict": {
       "type": "informative",
-      "verdict": "needs-change",
-      "reason": "The document lacks a main landmark, which is required for accessibility. This violates the axe rule for landmark-one-main.",
-      "confidence": 0.8,
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
       "techniques_used": [
-        "axe:landmark-one-main"
+        "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\landmark-one-main__html.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI",
-    "prompt_hash": "0291e6dc76b28b64"
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\aria-prohibited-attr__.ImageCardCollection_wrapper__Jin7c.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/aria-prohibited-attr?application=axeAPI",
+    "prompt_hash": "4b74821da28677f1"
   },
   {
     "page_url": "https://intermountainhealthcare.org/",
-    "topic": "BEST_PRACTICE",
-    "SC": "",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
     "sc_list": [],
-    "selector": "html",
-    "axe_rule_id": "page-has-heading-one",
+    "selector": ".PublicationCardCollection_wrapper__DIAJO",
+    "axe_rule_id": "aria-prohibited-attr",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\aria-prohibited-attr__.PublicationCardCollection_wrapper__DIAJO.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/aria-prohibited-attr?application=axeAPI",
+    "prompt_hash": "5e5688b52e11d364"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".locationSelectorText",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\color-contrast__.locationSelectorText.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "60637318d7a91102"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".EnterpriseNavigation_hideMobile__DeitS",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\color-contrast__.EnterpriseNavigation_hideMobile__DeitS.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "447ccaabfe7867e4"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".EnterpriseNavigation_iconButtonLabel__3Ism7",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\color-contrast__.EnterpriseNavigation_iconButtonLabel__3Ism7.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "c7ca8dd3c9f25ef5"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".EnterpriseNavigation_navButton__brsNE[href$=\"find-a-doctor\"][target=\"\"] > .IhLink_linkInner__QwFmJ.linkInner",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\color-contrast__.EnterpriseNavigation_navButton__brsNE_href_find-a-doctor_.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "163a5dc7d21864ec"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".EnterpriseNavigation_navButton__brsNE.MuiButton-text.MuiButton-textPrimary:nth-child(2)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\color-contrast__.EnterpriseNavigation_navButton__brsNE.MuiButton-text.MuiBut.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "457e66f273e46187"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".EnterpriseNavigation_navButton__brsNE.MuiButton-text.MuiButton-textPrimary:nth-child(3)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\color-contrast__.EnterpriseNavigation_navButton__brsNE.MuiButton-text.MuiBut.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "b0c6d593aac6ac92"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".EnterpriseNavigation_navButton__brsNE.MuiButton-text.MuiButton-textPrimary:nth-child(4)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\color-contrast__.EnterpriseNavigation_navButton__brsNE.MuiButton-text.MuiBut.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "044b6110ad7a44a8"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".EnterpriseNavigation_navButton__brsNE.MuiButton-text.MuiButton-textPrimary:nth-child(5)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\color-contrast__.EnterpriseNavigation_navButton__brsNE.MuiButton-text.MuiBut.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "1195f2c0b50c5495"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": ".EnterpriseNavigation_navButton__brsNE.MuiButton-text.MuiButton-textPrimary:nth-child(6)",
+    "axe_rule_id": "color-contrast",
+    "impact": "serious",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\color-contrast__.EnterpriseNavigation_navButton__brsNE.MuiButton-text.MuiBut.png",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+    "prompt_hash": "97635ee5c75d2365"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a",
+    "axe_rule_id": "keyboard-probe:unreachable",
     "impact": "moderate",
     "ai_verdict": {
       "type": "informative",
-      "verdict": "needs-change",
-      "reason": "The page lacks a level-one heading, which is required for accessibility (axe:page-has-heading-one). This impacts the document structure and navigation.",
-      "confidence": 0.9,
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
       "techniques_used": [
-        "axe:page-has-heading-one"
+        "fallback"
       ]
     },
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\page-has-heading-one__html.png",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/page-has-heading-one?application=axeAPI",
-    "prompt_hash": "cfe6983bec832beb"
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\kb_unreach__a.png",
+    "axe_help_url": "",
+    "prompt_hash": "a3d19f13506317d9"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\kb_unreach__a.IhLink_link__B1NPM.link.Footer_link__QXBXs.png",
+    "axe_help_url": "",
+    "prompt_hash": "7e02a7958b7c75c5"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+    "axe_rule_id": "keyboard-probe:unreachable",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\kb_unreach__a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI.png",
+    "axe_help_url": "",
+    "prompt_hash": "ef35d14cf85f0673"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.1.1",
+    "SC": "2.1.1",
+    "sc_list": [],
+    "selector": "div.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "axe_rule_id": "keyboard-probe:activation",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\kb_act__div.MuiButtonBase-root.MuiButton-root.MuiButton-contained.png",
+    "axe_help_url": "",
+    "prompt_hash": "ec6a83d54f4d235b"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.4.3",
+    "SC": "2.4.3",
+    "sc_list": [],
+    "selector": "div.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "axe_rule_id": "runner:focus-order-suspect",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\forder__div.MuiButtonBase-root.MuiButton-root.MuiButton-contained.png",
+    "axe_help_url": "",
+    "prompt_hash": "c738ff9da26496d5"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.4.3",
+    "SC": "2.4.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF",
+    "axe_rule_id": "runner:focus-order-suspect",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\forder__a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF.png",
+    "axe_help_url": "",
+    "prompt_hash": "40ef2a0bab124cc0"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.4.3",
+    "SC": "2.4.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_mediaLink__35BLb",
+    "axe_rule_id": "runner:focus-order-suspect",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\forder__a.IhLink_link__B1NPM.link.PublicationCard_mediaLink__35BLb.png",
+    "axe_help_url": "",
+    "prompt_hash": "ec1888afcad981bb"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.3.1",
+    "SC": "1.3.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "axe_rule_id": "runner:info-relationships-list-missing",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\rel_nav__a.IhLink_link__B1NPM.link.Footer_link__QXBXs.png",
+    "axe_help_url": "",
+    "prompt_hash": "c8b27a6b99491ef2"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.3.1",
+    "SC": "1.3.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+    "axe_rule_id": "runner:info-relationships-list-missing",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\rel_nav__a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI.png",
+    "axe_help_url": "",
+    "prompt_hash": "1d2b6d68a700e0f2"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.undefined",
+    "axe_rule_id": "runner:role-conflict-or-nested",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\roleconf__a.IhLink_link__B1NPM.link.undefined.png",
+    "axe_help_url": "",
+    "prompt_hash": "53e93e85ef3a55d7"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-4.1.2",
+    "SC": "4.1.2",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "axe_rule_id": "runner:role-conflict-or-nested",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\roleconf__a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C.png",
+    "axe_help_url": "",
+    "prompt_hash": "c4fd475fd70585f9"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lin__button.MuiButtonBase-root.MuiButton-root.MuiButton-text.png",
+    "axe_help_url": "",
+    "prompt_hash": "bbe124d9a71c6ab2"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.HomepageHeroSection_card__6XbjH",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lin__a.IhLink_link__B1NPM.link.HomepageHeroSection_card__6XbjH.png",
+    "axe_help_url": "",
+    "prompt_hash": "28165f97641dd72b"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.ImageCard_link__Pimer",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lin__a.IhLink_link__B1NPM.link.ImageCard_link__Pimer.png",
+    "axe_help_url": "",
+    "prompt_hash": "75051783a55ae649"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.HighlightCard_link__2Na2J",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lin__a.IhLink_link__B1NPM.link.HighlightCard_link__2Na2J.png",
+    "axe_help_url": "",
+    "prompt_hash": "f47bc868e4eb01da"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lin__a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C.png",
+    "axe_help_url": "",
+    "prompt_hash": "62a29b838a62b343"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.undefined",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lin__a.IhLink_link__B1NPM.link.undefined.png",
+    "axe_help_url": "",
+    "prompt_hash": "07ade50cc55e678a"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lin__a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF.png",
+    "axe_help_url": "",
+    "prompt_hash": "603bf0c19fc8d3b7"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "div.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lin__div.MuiButtonBase-root.MuiButton-root.MuiButton-contained.png",
+    "axe_help_url": "",
+    "prompt_hash": "6a71013e87a9ce20"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lin__a.IhLink_link__B1NPM.link.Footer_link__QXBXs.png",
+    "axe_help_url": "",
+    "prompt_hash": "74827732b2a949fa"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.5.3",
+    "SC": "2.5.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+    "axe_rule_id": "runner:label-in-name",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lin__a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI.png",
+    "axe_help_url": "",
+    "prompt_hash": "97962efad28bedf2"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.4.4",
+    "SC": "2.4.4",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "axe_rule_id": "runner:link-purpose-generic",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\lp__a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C.png",
+    "axe_help_url": "",
+    "prompt_hash": "007eeb4de6409a29"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.undefined",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\linkind__a.IhLink_link__B1NPM.link.undefined.png",
+    "axe_help_url": "",
+    "prompt_hash": "a0d8fe6dcc20ce33"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.EnterpriseNavigation_navButton__brsNE",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\linkind__a.IhLink_link__B1NPM.link.EnterpriseNavigation_navButton__br.png",
+    "axe_help_url": "",
+    "prompt_hash": "7e697ffe2d5bd67b"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.HomepageHeroSection_card__6XbjH",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\linkind__a.IhLink_link__B1NPM.link.HomepageHeroSection_card__6XbjH.png",
+    "axe_help_url": "",
+    "prompt_hash": "f27688c197dcecfc"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\linkind__a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C.png",
+    "axe_help_url": "",
+    "prompt_hash": "c82029281c94d984"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.HighlightCard_link__2Na2J",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\linkind__a.IhLink_link__B1NPM.link.HighlightCard_link__2Na2J.png",
+    "axe_help_url": "",
+    "prompt_hash": "95e4b959feff75fd"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\linkind__a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF.png",
+    "axe_help_url": "",
+    "prompt_hash": "7c579a57c49a6fa7"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\linkind__a.IhLink_link__B1NPM.link.Footer_link__QXBXs.png",
+    "axe_help_url": "",
+    "prompt_hash": "d0a56ea3e3f3f767"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.1",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+    "axe_rule_id": "link-indicator:style",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\linkind__a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI.png",
+    "axe_help_url": "",
+    "prompt_hash": "baaa1c4061db40f2"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "h1.MuiTypography-root.MuiTypography-hero.css-e6usta",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__h1.MuiTypography-root.MuiTypography-hero.css-e6usta.png",
+    "axe_help_url": "",
+    "prompt_hash": "dc73f1c1857d754a"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "p.MuiTypography-root.MuiTypography-body.HomepageHeroSection_subCopy___hRkX",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__p.MuiTypography-root.MuiTypography-body.HomepageHeroSection_.png",
+    "axe_help_url": "",
+    "prompt_hash": "c5ca897adf4a4907"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a.HomepageHeroSection_anchorLink__ljaAj",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__a.HomepageHeroSection_anchorLink__ljaAj.png",
+    "axe_help_url": "",
+    "prompt_hash": "17434c7b948dfb77"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "h2.MuiTypography-root.MuiTypography-title.HomepageHeroSection_cardsTitle__ji_Kt",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__h2.MuiTypography-root.MuiTypography-title.HomepageHeroSectio.png",
+    "axe_help_url": "",
+    "prompt_hash": "a837036e252786da"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.HomepageHeroSection_card__6XbjH",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__a.IhLink_link__B1NPM.link.HomepageHeroSection_card__6XbjH.png",
+    "axe_help_url": "",
+    "prompt_hash": "0b33277b3297dc9b"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "h2.MuiTypography-root.MuiTypography-title.css-1uxvbx",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__h2.MuiTypography-root.MuiTypography-title.css-1uxvbx.png",
+    "axe_help_url": "",
+    "prompt_hash": "f93850bdc8820050"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "p.MuiTypography-root.MuiTypography-body.MuiTypography-paragraph",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__p.MuiTypography-root.MuiTypography-body.MuiTypography-paragr.png",
+    "axe_help_url": "",
+    "prompt_hash": "fbfac71d2eab089e"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "span.MuiTypography-root.MuiTypography-label.ContextualInlineBanner_topic__XaYy_",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__span.MuiTypography-root.MuiTypography-label.ContextualInline.png",
+    "axe_help_url": "",
+    "prompt_hash": "1116e155353c3d82"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#mychart-is-now-live-for-patients-in-utah\\,-idaho-and-nevada",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text___mychart-is-now-live-for-patients-in-utah_-idaho-and-nevada.png",
+    "axe_help_url": "",
+    "prompt_hash": "44c3b8f4b15d5420"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "p.MuiTypography-root.MuiTypography-body.ContextualInlineBanner_bodyText__SvV9S",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__p.MuiTypography-root.MuiTypography-body.ContextualInlineBann.png",
+    "axe_help_url": "",
+    "prompt_hash": "13160ba90d8e6d97"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C.png",
+    "axe_help_url": "",
+    "prompt_hash": "6567f6479b3b9ec1"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#image-card-collection-\\:r6\\:",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text___image-card-collection-_r6_.png",
+    "axe_help_url": "",
+    "prompt_hash": "e17f8f359e8714ff"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.ImageCard_link__Pimer",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__a.IhLink_link__B1NPM.link.ImageCard_link__Pimer.png",
+    "axe_help_url": "",
+    "prompt_hash": "5106f9653503428a"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "h3.MuiTypography-root.MuiTypography-title-large.ImageCard_title__JUIba",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__h3.MuiTypography-root.MuiTypography-title-large.ImageCard_ti.png",
+    "axe_help_url": "",
+    "prompt_hash": "184d99e40d36612f"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#for-patients",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text___for-patients.png",
+    "axe_help_url": "",
+    "prompt_hash": "6caee0afcbf5605a"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.HighlightCard_link__2Na2J",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__a.IhLink_link__B1NPM.link.HighlightCard_link__2Na2J.png",
+    "axe_help_url": "",
+    "prompt_hash": "c3a37e743b435d39"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "h5.MuiTypography-root.MuiTypography-h5.HighlightCard_title__gzKtO",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__h5.MuiTypography-root.MuiTypography-h5.HighlightCard_title__.png",
+    "axe_help_url": "",
+    "prompt_hash": "fa6d5df5d2ffd8a7"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "p.MuiTypography-root.MuiTypography-body.HighlightCard_body__Rw01j",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__p.MuiTypography-root.MuiTypography-body.HighlightCard_body__.png",
+    "axe_help_url": "",
+    "prompt_hash": "ac3009250b554e4e"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "#we\\'re-reimagining-healthcare",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text___we_re-reimagining-healthcare.png",
+    "axe_help_url": "",
+    "prompt_hash": "8272046aef1d23c5"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.3",
+    "SC": "1.4.3",
+    "sc_list": [],
+    "selector": "p.MuiTypography-root.MuiTypography-body.Features_body__eb0rH",
+    "axe_rule_id": "runner:contrast-text",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_text__p.MuiTypography-root.MuiTypography-body.Features_body__eb0rH.png",
+    "axe_help_url": "",
+    "prompt_hash": "3550ae451609f202"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.11",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "#city-selection-container-\\:r2\\:",
+    "axe_rule_id": "runner:nontext-ui-contrast",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_nontext___city-selection-container-_r2_.png",
+    "axe_help_url": "",
+    "prompt_hash": "6e018bc25e43a8ef"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.11",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "axe_rule_id": "runner:nontext-ui-contrast",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_nontext__button.MuiButtonBase-root.MuiButton-root.MuiButton-text.png",
+    "axe_help_url": "",
+    "prompt_hash": "df5949fb4c8c60d8"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.11",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "div.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "axe_rule_id": "runner:nontext-ui-contrast",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_nontext__div.MuiButtonBase-root.MuiButton-root.MuiButton-contained.png",
+    "axe_help_url": "",
+    "prompt_hash": "1ea709935f5d56dc"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-1.4.11",
+    "SC": "1.4.1",
+    "sc_list": [],
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "axe_rule_id": "runner:nontext-ui-contrast",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\contrast_nontext__button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.png",
+    "axe_help_url": "",
+    "prompt_hash": "aad4849724c5573c"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.4.6",
+    "SC": "2.4.6",
+    "sc_list": [],
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "axe_rule_id": "runner:ai-2.4.6-local",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\sc246__a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C.png",
+    "axe_help_url": "",
+    "prompt_hash": "ea0bfe45cd6864ba"
+  },
+  {
+    "page_url": "https://intermountainhealthcare.org/",
+    "topic": "SC-2.4.6",
+    "SC": "2.4.6",
+    "sc_list": [],
+    "selector": "div.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "axe_rule_id": "runner:ai-2.4.6-local",
+    "impact": "moderate",
+    "ai_verdict": {
+      "type": "informative",
+      "verdict": "review",
+      "reason": "AI error/parse fallback: Connection error.",
+      "confidence": 0.3,
+      "techniques_used": [
+        "fallback"
+      ]
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\intermountainhealthcare.org__home\\screenshots\\sc246__div.MuiButtonBase-root.MuiButton-root.MuiButton-contained.png",
+    "axe_help_url": "",
+    "prompt_hash": "275e2c07342d2012"
   }
 ]

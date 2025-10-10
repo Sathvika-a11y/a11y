@@ -1,0 +1,12 @@
+[
+  {
+    "name": "main.html",
+    "url": "https://www.brandience.com/connect",
+    "is_main": true
+  },
+  {
+    "name": "frame_1.html",
+    "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.4873124444953!2d-84.4455610479628!3d39.11814097943676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b15759e6f7eb%3A0xd5ba2d25d31ee5e8!2sBrandience!5e0!3m2!1sen!2sus!4v1637610371248!5m2!1sen!2sus",
+    "is_main": false
+  }
+]

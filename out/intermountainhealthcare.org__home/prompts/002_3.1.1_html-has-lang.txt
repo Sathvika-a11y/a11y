@@ -1,0 +1,122 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 3.1.1
+Techniques context (from curated library):
+{
+  "topic": "SC 3.1.1",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'review' when meaning, purpose, or evidence is unclear.",
+    "Consider axe help: <html> element must have a lang attribute",
+    "Ref: https://dequeuniversity.com/rules/axe/4.10/html-has-lang?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives without evidence.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: html
+- HTML snippet: <html class="JFEScope">
+- Attributes: {"lang": "en", "data-mui-color-scheme": "light", "class": "hydrated"}
+- Computed role/name (best-effort): html — Denver, CO
+Sign in
+Search
+Find a doctor
+Locations
+Medical services
+Patient resources
+For professionals
+About us
+Let’s look at health in a whole new way
+
+We believe caring for your health is a journey. From helping you get well to guiding you t
+- Nearby text window: Denver, CO
+Sign in
+Search
+Find a doctor
+Locations
+Medical services
+Patient resources
+For professionals
+About us
+Let’s look at health in a whole new way
+
+We believe caring for your health is a journey. From helping you get well to guiding you to live your healthiest life possible, we’re here to support you every step of the way.
+
+Anchor Button Icon
+Find doctors and locations near you
+Find a doctor
+
+Looking for a primary care provider or a specialist? Start here.
+
+Find a location
+
+Find a hospital, clinic, or specialty location in your community.
+
+Patient portal
+
+Manage your health from one conve
+- Accessibility snapshot (partial): {}
+- Axe ruleId: html-has-lang
+- Axe help: <html> element must have a lang attribute
+- Axe impact: serious
+
+AXE_DIAGNOSTICS:
+(failureSummary/why_any/why_all/why_none and page_url are appended below this prompt; you MUST consider them.)
+
+TASK
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+
+2) Decide ONE verdict (string): "pass" | "fail" | "review".
+   - pass   → clearly meets the SC (e.g., decorative image correctly hidden; redundant alternative truly duplicates visible text for the same control/target; contrast thresholds met)
+   - fail   → clearly violates the SC (cite the concrete reason)
+   - review → borderline/ambiguous/incomplete evidence; AI checked but manual verification is warranted
+
+3) Decision boundaries to guide judgement (non-exhaustive):
+   • SC 1.1.1 (Non-text Content)
+     - fail: missing/empty/placeholder alt for informative/functional images; functional image label doesn’t convey action/target
+     - pass: purely decorative (empty alt or role=presentation); or alt would ONLY duplicate adjacent visible text for the same control/target (note “redundant” in reason)
+   • SC 2.4.4 (Link Purpose, In Context)
+     - fail: “click here / learn more / read more” without disambiguating context in the same sentence/container or accessible name
+     - review: context may disambiguate but evidence is thin in provided snippet
+   • SC 1.4.3 (Contrast Minimum)
+     - fail: computed contrast < 4.5:1 (normal) or < 3:1 (large) based on diagnostics/evidence
+     - review: dynamic/unknown background or insufficient data to compute reliably
+   • SC 4.1.2 (Name, Role, Value)
+     - fail: custom widget lacks name, wrong/missing role, or state/value not exposed
+     - pass: correct role + meaningful name + state
+   • SC 2.5.3 (Label in Name)
+     - fail: visible label text not found in accessible name for controls
+     - review: partial match or name derived by ids/ARIA is truncated/uncertain
+
+4) Output a compact JSON object EXACTLY with keys:
+{
+  "type": "<element type>",
+  "verdict": "pass" | "fail" | "review",
+  "reason": "<<=200 chars; cite concrete evidence from context/diagnostics (e.g., alt='image'; link text 'learn more' without context; contrast 2.8:1)>>",
+  "confidence": 0.0-1.0,
+  "techniques_used": ["<e.g., H37>", "<e.g., G94>", "<or axe:RULE_ID>"]
+}
+
+
+Rules:
+- Use the provided evidence only; do not invent page content.
+- Keep the reason specific (mention the attribute/phrase/metric).
+- Prefer "review" (not "fail") when evidence is borderline/insufficient or background is dynamic/unknown.
+- If no technique matches, still return a verdict and include ["fallback"] in techniques_used.
+- Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute",
+  "why_any": [
+    "has-lang: The <html> element does not have a lang attribute"
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://intermountainhealthcare.org/"
+}

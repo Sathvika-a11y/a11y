@@ -1,0 +1,213 @@
+ { 
+
+    "SC": "3.1.2 Language of Parts", 
+
+    "Topic": "Identify language changes within content", 
+
+    "Do": [ 
+
+      "Use lang attribute on elements that contain foreign language text", 
+
+      "Use BCP 47 subtags for dialects when relevant (e.g., en-GB)", 
+
+      "Mark quotes, citations and phrases in other languages with lang", 
+
+      "Tag headings in different language with lang attribute", 
+
+      "Ensure screen readers switch pronunciation when lang changes", 
+
+      "Use dir attribute for direction changes alongside lang where needed", 
+
+      "Add lang to inline spans for brief words/phrases", 
+
+      "Mark up whole sections with lang if a section changes language", 
+
+      "Add lang to aria-labels and ARIA attributes when language differs", 
+
+      "Ensure assistive tech reads mixed language correctly", 
+
+      "Provide translations when necessary and tag original with lang", 
+
+      "Ensure server and client render consistent lang markup", 
+
+      "Document language-of-parts usage for content authors", 
+
+      "Include lang in captions and transcripts for media", 
+
+      "Ensure embedded SVG/Canvas with text has proper lang", 
+
+      "Avoid overusing lang on isolated punctuation or symbols", 
+
+      "Use correct region subtags for pronunciation nuances", 
+
+      "Test mixed-language content with multiple screen readers", 
+
+      "Tag language for alt text containing foreign phrases", 
+
+      "Ensure CMS preserves inline lang tags through editor sanitization", 
+
+      "Check that text-to-speech reads languages correctly when switched", 
+
+      "Add lang to dynamically inserted content when appropriate", 
+
+      "Ensure newsletter and email HTML mark parts with lang", 
+
+      "Use consistent lang tagging patterns across components", 
+
+      "Provide language indicators in UI for user awareness", 
+
+      "Ensure language of parts is reflected in translated versions", 
+
+      "Avoid marking brand names as different language unless necessary", 
+
+      "Ensure PDFs and exported documents preserve inline lang", 
+
+      "Mark language in nested quoted material correctly", 
+
+      "Use lang on script elements that contain localized literals", 
+
+      "Verify that aria-labelledby references elements in same language", 
+
+      "Use lang when presenting content excerpts from other locales", 
+
+      "Ensure widget-provided translatable strings carry lang values", 
+
+      "Tag inline code comments or pseudo-code if in a different language", 
+
+      "Provide guidance for contributors on when to use lang part tags", 
+
+      "Ensure language tags are present in content imported from external sources", 
+
+      "Check that multilingual chat or comments have correct lang attributes", 
+
+      "Ensure language markers survive HTML sanitation pipelines" 
+
+    ], 
+
+    "Dont": [ 
+
+      "Don’t leave foreign-language fragments untagged", 
+
+      "Don’t wrap unnecessary words in lang attributes", 
+
+      "Don’t use incorrect or non-standard language codes", 
+
+      "Don’t rely on visual styling to indicate language changes", 
+
+      "Don’t mark the entire page with the wrong lang when only parts differ", 
+
+      "Don’t use lang='auto' expecting browsers to be correct", 
+
+      "Don’t place lang attributes only on parents when child content differs", 
+
+      "Don’t strip lang attributes during content sanitization", 
+
+      "Don’t assume screen readers will auto-detect language switches reliably", 
+
+      "Don’t overuse lang on punctuation or single characters unnecessarily", 
+
+      "Don’t tag things like emojis as language fragments", 
+
+      "Don’t let translation tools remove correct inline lang", 
+
+      "Don’t mix up region subtags and base language codes", 
+
+      "Don’t add lang attributes on elements that already inherit correct lang unnecessarily", 
+
+      "Don’t rely on server headers alone without html lang", 
+
+      "Don’t leave aria labels in wrong language without correction", 
+
+      "Don’t change dir without updating lang when switching to RTL", 
+
+      "Don’t use language tags to hide content from crawlers", 
+
+      "Don’t let CMS WYSIWYG remove or rewrite lang spans", 
+
+      "Don’t mark English stopwords as foreign in localized content", 
+
+      "Don’t assume code samples are language and need lang tagging", 
+
+      "Don’t use lang incorrectly to attempt SEO manipulation", 
+
+      "Don’t put lang on non-text elements unless they contain meaningful text", 
+
+      "Don’t apply multiple conflicting lang attributes on same element", 
+
+      "Don’t depend on user agent heuristics for pronunciation correctness", 
+
+      "Don’t ignore nested quotes where inner language differs", 
+
+      "Don’t let user translations overwrite original lang markers incorrectly", 
+
+      "Don’t put lang attributes on comments, scripts or CSS where not relevant", 
+
+      "Don’t assume language-of-parts is unnecessary for short brand names", 
+
+      "Don’t add lang to content that is purely symbolic (e.g., logos) unless necessary", 
+
+      "Don’t let text editors normalize or remove lang attributes silently", 
+
+      "Don’t set lang only in meta tags and not on inline language changes", 
+
+      "Don’t mix languages in aria-labelledby references without tagging", 
+
+      "Don’t assume language tags aren’t needed in audio.caption tracks", 
+
+      "Don’t use language tags inconsistently across similar components" 
+
+    ], 
+
+"Edge cases": [ 
+
+      "Inline foreign phrase in image alt text untagged and mispronounced", 
+
+      "CMS WYSIWYG strips span lang tags during save", 
+
+      "Nested quotes in different languages missing inner lang", 
+
+      "Comments or user content in mixed languages are not tagged", 
+
+      "Screen reader fails to switch pronunciation mid-sentence", 
+
+      "SVG text nodes with foreign words lack lang attribute", 
+
+      "Video captions mix languages without language indicators", 
+
+      "Auto-translation plugin incorrectly tags original text", 
+
+      "Aria-label references element with different language untagged", 
+
+      "Direction (dir) mismatch for an Arabic phrase inside English paragraph", 
+
+      "PDF export removes inline lang attributes", 
+
+      "Language markers lost after HTML sanitization or markdown conversion", 
+
+      "Dynamic chat messages in different languages not tagged", 
+
+      "Embedded widgets present content in another language without lang", 
+
+      "Code samples with comments in other language not tagged", 
+
+      "Third-party comments or embeds not preserving lang attributes", 
+
+      "Localized microcopy changed but inline lang not updated", 
+
+      "Screen reader pronounces brand names inconsistent with intended language", 
+
+      "Mixed language form labels and values confuse voice output", 
+
+      "Multilingual search snippets displayed without language context" 
+
+    ], 
+
+ 
+
+         "Techniques": ["H58", "G107", "ARIA1"], 
+
+    "Axe rules": ["valid-lang"], 
+
+    "Tags": ["multilingual", "i18n", "language-switch", "screen-reader"] 
+
+  }

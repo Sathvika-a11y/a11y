@@ -33,7 +33,10 @@
 "Pagination controls: 'Next'/'Previous' must include context (e.g., 'Next page of results')",  
 "Data visualizations: controls to filter data must have descriptive labels", 
 "Language attribute changes: headings and labels must update visible and accessible text", 
-"Geolocation permission prompts: label indicates permission and purpose" 
+"Geolocation permission prompts: label indicates permission and purpose",
+"Dynamic elements added after page load are missing descriptive labels or names.", 
+
+      "Automation may detect headings but cannot assess if they are meaningful or accurate." 
 ], 
 "techniques": [ 
 "G131: Ensuring visible text labels for interactive controls", 

@@ -1,33 +1,206 @@
-{
-  "topic": "SC 4.1.2 — Name, Role, Value",
-  "tags": ["SC-4.1.2", "4.1.2", "wcag412"],
-  "do": [
-    "Custom widgets expose correct role (native or ARIA) with a meaningful accessible name.",
-    "State and value are programmatically determinable and update when the UI changes.",
-    "Form controls have labels (label/for, aria-label, or aria-labelledby) that match purpose.",
-    "Only use ARIA attributes that are valid for the chosen role; keep IDs unique."
-  ],
-  "dont": [
-    "Don’t put aria-hidden on focusable/operable elements.",
-    "Don’t rely on placeholder as the only label.",
-    "Don’t assign invalid/unsupported roles or attributes.",
-    "Don’t let DOM state drift from the accessibility tree (e.g., toggles not updating aria-pressed)."
-  ],
-  "edge_cases": [
-    "Icon-only buttons need an accessible name (aria-label) even if visually obvious.",
-    "Composite widgets (menus, tabs) require required children/parents per the ARIA spec.",
-    "Dynamic components must update name/state without requiring focus loss/repaint."
-  ],
-  "techniques": ["ARIA6", "ARIA9", "ARIA14", "H44"],
-  "axe_rules_hint": [
-    "aria-allowed-attr",
-    "aria-required-attr",
-    "aria-required-children",
-    "aria-required-parent",
-    "aria-roles",
-    "aria-valid-attr",
-    "aria-valid-attr-value",
-    "aria-hidden-focus",
-    "duplicate-id-aria"
-  ]
-}
+{ 
+   "topic": "SC 4.1.2 — Name, Role, Value", 
+   "tags": ["SC-4.1.2","4.1.2","wcag412"], 
+
+"do": [ 
+
+    "Ensure every user interface component has a programmatically determinable name via accessible name computation", 
+
+    "Expose roles for all interactive and region elements using native HTML semantics or ARIA roles", 
+
+    "Ensure values of controls (e.g., inputs, sliders, lists) are programmatically available to assistive technologies", 
+
+    "Use semantic HTML elements such as <button>, <input>, <a>, <select>, <textarea> for native support of name, role, and value", 
+
+    "Use aria-label or aria-labelledby to provide accessible names when no visible label is present", 
+
+    "Use aria-labelledby to reference existing visible text when multiple sources define a label", 
+
+    "Keep name, role, and value in sync when components change state (e.g., toggled, expanded, selected)", 
+
+    "Implement full ARIA widget pattern for custom components (e.g., combobox, slider, checkbox)", 
+
+    "Ensure form fields are associated with labels via <label for> or aria-labelledby", 
+
+    "Ensure each ARIA role has all required states and properties per ARIA specification", 
+
+    "Use aria-valuemin, aria-valuemax, and aria-valuenow for custom range widgets like sliders and spinbuttons", 
+
+    "Use aria-pressed for toggle buttons and update its value appropriately on interaction", 
+
+    "Use aria-checked on custom checkboxes or radio buttons and reflect changes in the DOM", 
+
+    "Expose selected items in listboxes using aria-selected", 
+
+    "Ensure aria-required, aria-invalid, and aria-describedby are used to convey form validation feedback", 
+
+    "Use aria-hidden=\"true\" only for purely decorative elements or hidden content that should not be read by assistive tech", 
+
+    "Assign role=\"alert\" or role=\"status\" for live regions, and set aria-live for dynamic messaging", 
+
+    "Ensure ARIA attributes like aria-labelledby or aria-describedby reference valid and existing IDs", 
+
+    "For dialogs, use role=\"dialog\" and point aria-labelledby to the dialog’s title element", 
+
+    "Provide accessible names for SVG elements with role=\"img\" via aria-label or aria-labelledby", 
+
+    "Ensure that icon-only interactive elements (e.g., buttons, links) have a meaningful aria-label", 
+
+    "Ensure that the accessible name matches or complements the visible label when both exist", 
+
+    "Test custom components with screen readers to verify that name, role, and value are correctly exposed", 
+
+    "Document accessible attribute patterns (name, role, value) in component library or design system" 
+
+  ], 
+
+"dont": [ 
+
+    "Do not rely solely on visual labels without programmatic associations", 
+
+    "Do not use ARIA roles that conflict with or override native HTML semantics unnecessarily", 
+
+    "Do not leave aria-labelledby or aria-describedby referencing non-existent or duplicate IDs", 
+
+    "Do not remove accessible name or role from elements through scripting or CSS", 
+
+    "Do not use the title attribute as the only accessible name source", 
+
+    "Do not hard-code aria-valuenow, aria-checked, or aria-pressed values without updating them on state change", 
+
+    "Do not nest interactive roles (e.g., button inside link or vice versa)", 
+
+    "Do not use ARIA roles on non-interactive elements when no interaction is expected", 
+
+    "Do not use aria-* attributes that do not apply to the element’s role", 
+
+    "Do not use custom widgets without providing proper roles and accessible names", 
+
+"Do not use multiple conflicting ARIA roles on the same element", 
+
+  "Do not use aria-label and aria-labelledby together on the same element — choose one to avoid conflicts", 
+
+  "Do not provide an accessible name that misrepresents the purpose or function of the element", 
+
+  "Do not forget to localize accessible names for international audiences", 
+
+  "Do not use role=\"presentation\" or aria-hidden=\"true\" on focusable or interactive elements", 
+
+  "Do not use empty <label> elements without visible or programmatically associated content", 
+
+  "Do not dynamically update control state (e.g., expanded, selected) without also updating the corresponding ARIA attribute", 
+
+  "Do not use non-unique IDs for aria-labelledby or aria-describedby — this breaks the accessibility tree", 
+
+  "Do not create custom controls without testing their name, role, and value with assistive technologies", 
+
+  "Do not use placeholder text as a replacement for <label> — it disappears on focus and isn't a reliable accessible name", 
+
+  "Do not use role=\"none\" on meaningful content — it will remove it from the accessibility tree", 
+
+  "Do not use aria-label on groups of elements when individual elements need distinct names", 
+
+  "Do not forget to provide accessible names for elements used as buttons/controls inside SVG or Canvas", 
+
+  "Do not create form controls that rely on visual grouping alone to imply their label or purpose", 
+
+  "Do not override accessible name with JavaScript without updating visible label when they should be in sync" 
+
+  ], 
+
+"edge_cases": [  
+
+"Custom dropdowns: Use role='combobox' with aria-haspopup, aria-expanded, and aria-activedescendant to convey state and control", 
+
+ "Sliders: Use role='slider' with aria-valuemin, aria-valuemax, aria-valuenow, and optionally aria-valuetext for contextual value",  
+
+"Spinbuttons: Use role='spinbutton' with appropriate aria-valuenow and aria-valuetext for formatted numbers",  
+
+"Checkbox styled as toggle: Use role='checkbox' with aria-checked and ensure the label is announced",  
+
+"Menus and submenus: Use role='menu', role='menuitem' and support aria-haspopup and aria-expanded to expose relationships",  
+
+"Tree views: Use role='tree' and role='treeitem', with aria-expanded and aria-level to indicate nesting and state",  
+
+"Grids and tables: Use role='grid', with aria-rowindex, aria-colindex, and aria-selected on rows or cells as needed",  
+
+"SVG or canvas controls: Apply role='button' or other relevant roles and include aria-label or aria-labelledby",  
+
+"Dialogs: Use role='dialog' with aria-modal='true' and label the dialog via aria-labelledby or aria-label",  
+
+"Live regions: Use role='status' or aria-live='polite/assertive' to announce updates without stealing focus",  
+
+"Tab panels: Use role='tablist', role='tab', and role='tabpanel'; manage aria-selected and aria-labelledby correctly",  
+
+"Custom switch: Use role='switch' and aria-checked, ensure correct label for on/off states",  
+
+"Color pickers: Use role='listbox' or role='grid' and expose value using aria-valuetext", 
+
+"Custom rating controls: Represent as a group of buttons or role='slider' with accessible value and label",  
+
+"ARIA toolbar: Use role='toolbar' with grouped items and label the toolbar using aria-label or aria-labelledby",  
+
+"Graphical data points: Use role='img' with aria-label or aria-describedby linking to contextual info",  
+
+"Date pickers: Use role='dialog' for calendar and aria-selected for selected day",  
+
+"Hidden controls: Ensure hidden interactive elements are removed from accessibility tree or marked with aria-hidden",
+"Custom widgets do not expose their role, state, or name to assistive technologies.", 
+
+      "Dynamic components fail to announce changes in state such as expanded or collapsed panels.", 
+
+      "Duplicate or missing roles create ambiguity in accessibility trees.", 
+
+      "Automation can detect ARIA presence but not runtime synchronization between UI and AT output.", 
+
+      "Interactive elements missing defined names or roles cannot be identified programmatically.", 
+
+      "Dynamic content where roles and states are not updated appropriately."   
+
+],  
+
+"techniques": [  
+
+"ARIA1: Using aria-label to provide an accessible name",  
+
+"ARIA2: Using aria-labelledby to reference visible labels",  
+
+"ARIA3: Using aria-describedby to provide additional descriptions",  
+
+"ARIA4: Using valid ARIA roles like button, link, checkbox, radio, slider, spinbutton", "ARIA5: Using state attributes like aria-checked, aria-selected, aria-expanded",  
+
+"ARIA6: Using value attributes like aria-valuemin, aria-valuemax, aria-valuenow, aria-valuetext",  
+
+"ARIA7: Using aria-live and aria-relevant for dynamic updates",  
+
+"ARIA8: Using aria-modal for dialogs", "H44: Using elements to associate text labels with form controls",  
+
+"H91: Using native HTML form controls and links appropriately",  
+
+"G108: Using markup features to expose the name and role, allow user-settable properties to be set, and notify changes",  
+
+"G135: Using accessibility API features to expose names and roles",  
+
+"G198: Providing a way for assistive technology users to determine what actions are available" ],  
+
+"axe_rules_hint": [  
+
+"aria-valid-attr: Flags invalid ARIA attributes",  
+
+"aria-attribute-name: Ensures only valid ARIA attributes are used",  
+
+"role-img-alt: Ensures role='img' elements have accessible names",  
+
+"aria-required-parent: Ensures required parent roles are present",  
+
+"aria-label: Ensures aria-label is present and non-empty when used",  
+
+"aria-labelledby: Ensures referenced IDs in aria-labelledby exist and are not empty", "button-name: Ensures elements have accessible names",  
+
+"link-name: Ensures elements have accessible names",  
+
+"input-button-name: Ensures <input type='button'> elements have names"  
+
+]  
+
+} 

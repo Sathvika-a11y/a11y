@@ -1,0 +1,195 @@
+{ 
+   "topic": "SC 2.4.3 — Focus Order", 
+   "tags": ["SC-2.4.3","2.4.3","wcag243"], 
+
+  "do": ["Ensure focus moves in a logical, meaningful order that follows the visual layout", 
+
+    "Use HTML source order to control focus sequence rather than scripting", 
+
+    "Use positive tabindex values only for custom widgets; default tabindex=0 for natural flow", 
+
+    "Keep DOM order and visual order in sync to avoid confusion", 
+
+    "Implement keyboard navigation order consistent with reading order", 
+
+    "Ensure modals trap focus within and return focus to the triggering element when closed", 
+
+    "Manage focus when dynamically adding or removing content (e.g., SPA route changes)", 
+
+    "Use focus management APIs (element.focus()) sparingly and predictably", 
+
+    "Ensure hidden content (display:none) is removed from focus order", 
+
+    "Ensure focusable controls in carousels and tabs follow visual progression", 
+
+    "Test focus order with screen readers to verify NVDA/JAWS read sequence", 
+
+    "Confirm focus order between grouped form controls follows logical grouping", 
+
+    "Ensure skip-to navigation links receive focus before main content", 
+
+    "Use tabindex='-1' to send focus to non-focusable elements when needed (e.g., heading after skip link)", 
+
+    "Maintain a consistent focus order across screen sizes and responsive layouts", 
+
+    "Set focus programmatically only when it improves user context (e.g., after form submission or error)", 
+
+    "Test focus behavior in both forward (Tab) and reverse (Shift+Tab) directions", 
+
+    "Use meaningful tab order when custom widgets are implemented (e.g., listboxes, date pickers)", 
+
+    "Temporarily remove elements from focus order when they are disabled or hidden using tabindex='-1'", 
+
+    "Use scripting (e.g., .focus()) to manage focus transitions in single-page applications (SPAs)", 
+
+    "Align focus sequence with aria-flowto when deviating source order", 
+
+    "Maintain focus order when content is reordered via JavaScript", 
+
+    "Ensure focus order on responsive layouts (desktop vs mobile) remains logical", 
+
+    "Test focus order in both light and dark modes", 
+
+    "Document custom focus order patterns in design system guidelines" 
+
+  ], 
+
+  "dont": [ 
+
+    "Do not rely on tabindex > 0 to reorder focus (F56 failure)", 
+
+    "Do not skip interactive elements in focus order", 
+
+    "Do not create keyboard traps where focus cannot move forward/backward", 
+
+    "Do not manage focus unpredictably on each interaction", 
+
+    "Do not rely on visual cues alone; focus must follow semantic structure", 
+
+    "Do not mix DOM order and CSS positioning to change focus sequence", 
+
+    "Do not use focus() in event handlers that interfere with natural order", 
+
+    "Do not allow focus to jump unexpectedly or out of visual/logical order", 
+
+    "Do not trap keyboard focus in non-modal containers", 
+
+    "Do not hide elements from sighted users while still keeping them in the focus order", 
+
+    "Do not allow background content to receive focus when modal dialogs are active", 
+
+    "Do not use display: none or visibility: hidden on elements that are currently focused", 
+
+    "Do not place off-screen or invisible elements in the tab order unless intentionally needed", 
+
+    "Do not use JavaScript to move focus between unrelated elements during keyboard navigation", 
+
+    "Do not override expected keyboard behavior (e.g., prevent Tab from advancing focus)" 
+
+  ], 
+
+  "edge_cases": [ 
+
+    "Modal dialogs: Trap focus while open, restore on close", 
+
+    "Drawer/side panels: Manage focus when opened/closed", 
+
+    "Tabs: Focus moves to tablist then into panel content", 
+
+    "Accordions: Focus remains on header after collapse/expand", 
+
+    "Carousels: Arrow keys navigate items; Tab moves out", 
+
+    "Infinite scroll: Insert items without disrupting focus order", 
+
+    "Dynamic forms: Add/remove inputs without losing user focus", 
+
+    "Skip links: Visible and functional as first focusable element", 
+
+    "SVG with interactive elements: Ensure graphical elements in focus order", 
+
+    "Canvas controls: Provide fallback controls in DOM", 
+
+    "Live regions: Don’t auto-focus on updates unless necessary", 
+
+    "Rich text editors: Manage focus between toolbar and editing area", 
+
+    "Forms with grouped controls: Sequential focus by group then item", 
+
+    "Context menus: Focus moves into menu and returns", 
+
+    "Keyboard shortcuts: Don’t override default Tab focus sequence", 
+
+    "Nested modals: Manage focus in stack order", 
+
+    "Role=”application” regions: Explicit focus management required", 
+
+    "Offscreen content: Ensure removed from focus order", 
+
+    "Disabled elements: Should be skipped in Tab sequence", 
+
+    "Single-page applications (SPAs): On route change, set focus to the new page title or main heading", 
+
+    "In-page navigation (e.g., anchor links): Programmatically set focus to the target heading or landmark", 
+
+    "Auto-focused search inputs: Only set focus if it doesn't disrupt user task flow", 
+
+    "Hidden tabs or panels: Remove from tab order until they become active", 
+
+    "Focusable SVG elements: Ensure tab order is meaningful when SVGs contain links or buttons", 
+
+    "RTL (right-to-left) languages: Verify focus order follows reading direction", 
+
+    "Floating action buttons (FABs): Place logically in DOM, even if visually positioned at bottom right" ,
+      "Focus moves in a different sequence than the visual presentation.", 
+
+      "Dynamically added or removed elements shift tab order unexpectedly.", 
+
+      "Focus skips important elements or moves to hidden content.", 
+
+      "Overuse of tabindex changes the expected navigation logic.", 
+
+      "Automated scanning can confirm focusable elements but not logical flow of movement.", 
+
+      "Focus management in single-page applications during content updates.", 
+
+      "Complex widgets focus patterns that don't follow standard tab sequences." 
+    
+
+  ], 
+
+  "techniques": [ 
+
+    "H64: Ensuring the focus order preserves meaning and operability", 
+
+    "G167: Using tabindex to manage focus order", 
+
+    "G196: Managing focus when dynamic content is added or removed", 
+
+    "ARIA21: Using aria-label on focusable elements", 
+
+    "ARIA65: Using aria-flowto to redirect focus", 
+
+    "ARIA17: Using grouping roles for form controls", 
+
+    "SCR20: Using redundant keyboard and mouse event handlers", 
+
+    "ARIA24: Managing focus in modal dialogs" 
+
+  ], 
+
+  "axe_rules_hint": [ 
+
+    "tabindex: Ensures tabindex values are not greater than 0", 
+
+    "focus-order-semantics: Ensures focus order matches DOM order", 
+
+    "nested-interactive: Ensures interactive elements are not nested incorrectly", 
+
+    "focus-traps: Detects whether users are stuck in a part of the page", 
+
+    "aria-hidden-focus: Ensures focusable elements are not hidden from assistive technology"
+
+ ] 
+
+} 

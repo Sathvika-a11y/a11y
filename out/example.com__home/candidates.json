@@ -8,12 +8,12 @@
     ],
     "axe_rule_id": "html-has-lang",
     "axe_help": "<html> element must have a lang attribute",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/html-has-lang?application=axeAPI",
+    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.10/html-has-lang?application=axeAPI",
     "impact": "serious",
     "selector": "html",
     "html_snippet": "<html>",
     "attributes": {},
-    "role_name_guess": "html \u2014 Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "role_name_guess": "html — Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
     "nearby_text": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
     "acc_snapshot": {},
     "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\html-has-lang__html.png",
@@ -22,52 +22,239 @@
       "has-lang: The <html> element does not have a lang attribute"
     ],
     "why_all": [],
-    "why_none": []
+    "why_none": [],
+    "verdict": "fail"
   },
   {
     "page_url": "https://example.com",
-    "bucket": "must_review",
-    "topic": "BEST_PRACTICE",
-    "sc_list": [],
-    "axe_rule_id": "landmark-one-main",
-    "axe_help": "Document should have one main landmark",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/landmark-one-main?application=axeAPI",
+    "bucket": "semantic_review",
+    "topic": "SC-2.1.1",
+    "sc_list": [
+      "2.1.1"
+    ],
+    "axe_rule_id": "keyboard-probe:activation",
+    "axe_help": "Enter/Space did not activate a focusable control.",
+    "axe_help_url": "",
     "impact": "moderate",
-    "selector": "html",
-    "html_snippet": "<html>",
+    "selector": "body",
+    "html_snippet": "<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n\n\n</body>",
     "attributes": {},
-    "role_name_guess": "html \u2014 Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "role_name_guess": "body — Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
     "nearby_text": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
     "acc_snapshot": {},
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\landmark-one-main__html.png",
-    "failureSummary": "Fix all of the following:\n  Document does not have a main landmark",
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\kb_act__body.png",
+    "failureSummary": "Enter/Space did not activate a focusable control.",
     "why_any": [],
     "why_all": [
-      "page-has-main: Document does not have a main landmark"
+      "Enter/Space did not activate a focusable control."
     ],
-    "why_none": []
+    "why_none": [],
+    "verdict": "fail",
+    "evidence": {}
   },
   {
     "page_url": "https://example.com",
-    "bucket": "must_review",
-    "topic": "BEST_PRACTICE",
-    "sc_list": [],
-    "axe_rule_id": "region",
-    "axe_help": "All page content should be contained by landmarks",
-    "axe_help_url": "https://dequeuniversity.com/rules/axe/4.7/region?application=axeAPI",
+    "bucket": "semantic_review",
+    "topic": "SC-2.1.1",
+    "sc_list": [
+      "2.1.1"
+    ],
+    "axe_rule_id": "keyboard-probe:activation",
+    "axe_help": "Enter/Space did not activate a focusable control.",
+    "axe_help_url": "",
     "impact": "moderate",
-    "selector": "div",
-    "html_snippet": "<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>",
+    "selector": "body",
+    "html_snippet": "<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n\n\n</body>",
     "attributes": {},
-    "role_name_guess": "div \u2014 Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "role_name_guess": "body — Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
     "nearby_text": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
     "acc_snapshot": {},
-    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\region__div.png",
-    "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
-    "why_any": [
-      "region: Some page content is not contained by landmarks"
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\kb_act__body.png",
+    "failureSummary": "Enter/Space did not activate a focusable control.",
+    "why_any": [],
+    "why_all": [
+      "Enter/Space did not activate a focusable control."
     ],
-    "why_all": [],
-    "why_none": []
+    "why_none": [],
+    "verdict": "fail",
+    "evidence": {}
+  },
+  {
+    "page_url": "https://example.com",
+    "bucket": "semantic_review",
+    "topic": "SC-2.1.1",
+    "sc_list": [
+      "2.1.1"
+    ],
+    "axe_rule_id": "keyboard-probe:activation",
+    "axe_help": "Enter/Space did not activate a focusable control.",
+    "axe_help_url": "",
+    "impact": "moderate",
+    "selector": "body",
+    "html_snippet": "<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n\n\n</body>",
+    "attributes": {},
+    "role_name_guess": "body — Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "nearby_text": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\kb_act__body.png",
+    "failureSummary": "Enter/Space did not activate a focusable control.",
+    "why_any": [],
+    "why_all": [
+      "Enter/Space did not activate a focusable control."
+    ],
+    "why_none": [],
+    "verdict": "fail",
+    "evidence": {}
+  },
+  {
+    "page_url": "https://example.com",
+    "bucket": "semantic_review",
+    "topic": "SC-2.1.1",
+    "sc_list": [
+      "2.1.1"
+    ],
+    "axe_rule_id": "keyboard-probe:activation",
+    "axe_help": "Enter/Space did not activate a focusable control.",
+    "axe_help_url": "",
+    "impact": "moderate",
+    "selector": "body",
+    "html_snippet": "<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n\n\n</body>",
+    "attributes": {},
+    "role_name_guess": "body — Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "nearby_text": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\kb_act__body.png",
+    "failureSummary": "Enter/Space did not activate a focusable control.",
+    "why_any": [],
+    "why_all": [
+      "Enter/Space did not activate a focusable control."
+    ],
+    "why_none": [],
+    "verdict": "fail",
+    "evidence": {}
+  },
+  {
+    "page_url": "https://example.com",
+    "bucket": "semantic_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "runner:contrast-text",
+    "axe_help": "Transparent/unknown background; contrast uncertain.",
+    "axe_help_url": "",
+    "impact": "moderate",
+    "selector": "h1",
+    "html_snippet": "<h1>Example Domain</h1>",
+    "attributes": {},
+    "role_name_guess": "h1 — Example Domain",
+    "nearby_text": "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMore information...",
+    "acc_snapshot": {
+      "role": "heading",
+      "name": "Example Domain"
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\runner_contrast-text__h1.png",
+    "failureSummary": "Transparent/unknown background; contrast uncertain.",
+    "why_any": [],
+    "why_all": [
+      "Transparent/unknown background; contrast uncertain."
+    ],
+    "why_none": [],
+    "verdict": "review",
+    "evidence": {
+      "fontColor": "rgb(0, 0, 0)"
+    }
+  },
+  {
+    "page_url": "https://example.com",
+    "bucket": "semantic_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "runner:contrast-text",
+    "axe_help": "Transparent/unknown background; contrast uncertain.",
+    "axe_help_url": "",
+    "impact": "moderate",
+    "selector": "p",
+    "html_snippet": "<p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>",
+    "attributes": {},
+    "role_name_guess": "p — This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.",
+    "nearby_text": "This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\runner_contrast-text__p.png",
+    "failureSummary": "Transparent/unknown background; contrast uncertain.",
+    "why_any": [],
+    "why_all": [
+      "Transparent/unknown background; contrast uncertain."
+    ],
+    "why_none": [],
+    "verdict": "review",
+    "evidence": {
+      "fontColor": "rgb(0, 0, 0)"
+    }
+  },
+  {
+    "page_url": "https://example.com",
+    "bucket": "semantic_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "runner:contrast-text",
+    "axe_help": "Transparent/unknown background; contrast uncertain.",
+    "axe_help_url": "",
+    "impact": "moderate",
+    "selector": "p",
+    "html_snippet": "<p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>",
+    "attributes": {},
+    "role_name_guess": "p — This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.",
+    "nearby_text": "This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.",
+    "acc_snapshot": {},
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\runner_contrast-text__p.png",
+    "failureSummary": "Transparent/unknown background; contrast uncertain.",
+    "why_any": [],
+    "why_all": [
+      "Transparent/unknown background; contrast uncertain."
+    ],
+    "why_none": [],
+    "verdict": "review",
+    "evidence": {
+      "fontColor": "rgb(0, 0, 0)"
+    }
+  },
+  {
+    "page_url": "https://example.com",
+    "bucket": "semantic_review",
+    "topic": "SC-1.4.3",
+    "sc_list": [
+      "1.4.3"
+    ],
+    "axe_rule_id": "runner:contrast-text",
+    "axe_help": "Transparent/unknown background; contrast uncertain.",
+    "axe_help_url": "",
+    "impact": "moderate",
+    "selector": "a",
+    "html_snippet": "<a href=\"https://www.iana.org/domains/example\">More information...</a>",
+    "attributes": {
+      "href": "https://www.iana.org/domains/example"
+    },
+    "role_name_guess": "a — More information...",
+    "nearby_text": "More information...",
+    "acc_snapshot": {
+      "role": "link",
+      "name": "More information..."
+    },
+    "screenshot": "C:\\Users\\LaxmisathvikaVemula\\Downloads\\a11y_e2e_app_fixed\\a11y_e2e_app\\out\\example.com__home\\screenshots\\runner_contrast-text__a.png",
+    "failureSummary": "Transparent/unknown background; contrast uncertain.",
+    "why_any": [],
+    "why_all": [
+      "Transparent/unknown background; contrast uncertain."
+    ],
+    "why_none": [],
+    "verdict": "review",
+    "evidence": {
+      "fontColor": "rgb(56, 72, 143)"
+    }
   }
 ]

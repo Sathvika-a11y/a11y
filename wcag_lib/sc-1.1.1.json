@@ -71,7 +71,16 @@
     "Repeated decorative elements: consistently mark as decorative throughout the site",
     "Context-dependent images: same image may need different alt text depending on surrounding content and purpose",
     "Progressive disclosure images: alt text should indicate the action (e.g., 'Show more details')",
-    "Before/after comparison images: alt text should indicate which version is shown and key differences"
+    "Before/after comparison images: alt text should indicate which version is shown and key differences",
+    "Decorative visuals or icons are not hidden from assistive technologies, causing unnecessary announcements.", 
+
+      "Images that convey meaning lack clear text alternatives or equivalent descriptions.", 
+
+      "Complex visuals such as charts, infographics, or SVGs require structured text alternatives beyond simple labels.", 
+
+      "CAPTCHA or verification images lack an accessible equivalent method such as audio or logical challenge.", 
+
+      "Background or CSS images that contain essential information go undetected by automated tools." 
   ],
   "techniques": [
     "H37: Using alt attributes on img elements",

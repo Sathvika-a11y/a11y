@@ -1,3 +1,11 @@
 {
-  "page_url": "https://www.brandience.com/connect"
+  "page_url": "https://www.brandience.com/connect",
+  "axe_version_requested": "4.10.0",
+  "fast_mode": false,
+  "include_frames": true,
+  "capture_dom": true,
+  "screenshot_elements": false,
+  "screenshot_keyboard": false,
+  "quick_scan": true,
+  "ultra_quick": false
 }

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# core/rag_reviewer.py
 import json, os, pathlib, re
 from typing import Dict, Any, List, Tuple
 from hashlib import sha256
@@ -57,18 +58,34 @@ def retrieve_for_sc(sc: str, techniques: List[Dict[str, Any]]) -> Dict[str, Any]
 
 def _synth_context(sc: str, candidate: Dict[str, Any]) -> Dict[str, Any]:
     """Minimal context if wcag_lib lacks a doc."""
-    return {
+    out = {
         "topic": f"SC {sc}" if sc else "Unmapped rule",
         "do": [
             "Apply WCAG techniques conservatively for this SC.",
-            "Prefer 'needs-change' when meaning or programmatic name is unclear."
+            "Prefer 'review' when meaning, purpose, or evidence is unclear."
         ],
         "dont": [
-            "Do not approve ambiguous or redundant alternatives.",
+            "Do not approve ambiguous or redundant alternatives without evidence.",
             "Do not rely on visual presentation alone."
         ],
         "edge_cases": []
     }
+    if candidate.get("axe_help"):
+        out["do"].append(f"Consider axe help: {candidate.get('axe_help')}")
+    if candidate.get("axe_help_url"):
+        out["do"].append(f"Ref: {candidate.get('axe_help_url')}")
+    return out
+
+# Normalize any legacy verdicts to pass|fail|review
+def _normalize_verdict(v: str) -> str:
+    v = (v or "").strip().lower()
+    mapping = {
+        "needs-change": "fail",
+        "decorative-ok": "pass",
+        "redundant-ok": "pass",
+        "complex-needs-longdesc": "review",
+    }
+    return mapping.get(v, v if v in {"pass","fail","review"} else "review")
 
 # ===================== prompt builder =====================
 
@@ -80,10 +97,6 @@ def build_prompt(template_path: pathlib.Path, sc: str, tech_doc: Dict[str, Any],
     # If no technique doc, synthesize a tiny one and fold in axe help as guidance
     if not tech_doc:
         tech_doc = _synth_context(sc, c)
-        if c.get("axe_help"):
-            tech_doc.setdefault("do", []).append(f"Consider axe help: {c.get('axe_help')}")
-        if c.get("axe_help_url"):
-            tech_doc.setdefault("do", []).append(f"Ref: {c.get('axe_help_url')}")
 
     techniques_context = json.dumps({
         "topic": tech_doc.get("topic"),
@@ -143,65 +156,176 @@ def build_prompt(template_path: pathlib.Path, sc: str, tech_doc: Dict[str, Any],
 def _use_live_llm() -> bool:
     return os.environ.get("A11Y_USE_LLM") == "1" and bool(os.environ.get("OPENAI_API_KEY"))
 
+def _openai_chat_json(messages: List[Dict[str,str]], model: str) -> str:
+    from openai import OpenAI
+    client = OpenAI()
+    resp = client.chat.completions.create(
+        model=model,
+        temperature=0,
+        response_format={"type":"json_object"},
+        messages=messages
+    )
+    return resp.choices[0].message.content
+
 def _run_llm_openai(prompt: str) -> Dict[str, Any]:
     """
-    Minimal OpenAI call using Chat Completions.
-    Requires OPENAI_API_KEY; model from OPENAI_MODEL or defaults to gpt-4o-mini.
+    OpenAI call using Chat Completions → *pass/fail/review only*.
     """
     try:
-        from openai import OpenAI
-        client = OpenAI()
         model = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
-        resp = client.chat.completions.create(
-            model=model,
-            temperature=0,
-            messages=[
-                {"role": "system", "content":
-                 "You are an accessibility reviewer. "
-                 "Return ONLY a compact JSON object with keys: "
-                 "type, verdict, reason, confidence, techniques_used."},
-                {"role": "user", "content": prompt}
+        text = _openai_chat_json(
+            [
+                {
+                    "role":"system",
+                    "content":(
+                        "You are an accessibility reviewer. "
+                        "Return ONLY a compact JSON object with keys: "
+                        "type, verdict, reason, confidence, techniques_used. "
+                        "The 'verdict' must be exactly one of: pass, fail, review."
+                    )
+                },
+                {"role":"user","content":prompt}
             ],
+            model=model
         )
-        text = resp.choices[0].message.content.strip()
-        # Extract JSON
-        s = text.find("{"); e = text.rfind("}")
-        if s != -1 and e != -1 and e > s:
-            text = text[s:e+1]
-        data = json.loads(text)
+        s = text.strip()
+        s = s[s.find("{") : s.rfind("}")+1]
+        data = json.loads(s)
+        # Normalize verdict to our 3-state vocabulary
+        data["verdict"] = _normalize_verdict(data.get("verdict"))
         for k in ["type","verdict","reason","confidence","techniques_used"]:
             if k not in data:
                 raise ValueError(f"Missing key: {k}")
         return data
     except Exception as e:
+        # Soft fallback → review (not a hard fail)
         return {
             "type": "informative",
-            "verdict": "needs-change",
-            "reason": f"LLM fallback (parse/error): {e}",
-            "confidence": 0.4,
+            "verdict": "review",
+            "reason": f"AI error/parse fallback: {e}",
+            "confidence": 0.3,
             "techniques_used": ["fallback"]
         }
 
 def run_llm(prompt: str) -> Dict[str, Any]:
     if _use_live_llm():
         return _run_llm_openai(prompt)
-    # Offline-safe stub
+    # Offline-safe stub → review
     return {
         "type": "informative",
-        "verdict": "needs-change",
+        "verdict": "review",
         "reason": "Demo verdict (no live LLM or A11Y_USE_LLM=0).",
-        "confidence": 0.5,
+        "confidence": 0.4,
         "techniques_used": ["demo-only"]
     }
+
+# ======== 2.4.6 AI batch (guaranteed output) ========
+def _ai_judge_246(items: List[Dict[str,Any]], url: str) -> List[Dict[str,Any]]:
+    """
+    Produce ai/2_4_6/results.json style rows (pass|fail|review).
+    Uses OPENAI_API_KEY when A11Y_USE_LLM=1. Model from A11Y_246_MODEL or OPENAI_MODEL (fallback gpt-4o-mini).
+    If live AI is off OR returns nothing, synthesize results from heuristics so the reports still populate.
+    """
+    out: List[Dict[str,Any]] = []
+    if not items:
+        return out
+
+    # Heuristic fallback (used if live off, or if live returns nothing)
+    def _fallback(rows: List[Dict[str,Any]]) -> List[Dict[str,Any]]:
+        res: List[Dict[str,Any]] = []
+        for it in rows:
+            typ = it.get("type") or "heading"
+            sel = it.get("selector") or ""
+            txt = (it.get("visibleText") or it.get("visibleLabel") or it.get("accessibleName") or "").strip()
+            if not txt or len(txt) <= 2:
+                verdict, reasons = "fail", ["Very short/empty text"]
+            else:
+                verdict, reasons = "review", []
+            res.append({
+                "selector": sel,
+                "type": typ,
+                "sc": "2.4.6",
+                "verdict": verdict,
+                "reasons": reasons,
+                "suggestion": ""
+            })
+        return res
+
+    if not _use_live_llm():
+        return _fallback(items)
+
+    # live AI: chunked prompts
+    model = os.environ.get("A11Y_246_MODEL") or os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
+    sys_msg = (
+        "You are an accessibility auditor focused strictly on WCAG 2.4.6 (Headings and Labels). "
+        "Headings must describe the topic/purpose. Labels (buttons/links/inputs) must indicate purpose/action. "
+        "Use nearbyText/region when helpful. Return STRICT JSON with a top-level key 'results' whose value is an array of objects: "
+        "{selector,type,sc:'2.4.6',verdict in ['pass','fail','review'],reasons[],suggestion}."
+    )
+
+    CHUNK = 35
+    for i in range(0, len(items), CHUNK):
+        batch = items[i:i+CHUNK]
+        user_payload = {
+            "url": url,
+            "items": batch,
+            "output_format": [
+                {"selector":"...", "type":"heading|label", "sc":"2.4.6",
+                 "verdict":"pass|fail|review", "reasons":["..."], "suggestion":"..."}
+            ]
+        }
+        try:
+            content = _openai_chat_json(
+                [
+                    {"role":"system","content": sys_msg},
+                    {"role":"user","content": json.dumps(user_payload, ensure_ascii=False)}
+                ],
+                model=model
+            )
+            data = json.loads(content)
+            rows = data.get("results") if isinstance(data, dict) else data
+            if not isinstance(rows, list):
+                rows = []
+        except Exception as e:
+            # Log the error and continue (we'll fallback later if needed)
+            try:
+                errp = BASE / "ai_2_4_6_errors.log"
+                with errp.open("a", encoding="utf-8") as ef:
+                    ef.write(f"[chunk {i//CHUNK}] {type(e).__name__}: {e}\n")
+            except Exception:
+                pass
+            rows = []
+
+        for r in rows:
+            r["sc"] = "2.4.6"
+            r["type"] = r.get("type") or "heading"
+            r["selector"] = r.get("selector") or ""
+            r["verdict"] = _normalize_verdict(r.get("verdict"))
+            r["reasons"] = r.get("reasons") or []
+            if r["verdict"] in ("pass","fail","review"):
+                out.append(r)
+
+    # If AI yielded nothing, guarantee output with fallback
+    if not out:
+        out = _fallback(items)
+    return out
 
 # ===================== main review =====================
 
 def review(out_dir: pathlib.Path):
+    out_dir = pathlib.Path(out_dir)
     candidates_path = out_dir / "candidates.json"
     if not candidates_path.exists():
         raise FileNotFoundError("candidates.json not found; run axe_runner first.")
     candidates = json.loads(candidates_path.read_text(encoding="utf-8"))
     techniques = load_techniques()
+    debug_flags = {
+    "A11Y_USE_LLM": os.environ.get("A11Y_USE_LLM"),
+    "OPENAI_API_KEY_present": bool(os.environ.get("OPENAI_API_KEY")),
+    "OPENAI_MODEL": os.environ.get("OPENAI_MODEL"),
+    "A11Y_246_MODEL": os.environ.get("A11Y_246_MODEL"),
+    }
+    (out_dir / "ai_env_debug.json").write_text(json.dumps(debug_flags, indent=2), encoding="utf-8")
 
     prompts_dir = out_dir / "prompts"
     prompts_dir.mkdir(parents=True, exist_ok=True)
@@ -229,8 +353,9 @@ def review(out_dir: pathlib.Path):
         pfile = prompts_dir / f"{i:03d}_{sc_primary or (c.get('topic') or 'UNMAPPED')}_{c.get('axe_rule_id','')}.txt"
         pfile.write_text(prompt, encoding="utf-8")
 
-        # Run AI (or stub)
+        # Run AI (or stub) and normalize verdict
         verdict = run_llm(prompt)
+        verdict["verdict"] = _normalize_verdict(verdict.get("verdict"))
 
         # Traceability hash
         prompt_hash = sha256(prompt.encode("utf-8")).hexdigest()[:16]
@@ -250,4 +375,40 @@ def review(out_dir: pathlib.Path):
         })
 
     (out_dir / "ai_verdicts.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
+
+    # --------- 2.4.6 AI pass (reads input from axe runner, writes results.json) ----------
+    try:
+        ai_dir = out_dir / "ai" / "2_4_6"
+        ai_dir.mkdir(parents=True, exist_ok=True)
+        inp = ai_dir / "input.json"
+        if inp.exists():
+            items = json.loads(inp.read_text(encoding="utf-8"))
+            # Try to get URL for context; ok if missing
+            url = ""
+            try:
+                meta_p = out_dir / "metadata.json"
+                if meta_p.exists():
+                    meta = json.loads(meta_p.read_text(encoding="utf-8"))
+                    url = meta.get("page_url", "") or ""
+            except Exception:
+                url = ""
+            ai246 = _ai_judge_246(items, url)
+            (ai_dir / "results.json").write_text(json.dumps(ai246, indent=2), encoding="utf-8")
+    except Exception as e:
+        # Do not fail the whole review if 2.4.6 pass has an issue
+        try:
+            with (out_dir / "ai" / "2_4_6" / "errors.log").open("a", encoding="utf-8") as ef:
+                ef.write(f"{type(e).__name__}: {e}\n")
+        except Exception:
+            pass
+
     return {"reviewed": len(results)}
+
+# --------------------- CLI ---------------------
+if __name__ == "__main__":
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("out_dir", help="Directory containing candidates.json (output of axe_runner).")
+    args = ap.parse_args()
+    res = review(pathlib.Path(args.out_dir))
+    print(json.dumps(res))

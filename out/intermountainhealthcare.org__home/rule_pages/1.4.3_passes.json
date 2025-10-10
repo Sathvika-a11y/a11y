@@ -1,0 +1,146 @@
+[
+  {
+    "selector": "#city-selection-container-\\:r2\\:",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "span.MuiTypography-root.MuiTypography-label.locationSelectorText",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.undefined",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "span.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "span.EnterpriseNavigation_iconButtonLabel__3Ism7",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.EnterpriseNavigation_navButton__brsNE",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "sc": "1.4.3",
+    "note": "Text contrast 19.04 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 19.04,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "span.MuiTypography-root.MuiTypography-label.css-qg9f81",
+    "sc": "1.4.3",
+    "note": "Text contrast 18.88 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 18.88,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "span.MuiTypography-root.MuiTypography-label.ContextualInlineBanner_label__MoqOe",
+    "sc": "1.4.3",
+    "note": "Text contrast 18.88 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 18.88,
+      "is_large_text": false
+    }
+  },
+  {
+    "selector": "h2.MuiTypography-root.MuiTypography-headline.BaseDisplayCard_title__GHG8Q",
+    "sc": "1.4.3",
+    "note": "Text contrast 18.88 >= threshold 3.0.",
+    "evidence": {
+      "contrast_ratio": 18.88,
+      "is_large_text": true
+    }
+  },
+  {
+    "selector": "p.MuiTypography-root.MuiTypography-body.css-casq6l",
+    "sc": "1.4.3",
+    "note": "Text contrast 18.88 >= threshold 4.5.",
+    "evidence": {
+      "contrast_ratio": 18.88,
+      "is_large_text": false
+    }
+  }
+]

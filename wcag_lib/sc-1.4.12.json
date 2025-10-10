@@ -1,0 +1,204 @@
+ { 
+
+    "SC": "1.4.12 Text Spacing", 
+
+    "Topic": "Ensure text remains readable when users adjust spacing", 
+
+    "Do": [ 
+
+      "Allow user-controlled text spacing without loss of content or functionality", 
+
+      "Support line-height of at least 1.5 when user sets it", 
+
+      "Support paragraph spacing of at least 2x default line-height", 
+
+      "Support letter spacing of at least 0.12em", 
+
+      "Support word spacing of at least 0.16em", 
+
+      "Use relative units (em, rem) for spacing and sizing", 
+
+      "Avoid fixed height containers that clip text when spacing increases", 
+
+      "Allow text to reflow and wrap naturally", 
+
+      "Ensure no overlapping of adjacent text blocks at larger spacing", 
+
+      "Test text spacing at various zoom levels (up to 200%)", 
+
+      "Avoid white-space: nowrap on blocks that need to reflow", 
+
+      "Ensure buttons and controls expand to accommodate spaced text", 
+
+      "Ensure tables can reflow or scroll horizontally without clipping text", 
+
+      "Provide adequate space in input fields for increased letter spacing", 
+
+      "Ensure labels remain associated with inputs after spacing changes", 
+
+      "Avoid absolute positioning that can prevent reflow", 
+
+      "Ensure headings and lists remain readable with increased spacing", 
+
+      "Use flexible layout containers (flexbox, grid) that allow reflow", 
+
+      "Check that icons and text remain aligned with increased spacing", 
+
+      "Ensure placeholder text also scales and reflows with spacing", 
+
+      "Ensure media captions reflow correctly with spacing changes", 
+
+      "Avoid using images of text that cannot reflow", 
+
+      "Test forms with increased spacing to ensure usability", 
+
+      "Ensure tooltips and dropdowns size to fit spaced content", 
+
+      "Allow user stylesheets or browser extensions to override spacing", 
+
+      "Ensure accessible focus outlines remain visible with increased spacing", 
+
+      "Ensure text in SVG is responsive to spacing changes where possible", 
+
+      "Avoid cropping text in responsive cards or tiles when spacing increases", 
+
+      "Provide sufficient vertical space in lists to prevent overlap", 
+
+      "Ensure stacked UI elements expand to accommodate spaced text", 
+
+      "Test on small viewports to ensure no text clipping occurs", 
+
+      "Ensure content inside modals reflows and is fully reachable", 
+
+      "Confirm that line-length remains readable with expanded spacing", 
+
+      "Ensure keyboard navigation order is unaffected by reflow", 
+
+      "Allow user zoom and spacing adjustments to work together", 
+
+      "Avoid CSS rules that reset user spacing preferences", 
+
+      "Support spacing adjustments for all user-facing languages", 
+
+      "Document text spacing expectations for content authors" 
+
+    ], 
+
+    "Dont": [ 
+
+      "Don’t use fixed pixel heights for text containers", 
+
+      "Don’t clip or hide text when spacing is increased", 
+
+      "Don’t prevent wrapping with white-space: nowrap where wrapping is needed", 
+
+      "Don’t rely on images for key text content", 
+
+      "Don’t hard-code line-height that prevents user overrides", 
+
+      "Don’t set overflow: hidden on text that may expand", 
+
+      "Don’t use negative margins that cause overlap when spacing increases", 
+
+      "Don’t assume default spacing will be used by all users", 
+
+      "Don’t truncate text with ellipses when it can reflow", 
+
+      "Don’t position text with absolute coordinates that break on reflow", 
+
+      "Don’t use fixed-size buttons that clip labeled text", 
+
+      "Don’t rely on precise spacing for icon and text alignment", 
+
+      "Don’t use custom fonts that break at larger spacing without fallback", 
+
+      "Don’t hide form labels to save space when spacing increases", 
+
+      "Don’t prevent user style overrides via !important rules", 
+
+      "Don’t create responsive breakpoints that collapse content invisibly", 
+
+      "Don’t assume language line-breaking behavior is same for all locales", 
+
+      "Don’t put text in graphics without providing a text alternative", 
+
+      "Don’t use JS that enforces a fixed layout preventing reflow", 
+
+      "Don’t design tables that cannot adapt when text spacing increases", 
+
+      "Don’t disable browser zoom that users may use with spacing changes", 
+
+      "Don’t allow overflowing text to become unreachable off-screen", 
+
+      "Don’t use line-clamp techniques that hide content on spacing change", 
+
+      "Don’t rely on preformatted elements for primary content layout", 
+
+      "Don’t place interactive controls in fixed-size containers that clip labels", 
+
+      "Don’t rely on background images to position text content", 
+
+      "Don’t hide overflow on containers that hold spaced text", 
+
+      "Don’t use CSS that removes word-break opportunities needed for reflow", 
+
+      "Don’t anchor important UI to fixed pixel offsets that break with spacing", 
+
+      "Don’t ignore platform-specific text spacing behaviors" 
+
+    ], 
+
+ 
+
+"Edge cases": [ 
+
+      "Paragraph line-height increase causes overlap with adjacent floated elements", 
+
+      "Heading wraps into next UI element at larger letter spacing", 
+
+      "Input placeholder clipped when letter spacing increased", 
+
+      "Buttons resize but surrounding layout breaks with added spacing", 
+
+      "SVG-rendered text does not respect CSS letter-spacing", 
+
+      "Table cells overflow with increased word spacing causing horizontal scroll", 
+
+      "Modal dialog content grows beyond viewport when spacing increased", 
+
+      "Custom fonts cause unexpected glyph spacing at higher settings", 
+
+      "CSS grid template areas become unusable with spaced content", 
+
+      "Pseudo-elements positioned near text overlap after spacing change", 
+
+      "Responsive card heights fixed causing text to be hidden with spacing", 
+
+      "Tooltips positioned absolutely overlap other content on reflow", 
+
+      "Accessibility overlays applying spacing conflict with site styles", 
+
+      "News tickers or marquees break when spacing increases", 
+
+      "Form field labels detach visually from inputs when spacing increased", 
+
+      "Long compound words cause long unbreakable stretches that overflow", 
+
+      "Emoji or icon fonts change alignment with larger letter spacing", 
+
+      "Third-party widgets do not respond to spacing changes and overlap", 
+
+      "Browser extension applying spacing causes layout shift in flex containers", 
+
+      "Print-to-PDF rendering clips text when spacing increased" 
+
+    ], 
+
+       "Techniques": ["C36", "G188", "G204", "F105"], 
+
+    "Axe rules": ["text-spacing"], 
+
+    "Tags": ["readability", "typography", "zoom", "responsive"] 
+
+  } 
+

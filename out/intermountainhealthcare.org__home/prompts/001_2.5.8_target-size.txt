@@ -1,0 +1,87 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 2.5.8
+Techniques context (from curated library):
+{
+  "topic": "SC 2.5.8",
+  "do": [
+    "Apply WCAG techniques conservatively for this SC.",
+    "Prefer 'review' when meaning, purpose, or evidence is unclear.",
+    "Consider axe help: All touch targets must be 24px large, or leave sufficient space",
+    "Ref: https://dequeuniversity.com/rules/axe/4.10/target-size?application=axeAPI"
+  ],
+  "dont": [
+    "Do not approve ambiguous or redundant alternatives without evidence.",
+    "Do not rely on visual presentation alone."
+  ],
+  "edge_cases": []
+}
+
+Element context:
+- Selector: .swiper-slide-next.swiper-slide-visible.swiper-slide > .PublicationCard_wrapper__h6BoM > .MuiCard-root.PublicationCard_inner__Ym3DL.css-h4ugdf > .PublicationCard_body__cJmPT > .PublicationCard_topic__MaDGz > .undefined.IhLink_link__B1NPM[href="/"]
+- HTML snippet: <a class="IhLink_link__B1NPM link undefined" href="/"><div class="IhLink_linkInner__QwFmJ linkInner">Nutrition and weight loss</div></a>
+- Attributes: {"class": "IhLink_link__B1NPM link undefined", "href": "/"}
+- Computed role/name (best-effort): a — Nutrition and weight loss
+- Nearby text window: Nutrition and weight loss
+- Accessibility snapshot (partial): {"role": "link", "name": "Nutrition and weight loss"}
+- Axe ruleId: target-size
+- Axe help: All touch targets must be 24px large, or leave sufficient space
+- Axe impact: serious
+
+AXE_DIAGNOSTICS:
+(failureSummary/why_any/why_all/why_none and page_url are appended below this prompt; you MUST consider them.)
+
+TASK
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+
+2) Decide ONE verdict (string): "pass" | "fail" | "review".
+   - pass   → clearly meets the SC (e.g., decorative image correctly hidden; redundant alternative truly duplicates visible text for the same control/target; contrast thresholds met)
+   - fail   → clearly violates the SC (cite the concrete reason)
+   - review → borderline/ambiguous/incomplete evidence; AI checked but manual verification is warranted
+
+3) Decision boundaries to guide judgement (non-exhaustive):
+   • SC 1.1.1 (Non-text Content)
+     - fail: missing/empty/placeholder alt for informative/functional images; functional image label doesn’t convey action/target
+     - pass: purely decorative (empty alt or role=presentation); or alt would ONLY duplicate adjacent visible text for the same control/target (note “redundant” in reason)
+   • SC 2.4.4 (Link Purpose, In Context)
+     - fail: “click here / learn more / read more” without disambiguating context in the same sentence/container or accessible name
+     - review: context may disambiguate but evidence is thin in provided snippet
+   • SC 1.4.3 (Contrast Minimum)
+     - fail: computed contrast < 4.5:1 (normal) or < 3:1 (large) based on diagnostics/evidence
+     - review: dynamic/unknown background or insufficient data to compute reliably
+   • SC 4.1.2 (Name, Role, Value)
+     - fail: custom widget lacks name, wrong/missing role, or state/value not exposed
+     - pass: correct role + meaningful name + state
+   • SC 2.5.3 (Label in Name)
+     - fail: visible label text not found in accessible name for controls
+     - review: partial match or name derived by ids/ARIA is truncated/uncertain
+
+4) Output a compact JSON object EXACTLY with keys:
+{
+  "type": "<element type>",
+  "verdict": "pass" | "fail" | "review",
+  "reason": "<<=200 chars; cite concrete evidence from context/diagnostics (e.g., alt='image'; link text 'learn more' without context; contrast 2.8:1)>>",
+  "confidence": 0.0-1.0,
+  "techniques_used": ["<e.g., H37>", "<e.g., G94>", "<or axe:RULE_ID>"]
+}
+
+
+Rules:
+- Use the provided evidence only; do not invent page content.
+- Keep the reason specific (mention the attribute/phrase/metric).
+- Prefer "review" (not "fail") when evidence is borderline/insufficient or background is dynamic/unknown.
+- If no technique matches, still return a verdict and include ["fallback"] in techniques_used.
+- Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Target has insufficient size (442.7px by 21.6px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px.",
+  "why_any": [
+    "target-size: Target has insufficient size (442.7px by 21.6px, should be at least 24px by 24px)",
+    "target-offset: Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21.6px instead of at least 24px."
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://intermountainhealthcare.org/"
+}

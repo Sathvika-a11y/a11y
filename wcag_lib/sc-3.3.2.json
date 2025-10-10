@@ -1,0 +1,90 @@
+{  
+
+"topic": "Labels or Instructions – Missing or Ambiguous Form Guidance",  
+
+"tags": ["SC-3.3.2", "3.3.2", "wcag332", "labels", "form-instructions", "accessible-forms", "input-labels", "aria-label", "aria-describedby"],  
+
+"do": [  
+
+"Provide clear and descriptive labels for all form fields, inputs, and interactive controls.",  
+
+"Use the <label> element with a for attribute linked to the input’s id for explicit labeling.",  
+
+"For form controls without visible labels (like search fields with only an icon), use aria-label or aria-labelledby to provide a programmatic label.",  
+
+"Provide inline instructions near the relevant form field (before or immediately after the input).",  
+
+"For groups of related controls (radio buttons, checkboxes), use <fieldset> and <legend> to provide group context.",  
+
+"Mark required fields using visible text (e.g., 'Required') and programmatic indication (required attribute or aria-required).",  
+
+"Provide examples of expected input formats (e.g., DD/MM/YYYY) close to the input field.", "Ensure error messages identify the specific field and are programmatically linked via aria-describedby.",  
+
+"Ensure labels and instructions remain visible while entering data and do not disappear on focus.",  
+
+"Test with screen readers to confirm labels and instructions are announced in the correct order."  
+
+],  
+
+"dont": [  
+
+"Don’t leave form fields without labels or guidance on how to complete them.",  
+
+"Don’t rely solely on placeholder text as the label, since it disappears on typing and is not reliably announced.",  
+
+"Don’t rely only on the visual proximity of text to imply association; always create explicit programmatic relationships.",  
+
+"Don’t use vague labels such as 'Input' or 'Field' — be descriptive and specific.",  
+
+"Don’t use title attributes as the only labeling method; they are inconsistently supported by assistive technologies.",  
+
+"Don’t place instructions far from the related input in the DOM, breaking the logical reading sequence.",  
+
+"Don’t rely solely on color, styling, or symbols (like red borders or *) to indicate required fields or errors.",  
+
+"Don’t hide labels for visual minimalism without providing accessible alternatives.",  
+
+"Don’t provide error messages without associating them with their respective input fields programmatically."  
+
+],  
+
+"edge_cases": [  
+
+"Dynamically generated forms may inject inputs without labels, breaking accessibility.",  
+
+"Multi-step forms may lose context if instructions are not repeated for new sections.",  
+
+"Forms using ARIA-only labels may fail in older assistive technologies if no visible label is present.",  
+
+"Custom widgets (date pickers, sliders) may lack proper labels or instructions unless ARIA attributes are correctly applied.",  
+
+"Error messages placed visually near inputs may be missed by screen readers if not linked via aria-describedby.",  
+
+"Mobile responsive layouts may visually separate labels/instructions from their fields, confusing users.",  
+
+"Icon-only buttons or controls (e.g., search or close) must include aria-label to provide accessible names.",  
+
+"Single-page apps may re-render forms and break label associations if IDs are duplicated or mismatched." ,
+"Inputs rely on placeholder text instead of visible or persistent labels.", 
+
+      "Form instructions or hints are not linked to their fields programmatically.", 
+
+      "Required fields are indicated visually but not communicated to assistive technologies.", 
+
+      "Error messages appear visually but are not announced or associated to the input field.", 
+
+      "Automation tools often confirm labels but not instructional clarity or placement.", 
+
+      "Complex form validation requirements not clearly communicated.", 
+
+      "Multi-step form processes lacking clear navigation instructions.", 
+
+      "Input format requirements not specified or unclear." 
+
+],  
+
+"techniques": ["H44", "H65", "G131", "G89", "H71", "H90", "ARIA1", "ARIA9", "ARIA14", "ARIA17", "F68"],  
+
+"axe_rules_hint": ["label", "form-field-multiple-labels", "aria-label", "aria-describedby", "input-label", "form-field-labels"]  
+
+} 

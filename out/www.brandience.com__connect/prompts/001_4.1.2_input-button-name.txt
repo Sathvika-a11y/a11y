@@ -1,0 +1,159 @@
+You are an accessibility reviewer applying WCAG techniques precisely and conservatively.
+
+Topic: SC 4.1.2
+Techniques context (from curated library):
+{
+  "topic": "SC 4.1.2 — Name, Role, Value",
+  "do": [
+    "Ensure every user interface component has a programmatically determinable name via accessible name computation",
+    "Expose roles for all interactive and region elements using native HTML semantics or ARIA roles",
+    "Ensure values of controls (e.g., inputs, sliders, lists) are programmatically available to assistive technologies",
+    "Use semantic HTML elements such as <button>, <input>, <a>, <select>, <textarea> for native support of name, role, and value",
+    "Use aria-label or aria-labelledby to provide accessible names when no visible label is present",
+    "Use aria-labelledby to reference existing visible text when multiple sources define a label",
+    "Keep name, role, and value in sync when components change state (e.g., toggled, expanded, selected)",
+    "Implement full ARIA widget pattern for custom components (e.g., combobox, slider, checkbox)",
+    "Ensure form fields are associated with labels via <label for> or aria-labelledby",
+    "Ensure each ARIA role has all required states and properties per ARIA specification",
+    "Use aria-valuemin, aria-valuemax, and aria-valuenow for custom range widgets like sliders and spinbuttons",
+    "Use aria-pressed for toggle buttons and update its value appropriately on interaction",
+    "Use aria-checked on custom checkboxes or radio buttons and reflect changes in the DOM",
+    "Expose selected items in listboxes using aria-selected",
+    "Ensure aria-required, aria-invalid, and aria-describedby are used to convey form validation feedback",
+    "Use aria-hidden=\"true\" only for purely decorative elements or hidden content that should not be read by assistive tech",
+    "Assign role=\"alert\" or role=\"status\" for live regions, and set aria-live for dynamic messaging",
+    "Ensure ARIA attributes like aria-labelledby or aria-describedby reference valid and existing IDs",
+    "For dialogs, use role=\"dialog\" and point aria-labelledby to the dialog’s title element",
+    "Provide accessible names for SVG elements with role=\"img\" via aria-label or aria-labelledby",
+    "Ensure that icon-only interactive elements (e.g., buttons, links) have a meaningful aria-label",
+    "Ensure that the accessible name matches or complements the visible label when both exist",
+    "Test custom components with screen readers to verify that name, role, and value are correctly exposed",
+    "Document accessible attribute patterns (name, role, value) in component library or design system"
+  ],
+  "dont": [
+    "Do not rely solely on visual labels without programmatic associations",
+    "Do not use ARIA roles that conflict with or override native HTML semantics unnecessarily",
+    "Do not leave aria-labelledby or aria-describedby referencing non-existent or duplicate IDs",
+    "Do not remove accessible name or role from elements through scripting or CSS",
+    "Do not use the title attribute as the only accessible name source",
+    "Do not hard-code aria-valuenow, aria-checked, or aria-pressed values without updating them on state change",
+    "Do not nest interactive roles (e.g., button inside link or vice versa)",
+    "Do not use ARIA roles on non-interactive elements when no interaction is expected",
+    "Do not use aria-* attributes that do not apply to the element’s role",
+    "Do not use custom widgets without providing proper roles and accessible names",
+    "Do not use multiple conflicting ARIA roles on the same element",
+    "Do not use aria-label and aria-labelledby together on the same element — choose one to avoid conflicts",
+    "Do not provide an accessible name that misrepresents the purpose or function of the element",
+    "Do not forget to localize accessible names for international audiences",
+    "Do not use role=\"presentation\" or aria-hidden=\"true\" on focusable or interactive elements",
+    "Do not use empty <label> elements without visible or programmatically associated content",
+    "Do not dynamically update control state (e.g., expanded, selected) without also updating the corresponding ARIA attribute",
+    "Do not use non-unique IDs for aria-labelledby or aria-describedby — this breaks the accessibility tree",
+    "Do not create custom controls without testing their name, role, and value with assistive technologies",
+    "Do not use placeholder text as a replacement for <label> — it disappears on focus and isn't a reliable accessible name",
+    "Do not use role=\"none\" on meaningful content — it will remove it from the accessibility tree",
+    "Do not use aria-label on groups of elements when individual elements need distinct names",
+    "Do not forget to provide accessible names for elements used as buttons/controls inside SVG or Canvas",
+    "Do not create form controls that rely on visual grouping alone to imply their label or purpose",
+    "Do not override accessible name with JavaScript without updating visible label when they should be in sync"
+  ],
+  "edge_cases": [
+    "Custom dropdowns: Use role='combobox' with aria-haspopup, aria-expanded, and aria-activedescendant to convey state and control",
+    "Sliders: Use role='slider' with aria-valuemin, aria-valuemax, aria-valuenow, and optionally aria-valuetext for contextual value",
+    "Spinbuttons: Use role='spinbutton' with appropriate aria-valuenow and aria-valuetext for formatted numbers",
+    "Checkbox styled as toggle: Use role='checkbox' with aria-checked and ensure the label is announced",
+    "Menus and submenus: Use role='menu', role='menuitem' and support aria-haspopup and aria-expanded to expose relationships",
+    "Tree views: Use role='tree' and role='treeitem', with aria-expanded and aria-level to indicate nesting and state",
+    "Grids and tables: Use role='grid', with aria-rowindex, aria-colindex, and aria-selected on rows or cells as needed",
+    "SVG or canvas controls: Apply role='button' or other relevant roles and include aria-label or aria-labelledby",
+    "Dialogs: Use role='dialog' with aria-modal='true' and label the dialog via aria-labelledby or aria-label",
+    "Live regions: Use role='status' or aria-live='polite/assertive' to announce updates without stealing focus",
+    "Tab panels: Use role='tablist', role='tab', and role='tabpanel'; manage aria-selected and aria-labelledby correctly",
+    "Custom switch: Use role='switch' and aria-checked, ensure correct label for on/off states",
+    "Color pickers: Use role='listbox' or role='grid' and expose value using aria-valuetext",
+    "Custom rating controls: Represent as a group of buttons or role='slider' with accessible value and label",
+    "ARIA toolbar: Use role='toolbar' with grouped items and label the toolbar using aria-label or aria-labelledby",
+    "Graphical data points: Use role='img' with aria-label or aria-describedby linking to contextual info",
+    "Date pickers: Use role='dialog' for calendar and aria-selected for selected day",
+    "Hidden controls: Ensure hidden interactive elements are removed from accessibility tree or marked with aria-hidden",
+    "Custom widgets do not expose their role, state, or name to assistive technologies.",
+    "Dynamic components fail to announce changes in state such as expanded or collapsed panels.",
+    "Duplicate or missing roles create ambiguity in accessibility trees.",
+    "Automation can detect ARIA presence but not runtime synchronization between UI and AT output.",
+    "Interactive elements missing defined names or roles cannot be identified programmatically.",
+    "Dynamic content where roles and states are not updated appropriately."
+  ]
+}
+
+Element context:
+- Selector: .form_field-wrapper.is-menu > .form_submit-button-wrapper > .form_submit-button.w-button[data-wait=""]
+- HTML snippet: <input type="submit" data-wait="" class="form_submit-button w-button" value="">
+- Attributes: {"type": "submit", "data-wait": "", "class": "form_submit-button w-button", "value": ""}
+- Computed role/name (best-effort): input — 
+- Nearby text window: 
+- Accessibility snapshot (partial): {"role": "button", "name": ""}
+- Axe ruleId: input-button-name
+- Axe help: Input buttons must have discernible text
+- Axe impact: critical
+
+AXE_DIAGNOSTICS:
+(failureSummary/why_any/why_all/why_none and page_url are appended below this prompt; you MUST consider them.)
+
+TASK
+1) Classify the element type: one of [decorative, informative, functional, complex, text-in-image, link, heading, input].
+
+2) Decide ONE verdict (string): "pass" | "fail" | "review".
+   - pass   → clearly meets the SC (e.g., decorative image correctly hidden; redundant alternative truly duplicates visible text for the same control/target; contrast thresholds met)
+   - fail   → clearly violates the SC (cite the concrete reason)
+   - review → borderline/ambiguous/incomplete evidence; AI checked but manual verification is warranted
+
+3) Decision boundaries to guide judgement (non-exhaustive):
+   • SC 1.1.1 (Non-text Content)
+     - fail: missing/empty/placeholder alt for informative/functional images; functional image label doesn’t convey action/target
+     - pass: purely decorative (empty alt or role=presentation); or alt would ONLY duplicate adjacent visible text for the same control/target (note “redundant” in reason)
+   • SC 2.4.4 (Link Purpose, In Context)
+     - fail: “click here / learn more / read more” without disambiguating context in the same sentence/container or accessible name
+     - review: context may disambiguate but evidence is thin in provided snippet
+   • SC 1.4.3 (Contrast Minimum)
+     - fail: computed contrast < 4.5:1 (normal) or < 3:1 (large) based on diagnostics/evidence
+     - review: dynamic/unknown background or insufficient data to compute reliably
+   • SC 4.1.2 (Name, Role, Value)
+     - fail: custom widget lacks name, wrong/missing role, or state/value not exposed
+     - pass: correct role + meaningful name + state
+   • SC 2.5.3 (Label in Name)
+     - fail: visible label text not found in accessible name for controls
+     - review: partial match or name derived by ids/ARIA is truncated/uncertain
+
+4) Output a compact JSON object EXACTLY with keys:
+{
+  "type": "<element type>",
+  "verdict": "pass" | "fail" | "review",
+  "reason": "<<=200 chars; cite concrete evidence from context/diagnostics (e.g., alt='image'; link text 'learn more' without context; contrast 2.8:1)>>",
+  "confidence": 0.0-1.0,
+  "techniques_used": ["<e.g., H37>", "<e.g., G94>", "<or axe:RULE_ID>"]
+}
+
+
+Rules:
+- Use the provided evidence only; do not invent page content.
+- Keep the reason specific (mention the attribute/phrase/metric).
+- Prefer "review" (not "fail") when evidence is borderline/insufficient or background is dynamic/unknown.
+- If no technique matches, still return a verdict and include ["fallback"] in techniques_used.
+- Only output the JSON.
+
+
+AXE_DIAGNOSTICS:
+{
+  "failureSummary": "Fix any of the following:\n  Element has a value attribute and the value attribute is empty\n  Element has an empty value attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+  "why_any": [
+    "non-empty-if-present: Element has a value attribute and the value attribute is empty",
+    "non-empty-value: Element has an empty value attribute",
+    "aria-label: aria-label attribute does not exist or is empty",
+    "aria-labelledby: aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+    "non-empty-title: Element has no title attribute",
+    "presentational-role: Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+  ],
+  "why_all": [],
+  "why_none": [],
+  "page_url": "https://www.brandience.com/connect"
+}

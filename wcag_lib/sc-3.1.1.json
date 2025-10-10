@@ -1,0 +1,213 @@
+{ 
+
+    "SC": "3.1.1 Language of Page", 
+
+    "Topic": "Specify the primary language of each page", 
+
+    "Do": [ 
+
+      "Add lang attribute on the <html> element matching primary content language", 
+
+      "Use standard BCP 47 language codes (e.g., en, en-GB, fr)", 
+
+      "Set dir='rtl' for right-to-left languages like Arabic or Hebrew", 
+
+      "Localize <title> and meta descriptions consistent with lang", 
+
+      "Ensure server-rendered pages include lang before delivery", 
+
+      "Ensure CMS templates populate lang dynamically for each locale", 
+
+      "Validate lang attribute presence with automated tests", 
+
+      "Ensure character encoding is set (utf-8) to avoid garbling", 
+
+      "Provide localized UI strings matching the lang attribute", 
+
+      "Ensure screen readers pronounce content according to lang", 
+
+      "Ensure language tags used on print/PDF exports", 
+
+      "Test language behavior with browser translation disabled", 
+
+      "Use correct region subtags where relevant (en-US vs en-GB)", 
+
+      "Avoid mixing languages on a page without marking parts", 
+
+      "Ensure alternative language links include hreflang and lang", 
+
+      "Include lang on server-rendered documents and fragments", 
+
+      "Ensure subframes and iframes have appropriate lang attributes", 
+
+      "Ensure selected language persists across navigation", 
+
+      "Maintain lang consistency during AJAX/SPAs transitions", 
+
+      "Document language behaviors in developer guides", 
+
+      "Ensure metadata for voice assistants aligns with page lang", 
+
+      "Detect and fix incorrect lang set by translation plugins", 
+
+      "Verify third-party widgets use correct language settings", 
+
+      "Provide translators with clear language metadata", 
+
+      "Use lang attribute on HTML generated from templates", 
+
+      "Ensure language is set for printable views", 
+
+      "Provide language switcher that updates lang attribute", 
+
+      "Make sure redirect and canonical tags respect locale", 
+
+      "Use language in URLs when appropriate (example.com/en/)", 
+
+      "Ensure accessibility overlays respect page language", 
+
+      "Test screen reader pronunciation for key content segments", 
+
+      "Ensure error pages have correct lang set", 
+
+      "Avoid auto-detect plugins that overwrite authoritative lang", 
+
+      "Ensure search engine metadata aligns with declared language", 
+
+      "Make sure server-side rendering does not strip lang attributes", 
+
+      "Handle mixed direction content carefully with dir and lang", 
+
+      "Provide alternate language meta tags for indexing", 
+
+      "Ensure language in microdata and structured data matches lang" 
+
+    ], 
+
+    "Dont": [ 
+
+      "Don’t leave the <html> lang attribute empty", 
+
+      "Don’t use non-standard or invalid language codes", 
+
+      "Don’t rely solely on browser auto-detection", 
+
+      "Don’t mix language codes inconsistently across pages", 
+
+      "Don’t set lang incorrectly for localized content", 
+
+      "Don’t assume user's locale equals page language", 
+
+      "Don’t omit dir attribute for RTL content", 
+
+      "Don’t depend on translation plugins to set lang correctly", 
+
+      "Don’t set lang on fragments only and not on document", 
+
+      "Don’t ignore iframes or embeds that lack lang", 
+
+      "Don’t leave metadata untranslated while setting lang", 
+
+      "Don’t set conflicting lang attributes on parent and child elements incorrectly", 
+
+      "Don’t allow client-side scripts to overwrite authoritative lang after render", 
+
+      "Don’t allow staging or dev titles to be published with wrong lang", 
+
+      "Don’t let SEO tools inject wrong language metadata", 
+
+      "Don’t set language only via HTTP headers without html lang", 
+
+      "Don’t use uppercase or unusual capitalization for lang codes", 
+
+      "Don’t forget to set lang for server-side rendered emails or documents", 
+
+      "Don’t ignore punctuation or whitespace differences that change language meaning", 
+
+      "Don’t use dialect codes incorrectly (e.g., using 'eng' instead of 'en')", 
+
+      "Don’t leave mixed-language pages untagged", 
+
+      "Don’t define language in body only and not html", 
+
+      "Don’t use 'auto' as a lang value", 
+
+      "Don’t forget to localize ARIA labels and announcements", 
+
+      "Don’t let i18n libs inject inconsistent language attributes", 
+
+      "Don’t use region-only codes without base language (e.g., use en-GB not GB)", 
+
+      "Don’t ignore the effects of BOM or encoding on language rendering", 
+
+      "Don’t rely on client locale settings to set lang implicitly", 
+
+      "Don’t allow language attribute to remain default when content differs", 
+
+      "Don’t forget to validate lang on production builds", 
+
+      "Don’t assume punctuation or numerals don’t need locale-specific treatment", 
+
+      "Don’t depend on user agents to correct bad lang declarations", 
+
+      "Don’t forget to tag dynamically generated content with correct lang", 
+
+      "Don’t use language tags for stylistic or marketing purposes only", 
+
+      "Don’t set lang only on html but not update inner content language when translated", 
+
+      "Don’t ignore mixed-script issues where script differs from language" 
+
+    ], 
+
+    "Edge cases": [ 
+
+      "Page declares lang='en' but main content delivered in Spanish", 
+
+      "Translation plugin overwrites lang after initial server render", 
+
+      "Iframe content from third-party has mismatched lang", 
+
+      "Meta language tags conflict with html lang attribute", 
+
+      "SSR delivers page before lang attribute injection by client", 
+
+      "Language code typo (e.g., 'eng' instead of 'en')", 
+
+      "Right-to-left text displayed without dir attribute", 
+
+      "Dynamically loaded widgets in different language not tagged", 
+
+      "Screen reader mispronounces content due to wrong lang", 
+
+      "Localization fallback shows in wrong language on error pages", 
+
+      "Locale-specific date formats show inconsistent language", 
+
+      "User agent auto-translate masks underlying lang issues", 
+
+      "Header/footer in one language while body in another without part tagging", 
+
+      "Language declared but character encoding causes garbled text", 
+
+      "PDF embedded lacks language metadata while page has lang", 
+
+      "Language selector changes UI but not html lang attribute", 
+
+      "Subframe serving different locale not using lang attribute", 
+
+      "Custom fonts cause differences in rendering that affect language perception", 
+
+      "Mixed numeric and localized content confuses screen readers", 
+
+      "Locale-specific hyphenation or line breaks differ and are not adjusted" 
+
+    ], 
+
+    "Techniques": ["H57", "G115", "ARIA1"], 
+
+    "Axe rules": ["html-has-lang", "html-lang-valid"], 
+
+    "Tags": ["language", "i18n", "semantics", "localization"] 
+
+  }

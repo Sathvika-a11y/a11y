@@ -1,0 +1,824 @@
+[
+  {
+    "selector": "h1.MuiTypography-root.MuiTypography-hero.css-e6usta",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h2.MuiTypography-root.MuiTypography-title.HomepageHeroSection_cardsTitle__ji_Kt",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h2.MuiTypography-root.MuiTypography-title.css-1uxvbx",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h2.MuiTypography-root.MuiTypography-title.css-1uxvbx",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h2.MuiTypography-root.MuiTypography-title.css-1uxvbx",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#mychart-is-now-live-for-patients-in-utah\\,-idaho-and-nevada",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#image-card-collection-\\:r6\\:",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.MuiTypography-root.MuiTypography-title-large.ImageCard_title__JUIba",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.MuiTypography-root.MuiTypography-title-large.ImageCard_title__JUIba",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.MuiTypography-root.MuiTypography-title-large.ImageCard_title__JUIba",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.MuiTypography-root.MuiTypography-title-large.ImageCard_title__JUIba",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.MuiTypography-root.MuiTypography-title-large.ImageCard_title__JUIba",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#for-patients",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h5.MuiTypography-root.MuiTypography-h5.HighlightCard_title__gzKtO",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h5.MuiTypography-root.MuiTypography-h5.HighlightCard_title__gzKtO",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h5.MuiTypography-root.MuiTypography-h5.HighlightCard_title__gzKtO",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h5.MuiTypography-root.MuiTypography-h5.HighlightCard_title__gzKtO",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h2.MuiTypography-root.MuiTypography-headline.BaseDisplayCard_title__GHG8Q",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#we\\'re-reimagining-healthcare",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#intermountain-children\\'s-health",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#careers-at-intermountain-health",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#publication-card-collection-\\:rb\\:",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.PublicationCard_title__WofEW",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.PublicationCard_title__WofEW",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.PublicationCard_title__WofEW",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.PublicationCard_title__WofEW",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "h3.PublicationCard_title__WofEW",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#power-of-we",
+    "type": "heading",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "#city-selection-container-\\:r2\\:",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.undefined",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "span.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.undefined",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "Very short/empty text"
+    ],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.EnterpriseNavigation_navButton__brsNE",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-text",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.HomepageHeroSection_anchorLink__ljaAj",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.HomepageHeroSection_card__6XbjH",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.HomepageHeroSection_card__6XbjH",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.HomepageHeroSection_card__6XbjH",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "div.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.ImageCard_link__Pimer",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.ImageCard_link__Pimer",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.ImageCard_link__Pimer",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.ImageCard_link__Pimer",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.ImageCard_link__Pimer",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.HighlightCard_link__2Na2J",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.HighlightCard_link__2Na2J",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.HighlightCard_link__2Na2J",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.HighlightCard_link__2Na2J",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_mediaLink__35BLb",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "Very short/empty text"
+    ],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_mediaLink__35BLb",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "Very short/empty text"
+    ],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.undefined",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_mediaLink__35BLb",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "Very short/empty text"
+    ],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.undefined",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_mediaLink__35BLb",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "Very short/empty text"
+    ],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_mediaLink__35BLb",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "Very short/empty text"
+    ],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.PublicationCard_titleLink__rSxMF",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "button.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "div.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "fail",
+    "reasons": [
+      "Very short/empty text"
+    ],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.IhLink_noUnderline__F9x5C",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "div.MuiButtonBase-root.MuiButton-root.MuiButton-contained",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_link__QXBXs",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  },
+  {
+    "selector": "a.IhLink_link__B1NPM.link.Footer_hygieneLink__X3OsI",
+    "type": "label",
+    "sc": "2.4.6",
+    "verdict": "review",
+    "reasons": [],
+    "suggestion": ""
+  }
+]

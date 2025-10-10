@@ -47,7 +47,7 @@
     "Do not create infinite scroll without keyboard-accessible 'load more' alternatives",
     "Do not implement slider controls without arrow key support for value adjustment",
     "Do not use double-click functionality without single-click keyboard equivalent",
-    "If Interactive elements are implemented by <a> or <button> have tabindex="-1" Mark it as fail."
+    "If Interactive elements are implemented by <a> or <button> have tabindex='-1' Mark it as fail."
   ],
   "edge_cases": [
     "Path-dependent input exceptions: Drawing programs, painting applications, games requiring precise mouse movements are exempt",
@@ -71,7 +71,20 @@
     "Virtual keyboards/on-screen keyboards: Must be navigable via physical keyboard",
     "Games with accessibility features: Provide keyboard alternatives for essential gameplay mechanics",
     "Drawing/sketching tools: Exempt from full keyboard access but provide keyboard shortcuts for tools",
-    "3D model viewers: Arrow keys for rotation, zoom controls, keyboard shortcuts for view presets"
+    "3D model viewers: Arrow keys for rotation, zoom controls, keyboard shortcuts for view presets",
+     "Interactive controls are not operable with keyboard-only input.", 
+
+      "Focus becomes trapped within modals or popups and cannot return to the previous context.", 
+
+      "Components respond only to pointer or gesture input but not keyboard keys.", 
+
+      "Invisible or offscreen elements still receive focus, interrupting navigation flow.", 
+
+      "Automation tools rarely simulate full keyboard traversal and may miss focus lock issues.", 
+
+      "Interactive elements within multimedia content (video overlay controls).", 
+
+      "Dynamically generated interactive content missing keyboard event handlers." 
   ],
   "techniques": [
     "G202: Ensuring keyboard control for all functionality",

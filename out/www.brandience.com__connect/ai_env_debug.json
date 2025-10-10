@@ -1,0 +1,6 @@
+{
+  "A11Y_USE_LLM": "1",
+  "OPENAI_API_KEY_present": true,
+  "OPENAI_MODEL": "gpt-4o-mini",
+  "A11Y_246_MODEL": null
+}

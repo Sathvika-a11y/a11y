@@ -1,0 +1,468 @@
+{
+  "summary": {
+    "tab_stops": 2,
+    "trace_steps": 10,
+    "trap_suspected": false,
+    "activation_checks": 9,
+    "unreachable": 2
+  },
+  "unreachable": [
+    {
+      "selector": "button.prev.slick-arrow",
+      "tag": "button",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "button.next.slick-arrow",
+      "tag": "button",
+      "role": "",
+      "tabindex": "",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    }
+  ],
+  "activations": [
+    {
+      "selector": "a",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "a",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "a",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "a",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "a",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "a",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "a",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "a",
+      "enter_ok": false,
+      "space_ok": false
+    },
+    {
+      "selector": "a",
+      "enter_ok": false,
+      "space_ok": false
+    }
+  ],
+  "tabindex_neg1": [
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    },
+    {
+      "selector": "a",
+      "tag": "a",
+      "role": "",
+      "tabindex": "-1",
+      "nativeInteractive": true,
+      "ariaInteractive": false,
+      "inRovingContainer": false,
+      "disabledAttr": false,
+      "ariaDisabled": false,
+      "visible": true
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{  
+
+"topic": "Meaningful Sequence",  
+
+"tags": ["SC-1.3.2", "1.3.2", "wcag132", "meaningful-sequence", "reading-order", "dom-order", "semantic-structure"],  
+
+"do": [  
+
+"Ensure the DOM order logically reflects the visual presentation and intended reading order.",  
+
+"Use semantic HTML elements like <header>, <main>, <nav>, <footer>, <section>, <article>, <h1>-<h6>, <ul>/<ol>, <p>, and <table> to structure content meaningfully.",  
+
+"Use appropriate table markup (<thead>, <tbody>, <th>) to convey relationships programmatically.",  
+
+"Check that screen readers and keyboard navigation follow the same logical sequence as visually presented.",  
+
+"Use CSS for styling and positioning without disrupting the meaningful DOM order.",  
+
+"Place instructions for interactive controls immediately before or after the control in the DOM.",  
+
+"Test linearized reading order by disabling CSS or using a screen reader to confirm meaningful flow.",  
+
+"Use logical heading hierarchy (h1 → h2 → h3) so the sequence of information makes sense.",  
+
+"Ensure form instructions and error messages appear in a logical order and are programmatically associated with their fields.",  
+
+"Keep related content grouped together in the DOM (e.g., question text immediately before answer choices).",  
+
+"Ensure navigation menus and breadcrumbs follow a predictable, linearized order.",  
+
+"For responsive layouts, test both mobile and desktop breakpoints to confirm that content reflows in a logical order."  
+
+],  
+
+"dont": [  
+
+"Don’t rely solely on visual position; assistive technologies read based on DOM order.",  
+
+"Don’t use CSS properties like order, float, or absolute positioning to visually rearrange content in ways that break logical reading order.",  
+
+"Don’t reorder elements visually while leaving the DOM in an illogical or confusing sequence.",  
+
+"Don’t misuse structural elements (e.g., skipping heading levels or using list markup for non-list content).",  
+
+"Don’t use ARIA attributes to try to fix poor source order instead of correcting the DOM structure.",  
+
+"Don’t use non-semantic elements like <div> or <span> to fake structural roles (e.g., headings) without proper semantics.",  
+
+"Don’t insert content that appears visually first but comes last in the DOM hierarchy.",  
+
+"Don’t assume sighted users’ visual scanning order matches what assistive tech reads; always check DOM order.",  
+
+"Don’t break up sentences or paragraphs across multiple containers for styling only.",  
+
+"Don’t position labels or instructions visually without placing them correctly in the DOM.",  
+
+"Don’t rearrange DOM content dynamically with JavaScript in a way that causes assistive technology users to encounter content out of sequence.",  
+
+"Don’t rely on CSS pseudo-elements (::before/::after) to add meaningful content, since they aren’t always read by screen readers in the expected sequence."  
+
+],  
+
+"edge_cases": [  
+
+"Complex CSS Grid or Flexbox layouts may visually rearrange items in a different order than the DOM (e.g., using the 'order' property).",  
+
+"Multi-column layouts may cause the reading sequence to jump unexpectedly if columns are styled only with CSS.",  
+
+"Modal dialogs or dynamically injected content can disrupt the expected reading sequence if not correctly placed in the DOM.",  
+
+"Dynamically updated content in single-page applications may be inserted in the wrong logical sequence.",  
+
+"Long forms with grouped fields may appear visually logical but present an illogical tab or reading order if markup isn’t structured correctly." ,
+"The visual reading order differs from the source order, leading to confusing narration for screen readers.", 
+
+"Elements visually placed using layout or styling appear in a different order for keyboard or AT users.",
+"Hidden or reordered content disrupts logical reading flow when made visible dynamically.", 
+
+      "Automated systems detect DOM order but cannot interpret intended reading meaning or spatial flow.", 
+
+      "Multi-column or responsive designs may shift reading sequence unpredictably across devices.", 
+
+      "Content broken across multiple DOM elements affecting sequential reading.", 
+
+      "Multi-line headings split into separate elements affecting comprehension."
+
+],  
+
+"techniques": ["G57", "H49", "H69", "H73", "G158", "C27", "C28", "F1"],  
+
+"axe_rules_hint": ["heading-order", "list", "p-as-heading", "landmark-unique"]  
+
+}  
