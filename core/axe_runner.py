@@ -15,6 +15,33 @@ import json, os, re, pathlib, argparse
 from typing import Any, Dict, Optional, List, Tuple
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError, Page, Frame
 
+# ---------- ensure Playwright browser exists (Cloud-friendly) ----------
+def _ensure_playwright_chromium():
+    """
+    Make sure the Chromium browser binary is available.
+    On Streamlit Cloud we can't run build hooks, so install on first run.
+    """
+    import subprocess, sys, os
+
+    # If Playwright already downloaded browsers, skip
+    cache_dir = os.path.expanduser("~/.cache/ms-playwright")
+    chromium_dir = os.path.join(cache_dir, "chromium")
+    if os.path.exists(chromium_dir):
+        return
+
+    # Try to install the Chromium browser binary (OS deps come from packages.txt)
+    try:
+        subprocess.run(
+            [sys.executable, "-m", "playwright", "install", "chromium"],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+    except Exception:
+        # Don't crash the app here—let launch fallback try Firefox below
+        pass
+
+
 # ---- import detectors (all heavy lifting lives there) ----
 from .detectors import (
     # shared helpers
@@ -80,7 +107,7 @@ def _norm_sc_from_any(val) -> str:
     m = re.search(r"wcag(\d)(\d)(\d)$", s, re.I)
     return ".".join(m.groups()) if m else ""
 
-# ---------- NEW: DOM helpers to avoid missing dynamic content ----------
+# ---------- DOM helpers to avoid missing dynamic content ----------
 
 def wait_for_dom_settle(page: Page, quiet_ms: int = 800, total_timeout: int = 8000):
     """Wait until no DOM mutations for quiet_ms or total_timeout reached."""
@@ -108,7 +135,7 @@ def nudge_lazy_content(page: Page):
     except Exception:
         pass
 
-# ---------- NEW: robust axe injection (fixes “axe is not defined”) ----------
+# ---------- robust axe injection (fixes “axe is not defined”) ----------
 
 def inject_axe(frame: Frame, timeout_ms: int = 6000) -> bool:
     """Try several CDNs; then wait until window.axe.run exists."""
@@ -593,314 +620,342 @@ def run_axe_on_url(
     })
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(viewport=VIEWPORT)
-        page = context.new_page()
+        # Ensure browser binary present on first run (Cloud)
+        _ensure_playwright_chromium()
 
-        # ---------- navigation (robust) ----------
-        context.set_default_navigation_timeout(timeout_ms)
-        context.set_default_timeout(timeout_ms)
+        # Container-friendly launch flags
+        launch_args = [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-gpu",
+            "--no-zygote",
+        ]
 
-        def _should_block(route):
-            url_ = route.request.url
-            return any(s in url_ for s in (
-                "google-analytics.com", "googletagmanager.com", "doubleclick.net",
-                "facebook.net", "hotjar.com", "segment.com", "clarity.ms", "optimizely.com",
-                "fontawesome.com", "cdn.jsdelivr.net/npm/font-awesome", ".woff", ".woff2"
-            ))
+        browser = None
+        context = None
         try:
-            page.route("**/*", lambda route: route.abort() if _should_block(route) else route.continue_())
-        except Exception:
-            pass
-
-        try:
-            page.goto(url, timeout=timeout_ms, wait_until="networkidle")
-        except PlaywrightTimeoutError:
+            # Try Chromium first, then Firefox fallback
             try:
-                page.goto(url, timeout=timeout_ms, wait_until="domcontentloaded")
-                try:
-                    page.wait_for_load_state("load", timeout=max(2000, timeout_ms // 2))
-                except PlaywrightTimeoutError:
-                    pass
+                browser = p.chromium.launch(headless=True, args=launch_args)
+            except Exception:
+                browser = p.firefox.launch(headless=True)
+
+            context = browser.new_context(viewport=VIEWPORT)
+            page = context.new_page()
+
+            # ---------- navigation (robust) ----------
+            context.set_default_navigation_timeout(timeout_ms)
+            context.set_default_timeout(timeout_ms)
+
+            def _should_block(route):
+                url_ = route.request.url
+                return any(s in url_ for s in (
+                    "google-analytics.com", "googletagmanager.com", "doubleclick.net",
+                    "facebook.net", "hotjar.com", "segment.com", "clarity.ms", "optimizely.com",
+                    "fontawesome.com", "cdn.jsdelivr.net/npm/font-awesome", ".woff", ".woff2"
+                ))
+
+            try:
+                page.route("**/*", lambda route: route.abort() if _should_block(route) else route.continue_())
+            except Exception:
+                pass
+
+            try:
+                page.goto(url, timeout=timeout_ms, wait_until="networkidle")
             except PlaywrightTimeoutError:
                 try:
-                    page.goto(url, timeout=timeout_ms, wait_until="load")
+                    page.goto(url, timeout=timeout_ms, wait_until="domcontentloaded")
+                    try:
+                        page.wait_for_load_state("load", timeout=max(2000, timeout_ms // 2))
+                    except PlaywrightTimeoutError:
+                        pass
                 except PlaywrightTimeoutError:
-                    pass
+                    try:
+                        page.goto(url, timeout=timeout_ms, wait_until="load")
+                    except PlaywrightTimeoutError:
+                        pass
 
-        # expand & settle
-        page.wait_for_timeout(400 if (fast_mode or quick_scan) else 800)
-        page.evaluate("""() => {
-          document.querySelectorAll('details:not([open])').forEach(d => { try { d.open = true; } catch(e){} });
-          Array.from(document.querySelectorAll('[aria-expanded="false"]')).slice(0,50).forEach(el => { try { el.click(); } catch(e){} });
-          Array.from(document.querySelectorAll('[role="tab"]')).slice(0,6).forEach(t => { try { t.click(); } catch(e){} });
-        }""")
-        page.wait_for_timeout(250 if (fast_mode or quick_scan) else 400)
+            # expand & settle
+            page.wait_for_timeout(400 if (fast_mode or quick_scan) else 800)
+            page.evaluate("""() => {
+              document.querySelectorAll('details:not([open])').forEach(d => { try { d.open = true; } catch(e){} });
+              Array.from(document.querySelectorAll('[aria-expanded="false"]')).slice(0,50).forEach(el => { try { el.click(); } catch(e){} });
+              Array.from(document.querySelectorAll('[role="tab"]')).slice(0,6).forEach(t => { try { t.click(); } catch(e){} });
+            }""")
+            page.wait_for_timeout(250 if (fast_mode or quick_scan) else 400)
 
-        # NEW: nudge lazy content + wait for DOM settle (so we don't miss nodes)
-        nudge_lazy_content(page)
-        wait_for_dom_settle(page, quiet_ms=800, total_timeout=8000)
+            # nudge lazy content + wait for DOM settle
+            nudge_lazy_content(page)
+            wait_for_dom_settle(page, quiet_ms=800, total_timeout=8000)
 
-        # inject axe in main + frames, and verify availability
-        if not inject_axe(page.main_frame):
-            raise RuntimeError("Failed to inject axe-core into main document.")
-        if include_frames:
-            for fr in for_each_same_origin_frame(page, include_frames=True):
-                if fr == page.main_frame:
-                    continue
-                try:
-                    inject_axe(fr)
-                except Exception:
-                    continue
+            # inject axe in main + frames, and verify availability
+            if not inject_axe(page.main_frame):
+                raise RuntimeError("Failed to inject axe-core into main document.")
+            if include_frames:
+                for fr in for_each_same_origin_frame(page, include_frames=True):
+                    if fr == page.main_frame:
+                        continue
+                    try:
+                        inject_axe(fr)
+                    except Exception:
+                        continue
 
-        # DOM snapshots (optional)
-        if capture_dom and not ultra_quick:
-            save_dom_snapshots(page, out_dir, include_frames=include_frames)
+            # DOM snapshots (optional)
+            if capture_dom and not ultra_quick:
+                save_dom_snapshots(page, out_dir, include_frames=include_frames)
 
-        # axe across frames (we already injected axe)
-        axe_payload = run_axe_all_frames(page, include_frames=include_frames, result_types=axe_result_types)
-        # write raw once (will overwrite later with axe_issues included)
-        write_json(out_dir / "axe_results.json", axe_payload)
+            # axe across frames (we already injected axe)
+            axe_payload = run_axe_all_frames(page, include_frames=include_frames, result_types=axe_result_types)
+            write_json(out_dir / "axe_results.json", axe_payload)
 
-        # node-by-node debug
-        nodes_log = out_dir / "axe_nodes.jsonl"
-        with nodes_log.open("w", encoding="utf-8") as f:
-            for bucket in ["violations","incomplete","passes"]:
+            # node-by-node debug
+            nodes_log = out_dir / "axe_nodes.jsonl"
+            with nodes_log.open("w", encoding="utf-8") as f:
+                for bucket in ["violations","incomplete","passes"]:
+                    for r in axe_payload.get(bucket, []):
+                        scs = _extract_scs(r.get("tags", []))
+                        for n in r.get("nodes", []):
+                            rec = {
+                                "page_url": url,
+                                "bucket": bucket,
+                                "rule_id": r.get("id"),
+                                "help": r.get("help"),
+                                "helpUrl": r.get("helpUrl"),
+                                "impact": r.get("impact"),
+                                "sc_list": scs,
+                                "selector": (n.get("target") or [""])[0],
+                                "html": n.get("html"),
+                                "failureSummary": n.get("failureSummary"),
+                                "why_any": _msgs(n.get("any")),
+                                "why_all": _msgs(n.get("all")),
+                                "why_none": _msgs(n.get("none")),
+                            }
+                            f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+            # build candidates from axe (violations + incomplete)
+            candidates: List[Dict[str, Any]] = []
+            seen = set()
+            for bucket in ["violations", "incomplete"]:
                 for r in axe_payload.get(bucket, []):
                     scs = _extract_scs(r.get("tags", []))
+                    topic = f"SC-{_primary_sc(scs)}" if scs else "BEST_PRACTICE"
                     for n in r.get("nodes", []):
-                        rec = {
+                        selector = (n.get("target") or [""])[0]
+                        if not selector:
+                            continue
+                        key = (r.get("id"), selector)
+                        if key in seen:
+                            continue
+                        seen.add(key)
+                        html_snippet = n.get("html") or ""
+                        acc = get_accessibility_snapshot(page, selector)
+                        nearby = get_nearby_text(page, selector)
+                        role_name = get_role_name_guess(page, selector)
+                        attrs = _get_attrs(page, selector)
+                        shot_name = sanitize_filename(f"{r.get('id')}__{selector[:60]}") + ".png"
+                        shot_path = (out_dir / "screenshots" / shot_name)
+                        shot_saved = crop_element_screenshot(page, selector, shot_path, enabled=screenshot_elements)
+                        candidates.append({
+                            "source": "axe",
                             "page_url": url,
-                            "bucket": bucket,
-                            "rule_id": r.get("id"),
-                            "help": r.get("help"),
-                            "helpUrl": r.get("helpUrl"),
-                            "impact": r.get("impact"),
+                            "bucket": "must_review",
+                            "topic": topic,
                             "sc_list": scs,
-                            "selector": (n.get("target") or [""])[0],
-                            "html": n.get("html"),
+                            "axe_rule_id": r.get("id"),
+                            "axe_help": r.get("help"),
+                            "axe_help_url": r.get("helpUrl"),
+                            "impact": r.get("impact"),
+                            "selector": selector,
+                            "html_snippet": html_snippet,
+                            "attributes": attrs,
+                            "role_name_guess": role_name,
+                            "nearby_text": nearby,
+                            "acc_snapshot": acc,
+                            "screenshot": shot_saved,
                             "failureSummary": n.get("failureSummary"),
                             "why_any": _msgs(n.get("any")),
                             "why_all": _msgs(n.get("all")),
                             "why_none": _msgs(n.get("none")),
-                        }
-                        f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+                            "verdict": "fail"
+                        })
 
-        # build candidates from axe (violations + incomplete)
-        candidates: List[Dict[str, Any]] = []
-        seen = set()
-        for bucket in ["violations", "incomplete"]:
-            for r in axe_payload.get(bucket, []):
-                scs = _extract_scs(r.get("tags", []))
-                topic = f"SC-{_primary_sc(scs)}" if scs else "BEST_PRACTICE"
-                for n in r.get("nodes", []):
-                    selector = (n.get("target") or [""])[0]
-                    if not selector:
-                        continue
-                    key = (r.get("id"), selector)
-                    if key in seen:
-                        continue
-                    seen.add(key)
-                    html_snippet = n.get("html") or ""
-                    acc = get_accessibility_snapshot(page, selector)
-                    nearby = get_nearby_text(page, selector)
-                    role_name = get_role_name_guess(page, selector)
-                    attrs = _get_attrs(page, selector)
-                    shot_name = sanitize_filename(f"{r.get('id')}__{selector[:60]}") + ".png"
-                    shot_path = (out_dir / "screenshots" / shot_name)
-                    shot_saved = crop_element_screenshot(page, selector, shot_path, enabled=screenshot_elements)
-                    candidates.append({
-                        "source": "axe",
-                        "page_url": url,
-                        "bucket": "must_review",
-                        "topic": topic,
-                        "sc_list": scs,
-                        "axe_rule_id": r.get("id"),
-                        "axe_help": r.get("help"),
-                        "axe_help_url": r.get("helpUrl"),
-                        "impact": r.get("impact"),
-                        "selector": selector,
-                        "html_snippet": html_snippet,
-                        "attributes": attrs,
-                        "role_name_guess": role_name,
-                        "nearby_text": nearby,
-                        "acc_snapshot": acc,
-                        "screenshot": shot_saved,
-                        "failureSummary": n.get("failureSummary"),
-                        "why_any": _msgs(n.get("any")),
-                        "why_all": _msgs(n.get("all")),
-                        "why_none": _msgs(n.get("none")),
-                        "verdict": "fail"
-                    })
-
-        # keyboard probe
-        if not ultra_quick:
-            kb = run_keyboard_probe(
-                page, url, out_dir,
-                screenshot_elements=screenshot_elements,
-                max_steps=(80 if quick_scan else KB_MAX_STEPS),
-                max_repeats=(3 if quick_scan else KB_MAX_REPEATS),
-                max_back_steps=(6 if quick_scan else KB_MAX_BACK_STEPS),
-                screenshot_keyboard=screenshot_keyboard,
-            )
-            for it in kb.get("unreachable", [])[:40]:
-                sel = it.get("selector")
-                cand = _mk_candidate(page, url, "2.1.1", "keyboard-probe:unreachable", sel, "Interactive element appears unreachable by Tab.", verdict="fail")
-                shot_path = (out_dir / "screenshots" / (sanitize_filename(f"kb_unreach__{(sel or '')[:60]}") + ".png"))
-                cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
-                cand["source"] = "keyboard"
-                candidates.append(cand)
-            for it in kb.get("activations", [])[:30]:
-                if not (it.get("enter_ok") or it.get("space_ok")):
+            # keyboard probe
+            if not ultra_quick:
+                kb = run_keyboard_probe(
+                    page, url, out_dir,
+                    screenshot_elements=screenshot_elements,
+                    max_steps=(80 if quick_scan else KB_MAX_STEPS),
+                    max_repeats=(3 if quick_scan else KB_MAX_REPEATS),
+                    max_back_steps=(6 if quick_scan else KB_MAX_BACK_STEPS),
+                    screenshot_keyboard=screenshot_keyboard,
+                )
+                for it in kb.get("unreachable", [])[:40]:
                     sel = it.get("selector")
-                    cand = _mk_candidate(page, url, "2.1.1", "keyboard-probe:activation", sel, "Enter/Space did not activate a focusable control.", verdict="fail")
-                    shot_path = (out_dir / "screenshots" / (sanitize_filename(f"kb_act__{(sel or '')[:60]}") + ".png"))
+                    cand = _mk_candidate(page, url, "2.1.1", "keyboard-probe:unreachable", sel, "Interactive element appears unreachable by Tab.", verdict="fail")
+                    shot_path = (out_dir / "screenshots" / (sanitize_filename(f"kb_unreach__{(sel or '')[:60]}") + ".png"))
                     cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
                     cand["source"] = "keyboard"
                     candidates.append(cand)
-            for it in kb.get("tabindex_neg1", [])[:30]:
-                sel = it.get("selector")
-                cand = _mk_candidate(page, url, "2.1.1", "keyboard-probe:tabindex--1", sel, "Interactive element with tabindex='-1' (roving/disabled exceptions handled).", verdict="fail")
-                shot_path = (out_dir / "screenshots" / (sanitize_filename(f"kb_tabneg__{(sel or '')[:60]}") + ".png"))
-                cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
-                cand["source"] = "keyboard"
-                candidates.append(cand)
+                for it in kb.get("activations", [])[:30]:
+                    if not (it.get("enter_ok") or it.get("space_ok")):
+                        sel = it.get("selector")
+                        cand = _mk_candidate(page, url, "2.1.1", "keyboard-probe:activation", sel, "Enter/Space did not activate a focusable control.", verdict="fail")
+                        shot_path = (out_dir / "screenshots" / (sanitize_filename(f"kb_act__{(sel or '')[:60]}") + ".png"))
+                        cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
+                        cand["source"] = "keyboard"
+                        candidates.append(cand)
+                for it in kb.get("tabindex_neg1", [])[:30]:
+                    sel = it.get("selector")
+                    cand = _mk_candidate(page, url, "2.1.1", "keyboard-probe:tabindex--1", sel, "Interactive element with tabindex='-1' (roving/disabled exceptions handled).", verdict="fail")
+                    shot_path = (out_dir / "screenshots" / (sanitize_filename(f"kb_tabneg__{(sel or '')[:60]}") + ".png"))
+                    cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
+                    cand["source"] = "keyboard"
+                    candidates.append(cand)
 
-            # weak focus-visible + focus-order (from trace)
-            try:
-                fv = detect_focus_visible_weak_from_trace(page, url, out_dir, screenshot_elements=screenshot_elements)
-                for c in fv: c.setdefault("source","keyboard-trace")
-                candidates.extend(fv)
-                fo = detect_focus_order_suspect_from_trace(page, url, out_dir, screenshot_elements=screenshot_elements)
-                for c in fo: c.setdefault("source","keyboard-trace")
-                candidates.extend(fo)
-            except Exception:
-                pass
-
-        # additional detectors (skip in ultra_quick)
-        if not ultra_quick:
-            for det in (
-                lambda pg,u,od: detect_info_relationships(pg,u,od,screenshot_elements),   # 1.3.1
-                lambda pg,u,od: detect_meaningful_sequence(pg,u,od,screenshot_elements),  # 1.3.2
-                lambda pg,u,od: detect_role_conflicts(pg,u,od,screenshot_elements),       # 4.1.2
-                lambda pg,u,od: detect_label_in_name(pg,u,od,screenshot_elements),        # 2.5.3
-                lambda pg,u,od: detect_link_purpose_generic(pg,u,od,screenshot_elements), # 2.4.4
-                lambda pg,u,od: detect_link_indicator_style(pg,u,od,screenshot_elements), # 1.4.1
-                detect_timeouts,                                                         # 2.2.6
-            ):
+                # weak focus-visible + focus-order (from trace)
                 try:
-                    rows = det(page, url, out_dir)
-                    if isinstance(rows, list):
-                        for c in rows:
-                            c.setdefault("source", "detector")
-                        candidates.extend(rows)
+                    fv = detect_focus_visible_weak_from_trace(page, url, out_dir, screenshot_elements=screenshot_elements)
+                    for c in fv: c.setdefault("source","keyboard-trace")
+                    candidates.extend(fv)
+                    fo = detect_focus_order_suspect_from_trace(page, url, out_dir, screenshot_elements=screenshot_elements)
+                    for c in fo: c.setdefault("source","keyboard-trace")
+                    candidates.extend(fo)
                 except Exception:
                     pass
 
-        # contrast (optional)
-        if not ultra_quick and enable_contrast_checks:
-            c143_fail_a, c143_pass_a = detect_contrast_text_general(page, url, out_dir)
-            c143_fail_b, c143_pass_b = detect_contrast_on_image_text(page, url, out_dir)
-            c1411_fail,  c1411_pass  = detect_contrast_nontext_ui(page, url, out_dir)
-            for c in (c143_fail_a + c143_fail_b + c1411_fail):
-                c.setdefault("source","detector-contrast")
-            candidates.extend(c143_fail_a + c143_fail_b + c1411_fail)
-            write_json(out_dir / "rule_pages" / "1.4.3_passes.json", c143_pass_a + c143_pass_b)
-            write_json(out_dir / "rule_pages" / "1.4.11_passes.json", c1411_pass)
+            # additional detectors (skip in ultra_quick)
+            if not ultra_quick:
+                for det in (
+                    lambda pg,u,od: detect_info_relationships(pg,u,od,screenshot_elements),   # 1.3.1
+                    lambda pg,u,od: detect_meaningful_sequence(pg,u,od,screenshot_elements),  # 1.3.2
+                    lambda pg,u,od: detect_role_conflicts(pg,u,od,screenshot_elements),       # 4.1.2
+                    lambda pg,u,od: detect_label_in_name(pg,u,od,screenshot_elements),        # 2.5.3
+                    lambda pg,u,od: detect_link_purpose_generic(pg,u,od,screenshot_elements), # 2.4.4
+                    lambda pg,u,od: detect_link_indicator_style(pg,u,od,screenshot_elements), # 1.4.1
+                    detect_timeouts,                                                         # 2.2.6
+                ):
+                    try:
+                        rows = det(page, url, out_dir)
+                        if isinstance(rows, list):
+                            for c in rows:
+                                c.setdefault("source", "detector")
+                            candidates.extend(rows)
+                    except Exception:
+                        pass
 
-        # 2.4.6: collect + local heuristic + AI prompt (runner only prepares input/prompt; RAG does AI eval)
-        if not ultra_quick:
-            collected = []
-            for fr in for_each_same_origin_frame(page, include_frames=include_frames):
+            # contrast (optional)
+            if not ultra_quick and enable_contrast_checks:
+                c143_fail_a, c143_pass_a = detect_contrast_text_general(page, url, out_dir)
+                c143_fail_b, c143_pass_b = detect_contrast_on_image_text(page, url, out_dir)
+                c1411_fail,  c1411_pass  = detect_contrast_nontext_ui(page, url, out_dir)
+                for c in (c143_fail_a + c143_fail_b + c1411_fail):
+                    c.setdefault("source","detector-contrast")
+                candidates.extend(c143_fail_a + c143_fail_b + c1411_fail)
+                write_json(out_dir / "rule_pages" / "1.4.3_passes.json", c143_pass_a + c143_pass_b)
+                write_json(out_dir / "rule_pages" / "1.4.11_passes.json", c1411_pass)
+
+            # 2.4.6: collect + local heuristic + AI prompt
+            if not ultra_quick:
+                collected = []
+                for fr in for_each_same_origin_frame(page, include_frames=include_frames):
+                    try:
+                        items = collect_headings_and_labels(fr)
+                        src = "main" if fr == page.main_frame else "frame"
+                        for it in items:
+                            it["source"] = src
+                        collected.extend(items)
+                    except Exception:
+                        continue
+                write_json(out_dir / "ai" / "2_4_6" / "input.json", collected)
+                write_2_4_6_ai_prompt(out_dir, url, fast_mode=fast_mode)
+                fails_246, passes_246 = evaluate_2_4_6_locally(collected)
+                for it in fails_246:
+                    sel = it.get("selector")
+                    reason = "; ".join(it.get("reasons", [])) or "Non-descriptive heading/label."
+                    cand = _mk_candidate(page, url, "2.4.6", "runner:ai-2.4.6-local", sel, reason, verdict="fail", evidence=it)
+                    shot_path = (out_dir / "screenshots" / (sanitize_filename(f"sc246__{(sel or '')[:60]}") + ".png"))
+                    cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
+                    cand["source"] = "runner-2.4.6-local"
+                    candidates.append(cand)
+                write_json(out_dir / "rule_pages" / "2.4.6_passes.json", passes_246)
+
+            # -------- de-duplicate candidates & persist --------
+            write_json(out_dir / "candidates_raw.json", candidates)
+            candidates = _dedupe_by_selector_keep_best(candidates)
+            write_json(out_dir / "candidates.json", candidates)
+
+            # -------- BUILD unified axe_issues for Excel: Overall_Issues --------
+            axe_issues: List[Dict[str,Any]] = []
+
+            # A) axe buckets → issues
+            for bucket in ("violations","incomplete","passes"):
+                for r in axe_payload.get(bucket, []):
+                    for n in r.get("nodes", []) or []:
+                        axe_issues.append(_mk_issue_from_axe_node(url, r, n, bucket))
+
+            # B) all candidates (mostly 'fail' from axe/detectors/keyboard)
+            for c in candidates:
+                axe_issues.append(_mk_issue_from_candidate(c))
+
+            # C) optional detector PASSES (contrast & 2.4.6) → issues as 'pass'
+            try:
+                c143_pass_all = []
                 try:
-                    items = collect_headings_and_labels(fr)
-                    src = "main" if fr == page.main_frame else "frame"
-                    for it in items:
-                        it["source"] = src
-                    collected.extend(items)
+                    c143_pass_all.extend(json.loads((out_dir / "rule_pages" / "1.4.3_passes.json").read_text(encoding="utf-8")))
                 except Exception:
-                    continue
-            write_json(out_dir / "ai" / "2_4_6" / "input.json", collected)
-            write_2_4_6_ai_prompt(out_dir, url, fast_mode=fast_mode)
-            fails_246, passes_246 = evaluate_2_4_6_locally(collected)
-            for it in fails_246:
-                sel = it.get("selector")
-                reason = "; ".join(it.get("reasons", [])) or "Non-descriptive heading/label."
-                cand = _mk_candidate(page, url, "2.4.6", "runner:ai-2.4.6-local", sel, reason, verdict="fail", evidence=it)
-                shot_path = (out_dir / "screenshots" / (sanitize_filename(f"sc246__{(sel or '')[:60]}") + ".png"))
-                cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
-                cand["source"] = "runner-2.4.6-local"
-                candidates.append(cand)
-            write_json(out_dir / "rule_pages" / "2.4.6_passes.json", passes_246)
+                    pass
+                c1411_pass = []
+                try:
+                    c1411_pass.extend(json.loads((out_dir / "rule_pages" / "1.4.11_passes.json").read_text(encoding="utf-8")))
+                except Exception:
+                    pass
 
-        # -------- de-duplicate candidates & persist --------
-        write_json(out_dir / "candidates_raw.json", candidates)
-        candidates = _dedupe_by_selector_keep_best(candidates)
-        write_json(out_dir / "candidates.json", candidates)
+                for row in c143_pass_all:
+                    row = dict(row)
+                    row["verdict"] = "pass"
+                    row["rule_id"] = row.get("rule_id") or "detector:1.4.3"
+                    row["source"]  = row.get("source") or "detector-contrast"
+                    axe_issues.append(_mk_issue_from_candidate(row))
 
-        # -------- BUILD unified axe_issues for Excel: Overall_Issues --------
-        axe_issues: List[Dict[str,Any]] = []
-
-        # A) axe buckets → issues
-        for bucket in ("violations","incomplete","passes"):
-            for r in axe_payload.get(bucket, []):
-                for n in r.get("nodes", []) or []:
-                    axe_issues.append(_mk_issue_from_axe_node(url, r, n, bucket))
-
-        # B) all candidates (mostly 'fail' from axe/detectors/keyboard)
-        for c in candidates:
-            axe_issues.append(_mk_issue_from_candidate(c))
-
-        # C) optional detector PASSES (contrast & 2.4.6) → issues as 'pass'
-        try:
-            c143_pass_all = []
-            try:
-                c143_pass_all.extend(json.loads((out_dir / "rule_pages" / "1.4.3_passes.json").read_text(encoding="utf-8")))
-            except Exception:
-                pass
-            c1411_pass = []
-            try:
-                c1411_pass.extend(json.loads((out_dir / "rule_pages" / "1.4.11_passes.json").read_text(encoding="utf-8")))
+                for row in c1411_pass:
+                    row = dict(row)
+                    row["verdict"] = "pass"
+                    row["rule_id"] = row.get("rule_id") or "detector:1.4.11"
+                    row["source"]  = row.get("source") or "detector-contrast"
+                    axe_issues.append(_mk_issue_from_candidate(row))
             except Exception:
                 pass
 
-            for row in c143_pass_all:
-                row = dict(row)
-                row["verdict"] = "pass"
-                row["rule_id"] = row.get("rule_id") or "detector:1.4.3"
-                row["source"]  = row.get("source") or "detector-contrast"
-                axe_issues.append(_mk_issue_from_candidate(row))
+            # D) 2.4.6 passes (local heuristic)
+            try:
+                passes_246 = json.loads((out_dir / "rule_pages" / "2.4.6_passes.json").read_text(encoding="utf-8"))
+                for row in passes_246 or []:
+                    row = dict(row)
+                    row["verdict"] = "pass"
+                    row["rule_id"] = row.get("rule_id") or "runner:ai-2.4.6-local"
+                    row["source"]  = row.get("source") or "runner-2.4.6-local"
+                    axe_issues.append(_mk_issue_from_candidate(row))
+            except Exception:
+                pass
 
-            for row in c1411_pass:
-                row = dict(row)
-                row["verdict"] = "pass"
-                row["rule_id"] = row.get("rule_id") or "detector:1.4.11"
-                row["source"]  = row.get("source") or "detector-contrast"
-                axe_issues.append(_mk_issue_from_candidate(row))
-        except Exception:
-            pass
+            # E) de-dupe & write axe_results with issues + raw
+            axe_issues = _dedupe_issues(axe_issues)
+            write_json(out_dir / "axe_results.json", {
+                "axe_raw": axe_payload,
+                "axe_issues": axe_issues
+            })
 
-        # D) 2.4.6 passes (local heuristic)
-        try:
-            passes_246 = json.loads((out_dir / "rule_pages" / "2.4.6_passes.json").read_text(encoding="utf-8"))
-            for row in passes_246 or []:
-                row = dict(row)
-                row["verdict"] = "pass"
-                row["rule_id"] = row.get("rule_id") or "runner:ai-2.4.6-local"
-                row["source"]  = row.get("source") or "runner-2.4.6-local"
-                axe_issues.append(_mk_issue_from_candidate(row))
-        except Exception:
-            pass
-
-        # E) de-dupe & write axe_results with issues + raw
-        axe_issues = _dedupe_issues(axe_issues)
-        write_json(out_dir / "axe_results.json", {
-            "axe_raw": axe_payload,
-            "axe_issues": axe_issues
-        })
-
-        context.close()
-        browser.close()
+        finally:
+            # Always clean up
+            try:
+                if context: context.close()
+            except Exception:
+                pass
+            try:
+                if browser: browser.close()
+            except Exception:
+                pass
 
 # -------------------- CLI --------------------
 
