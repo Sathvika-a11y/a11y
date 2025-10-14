@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
 # core/axe_runner.py
 # (keeps your structure; fixes dedupe + appends Manual Review tab; conservative keyboard flags)
-# (now with Chromium install guard, container-friendly flags, and Firefox fallback)
+# (adds Chromium install guard, container-friendly flags, and Firefox fallback)
 
 from __future__ import annotations
 import json, os, re, pathlib, argparse
 from typing import Any, Dict, Optional, List, Tuple
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError, Page, Frame
 
-# ---------- ensure Playwright browser exists (Cloud-friendly) ----------
+# ---------- ensure Playwright browser exists (Cloud/CI friendly) ----------
 def _ensure_playwright_chromium():
     """
     Make sure the Chromium browser binary is available.
     On hosted environments with no build hooks, install on first run.
     """
     import subprocess, sys
-
     cache_dir = os.path.expanduser("~/.cache/ms-playwright")
     chromium_dir = os.path.join(cache_dir, "chromium")
     if os.path.exists(chromium_dir):
@@ -28,7 +27,7 @@ def _ensure_playwright_chromium():
             stderr=subprocess.PIPE,
         )
     except Exception:
-        # Don't crash—runtime launch will attempt Firefox as a fallback
+        # Don't crash—runtime will attempt Firefox as a fallback
         pass
 
 
@@ -40,6 +39,7 @@ from .detectors import (
     # 2.4.6
     collect_headings_and_labels, evaluate_2_4_6_locally, write_2_4_6_ai_prompt,
     detect_non_text_content_111,
+    detect_bypass_blocks, detect_language_of_page, detect_heading_outline_sequence,
     # contrast
     detect_contrast_text_general, detect_contrast_on_image_text, detect_contrast_nontext_ui,
     # other rules
@@ -274,7 +274,8 @@ def run_keyboard_probe(
         info["step"] = i
         trace.append(info)
         last_two.append(sel)
-        if len(last_two) > 2: last_two.pop(0)
+        if len(last_two) > 2:
+            last_two.pop(0)
         if len(last_two) == 2 and last_two[0] and last_two[1]:
             if len(trace) >= 4 and trace[-4]["selector"] == last_two[0] and trace[-3]["selector"] == last_two[1]:
                 seen_pair_repeats += 1
@@ -294,7 +295,7 @@ def run_keyboard_probe(
 
     # unreachable inventory (respect disabled/aria-disabled/roving)
     inventory = _interactive_inventory(page)
-    tab_selectors = {t.get("selector","") for t in trace if t.get("selector")}
+    tab_selectors = {t.get("selector", "") for t in trace if t.get("selector")}
     unreachable = [
         it for it in inventory
         if it.get("visible")
@@ -310,9 +311,11 @@ def run_keyboard_probe(
     sample_idxs = list(range(0, len(trace), max(1, len(trace)//10)))[:12]
     for idx in sample_idxs:
         sel = trace[idx].get("selector") if idx < len(trace) else None
-        if not sel: continue
+        if not sel:
+            continue
         el = page.query_selector(sel)
-        if not el: continue
+        if not el:
+            continue
         role = el.get_attribute("role") or el.evaluate("el => el.tagName.toLowerCase()")
         if el.evaluate("(el)=>el.tagName.toLowerCase()==='a' && el.hasAttribute('href')"):
             continue
@@ -347,7 +350,7 @@ def run_keyboard_probe(
         "activations": activations,
         "tabindex_neg1": [
             it for it in inventory
-            if str(it.get("tabindex","")).strip() == "-1"
+            if str(it.get("tabindex", "")).strip() == "-1"
                and (it.get("nativeInteractive") or it.get("ariaInteractive"))
                and not it.get("inRovingContainer")
                and not it.get("disabled")
@@ -367,7 +370,7 @@ def for_each_same_origin_frame(page, include_frames: bool):
         if fr is page.main_frame:
             continue
         try:
-            fr.evaluate("(() => 1)")
+            fr.evaluate("() => 1")  # same-origin probe
             yield fr
         except Exception:
             continue
@@ -396,12 +399,12 @@ def save_dom_snapshots(page, out_dir: pathlib.Path, include_frames: bool) -> Non
 def run_axe_all_frames(page, include_frames: bool, result_types: Optional[List[str]] = None) -> Dict[str,Any]:
     all_results = {"violations": [], "incomplete": [], "passes": []}
     def _merge(res):
-        for k in ("violations","incomplete","passes"):
+        for k in ("violations", "incomplete", "passes"):
             all_results[k].extend(res.get(k, []))
 
     axe_opts = {
-        "runOnly": {"type":"tag","values":["wcag2a","wcag2aa","wcag21a","wcag21aa","wcag22a","wcag22aa"]},
-        "resultTypes": result_types or ["violations","incomplete","passes"]
+        "runOnly": {"type": "tag", "values": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22a", "wcag22aa"]},
+        "resultTypes": result_types or ["violations", "incomplete", "passes"]
     }
 
     _merge(page.evaluate("(opts)=>axe.run(document, opts)", axe_opts))
@@ -422,8 +425,9 @@ def _mk_issue_from_axe_node(url: str, rule: Dict[str,Any], node: Dict[str,Any], 
     scs = []
     for t in rule.get("tags", []) or []:
         m = re.match(r"wcag(\d)(\d)(\d)$", str(t).lower())
-        if m: scs.append(".".join(m.groups()))
-    status = "fail" if bucket=="violations" else ("review" if bucket=="incomplete" else "pass")
+        if m:
+            scs.append(".".join(m.groups()))
+    status = "fail" if bucket == "violations" else ("review" if bucket == "incomplete" else "pass")
     return {
         "page_url": url,
         "SC": scs[0] if scs else "",
@@ -451,7 +455,7 @@ def _mk_issue_from_candidate(c: Dict[str,Any]) -> Dict[str,Any]:
     return {
         "page_url": c.get("page_url"),
         "SC": sc,
-        "status": status,                           # pass | fail | review | manual_review (treated as review)
+        "status": status,  # pass | fail | review | manual_review
         "rule_id": rule_id,
         "impact": c.get("impact"),
         "selector": c.get("selector"),
@@ -468,19 +472,20 @@ def _mk_issue_from_candidate(c: Dict[str,Any]) -> Dict[str,Any]:
         }
     }
 
-# -------------------- NEW: de-dup candidates by (selector, rule_id) --------------------
+# -------------------- de-dup candidates by (selector, rule_id) --------------------
 
 def _primary_rule_id_of(c: Dict[str,Any]) -> str:
-    for k in ("rule_id","axe_rule_id","detector","source","topic"):
+    for k in ("rule_id", "axe_rule_id", "detector", "source", "topic"):
         v = c.get(k)
-        if v: return str(v)
+        if v:
+            return str(v)
     return ""
 
 def _norm_ev_tuple(c: Dict[str,Any]) -> tuple:
     ev = c.get("evidence") or {}
     if not isinstance(ev, dict):
         return ()
-    keep = ("accname","alt","contrast_ratio","role","context","computed_role","bg_source")
+    keep = ("accname", "alt", "contrast_ratio", "role", "context", "computed_role", "bg_source")
     out = []
     for k in keep:
         v = ev.get(k)
@@ -494,7 +499,7 @@ def _cand_score(c: Dict[str,Any]) -> int:
     if c.get("axe_rule_id"): s += 2
     if c.get("failureSummary"): s += 2
     if (c.get("why_any") or c.get("why_all") or c.get("why_none")): s += 1
-    if c.get("verdict","").lower() == "fail": s += 1
+    if c.get("verdict", "").lower() == "fail": s += 1
     if c.get("screenshot"): s += 1
     return s
 
@@ -507,7 +512,6 @@ def _dedupe_by_selector_keep_best(cands: List[Dict[str,Any]]) -> List[Dict[str,A
     kept: List[Dict[str,Any]] = []
     for c in cands:
         sel = (c.get("selector") or "").strip()
-    # NOTE: indentation fix:
         if not sel:
             nosel.append(c)
             continue
@@ -534,6 +538,27 @@ def _dedupe_by_selector_keep_best(cands: List[Dict[str,Any]]) -> List[Dict[str,A
     return kept + nosel
 
 # -------------------- main run --------------------
+
+def _has_skip_or_landmarks(page: Page) -> bool:
+    try:
+        return page.evaluate("""() => {
+          // visible skip link
+          const skips = Array.from(document.querySelectorAll('a[href^="#"]')).filter(a => {
+            const r = a.getBoundingClientRect();
+            const cs = getComputedStyle(a);
+            return r.width>1 && r.height>1 && cs.visibility!=='hidden' && cs.display!=='none' &&
+                   /skip/i.test(a.innerText || a.getAttribute('aria-label') || '');
+          });
+          if (skips.length) return true;
+
+          // minimal landmark combo + headings
+          const hasMain = !!document.querySelector('main, [role="main"]');
+          const hasNav  = !!document.querySelector('nav, [role="navigation"]');
+          const hasHead = !!document.querySelector('h1,h2,h3,[role="heading"]');
+          return !!(hasMain && (hasNav || hasHead));
+        }""")
+    except Exception:
+        return False
 
 def run_axe_on_url(
     url: str,
@@ -606,9 +631,8 @@ def run_axe_on_url(
 
     browser = None
     context = None
-
     with sync_playwright() as p:
-        # Make sure Chromium is available (Cloud/CI friendly)
+        # Ensure Chromium exists (first-run friendly)
         _ensure_playwright_chromium()
 
         # Container-friendly launch flags
@@ -621,7 +645,7 @@ def run_axe_on_url(
         ]
 
         try:
-            # Try Chromium with flags; fall back to Firefox if Chromium fails
+            # Try Chromium; fall back to Firefox
             try:
                 browser = p.chromium.launch(headless=True, args=launch_args)
             except Exception:
@@ -633,7 +657,6 @@ def run_axe_on_url(
                 user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
             )
             page = context.new_page()
-            # Reduce flaky animations/scroll behavior
             page.add_style_tag(content="""* { animation-duration: 0.001s !important; animation-delay: 0s !important; } html { scroll-behavior: auto !important; }""")
 
             # navigation
@@ -702,7 +725,7 @@ def run_axe_on_url(
             # node-by-node debug
             nodes_log = out_dir / "axe_nodes.jsonl"
             with nodes_log.open("w", encoding="utf-8") as f:
-                for bucket in ["violations","incomplete","passes"]:
+                for bucket in ["violations", "incomplete", "passes"]:
                     for r in axe_payload.get(bucket, []):
                         scs = _extract_scs(r.get("tags", []))
                         for n in r.get("nodes", []):
@@ -780,30 +803,38 @@ def run_axe_on_url(
                     max_back_steps=(6 if quick_scan else KB_MAX_BACK_STEPS),
                     screenshot_keyboard=screenshot_keyboard,
                 )
-                # Unreachable: uncertain → manual_review
+                # Unreachable: uncertain → manual_review (avoid false FAILs)
                 for it in kb.get("unreachable", [])[:40]:
                     sel = it.get("selector")
-                    cand = _mk_candidate(page, url, "2.1.1", "keyboard-probe:unreachable", sel,
-                                         "Interactive element may be unreachable by Tab (needs manual verification).",
-                                         verdict="manual_review")
+                    cand = _mk_candidate(
+                        page, url, "2.1.1", "keyboard-probe:unreachable", sel,
+                        "Interactive element may be unreachable by Tab (needs manual verification).",
+                        verdict="manual_review"
+                    )
                     shot_path = (out_dir / "screenshots" / (sanitize_filename(f"kb_unreach__{(sel or '')[:60]}") + ".png"))
                     cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
                     cand["source"] = "keyboard"
                     candidates.append(cand)
-                # Activation failure: still fail
+                # Activation failure: manual review in this conservative profile
                 for it in kb.get("activations", [])[:30]:
                     if not (it.get("enter_ok") or it.get("space_ok")):
                         sel = it.get("selector")
-                        cand = _mk_candidate(page, url, "2.1.1", "keyboard-probe:activation", sel,
-                                             "Enter/Space did not activate a focusable control.", verdict="fail")
+                        cand = _mk_candidate(
+                            page, url, "2.1.1", "keyboard-probe:activation", sel,
+                            "Enter/Space did not activate a focusable control.",
+                            verdict="manual_review"
+                        )
                         shot_path = (out_dir / "screenshots" / (sanitize_filename(f"kb_act__{(sel or '')[:60]}") + ".png"))
                         cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
                         cand["source"] = "keyboard"
                         candidates.append(cand)
                 for it in kb.get("tabindex_neg1", [])[:30]:
                     sel = it.get("selector")
-                    cand = _mk_candidate(page, url, "2.1.1", "keyboard-probe:tabindex--1", sel,
-                                         "Interactive element with tabindex='-1' (roving/disabled exceptions handled).", verdict="fail")
+                    cand = _mk_candidate(
+                        page, url, "2.1.1", "keyboard-probe:tabindex--1", sel,
+                        "Interactive element with tabindex='-1' (roving/disabled exceptions handled).",
+                        verdict="manual_review"
+                    )
                     shot_path = (out_dir / "screenshots" / (sanitize_filename(f"kb_tabneg__{(sel or '')[:60]}") + ".png"))
                     cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
                     cand["source"] = "keyboard"
@@ -812,10 +843,12 @@ def run_axe_on_url(
                 # weak focus-visible + focus-order (from trace)
                 try:
                     fv = detect_focus_visible_weak_from_trace(page, url, out_dir, screenshot_elements=screenshot_elements)
-                    for c in fv: c.setdefault("source","keyboard-trace")
+                    for c in fv:
+                        c.setdefault("source", "keyboard-trace")
                     candidates.extend(fv)
                     fo = detect_focus_order_suspect_from_trace(page, url, out_dir, screenshot_elements=screenshot_elements)
-                    for c in fo: c.setdefault("source","keyboard-trace")
+                    for c in fo:
+                        c.setdefault("source", "keyboard-trace")
                     candidates.extend(fo)
                 except Exception:
                     pass
@@ -823,15 +856,18 @@ def run_axe_on_url(
             # additional detectors
             if not ultra_quick:
                 for det in (
-                    lambda pg,u,od: detect_non_text_content_111(pg,u,od,screenshot_elements),
-                    lambda pg,u,od: detect_info_relationships(pg,u,od,screenshot_elements),   # 1.3.1
-                    lambda pg,u,od: detect_meaningful_sequence(pg,u,od,screenshot_elements),  # 1.3.2
-                    lambda pg,u,od: detect_role_conflicts(pg,u,od,screenshot_elements),       # 4.1.2
-                    lambda pg,u,od: detect_label_in_name(pg,u,od,screenshot_elements),        # 2.5.3
-                    lambda pg,u,od: detect_link_purpose_generic(pg,u,od,screenshot_elements), # 2.4.4
-                    lambda pg,u,od: detect_link_indicator_style(pg,u,od,screenshot_elements), # 1.4.1
-                    lambda pg,u,od: detect_labels_or_instructions_332(pg,u,od,screenshot_elements),
-                    detect_timeouts,                                                         # 2.2.6
+                    lambda pg,u,od: detect_non_text_content_111(pg,u,od,screenshot_elements),               # 1.1.1
+                    lambda pg,u,od: detect_info_relationships(pg,u,od,screenshot_elements),                 # 1.3.1
+                    lambda pg,u,od: detect_meaningful_sequence(pg,u,od,screenshot_elements),                # 1.3.2 (spatial)
+                    lambda pg,u,od: detect_heading_outline_sequence(pg,u,od,screenshot_elements),           # 1.3.2 (outline)
+                    lambda pg,u,od: detect_role_conflicts(pg,u,od,screenshot_elements),                     # 4.1.2
+                    lambda pg,u,od: detect_label_in_name(pg,u,od,screenshot_elements),                      # 2.5.3
+                    lambda pg,u,od: detect_link_purpose_generic(pg,u,od,screenshot_elements),               # 2.4.4
+                    lambda pg,u,od: detect_link_indicator_style(pg,u,od,screenshot_elements),               # 1.4.1
+                    lambda pg,u,od: detect_labels_or_instructions_332(pg,u,od,screenshot_elements),         # 3.3.2
+                    lambda pg,u,od: detect_bypass_blocks(pg,u,od,screenshot_elements),                      # 2.4.1
+                    lambda pg,u,od: detect_language_of_page(pg,u,od,screenshot_elements),                   # 3.1.1
+                    detect_timeouts,                                                                        # 2.2.6
                 ):
                     try:
                         rows = det(page, url, out_dir)
@@ -848,7 +884,7 @@ def run_axe_on_url(
                 c143_fail_b, c143_pass_b = detect_contrast_on_image_text(page, url, out_dir)
                 c1411_fail,  c1411_pass  = detect_contrast_nontext_ui(page, url, out_dir)
                 for c in (c143_fail_a + c143_fail_b + c1411_fail):
-                    c.setdefault("source","detector-contrast")
+                    c.setdefault("source", "detector-contrast")
                 candidates.extend(c143_fail_a + c143_fail_b + c1411_fail)
                 write_json(out_dir / "rule_pages" / "1.4.3_passes.json", c143_pass_a + c143_pass_b)
                 write_json(out_dir / "rule_pages" / "1.4.11_passes.json", c1411_pass)
@@ -887,7 +923,7 @@ def run_axe_on_url(
             axe_issues: List[Dict[str,Any]] = []
 
             # A) axe buckets → issues
-            for bucket in ("violations","incomplete","passes"):
+            for bucket in ("violations", "incomplete", "passes"):
                 for r in axe_payload.get(bucket, []):
                     for n in r.get("nodes", []) or []:
                         axe_issues.append(_mk_issue_from_axe_node(url, r, n, bucket))
@@ -939,7 +975,16 @@ def run_axe_on_url(
 
             # E) de-dupe list & append Manual Review tab (non-breaking)
             axe_issues = _dedupe_by_selector_keep_best(axe_issues)  # safe reuse
-            manual_tab = [i for i in axe_issues if str(i.get("status","")).lower() in ("manual_review","review","undetermined")]
+            manual_tab = [i for i in axe_issues if str(i.get("status", "")).lower() in ("manual_review", "review", "undetermined")]
+
+            # 2.4.1 sanity: if we can't verify a bypass mechanism, downgrade reported passes to review
+            if not _has_skip_or_landmarks(page):
+                for row in axe_issues:
+                    sc = row.get("SC") or ""
+                    status = (row.get("status") or "").lower()
+                    if sc == "2.4.1" and status == "pass":
+                        row["status"] = "review"
+                        row["note"] = (row.get("note") or "") + " Axe reported pass, but no skip link/landmarks verified; needs manual confirmation."
 
             write_json(out_dir / "axe_results.json", {
                 "axe_raw": axe_payload,
@@ -950,11 +995,13 @@ def run_axe_on_url(
         finally:
             # Always clean up
             try:
-                if context: context.close()
+                if context:
+                    context.close()
             except Exception:
                 pass
             try:
-                if browser: browser.close()
+                if browser:
+                    browser.close()
             except Exception:
                 pass
 
