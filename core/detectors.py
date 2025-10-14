@@ -41,10 +41,13 @@ def crop_element_screenshot(page, selector: str, out_path: pathlib.Path, enabled
         im = Image.open(tmp)
         x = int(clip["x"]); y = int(clip["y"]); w = int(clip["width"]); h = int(clip["height"])
         w = max(0, min(w, im.width - x)); h = max(0, min(h, im.height - y))
-        if w <= 0 or h <= 0: return None
+        if w <= 0 or h <= 0:
+            return None
         im.crop((x, y, x+w, y+h)).save(out_path)
-        try: tmp.unlink()
-        except Exception: pass
+        try:
+            tmp.unlink()
+        except Exception:
+            pass
         return str(out_path)
     except Exception:
         return None
@@ -108,8 +111,12 @@ def get_role_name_guess(page, selector: str) -> str:
 
 def _get_attrs(page, selector: str) -> Dict[str, Any]:
     try:
-        if not page.query_selector(selector): return {}
-        return page.eval_on_selector(selector, "(el)=>{const o={};for (const a of el.getAttributeNames()) o[a]=el.getAttribute(a); return o;}")
+        if not page.query_selector(selector):
+            return {}
+        return page.eval_on_selector(
+            selector,
+            "(el)=>{const o={};for (const a of el.getAttributeNames()) o[a]=el.getAttribute(a); return o;}"
+        )
     except Exception:
         return {}
 
@@ -215,6 +222,7 @@ def collect_headings_and_labels(frame) -> List[Dict[str,Any]]:
       }
       return out;
     }""")
+
 def detect_bypass_blocks(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str,Any]]:
     """
     SC 2.4.1 — Provide a mechanism to bypass blocks of repeated content.
@@ -236,16 +244,17 @@ def detect_bypass_blocks(page, url: str, out_dir: pathlib.Path, screenshot_eleme
     try:
         r = page.evaluate(js)
         if r and (r.get("hasMain") or r.get("hasSkip")):
-            # no issue to report; treat as implicit pass → nothing to add
             return out
-        # else manual review
-        cand = _mk_candidate(page, url, "2.4.1", "runner:bypass-blocks", "",
-                             "No landmark <main>/role=main or obvious skip link found — verify bypass mechanism.",
-                             verdict="manual_review")
+        cand = _mk_candidate(
+            page, url, "2.4.1", "runner:bypass-blocks", "",
+            "No landmark <main>/role=main or obvious skip link found — verify bypass mechanism.",
+            verdict="manual_review"
+        )
         out.append(cand)
     except Exception:
         pass
     return out
+
 def detect_language_of_page(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str,Any]]:
     """
     SC 3.1.1 — Language of Page.
@@ -261,8 +270,10 @@ def detect_language_of_page(page, url: str, out_dir: pathlib.Path, screenshot_el
         r = page.evaluate(js)
         lang = (r.get("lang") or "").strip().lower()
         if not lang or lang in ("xx", "und", "none"):
-            cand = _mk_candidate(page, url, "3.1.1", "runner:language-of-page", "html",
-                                 "<html> element missing valid lang attribute.", verdict="fail")
+            cand = _mk_candidate(
+                page, url, "3.1.1", "runner:language-of-page", "html",
+                "<html> element missing valid lang attribute.", verdict="fail"
+            )
             out.append(cand)
     except Exception:
         pass
@@ -285,7 +296,6 @@ def evaluate_2_4_6_locally(items: List[Dict[str,Any]]) -> Tuple[List[Dict[str,An
                 "reasons": ["Heading text generic or empty"] if verdict=="fail" else []
             })
         else:
-            # labels: ignore buttons/links – those belong under 2.4.4 Link Purpose
             role = (it.get("controlType") or "").lower()
             if role in ("button","a","link","[role=\"button\"]","[role=\"link\"]"):
                 continue
@@ -299,7 +309,6 @@ def evaluate_2_4_6_locally(items: List[Dict[str,Any]]) -> Tuple[List[Dict[str,An
                 "reasons": ["Label generic/too short"] if verdict=="fail" else []
             })
     return fails, passes
-
 
 def write_2_4_6_ai_prompt(out_dir: pathlib.Path, url: str, fast_mode: bool) -> None:
     scope = "MAIN document only (fast mode; no iframes)" if fast_mode else "main document PLUS same-origin iframes"
@@ -405,7 +414,7 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
       const accName = (el) => {
         let name = (el.getAttribute('aria-label') || '').trim();
         if (!name) {
-          const ids = (el.getAttribute('aria-labelledby') || "").split(/\s+/).filter(Boolean);
+          const ids = (el.getAttribute('aria-labelledby') || "").split(/\\s+/).filter(Boolean);
           if (ids.length) {
             name = ids.map(id => (document.getElementById(id)?.innerText || '')).join(' ').trim();
           }
@@ -461,7 +470,6 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
       });
 
       // D) graphics only: <svg> or role="img" with no accessible name
-      //    Do NOT include native <button> elements here (buttons with visible text are fine).
       q('svg, [role="img"]').forEach(el => {
         if (!isVisible(el)) return;
         const ariaHidden = (el.getAttribute('aria-hidden') || '').toLowerCase() === 'true';
@@ -510,15 +518,16 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
     for h in res.get("graphics_no_name", []):
         out.append(_fail(h["sel"], "Graphic (<svg>/role=img) lacks accessible name (no <title>/aria-*)."))
     for h in res.get("css_bg_controls", []):
-        cand = _mk_candidate(page, url, "1.1.1", "runner:css-bg-control", h["sel"],
-                             "Control appears to rely on CSS background-image; accessible name uncertain.",
-                             verdict="manual_review")
+        cand = _mk_candidate(
+            page, url, "1.1.1", "runner:css-bg-control", h["sel"],
+            "Control appears to rely on CSS background-image; accessible name uncertain.",
+            verdict="manual_review"
+        )
         shot = out_dir / "screenshots" / (sanitize_filename(f"sc111_bg__{(h['sel'] or '')[:60]}") + ".png")
         cand["screenshot"] = crop_element_screenshot(page, h["sel"], shot, enabled=screenshot_elements)
         out.append(cand)
 
     return out
-
 
 def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
@@ -574,7 +583,6 @@ def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, scr
       const describedByText = (el) => {
         const ids = (el.getAttribute('aria-describedby') || "").split(/\\s+/).filter(Boolean);
         let s = ids.map(id => textOf(document.getElementById(id))).join(" ").trim();
-        // Add common help siblings
         const help = el.closest('.field, .form-group, .input, div') || el.parentElement;
         if (help) {
           const hint = help.querySelector('.help, .hint, .description, small');
@@ -585,8 +593,7 @@ def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, scr
       const hasVisibleRequiredMark = (el) => {
         const lab = nearestLabel(el).toLowerCase();
         if (lab.includes("required")) return true;
-        if (/[*]\s*$/.test(lab) || /[*]\s*/.test(lab)) return true;
-        // Look for a nearby note "All fields marked * are required"
+        if (/[*]\\s*$/.test(lab) || /[*]\\s*/.test(lab)) return true;
         const root = el.closest('form') || document;
         const note = root.querySelector('p,small,div');
         if (note && /required/.test((note.innerText||"").toLowerCase()) && note.innerText.includes("*")) return true;
@@ -607,11 +614,9 @@ def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, scr
         return (ph + " " + desc).trim();
       };
 
-      // Collect atomic controls
       const ctrls = q('input, select, textarea, [role="combobox"], [role="spinbutton"], [role="textbox"]')
         .filter(isVisible);
 
-      // Group radios/checkboxes by (name,parentField)
       const groupRecords = [];
       const groups = new Map();
       ctrls.forEach(el => {
@@ -625,14 +630,10 @@ def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, scr
         }
       });
 
-      // Build outputs
       const out = { missing_name: [], groups_missing_label: [], required_no_visible_mark: [], complex_without_hint: [] };
 
-      // A) Missing programmatic name
       ctrls.forEach(el => {
-        const tn = el.tagName.toLowerCase();
         const type = (el.getAttribute('type') || '').toLowerCase();
-        // skip hidden
         if (type === 'hidden') return;
         const name = accName(el);
         if (!name) {
@@ -640,16 +641,13 @@ def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, scr
         }
       });
 
-      // B) Radio/checkbox groups without a group label
       for (const [key, arr] of groups.entries()) {
         if (arr.length < 2) continue;
         const container = arr[0].closest('fieldset, [role="group"], [role="radiogroup"]');
         let hasGroupLabel = false;
         if (container) {
-          // fieldset/legend
           const lg = container.querySelector('legend');
           if (lg && isVisible(lg) && textOf(lg)) hasGroupLabel = true;
-          // role group name
           const r = (container.getAttribute('role') || '').toLowerCase();
           if (!hasGroupLabel && (r === 'group' || r === 'radiogroup')) {
             const acc = container.getAttribute('aria-label') || '';
@@ -666,7 +664,6 @@ def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, scr
         }
       }
 
-      // C) Required fields with no visible required mark near label
       ctrls.forEach(el => {
         const type = (el.getAttribute('type') || '').toLowerCase();
         if (type === 'hidden') return;
@@ -677,7 +674,6 @@ def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, scr
         }
       });
 
-      // D) Complex format fields without any hint
       ctrls.forEach(el => {
         if (!isProbablyComplexFormat(el)) return;
         const hint = getHintText(el).toLowerCase();
@@ -707,19 +703,15 @@ def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, scr
         cand["screenshot"] = crop_element_screenshot(page, sel, shot, enabled=screenshot_elements)
         return cand
 
-    # A) Missing programmatic name -> FAIL
     for h in res.get("missing_name", []):
         out.append(_fail(h["sel"], "Form control lacks a programmatic label (label/aria-label/aria-labelledby)."))
 
-    # B) Group label missing -> FAIL (point at first item)
     for h in res.get("groups_missing_label", []):
         out.append(_fail(h["sel"], "Radio/checkbox group missing group label (fieldset/legend or named group)."))
 
-    # C) Required field, no visible mark -> MANUAL_REVIEW (conservative)
     for h in res.get("required_no_visible_mark", []):
         out.append(_review(h["sel"], "Required field without a visible required indication near its label (verify with design guidelines)."))
 
-    # D) Complex format with no hint -> MANUAL_REVIEW
     for h in res.get("complex_without_hint", []):
         out.append(_review(h["sel"], "Complex input format without visible hint/example (e.g., MM/DD/YYYY, phone format)."))
 
@@ -740,7 +732,6 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
         const txt = (el.innerText || '').trim();
         if (!txt || !(r.width>40 && r.height>14)) continue;
 
-        // treat as UI? (skip: buttons/links/controls/roles)
         const tn = el.tagName.toLowerCase();
         const isLink = el.closest('a[href]') && tn !== 'a' ? true : (tn === 'a' && el.hasAttribute('href'));
         const isControl = isLink || el.closest('button,input,select,textarea,[role="button"],[role="link"],[role="tab"],[role="switch"],[role="checkbox"],[role="radio"],[role="combobox"],[role="listbox"]');
@@ -768,7 +759,8 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
     fails, passes = [], []
     try:
         elems = page.evaluate(js)
-        if not elems: return fails, passes
+        if not elems:
+            return fails, passes
         full_path = out_dir / "screenshots" / "contrast_text_full.png"
         ensure_dir(full_path.parent)
         page.screenshot(path=str(full_path), full_page=True)
@@ -777,23 +769,26 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
         for e in elems:
             sel = e["sel"]; rect = e["rect"]; role = e.get("role") or ""
             if e.get("isControl"):
-                # route UI text to manual review to avoid double-counting with 1.4.11
-                cand = _mk_candidate(page, url, "1.4.3", "runner:contrast-text", sel,
-                                     "Text belongs to a UI control — evaluate under 1.4.11 (non-text contrast) or review.",
-                                     verdict="manual_review", evidence={"context":"ui_control"})
+                cand = _mk_candidate(
+                    page, url, "1.4.3", "runner:contrast-text", sel,
+                    "Text belongs to a UI control — evaluate under 1.4.11 (non-text contrast) or review.",
+                    verdict="manual_review", evidence={"context":"ui_control"}
+                )
                 fails.append(cand)
                 continue
 
             bg_source = e.get("bg_source") or "solid"
             if bg_source in ("pseudo","gradient","unresolved"):
-                cand = _mk_candidate(page, url, "1.4.3", "runner:contrast-text", sel,
-                                     "Undetermined background (pseudo/gradient) — manual verification required.",
-                                     verdict="manual_review", evidence={"bg_source": bg_source})
+                cand = _mk_candidate(
+                    page, url, "1.4.3", "runner:contrast-text", sel,
+                    "Undetermined background (pseudo/gradient) — manual verification required.",
+                    verdict="manual_review", evidence={"bg_source": bg_source}
+                )
                 fails.append(cand)
                 continue
 
             fr, fg, fb, fa = _parse_rgba_any(e["color"])
-            if fa == 0:  # fully transparent text? skip
+            if fa == 0:
                 continue
             fg_rgb = (fr, fg, fb)
             bg_css = e.get("bg","")
@@ -805,7 +800,6 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
 
             ratio = _contrast_ratio(fg_rgb, bg_rgb)
             fs_px = float(re.findall(r"[\d.]+", e.get("fontSize","16px"))[0])
-            # bold/large rules
             try:
                 fw = page.eval_on_selector(sel, "(el)=>getComputedStyle(el).fontWeight") if sel else "400"
                 is_bold = int(fw) >= 700
@@ -850,7 +844,8 @@ def detect_contrast_on_image_text(page, url: str, out_dir: pathlib.Path) -> Tupl
     fails, passes = [], []
     try:
         elems = page.evaluate(js)
-        if not elems: return fails, passes
+        if not elems:
+            return fails, passes
         full_path = out_dir / "screenshots" / "contrast_over_image_full.png"
         ensure_dir(full_path.parent)
         page.screenshot(path=str(full_path), full_page=True)
@@ -858,9 +853,11 @@ def detect_contrast_on_image_text(page, url: str, out_dir: pathlib.Path) -> Tupl
 
         for e in elems:
             sel = e["sel"]; rect = e["rect"]; bg_source = e.get("bg_source") or "pseudo"
-            cand = _mk_candidate(page, url, "1.4.3", "runner:contrast-over-image", sel,
-                                 "Text over image/gradient — send to Manual Review.", verdict="manual_review",
-                                 evidence={"bg_source": bg_source})
+            cand = _mk_candidate(
+                page, url, "1.4.3", "runner:contrast-over-image", sel,
+                "Text over image/gradient — send to Manual Review.", verdict="manual_review",
+                evidence={"bg_source": bg_source}
+            )
             shot = out_dir / "screenshots" / (sanitize_filename(f"contrast_over_img__{(sel or '')[:60]}") + ".png")
             try:
                 box = (int(rect["x"]), int(rect["y"]), int(rect["x"]+rect["w"]), int(rect["y"]+rect["h"]))
@@ -902,7 +899,8 @@ def detect_contrast_nontext_ui(page, url: str, out_dir: pathlib.Path) -> Tuple[L
     fails, passes = [], []
     try:
         elems = page.evaluate(js)
-        if not elems: return fails, passes
+        if not elems:
+            return fails, passes
         full_path = out_dir / "screenshots" / "contrast_nontext_full.png"
         ensure_dir(full_path.parent)
         page.screenshot(path=str(full_path), full_page=True)
@@ -912,9 +910,11 @@ def detect_contrast_nontext_ui(page, url: str, out_dir: pathlib.Path) -> Tuple[L
             sel = e["sel"]; rect = e["rect"]
             bg_source = e.get("bg_source") or "solid"
             if bg_source in ("pseudo","gradient","unresolved"):
-                cand = _mk_candidate(page, url, "1.4.11", "runner:nontext-ui-contrast",
-                                     sel, "Undetermined component background (pseudo/gradient) — Manual Review.",
-                                     verdict="manual_review", evidence={"bg_source": bg_source})
+                cand = _mk_candidate(
+                    page, url, "1.4.11", "runner:nontext-ui-contrast",
+                    sel, "Undetermined component background (pseudo/gradient) — Manual Review.",
+                    verdict="manual_review", evidence={"bg_source": bg_source}
+                )
                 fails.append(cand)
                 continue
 
@@ -924,8 +924,10 @@ def detect_contrast_nontext_ui(page, url: str, out_dir: pathlib.Path) -> Tuple[L
             ratio = _contrast_ratio(inside_rgb, outside_rgb)
             evidence = {"contrast_ratio": round(ratio,2), "inside_rgb": inside_rgb, "outside_rgb": outside_rgb}
             if ratio < CONTRAST_NON_TEXT_UI:
-                cand = _mk_candidate(page, url, "1.4.11", "runner:nontext-ui-contrast", sel,
-                                     f"Non-text contrast {ratio:.2f} < 3.0", verdict="fail", evidence=evidence)
+                cand = _mk_candidate(
+                    page, url, "1.4.11", "runner:nontext-ui-contrast", sel,
+                    f"Non-text contrast {ratio:.2f} < 3.0", verdict="fail", evidence=evidence
+                )
                 shot = out_dir / "screenshots" / (sanitize_filename(f"contrast_nontext__{(sel or '')[:60]}") + ".png")
                 cand["screenshot"] = crop_element_screenshot(page, sel, shot, enabled=True)
                 fails.append(cand)
@@ -934,7 +936,6 @@ def detect_contrast_nontext_ui(page, url: str, out_dir: pathlib.Path) -> Tuple[L
     except Exception:
         pass
     return fails, passes
-
 
 # -------------------- other detectors --------------------
 
@@ -982,15 +983,16 @@ def detect_info_relationships(page, url: str, out_dir: pathlib.Path, screenshot_
         hits = page.evaluate(js)
         for h in hits:
             sel = h.get("sel") or ""
-            cand = _mk_candidate(page, url, "1.3.1", "runner:info-relationships-list-missing", sel,
-                                 "Navigation links not grouped using list semantics.", verdict="fail")
+            cand = _mk_candidate(
+                page, url, "1.3.1", "runner:info-relationships-list-missing", sel,
+                "Navigation links not grouped using list semantics.", verdict="fail"
+            )
             shot_path = (out_dir / "screenshots" / (sanitize_filename(f"rel_nav__{(sel or '')[:60]}") + ".png"))
             cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
             out.append(cand)
     except Exception:
         pass
     return out
-
 
 def detect_heading_outline_sequence(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str,Any]]:
     """
@@ -1007,7 +1009,6 @@ def detect_heading_outline_sequence(page, url: str, out_dir: pathlib.Path, scree
       const out = [];
       for (let i=1;i<items.length;i++){
         const prev = items[i-1], cur = items[i];
-        // allow same-level or -1; flag if drop > 1 (e.g., from 2 -> 4)
         if (cur.level - prev.level > 1) {
           out.push({ sel: null, idx: i });
         }
@@ -1017,9 +1018,8 @@ def detect_heading_outline_sequence(page, url: str, out_dir: pathlib.Path, scree
     out = []
     try:
         jumps = page.evaluate(js)
-        if not jumps: return out
-        # we can't serialize elements from page; re-find selector by nearest text
-        # best-effort crops:
+        if not jumps:
+            return out
         for j in jumps[:12]:
             note = "Possible heading level jump in outline (e.g., H2 → H4). Verify reading order."
             cand = _mk_candidate(page, url, "1.3.2", "runner:heading-outline-jump", "", note, verdict="manual_review")
@@ -1027,7 +1027,6 @@ def detect_heading_outline_sequence(page, url: str, out_dir: pathlib.Path, scree
     except Exception:
         pass
     return out
-
 
 def detect_role_conflicts(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
@@ -1051,7 +1050,10 @@ def detect_role_conflicts(page, url: str, out_dir: pathlib.Path, screenshot_elem
         hits = page.evaluate(js)
         for h in hits:
             sel = h["sel"]
-            cand = _mk_candidate(page, url, "4.1.2", "runner:role-conflict-or-nested", sel, "Potential role conflict or nested interactive elements.", verdict="fail")
+            cand = _mk_candidate(
+                page, url, "4.1.2", "runner:role-conflict-or-nested", sel,
+                "Potential role conflict or nested interactive elements.", verdict="fail"
+            )
             shot_name = sanitize_filename(f"roleconf__{(sel or '')[:60]}") + ".png"
             shot_path = (out_dir / "screenshots" / shot_name)
             cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
@@ -1089,7 +1091,6 @@ def _accname_for_selector(page, sel: str) -> str:
     except Exception:
         return ""
 
-
 def detect_label_in_name(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
     SC 2.5.3 — Visible label included in accessible name.
@@ -1125,19 +1126,19 @@ def detect_label_in_name(page, url: str, out_dir: pathlib.Path, screenshot_eleme
         for r in rows:
             sel = r["sel"]
             vis_tokens = toks(r.get("visible") or "")
-            if not vis_tokens:  # ignore empty/very short/icon cases
+            if not vis_tokens:
                 continue
             acc = _normalize_text_label(_accname_for_selector(page, sel))
-            # token containment: every visible token should appear in accname
             missing = [t for t in vis_tokens if t not in acc.split()]
             if missing:
-                # try again if aria-labelledby exists (resolve)
                 if r.get("labelledby"):
                     acc2 = _normalize_text_label(_accname_for_selector(page, sel))
                     if all(t in acc2.split() for t in vis_tokens):
                         continue
-                cand = _mk_candidate(page, url, "2.5.3", "runner:label-in-name", sel,
-                                     "Visible label text not included in the accessible name.", verdict="fail")
+                cand = _mk_candidate(
+                    page, url, "2.5.3", "runner:label-in-name", sel,
+                    "Visible label text not included in the accessible name.", verdict="fail"
+                )
                 shot_name = sanitize_filename(f"lin__{(sel or '')[:60]}") + ".png"
                 shot_path = (out_dir / "screenshots" / shot_name)
                 cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
@@ -1146,13 +1147,13 @@ def detect_label_in_name(page, url: str, out_dir: pathlib.Path, screenshot_eleme
         pass
     return out
 
-
 def detect_link_purpose_generic(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
     SC 2.4.4 — generic link text; allow nearby heading to disambiguate.
     """
     GENERIC = {"learn more","get started","read more","see more","view more","more","details","click here"}
-    def _clean_link_text(s:str)->str:
+
+    def _clean_link_text(s: str) -> str:
         s = (s or "").lower()
         s = re.sub(r"[\u2190-\u21ff\u25a0-\u25ff\u2700-\u27bf➡️•►»›‹«→]+", "", s)
         s = re.sub(r"\s+", " ", s)
@@ -1160,29 +1161,28 @@ def detect_link_purpose_generic(page, url: str, out_dir: pathlib.Path, screensho
         return s.strip()
 
     def _nearby_heading_text(page, sel: str) -> str:
-    js = """(el) => {
-      if (!el) return "";
-      const hs = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,[role="heading"]'));
-      let best = "", bestDist = Infinity;
-      const r = el.getBoundingClientRect();
-      for (const h of hs) {
-        const rb = h.getBoundingClientRect();
-        if (rb.top <= r.top + 2) {
-          const d = Math.abs(r.top - rb.top) + Math.abs(r.left - rb.left);
-          if (d < bestDist) {
-            bestDist = d;
-            best = (h.innerText || h.getAttribute('aria-label') || '').trim();
+        js = """(el) => {
+          if (!el) return "";
+          const hs = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,[role="heading"]'));
+          let best = "", bestDist = Infinity;
+          const r = el.getBoundingClientRect();
+          for (const h of hs) {
+            const rb = h.getBoundingClientRect();
+            if (rb.top <= r.top + 2) {
+              const d = Math.abs(r.top - rb.top) + Math.abs(r.left - rb.left);
+              if (d < bestDist) {
+                bestDist = d;
+                best = (h.innerText || h.getAttribute('aria-label') || '').trim();
+              }
+            }
           }
-        }
-      }
-      return best;
-    }"""
-    try:
-        t = page.eval_on_selector(sel, js) or ""
-        return re.sub(r"\\s+"," ", t).strip().lower()
-    except Exception:
-        return ""
-
+          return best;
+        }"""
+        try:
+            t = page.eval_on_selector(sel, js) or ""
+            return re.sub(r"\s+", " ", t).strip().lower()
+        except Exception:
+            return ""
 
     js = """() => {
       const res = [];
@@ -1204,10 +1204,11 @@ def detect_link_purpose_generic(page, url: str, out_dir: pathlib.Path, screensho
                 sel = r["sel"]
                 ctx = _nearby_heading_text(page, sel)
                 if ctx:
-                    # context disambiguates → consider OK, add no fail
                     continue
-                cand = _mk_candidate(page, url, "2.4.4", "runner:link-purpose-generic", sel,
-                                     f'Generic link text: "{text}" without disambiguating context.', verdict="fail")
+                cand = _mk_candidate(
+                    page, url, "2.4.4", "runner:link-purpose-generic", sel,
+                    f'Generic link text: "{text}" without disambiguating context.', verdict="fail"
+                )
                 shot_name = sanitize_filename(f"lp__{(sel or '')[:60]}") + ".png"
                 shot_path = (out_dir / "screenshots" / shot_name)
                 cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
@@ -1243,7 +1244,10 @@ def detect_link_indicator_style(page, url: str, out_dir: pathlib.Path, screensho
         rows = page.evaluate(js)
         for r in rows:
             sel = r["sel"]
-            cand = _mk_candidate(page, url, "1.4.1", "link-indicator:style", sel, "Inline link not visually distinguished (no underline and no color difference).", verdict="fail")
+            cand = _mk_candidate(
+                page, url, "1.4.1", "link-indicator:style", sel,
+                "Inline link not visually distinguished (no underline and no color difference).", verdict="fail"
+            )
             shot_name = sanitize_filename(f"linkind__{(sel or '')[:60]}") + ".png"
             shot_path = (out_dir / "screenshots" / shot_name)
             cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
@@ -1279,17 +1283,26 @@ def detect_timeouts(page, url: str, out_dir: pathlib.Path) -> List[Dict[str, Any
         for m in res.get("metas", []):
             c = m.get("content","")
             secs = None
-            try: secs = int((c.split(";")[0] or "").strip())
-            except Exception: secs = None
+            try:
+                secs = int((c.split(";")[0] or "").strip())
+            except Exception:
+                secs = None
             if secs is not None and secs < TIMEOUT_20H_SECONDS:
-                cand = _mk_candidate(page, url, "2.2.6", "timeout:meta-refresh", "", f"Meta refresh present (~{secs}s) without user control/warning.", verdict="fail")
+                cand = _mk_candidate(
+                    page, url, "2.2.6", "timeout:meta-refresh", "",
+                    f"Meta refresh present (~{secs}s) without user control/warning.", verdict="fail"
+                )
                 out.append(cand)
         code = res.get("inlineScripts","") or ""
         for m in re.finditer(r"setTimeout\s*\(([^,]+),\s*(\d+)\s*\)", code, flags=re.S|re.I):
             delay_ms = int(m.group(2))
             callback_src = m.group(1)
             if delay_ms < TIMEOUT_20H_MS and re.search(r"location|redirect|logout|session", callback_src, flags=re.I):
-                cand = _mk_candidate(page, url, "2.2.6", "timeout:settimeout", "", f"Script sets a time-based action at ~{int(delay_ms/1000)}s (possible timeout) without visible notice.", verdict="fail")
+                cand = _mk_candidate(
+                    page, url, "2.2.6", "timeout:settimeout", "",
+                    f"Script sets a time-based action at ~{int(delay_ms/1000)}s (possible timeout) without visible notice.",
+                    verdict="fail"
+                )
                 out.append(cand)
     except Exception:
         pass
@@ -1305,7 +1318,8 @@ def _read_keyboard_trace(out_dir: pathlib.Path) -> List[Dict[str, Any]]:
     with p.open("r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
-            if not line: continue
+            if not line:
+                continue
             try:
                 rows.append(json.loads(line))
             except Exception:
@@ -1341,17 +1355,19 @@ def detect_focus_order_suspect_from_trace(page, url: str, out_dir: pathlib.Path,
     for i in range(1, len(trace)):
         prev = trace[i-1]; cur = trace[i]
         rp = (prev.get("rect") or {}); rc = (cur.get("rect") or {})
-        if not rp or not rc: continue
+        if not rp or not rc:
+            continue
         dy = rc.get("y", 0) - rp.get("y", 0)
         if dy < -400:
             sel = cur.get("selector") or ""
-            cand = _mk_candidate(page, url, "2.4.3", "runner:focus-order-suspect",
-                                 sel, "Focus order may not follow a meaningful sequence (large jump detected).",
-                                 verdict="manual_review")
+            cand = _mk_candidate(
+                page, url, "2.4.3", "runner:focus-order-suspect",
+                sel, "Focus order may not follow a meaningful sequence (large jump detected).",
+                verdict="manual_review"
+            )
             shot = out_dir / "screenshots" / (sanitize_filename(f"forder__{sel[:60]}") + ".png")
             cand["screenshot"] = crop_element_screenshot(page, sel, shot, enabled=screenshot_elements)
             out.append(cand)
             if len(out) >= 10:
                 break
     return out
-
