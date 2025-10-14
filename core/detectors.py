@@ -1067,9 +1067,7 @@ def _normalize_text_label(s: str) -> str:
     return s.strip()
 
 def _accname_for_selector(page, sel: str) -> str:
-    js = """
-    (sel) => {
-      const el = document.querySelector(sel);
+    js = """(el) => {
       if(!el) return "";
       const aria = el.getAttribute('aria-label');
       if (aria && aria.trim()) return aria.trim();
@@ -1085,12 +1083,12 @@ def _accname_for_selector(page, sel: str) -> str:
       if (by) return by;
       const txt = (el.innerText || el.textContent || "").trim();
       return txt;
-    }
-    """
+    }"""
     try:
-        return (page.eval_on_selector(sel, js, sel) or "").strip()
+        return (page.eval_on_selector(sel, js) or "").strip()
     except Exception:
         return ""
+
 
 def detect_label_in_name(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
@@ -1162,31 +1160,29 @@ def detect_link_purpose_generic(page, url: str, out_dir: pathlib.Path, screensho
         return s.strip()
 
     def _nearby_heading_text(page, sel: str) -> str:
-        js = """
-        (sel) => {
-          const el = document.querySelector(sel);
-          if(!el) return "";
-          const hs = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,[role="heading"]'));
-          let best = "", bestDist = Infinity;
-          const r = el.getBoundingClientRect();
-          for (const h of hs) {
-            const rb = h.getBoundingClientRect();
-            if (rb.top <= r.top + 2) {
-              const d = Math.abs(r.top - rb.top) + Math.abs(r.left - rb.left);
-              if (d < bestDist) {
-                bestDist = d;
-                best = (h.innerText || h.getAttribute('aria-label') || '').trim();
-              }
-            }
+    js = """(el) => {
+      if (!el) return "";
+      const hs = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,[role="heading"]'));
+      let best = "", bestDist = Infinity;
+      const r = el.getBoundingClientRect();
+      for (const h of hs) {
+        const rb = h.getBoundingClientRect();
+        if (rb.top <= r.top + 2) {
+          const d = Math.abs(r.top - rb.top) + Math.abs(r.left - rb.left);
+          if (d < bestDist) {
+            bestDist = d;
+            best = (h.innerText || h.getAttribute('aria-label') || '').trim();
           }
-          return best;
-        }"""
-        try:
-            t = page.eval_on_selector(sel, js, sel) or ""
-            t = re.sub(r"\s+"," ", t).strip().lower()
-            return t
-        except Exception:
-            return ""
+        }
+      }
+      return best;
+    }"""
+    try:
+        t = page.eval_on_selector(sel, js) or ""
+        return re.sub(r"\\s+"," ", t).strip().lower()
+    except Exception:
+        return ""
+
 
     js = """() => {
       const res = [];
