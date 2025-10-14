@@ -215,8 +215,65 @@ def collect_headings_and_labels(frame) -> List[Dict[str,Any]]:
       }
       return out;
     }""")
+def detect_bypass_blocks(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str,Any]]:
+    """
+    SC 2.4.1 — Provide a mechanism to bypass blocks of repeated content.
+    PASS if there is:
+      - A visible *skip* link (anchor to an in-page target) OR
+      - A <main> landmark (or role="main")
+    If neither is present -> MANUAL_REVIEW (conservative).
+    """
+    js = """() => {
+      const q = (sel)=>Array.from(document.querySelectorAll(sel));
+      const hasMain = !!document.querySelector('main, [role="main"]');
+      const skip = q('a[href^="#"]').some(a => {
+        const t = (a.innerText || a.textContent || '').toLowerCase();
+        return /skip/.test(t);
+      });
+      return { hasMain, hasSkip: skip };
+    }"""
+    out = []
+    try:
+        r = page.evaluate(js)
+        if r and (r.get("hasMain") or r.get("hasSkip")):
+            # no issue to report; treat as implicit pass → nothing to add
+            return out
+        # else manual review
+        cand = _mk_candidate(page, url, "2.4.1", "runner:bypass-blocks", "",
+                             "No landmark <main>/role=main or obvious skip link found — verify bypass mechanism.",
+                             verdict="manual_review")
+        out.append(cand)
+    except Exception:
+        pass
+    return out
+def detect_language_of_page(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str,Any]]:
+    """
+    SC 3.1.1 — Language of Page.
+    FAIL if <html> has no lang or an empty/unknown value.
+    """
+    js = """() => {
+      const html = document.documentElement;
+      const lang = (html.getAttribute('lang') || '').trim();
+      return { lang };
+    }"""
+    out = []
+    try:
+        r = page.evaluate(js)
+        lang = (r.get("lang") or "").strip().lower()
+        if not lang or lang in ("xx", "und", "none"):
+            cand = _mk_candidate(page, url, "3.1.1", "runner:language-of-page", "html",
+                                 "<html> element missing valid lang attribute.", verdict="fail")
+            out.append(cand)
+    except Exception:
+        pass
+    return out
 
 def evaluate_2_4_6_locally(items: List[Dict[str,Any]]) -> Tuple[List[Dict[str,Any]], List[Dict[str,Any]]]:
+    """
+    Only check:
+      - Headings
+      - Labels for form inputs (NOT CTA buttons or generic links)
+    """
     fails, passes = [], []
     for it in items:
         if it["type"] == "heading":
@@ -228,6 +285,10 @@ def evaluate_2_4_6_locally(items: List[Dict[str,Any]]) -> Tuple[List[Dict[str,An
                 "reasons": ["Heading text generic or empty"] if verdict=="fail" else []
             })
         else:
+            # labels: ignore buttons/links – those belong under 2.4.4 Link Purpose
+            role = (it.get("controlType") or "").lower()
+            if role in ("button","a","link","[role=\"button\"]","[role=\"link\"]"):
+                continue
             vis = _norm_text(it.get("visibleLabel",""))
             name = _norm_text(it.get("accessibleName",""))
             generic = (vis in GENERIC_LABELS) or (not vis and name in GENERIC_LABELS)
@@ -238,6 +299,7 @@ def evaluate_2_4_6_locally(items: List[Dict[str,Any]]) -> Tuple[List[Dict[str,An
                 "reasons": ["Label generic/too short"] if verdict=="fail" else []
             })
     return fails, passes
+
 
 def write_2_4_6_ai_prompt(out_dir: pathlib.Path, url: str, fast_mode: bool) -> None:
     scope = "MAIN document only (fast mode; no iframes)" if fast_mode else "main document PLUS same-origin iframes"
@@ -304,16 +366,16 @@ def _sample_bg_from_image(im: Image.Image, rect) -> Tuple[int,int,int]:
 
 def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
-    SC 1.1.1 — Mechanical checks for:
-      A) <img> without alt (and not decorative)
-      B) <input type="image"> without alt
-      C) Interactive/focusable <img> with empty alt ("")  -> likely needs a real name
-      D) <svg> used as img/button/link without accessible name (no <title>/aria-*)
-      E) Controls that rely on CSS background-image with no accessible name -> manual_review
-    Returns FAIL candidates (and manual_review for E).
+    SC 1.1.1 — Mechanical checks.
+      A) <img> without alt (and not decorative) -> FAIL
+      B) <input type="image"> without alt      -> FAIL
+      C) Focusable/interactive <img> with empty alt ("") -> FAIL
+      D) *Graphics only*: <svg> or role="img" lacking an accessible name (no <title>/aria-*) -> FAIL
+         (DO NOT fail native <button> elements if they have visible text or an accname)
+      E) Controls that visually rely on CSS background-image with no accessible name -> MANUAL_REVIEW
     """
     js = """() => {
-      const res = { img_no_alt: [], img_focusable_empty_alt: [], input_image_no_alt: [], svg_no_name: [], css_bg_controls: [] };
+      const res = { img_no_alt: [], img_focusable_empty_alt: [], input_image_no_alt: [], graphics_no_name: [], css_bg_controls: [] };
       const q = (sel) => Array.from(document.querySelectorAll(sel));
       const isVisible = (el) => {
         const cs = getComputedStyle(el);
@@ -324,22 +386,39 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         const id = el.getAttribute('id'); if (id) return `#${CSS.escape(id)}`;
         let s = el.tagName.toLowerCase();
         if (el.classList.length) s += '.' + Array.from(el.classList).slice(0,3).map(c=>CSS.escape(c)).join('.');
+        const name = el.getAttribute('name');
+        if (name) s += `[name="${CSS.escape(name)}"]`;
         return s;
       };
-      const hasHandlers = (el) => {
-        // quick heuristic for interactivity
-        return !!(el.getAttribute('onclick') || el.getAttribute('onkeydown') || el.getAttribute('onkeyup'));
+      const hasHandlers = (el) => !!(el.getAttribute('onclick') || el.getAttribute('onkeydown') || el.getAttribute('onkeyup'));
+
+      const textOf = (n) => (n && (n.innerText || n.textContent) || "").trim();
+      const nearestLabel = (el) => {
+        if (el.id) {
+          const lab = document.querySelector(`label[for="${CSS.escape(el.id)}"]`);
+          if (lab && isVisible(lab)) return textOf(lab);
+        }
+        const wrap = el.closest('label');
+        if (wrap && isVisible(wrap)) return textOf(wrap);
+        return "";
       };
       const accName = (el) => {
-        let name = el.getAttribute('aria-label') || '';
-        const by = (el.getAttribute('aria-labelledby') || '').split(/\\s+/).filter(Boolean);
-        if (!name && by.length) name = by.map(id => (document.getElementById(id)?.innerText || '')).join(' ').trim();
-        // SVG <title>
-        if (!name && el.tagName.toLowerCase() === 'svg') {
+        let name = (el.getAttribute('aria-label') || '').trim();
+        if (!name) {
+          const ids = (el.getAttribute('aria-labelledby') || "").split(/\s+/).filter(Boolean);
+          if (ids.length) {
+            name = ids.map(id => (document.getElementById(id)?.innerText || '')).join(' ').trim();
+          }
+        }
+        if (!name && el.tagName.toLowerCase()==='svg') {
           const t = el.querySelector('title');
           if (t) name = (t.textContent || '').trim();
         }
-        if (!name) name = (el.getAttribute('alt') || '').trim();
+        if (!name && (el.tagName.toLowerCase()==='img' || el.getAttribute('role')==='img')) {
+          name = (el.getAttribute('alt') || '').trim();
+        }
+        if (!name) name = nearestLabel(el);
+        if (!name) name = textOf(el);
         return (name || '').trim();
       };
       const isFocusable = (el) => {
@@ -349,21 +428,18 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         if (tn === 'button' || tn === 'input' || tn === 'select' || tn === 'textarea') return true;
         return false;
       };
-      const isDecorative = (el) => {
-        const alt = (el.getAttribute('alt') || '').trim();
-        const role = (el.getAttribute('role') || '').toLowerCase();
-        const ariaHidden = (el.getAttribute('aria-hidden') || '').toLowerCase() === 'true';
-        return (alt === '' && !isFocusable(el) && !hasHandlers(el)) || role === 'presentation' || ariaHidden;
+      const isDecorativeImg = (img) => {
+        const alt = (img.getAttribute('alt') || '').trim();
+        const role = (img.getAttribute('role') || '').toLowerCase();
+        const ariaHidden = (img.getAttribute('aria-hidden') || '').toLowerCase() === 'true';
+        return (alt === '' && !isFocusable(img) && !hasHandlers(img)) || role === 'presentation' || ariaHidden;
       };
 
-      // A) <img> without alt (not decorative)
+      // A) <img> missing alt (not decorative)
       q('img').forEach(img => {
         if (!isVisible(img)) return;
-        const hasAlt = img.hasAttribute('alt');
-        if (!hasAlt) {
-          // if aria-hidden or role=presentation, ignore
-          if (!isDecorative(img)) res.img_no_alt.push({ sel: selOf(img) });
-          return;
+        if (!img.hasAttribute('alt') && !isDecorativeImg(img)) {
+          res.img_no_alt.push({ sel: selOf(img) });
         }
       });
 
@@ -375,7 +451,7 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         }
       });
 
-      // C) <img> focusable/interactive with empty alt ("")
+      // C) focusable/interactive <img> with empty alt
       q('img').forEach(img => {
         if (!isVisible(img)) return;
         const alt = (img.getAttribute('alt') || '').trim();
@@ -384,29 +460,25 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         }
       });
 
-      // D) <svg> used as img/button/link without accessible name
-      q('svg, [role="img"], [role="button"], [role="link"]').forEach(el => {
+      // D) graphics only: <svg> or role="img" with no accessible name
+      //    Do NOT include native <button> elements here (buttons with visible text are fine).
+      q('svg, [role="img"]').forEach(el => {
         if (!isVisible(el)) return;
-        const role = (el.getAttribute('role') || '').toLowerCase();
-        const tn = el.tagName.toLowerCase();
-        const looksInteractive = role === 'button' || role === 'link' || isFocusable(el) || hasHandlers(el) || tn === 'svg';
-        if (!looksInteractive) return;
-        const name = accName(el);
         const ariaHidden = (el.getAttribute('aria-hidden') || '').toLowerCase() === 'true';
-        if (!ariaHidden && !name) {
-          res.svg_no_name.push({ sel: selOf(el) });
-        }
+        if (ariaHidden) return;
+        const name = accName(el);
+        if (!name) res.graphics_no_name.push({ sel: selOf(el) });
       });
 
-      // E) CSS background-image used for controls; no accessible name -> manual_review
+      // E) Controls that look like purely background-image icons and have no name -> manual review
       q('[style*="background"], [class*="bg"], [class*="hero"], [class*="icon"]').forEach(el => {
         if (!isVisible(el)) return;
         const cs = getComputedStyle(el);
         const bgImg = cs.backgroundImage && cs.backgroundImage !== 'none';
         if (!bgImg) return;
         const role = (el.getAttribute('role') || '').toLowerCase();
-        const interactive = role === 'button' || role === 'link' || isFocusable(el) || hasHandlers(el) || el.closest('a,button');
-        if (!interactive) return;
+        const isInteractive = role === 'button' || role === 'link' || isFocusable(el) || hasHandlers(el) || !!el.closest('a,button');
+        if (!isInteractive) return;
         const name = accName(el);
         const ariaHidden = (el.getAttribute('aria-hidden') || '').toLowerCase() === 'true';
         if (!ariaHidden && !name) {
@@ -419,9 +491,9 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
 
     out: List[Dict[str, Any]] = []
     try:
-      res = page.evaluate(js)  # may raise on some pages; we keep it safe
+        res = page.evaluate(js)
     except Exception:
-      res = {"img_no_alt": [], "img_focusable_empty_alt": [], "input_image_no_alt": [], "svg_no_name": [], "css_bg_controls": []}
+        res = {"img_no_alt": [], "img_focusable_empty_alt": [], "input_image_no_alt": [], "graphics_no_name": [], "css_bg_controls": []}
 
     def _fail(sel: str, note: str) -> Dict[str, Any]:
         cand = _mk_candidate(page, url, "1.1.1", "runner:nontext", sel, note, verdict="fail")
@@ -429,28 +501,24 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         cand["screenshot"] = crop_element_screenshot(page, sel, shot, enabled=screenshot_elements)
         return cand
 
-    # A
     for h in res.get("img_no_alt", []):
         out.append(_fail(h["sel"], "<img> missing alt (not decorative)."))
-    # B
     for h in res.get("input_image_no_alt", []):
         out.append(_fail(h["sel"], "<input type='image'> missing alt."))
-    # C
     for h in res.get("img_focusable_empty_alt", []):
         out.append(_fail(h["sel"], "Interactive/focusable <img> has empty alt."))
-    # D
-    for h in res.get("svg_no_name", []):
-        out.append(_fail(h["sel"], "SVG/interactive graphic lacks accessible name (no <title>/aria-*)."))
-    # E (manual review)
+    for h in res.get("graphics_no_name", []):
+        out.append(_fail(h["sel"], "Graphic (<svg>/role=img) lacks accessible name (no <title>/aria-*)."))
     for h in res.get("css_bg_controls", []):
         cand = _mk_candidate(page, url, "1.1.1", "runner:css-bg-control", h["sel"],
-                             "Control appears to rely on CSS background image; accessible name uncertain.",
+                             "Control appears to rely on CSS background-image; accessible name uncertain.",
                              verdict="manual_review")
         shot = out_dir / "screenshots" / (sanitize_filename(f"sc111_bg__{(h['sel'] or '')[:60]}") + ".png")
         cand["screenshot"] = crop_element_screenshot(page, h["sel"], shot, enabled=screenshot_elements)
         out.append(cand)
 
     return out
+
 
 def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
@@ -659,34 +727,43 @@ def detect_labels_or_instructions_332(page, url: str, out_dir: pathlib.Path, scr
 
 def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple[List[Dict[str,Any]], List[Dict[str,Any]]]:
     """
-    SC 1.4.3 — text contrast on solid backgrounds.
-    If background comes from pseudo/gradient/unresolved → manual_review (not FAIL).
-    Skip judging interactive *backgrounds* here (1.4.11 handles chrome).
+    SC 1.4.3 — text contrast on solid backgrounds (non-UI text).
+    - If element appears to be a control (button/link/form role), send MANUAL_REVIEW instead (we rely on 1.4.11 for UI chrome).
+    - Pseudo/gradient backgrounds -> manual_review.
     """
     js = """() => {
-      const all = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,a,button,label,li,dt,dd,th,td'));
+      const all = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,li,dt,dd,th,td,small,em,strong'));
       const res = [];
       for (const el of all) {
+        const r = el.getBoundingClientRect();
         const cs = getComputedStyle(el);
         const txt = (el.innerText || '').trim();
-        if (!txt) continue;
-        const rect = el.getBoundingClientRect();
-        if (!(rect.width > 40 && rect.height > 14)) continue;
+        if (!txt || !(r.width>40 && r.height>14)) continue;
+
+        // treat as UI? (skip: buttons/links/controls/roles)
+        const tn = el.tagName.toLowerCase();
+        const isLink = el.closest('a[href]') && tn !== 'a' ? true : (tn === 'a' && el.hasAttribute('href'));
+        const isControl = isLink || el.closest('button,input,select,textarea,[role="button"],[role="link"],[role="tab"],[role="switch"],[role="checkbox"],[role="radio"],[role="combobox"],[role="listbox"]');
+
         const bgImg = cs.backgroundImage && cs.backgroundImage !== 'none';
         const hasBefore = window.getComputedStyle(el, '::before').content && window.getComputedStyle(el, '::before').content !== 'none';
         const hasAfter  = window.getComputedStyle(el, '::after').content && window.getComputedStyle(el, '::after').content !== 'none';
         let bg_source = "solid";
         if (bgImg) bg_source = "gradient";
         if (hasBefore || hasAfter) bg_source = "pseudo";
+
         res.push({
           sel: (window.__a11ySel? window.__a11ySel(el) : ''),
-          role: el.getAttribute('role') || el.tagName.toLowerCase(),
-          color: cs.color, fontSize: cs.fontSize,
-          bg: cs.backgroundColor, rect:{x:rect.x,y:rect.y,w:rect.width,h:rect.height},
-          bg_source
+          role: el.getAttribute('role') || tn,
+          color: cs.color,
+          fontSize: cs.fontSize,
+          bg: cs.backgroundColor,
+          rect:{x:r.x,y:r.y,w:r.width,h:r.height},
+          bg_source,
+          isControl: !!isControl
         });
       }
-      return res.slice(0, 120);
+      return res.slice(0, 160);
     }"""
     fails, passes = [], []
     try:
@@ -699,6 +776,14 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
 
         for e in elems:
             sel = e["sel"]; rect = e["rect"]; role = e.get("role") or ""
+            if e.get("isControl"):
+                # route UI text to manual review to avoid double-counting with 1.4.11
+                cand = _mk_candidate(page, url, "1.4.3", "runner:contrast-text", sel,
+                                     "Text belongs to a UI control — evaluate under 1.4.11 (non-text contrast) or review.",
+                                     verdict="manual_review", evidence={"context":"ui_control"})
+                fails.append(cand)
+                continue
+
             bg_source = e.get("bg_source") or "solid"
             if bg_source in ("pseudo","gradient","unresolved"):
                 cand = _mk_candidate(page, url, "1.4.3", "runner:contrast-text", sel,
@@ -706,25 +791,26 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
                                      verdict="manual_review", evidence={"bg_source": bg_source})
                 fails.append(cand)
                 continue
-            # skip component background judgement here if interactive (text contrast still applies to text color vs solid bg)
-            # parse rgb
+
             fr, fg, fb, fa = _parse_rgba_any(e["color"])
-            if fa == 0:
+            if fa == 0:  # fully transparent text? skip
                 continue
             fg_rgb = (fr, fg, fb)
             bg_css = e.get("bg","")
             br, bg_g, bb, ba = _parse_rgba_any(bg_css)
             if ba == 0 or bg_css in ("transparent","rgba(0, 0, 0, 0)","rgba(0,0,0,0)"):
-                # transparent → sample from screenshot
                 bg_rgb = _sample_bg_from_image(im, rect)
             else:
                 bg_rgb = (br, bg_g, bb)
 
             ratio = _contrast_ratio(fg_rgb, bg_rgb)
             fs_px = float(re.findall(r"[\d.]+", e.get("fontSize","16px"))[0])
-            fw = page.eval_on_selector(sel, "(el)=>getComputedStyle(el).fontWeight") if sel else "400"
-            try: is_bold = int(fw) >= 700
-            except: is_bold = str(fw).lower() in ("bold","bolder")
+            # bold/large rules
+            try:
+                fw = page.eval_on_selector(sel, "(el)=>getComputedStyle(el).fontWeight") if sel else "400"
+                is_bold = int(fw) >= 700
+            except Exception:
+                is_bold = False
             is_large = (fs_px >= 24) or (is_bold and fs_px >= 18.66)
             pass_thr = (CONTRAST_MIN_LARGE if is_large else CONTRAST_MIN_NORMAL)
             evidence = {"contrast_ratio": round(ratio,2), "is_large_text": is_large, "role": role}
@@ -789,9 +875,6 @@ def detect_contrast_on_image_text(page, url: str, out_dir: pathlib.Path) -> Tupl
     return fails, passes
 
 def detect_contrast_nontext_ui(page, url: str, out_dir: pathlib.Path) -> Tuple[List[Dict[str,Any]], List[Dict[str,Any]]]:
-    """
-    SC 1.4.11 — non-text contrast (UI components). Pseudo/gradient backgrounds → manual_review.
-    """
     js = """() => {
       const res = [];
       const isUI = (el) => el.matches('button, input, select, textarea, [role="button"], [role="switch"], [role="checkbox"], [role="radio"], [role="tab"], [role="link"]');
@@ -801,19 +884,20 @@ def detect_contrast_nontext_ui(page, url: str, out_dir: pathlib.Path) -> Tuple[L
         const rect = el.getBoundingClientRect();
         if (!(rect.width>20 && rect.height>16)) continue;
         const cs = getComputedStyle(el);
-        const hasBefore = window.getComputedStyle(el, '::before').content && window.getComputedStyle(el, '::before').content !== 'none';
-        const hasAfter  = window.getComputedStyle(el, '::after').content && window.getComputedStyle(el, '::after').content !== 'none';
         const bgImg = cs.backgroundImage && cs.backgroundImage !== 'none';
+        const beforeC = window.getComputedStyle(el, '::before').content;
+        const afterC  = window.getComputedStyle(el, '::after').content;
+        const hasPseudo = (beforeC && beforeC !== 'none') || (afterC && afterC !== 'none');
         let bg_source = "solid";
         if (bgImg) bg_source = "gradient";
-        if (hasBefore || hasAfter) bg_source = "pseudo";
+        if (hasPseudo) bg_source = "pseudo";
         res.push({
           sel: (window.__a11ySel? window.__a11ySel(el) : ''),
           rect:{x:rect.x,y:rect.y,w:rect.width,h:rect.height},
-          bg: cs.backgroundColor, borderColor: cs.borderTopColor, bg_source
+          bg_source
         });
       }
-      return res.slice(0, 80);
+      return res.slice(0, 120);
     }"""
     fails, passes = [], []
     try:
@@ -824,19 +908,13 @@ def detect_contrast_nontext_ui(page, url: str, out_dir: pathlib.Path) -> Tuple[L
         page.screenshot(path=str(full_path), full_page=True)
         im = Image.open(full_path)
 
-        def _rgb(s):
-            m = re.findall(r"[\d.]+", s or "")
-            if len(m) >= 3:
-                return (int(float(m[0])), int(float(m[1])), int(float(m[2])))
-            return (0,0,0)
-
         for e in elems:
             sel = e["sel"]; rect = e["rect"]
             bg_source = e.get("bg_source") or "solid"
             if bg_source in ("pseudo","gradient","unresolved"):
-                cand = _mk_candidate(page, url, "1.4.11", "runner:nontext-ui-contrast", sel,
-                                     "Undetermined component background (pseudo/gradient) — Manual Review.", verdict="manual_review",
-                                     evidence={"bg_source": bg_source})
+                cand = _mk_candidate(page, url, "1.4.11", "runner:nontext-ui-contrast",
+                                     sel, "Undetermined component background (pseudo/gradient) — Manual Review.",
+                                     verdict="manual_review", evidence={"bg_source": bg_source})
                 fails.append(cand)
                 continue
 
@@ -852,43 +930,31 @@ def detect_contrast_nontext_ui(page, url: str, out_dir: pathlib.Path) -> Tuple[L
                 cand["screenshot"] = crop_element_screenshot(page, sel, shot, enabled=True)
                 fails.append(cand)
             else:
-                passes.append({"selector": sel, "sc":"1.4.11", "note":"Non-text contrast OK", "evidence": evidence})
+                passes.append({"selector": sel, "sc":"1.4.11", "note": "Non-text contrast OK", "evidence": evidence})
     except Exception:
         pass
     return fails, passes
+
 
 # -------------------- other detectors --------------------
 
 def detect_info_relationships(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
-    SC 1.3.1 — list semantics for grouped nav/header/footer links, per-link candidates.
+    SC 1.3.1 — In header/footer/nav regions with multiple links, links should be grouped with list semantics.
+    - Only evaluate <a href> links
+    - Do NOT flag buttons/CTAs
+    - Require at least 3 links in the region (avoid noisy singles)
     """
     js = """() => {
-      const regions = Array.from(document.querySelectorAll('header, footer, nav, [role="navigation"]'));
-      const res = [];
-      const isListy = (el) => el.closest('ul,ol,[role="list"]');
-      for (const reg of regions) {
-        const links = Array.from(reg.querySelectorAll('a[href]')).filter(a => a.offsetWidth>0 && a.offsetHeight>0);
-        if (links.length < 2) continue;
-        for (const a of links) {
-          let p = a.parentElement, wrapped = false;
-          while (p && p !== reg) {
-            const tn = (p.tagName || "").toLowerCase();
-            if (tn === "ul" || tn === "ol" || tn === "li" || p.getAttribute("role")==="list" || p.getAttribute("role")==="listitem") {
-              wrapped = True = True
-              wrapped = True  # noqa (marker; next line sets real value)
-            }
-            p = p.parentElement;
-          }
-        }
-      }
-      return [];
-    }"""
-    # The above JS stub is replaced below to keep line numbers short in this file.
-    js = """() => {
-      const regions = Array.from(document.querySelectorAll('header, footer, nav, [role="navigation"]'));
       const out = [];
-      const wrappedInList = (el, root) => {
+      const regions = Array.from(document.querySelectorAll('header, footer, nav, [role="navigation"]'));
+      const selOf = (el) => {
+        const id = el.getAttribute('id'); if (id) return `#${CSS.escape(id)}`;
+        let s = el.tagName.toLowerCase();
+        if (el.classList.length) s += '.' + Array.from(el.classList).slice(0,3).map(c=>CSS.escape(c)).join('.');
+        return s;
+      };
+      const isWrappedInList = (el, root) => {
         let p = el;
         while (p && p !== root) {
           const tn = (p.tagName || '').toLowerCase();
@@ -898,15 +964,18 @@ def detect_info_relationships(page, url: str, out_dir: pathlib.Path, screenshot_
         return false;
       };
       for (const reg of regions) {
-        const links = Array.from(reg.querySelectorAll('a[href]')).filter(a => a.offsetWidth>0 && a.offsetHeight>0);
-        if (links.length < 2) continue;
+        const links = Array.from(reg.querySelectorAll('a[href]')).filter(a => {
+          const r = a.getBoundingClientRect(); const cs = getComputedStyle(a);
+          return r.width > 1 && r.height > 1 && cs.visibility !== 'hidden' && cs.display !== 'none';
+        });
+        if (links.length < 3) continue;
         for (const a of links) {
-          if (!wrappedInList(a, reg)) {
-            out.push({ sel: (window.__a11ySel? window.__a11ySel(a): '') });
+          if (!isWrappedInList(a, reg)) {
+            out.push({ sel: selOf(a) });
           }
         }
       }
-      return out.slice(0, 60);
+      return out.slice(0, 200);
     }"""
     out = []
     try:
@@ -914,7 +983,7 @@ def detect_info_relationships(page, url: str, out_dir: pathlib.Path, screenshot_
         for h in hits:
             sel = h.get("sel") or ""
             cand = _mk_candidate(page, url, "1.3.1", "runner:info-relationships-list-missing", sel,
-                                 "Link in header/footer/nav not grouped using list semantics.", verdict="fail")
+                                 "Navigation links not grouped using list semantics.", verdict="fail")
             shot_path = (out_dir / "screenshots" / (sanitize_filename(f"rel_nav__{(sel or '')[:60]}") + ".png"))
             cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
             out.append(cand)
@@ -922,43 +991,43 @@ def detect_info_relationships(page, url: str, out_dir: pathlib.Path, screenshot_
         pass
     return out
 
-def detect_meaningful_sequence(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
+
+def detect_heading_outline_sequence(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str,Any]]:
     """
-    SC 1.3.2 — crude DOM↔visual order anomalies (unchanged).
+    SC 1.3.2 (assist) — Check heading level jumps (e.g., H4 after H2 with no H3 in between).
+    Conservative: produce MANUAL_REVIEW, not FAIL.
     """
     js = """() => {
-      const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li'));
-      const res = [];
-      let idx = 0;
-      for (const el of nodes) {
-        const rect = el.getBoundingClientRect();
-        const txt = (el.innerText || '').trim();
-        if (!txt) continue;
-        if (!(rect.width>40 && rect.height>14)) continue;
-        res.push({idx: idx++, y: rect.y, sel: (window.__a11ySel? window.__a11ySel(el): ''), text: txt.slice(0,100)});
+      const heads = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,[role="heading"]'));
+      const items = heads.map(h => {
+        const lvl = h.tagName.match(/^H([1-6])$/) ? +RegExp.$1 : +(h.getAttribute('aria-level') || 0);
+        const r = h.getBoundingClientRect();
+        return { el: h, level: lvl || 0, text: (h.innerText||'').trim(), y: r.top };
+      }).filter(x => x.level>0 && x.text);
+      const out = [];
+      for (let i=1;i<items.length;i++){
+        const prev = items[i-1], cur = items[i];
+        // allow same-level or -1; flag if drop > 1 (e.g., from 2 -> 4)
+        if (cur.level - prev.level > 1) {
+          out.push({ sel: null, idx: i });
+        }
       }
-      return res;
+      return out;
     }"""
     out = []
     try:
-        rows = page.evaluate(js)
-        if len(rows) < 6:
-            return out
-        anomalies = []
-        for i in range(1, len(rows)-1):
-            prev, cur, nxt = rows[i-1], rows[i], rows[i+1]
-            if (cur["y"] - prev["y"] > 600) and (nxt["y"] - prev["y"] < 200):
-                anomalies.append(cur)
-        for a in anomalies[:5]:
-            sel = a["sel"]
-            cand = _mk_candidate(page, url, "1.3.2", "runner:meaningful-sequence-inversion", sel, "Possible DOM↔visual reading order mismatch.", verdict="fail")
-            shot_name = sanitize_filename(f"seq__{(sel or '')[:60]}") + ".png"
-            shot_path = (out_dir / "screenshots" / shot_name)
-            cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
+        jumps = page.evaluate(js)
+        if not jumps: return out
+        # we can't serialize elements from page; re-find selector by nearest text
+        # best-effort crops:
+        for j in jumps[:12]:
+            note = "Possible heading level jump in outline (e.g., H2 → H4). Verify reading order."
+            cand = _mk_candidate(page, url, "1.3.2", "runner:heading-outline-jump", "", note, verdict="manual_review")
             out.append(cand)
     except Exception:
         pass
     return out
+
 
 def detect_role_conflicts(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
@@ -1025,40 +1094,52 @@ def _accname_for_selector(page, sel: str) -> str:
 
 def detect_label_in_name(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
-    SC 2.5.3 — visible label must be included in accessible name (normalized); re-check aria-labelledby before failing.
+    SC 2.5.3 — Visible label included in accessible name.
+    - Token containment (case/spacing/punct insensitive)
+    - Re-check aria-labelledby resolution
+    - Ignore ultra-short tokens (<=2 chars) and purely icon buttons
     """
+    STOP = {"the","and","to","for","of","in","on","at","a","an","or"}
+    def toks(s: str) -> List[str]:
+        s = _normalize_text_label(s)
+        return [t for t in s.split() if len(t) > 2 and t not in STOP]
+
     js = """() => {
       const els = Array.from(document.querySelectorAll('button, a[href], input, [role="button"], [role="link"]'));
       const res = [];
       for (const el of els) {
-        const rect = el.getBoundingClientRect();
-        if (!(rect.width>24 && rect.height>16)) continue;
+        const r = el.getBoundingClientRect();
+        if (!(r.width>24 && r.height>16)) continue;
         let vis = '';
         if (el.id) {
-          const lab = document.querySelector(`[for="${el.id}"]`);
+          const lab = document.querySelector(`label[for="${el.id}"]`);
           if (lab) vis = (lab.innerText || '').trim();
         }
-        if (!vis) vis = (el.innerText || '').trim();
+        if (!vis) vis = (el.innerText || el.getAttribute('aria-label') || '').trim();
         if (!vis) continue;
-        res.push({ sel: (window.__a11ySel? window.__a11ySel(el): ''), visible: vis.slice(0,120), labelledby: el.getAttribute('aria-labelledby') || '' });
+        res.push({ sel: (window.__a11ySel? window.__a11ySel(el): ''), visible: vis.slice(0,160), labelledby: el.getAttribute('aria-labelledby') || '' });
       }
-      return res.slice(0, 80);
+      return res.slice(0, 120);
     }"""
     out = []
     try:
         rows = page.evaluate(js)
         for r in rows:
             sel = r["sel"]
-            vis = _normalize_text_label(r.get("visible") or "")
+            vis_tokens = toks(r.get("visible") or "")
+            if not vis_tokens:  # ignore empty/very short/icon cases
+                continue
             acc = _normalize_text_label(_accname_for_selector(page, sel))
-            if vis and acc and (vis not in acc):
-                # if labelledby can resolve to include vis, pass
+            # token containment: every visible token should appear in accname
+            missing = [t for t in vis_tokens if t not in acc.split()]
+            if missing:
+                # try again if aria-labelledby exists (resolve)
                 if r.get("labelledby"):
-                    derived = _normalize_text_label(_accname_for_selector(page, sel))
-                    if derived and (vis in derived):
+                    acc2 = _normalize_text_label(_accname_for_selector(page, sel))
+                    if all(t in acc2.split() for t in vis_tokens):
                         continue
                 cand = _mk_candidate(page, url, "2.5.3", "runner:label-in-name", sel,
-                                     "Visible label text not present in the accessible name.", verdict="fail")
+                                     "Visible label text not included in the accessible name.", verdict="fail")
                 shot_name = sanitize_filename(f"lin__{(sel or '')[:60]}") + ".png"
                 shot_path = (out_dir / "screenshots" / shot_name)
                 cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
@@ -1066,6 +1147,7 @@ def detect_label_in_name(page, url: str, out_dir: pathlib.Path, screenshot_eleme
     except Exception:
         pass
     return out
+
 
 def detect_link_purpose_generic(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
@@ -1262,17 +1344,18 @@ def detect_focus_order_suspect_from_trace(page, url: str, out_dir: pathlib.Path,
     out = []
     for i in range(1, len(trace)):
         prev = trace[i-1]; cur = trace[i]
-        rp = (prev.get("rect") or {})
-        rc = (cur.get("rect") or {})
+        rp = (prev.get("rect") or {}); rc = (cur.get("rect") or {})
         if not rp or not rc: continue
         dy = rc.get("y", 0) - rp.get("y", 0)
         if dy < -400:
             sel = cur.get("selector") or ""
-            cand = _mk_candidate(page, url, "2.4.3", "runner:focus-order-suspect", sel, "Focus order may not follow a meaningful sequence (large jump detected).", verdict="fail")
-            shot_name = sanitize_filename(f"forder__{sel[:60]}") + ".png"
-            shot_path = (out_dir / "screenshots" / shot_name)
-            cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
+            cand = _mk_candidate(page, url, "2.4.3", "runner:focus-order-suspect",
+                                 sel, "Focus order may not follow a meaningful sequence (large jump detected).",
+                                 verdict="manual_review")
+            shot = out_dir / "screenshots" / (sanitize_filename(f"forder__{sel[:60]}") + ".png")
+            cand["screenshot"] = crop_element_screenshot(page, sel, shot, enabled=screenshot_elements)
             out.append(cand)
             if len(out) >= 10:
                 break
     return out
+
