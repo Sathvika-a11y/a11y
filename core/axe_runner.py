@@ -262,7 +262,7 @@ def run_keyboard_probe(
     trace, seen_pair_repeats, last_two = [], 0, []
 
     # forward sweep
-    for i in range(1, max_steps+1):
+    for i in range(1, max_steps + 1):
         page.keyboard.press("Tab")
         page.wait_for_timeout(FOCUS_WAIT_MS)
         info = _get_active_info(page)
@@ -308,7 +308,7 @@ def run_keyboard_probe(
 
     # sampled activation checks
     activations = []
-    sample_idxs = list(range(0, len(trace), max(1, len(trace)//10)))[:12]
+    sample_idxs = list(range(0, len(trace), max(1, len(trace) // 10)))[:12]
     for idx in sample_idxs:
         sel = trace[idx].get("selector") if idx < len(trace) else None
         if not sel:
@@ -351,10 +351,10 @@ def run_keyboard_probe(
         "tabindex_neg1": [
             it for it in inventory
             if str(it.get("tabindex", "")).strip() == "-1"
-               and (it.get("nativeInteractive") or it.get("ariaInteractive"))
-               and not it.get("inRovingContainer")
-               and not it.get("disabled")
-               and not it.get("ariaDisabled")
+            and (it.get("nativeInteractive") or it.get("ariaInteractive"))
+            and not it.get("inRovingContainer")
+            and not it.get("disabled")
+            and not it.get("ariaDisabled")
         ]
     }
     write_json(out_dir / "keyboard_trace_summary.json", summary)
@@ -396,7 +396,7 @@ def save_dom_snapshots(page, out_dir: pathlib.Path, include_frames: bool) -> Non
         i += 1
     write_json(dom_dir / "index.json", idx)
 
-def run_axe_all_frames(page, include_frames: bool, result_types: Optional[List[str]] = None) -> Dict[str,Any]:
+def run_axe_all_frames(page, include_frames: bool, result_types: Optional[List[str]] = None) -> Dict[str, Any]:
     all_results = {"violations": [], "incomplete": [], "passes": []}
     def _merge(res):
         for k in ("violations", "incomplete", "passes"):
@@ -421,7 +421,7 @@ def run_axe_all_frames(page, include_frames: bool, result_types: Optional[List[s
 
 # -------------------- issues normalization --------------------
 
-def _mk_issue_from_axe_node(url: str, rule: Dict[str,Any], node: Dict[str,Any], bucket: str) -> Dict[str,Any]:
+def _mk_issue_from_axe_node(url: str, rule: Dict[str, Any], node: Dict[str, Any], bucket: str) -> Dict[str, Any]:
     scs = []
     for t in rule.get("tags", []) or []:
         m = re.match(r"wcag(\d)(\d)(\d)$", str(t).lower())
@@ -431,7 +431,7 @@ def _mk_issue_from_axe_node(url: str, rule: Dict[str,Any], node: Dict[str,Any], 
     return {
         "page_url": url,
         "SC": scs[0] if scs else "",
-        "status": status,  # pass | fail | review
+        "status": status,
         "rule_id": rule.get("id"),
         "impact": rule.get("impact"),
         "selector": (node.get("target") or [""])[0],
@@ -448,7 +448,7 @@ def _mk_issue_from_axe_node(url: str, rule: Dict[str,Any], node: Dict[str,Any], 
         }
     }
 
-def _mk_issue_from_candidate(c: Dict[str,Any]) -> Dict[str,Any]:
+def _mk_issue_from_candidate(c: Dict[str, Any]) -> Dict[str, Any]:
     sc = c.get("SC") or _norm_sc_from_any(c.get("topic")) or _norm_sc_from_any(c.get("axe_rule_id"))
     rule_id = c.get("axe_rule_id") or c.get("rule_id") or (c.get("detector") or c.get("source") or "detector")
     status = (c.get("verdict") or "review").lower()
@@ -474,14 +474,14 @@ def _mk_issue_from_candidate(c: Dict[str,Any]) -> Dict[str,Any]:
 
 # -------------------- de-dup candidates by (selector, rule_id) --------------------
 
-def _primary_rule_id_of(c: Dict[str,Any]) -> str:
+def _primary_rule_id_of(c: Dict[str, Any]) -> str:
     for k in ("rule_id", "axe_rule_id", "detector", "source", "topic"):
         v = c.get(k)
         if v:
             return str(v)
     return ""
 
-def _norm_ev_tuple(c: Dict[str,Any]) -> tuple:
+def _norm_ev_tuple(c: Dict[str, Any]) -> tuple:
     ev = c.get("evidence") or {}
     if not isinstance(ev, dict):
         return ()
@@ -494,22 +494,27 @@ def _norm_ev_tuple(c: Dict[str,Any]) -> tuple:
         out.append((k, v))
     return tuple(out)
 
-def _cand_score(c: Dict[str,Any]) -> int:
+def _cand_score(c: Dict[str, Any]) -> int:
     s = 0
-    if c.get("axe_rule_id"): s += 2
-    if c.get("failureSummary"): s += 2
-    if (c.get("why_any") or c.get("why_all") or c.get("why_none")): s += 1
-    if c.get("verdict", "").lower() == "fail": s += 1
-    if c.get("screenshot"): s += 1
+    if c.get("axe_rule_id"):
+        s += 2
+    if c.get("failureSummary"):
+        s += 2
+    if (c.get("why_any") or c.get("why_all") or c.get("why_none")):
+        s += 1
+    if c.get("verdict", "").lower() == "fail":
+        s += 1
+    if c.get("screenshot"):
+        s += 1
     return s
 
-def _dedupe_by_selector_keep_best(cands: List[Dict[str,Any]]) -> List[Dict[str,Any]]:
+def _dedupe_by_selector_keep_best(cands: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
     Keep best row per (selector, primary rule_id). If evidence differs, keep both.
     """
-    best: Dict[Tuple[str,str], Tuple[Dict[str,Any], tuple, int]] = {}
-    nosel: List[Dict[str,Any]] = []
-    kept: List[Dict[str,Any]] = []
+    best: Dict[Tuple[str, str], Tuple[Dict[str, Any], tuple, int]] = {}
+    nosel: List[Dict[str, Any]] = []
+    kept: List[Dict[str, Any]] = []
     for c in cands:
         sel = (c.get("selector") or "").strip()
         if not sel:
@@ -537,7 +542,7 @@ def _dedupe_by_selector_keep_best(cands: List[Dict[str,Any]]) -> List[Dict[str,A
             kept.append(c)  # distinct evidence → keep both
     return kept + nosel
 
-# -------------------- main run --------------------
+# -------------------- verification helpers --------------------
 
 def _has_skip_or_landmarks(page: Page) -> bool:
     try:
@@ -559,6 +564,8 @@ def _has_skip_or_landmarks(page: Page) -> bool:
         }""")
     except Exception:
         return False
+
+# -------------------- main run --------------------
 
 def run_axe_on_url(
     url: str,
@@ -815,7 +822,7 @@ def run_axe_on_url(
                     cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
                     cand["source"] = "keyboard"
                     candidates.append(cand)
-                # Activation failure: manual review in this conservative profile
+                # Activation: conservative → manual_review
                 for it in kb.get("activations", [])[:30]:
                     if not (it.get("enter_ok") or it.get("space_ok")):
                         sel = it.get("selector")
@@ -920,7 +927,7 @@ def run_axe_on_url(
             write_json(out_dir / "candidates.json", candidates)
 
             # -------- BUILD unified axe_issues (list) + Manual Review tab --------
-            axe_issues: List[Dict[str,Any]] = []
+            axe_issues: List[Dict[str, Any]] = []
 
             # A) axe buckets → issues
             for bucket in ("violations", "incomplete", "passes"):
@@ -988,8 +995,8 @@ def run_axe_on_url(
 
             write_json(out_dir / "axe_results.json", {
                 "axe_raw": axe_payload,
-                "axe_issues": axe_issues,                       # existing list consumers keep working
-                "axe_issues_tabs": {"manual_review": manual_tab}  # new tab for your report UI
+                "axe_issues": axe_issues,
+                "axe_issues_tabs": {"manual_review": manual_tab}
             })
 
         finally:
