@@ -224,41 +224,120 @@ def collect_headings_and_labels(frame) -> List[Dict[str,Any]]:
     }""")
 def detect_meaningful_sequence(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
-    SC 1.3.2 — crude DOM↔visual order anomalies (unchanged).
+    SC 1.3.2 — DOM↔visual order anomalies (conservative).
+    - Filters sticky/fixed, header/footer/nav, invisible, and multi-column/grid regions.
+    - Requires ≥2 anomalies in a cluster to emit.
+    - Emits MANUAL_REVIEW by default; only FAIL if also corroborated by keyboard trace jumps.
     """
     js = """() => {
       const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li'));
-      const res = [];
-      let idx = 0;
+      const isVisible = (el) => {
+        const cs = getComputedStyle(el);
+        const r = el.getBoundingClientRect();
+        return r && r.width > 40 && r.height > 14 && cs.visibility !== 'hidden' && cs.display !== 'none';
+      };
+      const inChrome = (el) => !!el.closest('header, footer, nav, [role="navigation"]');
+      const isSticky = (el) => {
+        const cs = getComputedStyle(el);
+        return cs.position === 'fixed' || cs.position === 'sticky';
+      };
+      const inMultiColumn = (el) => {
+        // detect common multi-column/grid containers to reduce FPs
+        let p = el.parentElement;
+        while (p && p !== document.body) {
+          const cs = getComputedStyle(p);
+          if (cs.columnCount && parseInt(cs.columnCount, 10) > 1) return true;
+          if (cs.display === 'grid' && (cs.gridTemplateColumns || '').split(' ').length >= 2) return true;
+          p = p.parentElement;
+        }
+        return false;
+      };
+      const sel = (el) => {
+        const id = el.getAttribute('id'); if (id) return `#${CSS.escape(id)}`;
+        let s = el.tagName.toLowerCase();
+        if (el.classList.length) s += '.' + Array.from(el.classList).slice(0,3).map(c=>CSS.escape(c)).join('.');
+        return s;
+      };
+
+      const rows = [];
       for (const el of nodes) {
-        const rect = el.getBoundingClientRect();
-        const txt = (el.innerText || '').trim();
-        if (!txt) continue;
-        if (!(rect.width>40 && rect.height>14)) continue;
-        res.push({idx: idx++, y: rect.y, sel: (window.__a11ySel? window.__a11ySel(el): ''), text: txt.slice(0,100)});
+        if (!isVisible(el)) continue;
+        if (isSticky(el)) continue;
+        if (inChrome(el)) continue;
+        if (inMultiColumn(el)) continue;
+        const r = el.getBoundingClientRect();
+        const t = (el.innerText || '').trim();
+        if (!t) continue;
+        rows.push({ y: r.top, sel: sel(el), text: t.slice(0,120) });
       }
-      return res;
+      // need enough density to say anything
+      if (rows.length < 8) return { anomalies: [] };
+
+      // sort by DOM order already; look for repeated large downward gap followed by small recovery
+      const anomalies = [];
+      for (let i = 1; i < rows.length - 1; i++) {
+        const prev = rows[i-1], cur = rows[i], nxt = rows[i+1];
+        const bigDrop = (cur.y - prev.y) > 700;      // stricter threshold
+        const quickRecover = (nxt.y - prev.y) < 240; // small net movement
+        if (bigDrop && quickRecover) {
+          anomalies.push({ idx: i, sel: cur.sel, y: cur.y });
+        }
+      }
+
+      // cluster anomalies that are close in Y (reduce one-off noise)
+      anomalies.sort((a,b)=>a.y-b.y);
+      const clusters = [];
+      for (const a of anomalies) {
+        const last = clusters[clusters.length-1];
+        if (last && Math.abs(a.y - last[last.length-1].y) < 600) last.push(a);
+        else clusters.push([a]);
+      }
+      // keep only clusters with 2+ hits
+      const strong = clusters.filter(c => c.length >= 2).flat();
+      return { anomalies: strong.slice(0, 8) };
     }"""
-    out = []
+
+    out: List[Dict[str, Any]] = []
+    corroborated_selectors = set()
+
+    # try to corroborate with keyboard trace (focus-order suspect detector already writes trace)
     try:
-        rows = page.evaluate(js)
-        if len(rows) < 6:
-            return out
-        anomalies = []
-        for i in range(1, len(rows)-1):
-            prev, cur, nxt = rows[i-1], rows[i], rows[i+1]
-            if (cur["y"] - prev["y"] > 600) and (nxt["y"] - prev["y"] < 200):
-                anomalies.append(cur)
-        for a in anomalies[:5]:
-            sel = a["sel"]
-            cand = _mk_candidate(page, url, "1.3.2", "runner:meaningful-sequence-inversion", sel, "Possible DOM↔visual reading order mismatch.", verdict="fail")
-            shot_name = sanitize_filename(f"seq__{(sel or '')[:60]}") + ".png"
-            shot_path = (out_dir / "screenshots" / shot_name)
+        trace_p = out_dir / "keyboard_trace.jsonl"
+        if trace_p.exists():
+            with trace_p.open("r", encoding="utf-8") as f:
+                prev = None
+                for line in f:
+                    try:
+                        row = json.loads(line)
+                    except Exception:
+                        continue
+                    if prev and prev.get("rect") and row.get("rect"):
+                        dy = (row["rect"].get("y",0) - prev["rect"].get("y",0))
+                        # strong negative jump → suspicious
+                        if dy < -500:
+                            if row.get("selector"): corroborated_selectors.add(row["selector"])
+                    prev = row
+    except Exception:
+        pass
+
+    try:
+        res = page.evaluate(js) or {}
+        anomalies = res.get("anomalies") or []
+        for a in anomalies:
+            sel = a.get("sel") or ""
+            # default to manual_review; only upgrade to fail if corroborated by focus trace
+            verdict = "fail" if sel in corroborated_selectors else "manual_review"
+            note = "Possible DOM↔visual reading order mismatch."
+            if verdict == "fail":
+                note += " Corroborated by keyboard focus jump."
+            cand = _mk_candidate(page, url, "1.3.2", "runner:meaningful-sequence", sel, note, verdict=verdict)
+            shot_path = (out_dir / "screenshots" / (sanitize_filename(f"seq__{(sel or '')[:60]}") + ".png"))
             cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
             out.append(cand)
     except Exception:
         pass
     return out
+
 def detect_bypass_blocks(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str,Any]]:
     """
     SC 2.4.1 — Provide a mechanism to bypass blocks of repeated content.
