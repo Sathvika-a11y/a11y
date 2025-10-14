@@ -222,7 +222,43 @@ def collect_headings_and_labels(frame) -> List[Dict[str,Any]]:
       }
       return out;
     }""")
-
+def detect_meaningful_sequence(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
+    """
+    SC 1.3.2 — crude DOM↔visual order anomalies (unchanged).
+    """
+    js = """() => {
+      const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li'));
+      const res = [];
+      let idx = 0;
+      for (const el of nodes) {
+        const rect = el.getBoundingClientRect();
+        const txt = (el.innerText || '').trim();
+        if (!txt) continue;
+        if (!(rect.width>40 && rect.height>14)) continue;
+        res.push({idx: idx++, y: rect.y, sel: (window.__a11ySel? window.__a11ySel(el): ''), text: txt.slice(0,100)});
+      }
+      return res;
+    }"""
+    out = []
+    try:
+        rows = page.evaluate(js)
+        if len(rows) < 6:
+            return out
+        anomalies = []
+        for i in range(1, len(rows)-1):
+            prev, cur, nxt = rows[i-1], rows[i], rows[i+1]
+            if (cur["y"] - prev["y"] > 600) and (nxt["y"] - prev["y"] < 200):
+                anomalies.append(cur)
+        for a in anomalies[:5]:
+            sel = a["sel"]
+            cand = _mk_candidate(page, url, "1.3.2", "runner:meaningful-sequence-inversion", sel, "Possible DOM↔visual reading order mismatch.", verdict="fail")
+            shot_name = sanitize_filename(f"seq__{(sel or '')[:60]}") + ".png"
+            shot_path = (out_dir / "screenshots" / shot_name)
+            cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
+            out.append(cand)
+    except Exception:
+        pass
+    return out
 def detect_bypass_blocks(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str,Any]]:
     """
     SC 2.4.1 — Provide a mechanism to bypass blocks of repeated content.
