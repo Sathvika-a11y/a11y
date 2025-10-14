@@ -222,6 +222,7 @@ def collect_headings_and_labels(frame) -> List[Dict[str,Any]]:
       }
       return out;
     }""")
+
 def detect_meaningful_sequence(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str, Any]]:
     """
     SC 1.3.2 — DOM↔visual order anomalies (conservative).
@@ -340,31 +341,33 @@ def detect_meaningful_sequence(page, url: str, out_dir: pathlib.Path, screenshot
 
 def detect_bypass_blocks(page, url: str, out_dir: pathlib.Path, screenshot_elements: bool) -> List[Dict[str,Any]]:
     """
-    SC 2.4.1 — Provide a mechanism to bypass blocks of repeated content.
-    PASS if there is:
-      - A visible *skip* link (anchor to an in-page target) OR
-      - A <main> landmark (or role="main")
-    If neither is present -> MANUAL_REVIEW (conservative).
+    SC 2.4.1 — Bypass blocks.
+    - PASS silently if a visible “skip” link exists.
+    - If only <main>/role="main"> is present → MANUAL_REVIEW.
+    - If neither exists → MANUAL_REVIEW.
     """
     js = """() => {
       const q = (sel)=>Array.from(document.querySelectorAll(sel));
       const hasMain = !!document.querySelector('main, [role="main"]');
-      const skip = q('a[href^="#"]').some(a => {
+      const hasSkip = q('a[href^="#"]').some(a => {
         const t = (a.innerText || a.textContent || '').toLowerCase();
-        return /skip/.test(t);
+        const rect = a.getBoundingClientRect(); const cs = getComputedStyle(a);
+        const vis = rect.width>1 && rect.height>1 && cs.visibility!=='hidden' && cs.display!=='none';
+        return vis && /skip/.test(t);
       });
-      return { hasMain, hasSkip: skip };
+      return { hasMain, hasSkip };
     }"""
     out = []
     try:
-        r = page.evaluate(js)
-        if r and (r.get("hasMain") or r.get("hasSkip")):
-            return out
-        cand = _mk_candidate(
-            page, url, "2.4.1", "runner:bypass-blocks", "",
-            "No landmark <main>/role=main or obvious skip link found — verify bypass mechanism.",
-            verdict="manual_review"
-        )
+        r = page.evaluate(js) or {}
+        if r.get("hasSkip"):
+            return out  # implicit PASS
+        note = "No obvious skip link; "
+        if r.get("hasMain"):
+            note += "<main> landmark present — verify it satisfies bypass policy."
+        else:
+            note += "no <main> landmark either — verify bypass mechanism."
+        cand = _mk_candidate(page, url, "2.4.1", "runner:bypass-blocks", "", note, verdict="manual_review")
         out.append(cand)
     except Exception:
         pass
@@ -441,7 +444,7 @@ Verdicts:
 
 Return STRICT JSON...
 """
-    write_json(out_dir / "ai" / "2_4_6" / "prompt.txt", {"prompt": prompt})
+    write_json(out_dir / "ai" / "2_4_6" / "prompt.json", {"prompt": prompt})
 
 # -------------------- contrast helpers + detectors --------------------
 
@@ -495,7 +498,7 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
       B) <input type="image"> without alt      -> FAIL
       C) Focusable/interactive <img> with empty alt ("") -> FAIL
       D) *Graphics only*: <svg> or role="img" lacking an accessible name (no <title>/aria-*) -> FAIL
-         (DO NOT fail native <button> elements if they have visible text or an accname)
+         (Do NOT flag icons inside a named interactive control or named interactive elements themselves.)
       E) Controls that visually rely on CSS background-image with no accessible name -> MANUAL_REVIEW
     """
     js = """() => {
@@ -515,8 +518,8 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         return s;
       };
       const hasHandlers = (el) => !!(el.getAttribute('onclick') || el.getAttribute('onkeydown') || el.getAttribute('onkeyup'));
-
       const textOf = (n) => (n && (n.innerText || n.textContent) || "").trim();
+
       const nearestLabel = (el) => {
         if (el.id) {
           const lab = document.querySelector(`label[for="${CSS.escape(el.id)}"]`);
@@ -526,13 +529,12 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         if (wrap && isVisible(wrap)) return textOf(wrap);
         return "";
       };
+
       const accName = (el) => {
         let name = (el.getAttribute('aria-label') || '').trim();
         if (!name) {
           const ids = (el.getAttribute('aria-labelledby') || "").split(/\\s+/).filter(Boolean);
-          if (ids.length) {
-            name = ids.map(id => (document.getElementById(id)?.innerText || '')).join(' ').trim();
-          }
+          if (ids.length) name = ids.map(id => (document.getElementById(id)?.innerText || '')).join(' ').trim();
         }
         if (!name && el.tagName.toLowerCase()==='svg') {
           const t = el.querySelector('title');
@@ -545,6 +547,7 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         if (!name) name = textOf(el);
         return (name || '').trim();
       };
+
       const isFocusable = (el) => {
         if (el.tabIndex >= 0) return true;
         const tn = el.tagName.toLowerCase();
@@ -552,11 +555,24 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         if (tn === 'button' || tn === 'input' || tn === 'select' || tn === 'textarea') return true;
         return false;
       };
+
       const isDecorativeImg = (img) => {
         const alt = (img.getAttribute('alt') || '').trim();
         const role = (img.getAttribute('role') || '').toLowerCase();
         const ariaHidden = (img.getAttribute('aria-hidden') || '').toLowerCase() === 'true';
         return (alt === '' && !isFocusable(img) && !hasHandlers(img)) || role === 'presentation' || ariaHidden;
+      };
+
+      // convenience: named interactive host (button/link/etc.) with its own accessible name
+      const isInNamedInteractive = (el) => {
+        const host = el.closest('button, a[href], [role="button"], [role="link"]');
+        if (!host) return false;
+        const nm = accName(host);
+        return !!nm;
+      };
+      const isNamedInteractiveSelf = (el) => {
+        const isHost = el.matches('button, a[href], [role="button"], [role="link"]');
+        return isHost && !!accName(el);
       };
 
       // A) <img> missing alt (not decorative)
@@ -589,11 +605,13 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         if (!isVisible(el)) return;
         const ariaHidden = (el.getAttribute('aria-hidden') || '').toLowerCase() === 'true';
         if (ariaHidden) return;
+        if (isInNamedInteractive(el)) return;      // icon inside named control
+        if (isNamedInteractiveSelf(el)) return;    // the element itself is a named control
         const name = accName(el);
         if (!name) res.graphics_no_name.push({ sel: selOf(el) });
       });
 
-      // E) Controls that look like purely background-image icons and have no name -> manual review
+      // E) BG-image controls with no name -> manual review
       q('[style*="background"], [class*="bg"], [class*="hero"], [class*="icon"]').forEach(el => {
         if (!isVisible(el)) return;
         const cs = getComputedStyle(el);
@@ -603,10 +621,8 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
         const isInteractive = role === 'button' || role === 'link' || isFocusable(el) || hasHandlers(el) || !!el.closest('a,button');
         if (!isInteractive) return;
         const name = accName(el);
-        const ariaHidden = (el.getAttribute('aria-hidden') || '').toLowerCase() === 'true';
-        if (!ariaHidden && !name) {
-          res.css_bg_controls.push({ sel: selOf(el) });
-        }
+        const ariaHidden2 = (el.getAttribute('aria-hidden') || '').toLowerCase() === 'true';
+        if (!ariaHidden2 && !name) res.css_bg_controls.push({ sel: selOf(el) });
       });
 
       return res;
@@ -633,11 +649,9 @@ def detect_non_text_content_111(page, url: str, out_dir: pathlib.Path, screensho
     for h in res.get("graphics_no_name", []):
         out.append(_fail(h["sel"], "Graphic (<svg>/role=img) lacks accessible name (no <title>/aria-*)."))
     for h in res.get("css_bg_controls", []):
-        cand = _mk_candidate(
-            page, url, "1.1.1", "runner:css-bg-control", h["sel"],
-            "Control appears to rely on CSS background-image; accessible name uncertain.",
-            verdict="manual_review"
-        )
+        cand = _mk_candidate(page, url, "1.1.1", "runner:css-bg-control", h["sel"],
+                             "Control appears to rely on CSS background-image; accessible name uncertain.",
+                             verdict="manual_review")
         shot = out_dir / "screenshots" / (sanitize_filename(f"sc111_bg__{(h['sel'] or '')[:60]}") + ".png")
         cand["screenshot"] = crop_element_screenshot(page, h["sel"], shot, enabled=screenshot_elements)
         out.append(cand)
@@ -838,6 +852,8 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
     - If element appears to be a control (button/link/form role), send MANUAL_REVIEW instead (we rely on 1.4.11 for UI chrome).
     - Pseudo/gradient backgrounds -> manual_review.
     """
+    TOL = 0.2  # tolerance band to avoid borderline false fails
+
     js = """() => {
       const all = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,li,dt,dd,th,td,small,em,strong'));
       const res = [];
@@ -847,6 +863,7 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
         const txt = (el.innerText || '').trim();
         if (!txt || !(r.width>40 && r.height>14)) continue;
 
+        // treat as UI? (skip: buttons/links/controls/roles)
         const tn = el.tagName.toLowerCase();
         const isLink = el.closest('a[href]') && tn !== 'a' ? true : (tn === 'a' && el.hasAttribute('href'));
         const isControl = isLink || el.closest('button,input,select,textarea,[role="button"],[role="link"],[role="tab"],[role="switch"],[role="checkbox"],[role="radio"],[role="combobox"],[role="listbox"]');
@@ -884,26 +901,23 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
         for e in elems:
             sel = e["sel"]; rect = e["rect"]; role = e.get("role") or ""
             if e.get("isControl"):
-                cand = _mk_candidate(
-                    page, url, "1.4.3", "runner:contrast-text", sel,
-                    "Text belongs to a UI control — evaluate under 1.4.11 (non-text contrast) or review.",
-                    verdict="manual_review", evidence={"context":"ui_control"}
-                )
+                # route UI text to manual review to avoid double-counting with 1.4.11
+                cand = _mk_candidate(page, url, "1.4.3", "runner:contrast-text", sel,
+                                     "Text belongs to a UI control — evaluate under 1.4.11 (non-text contrast) or review.",
+                                     verdict="manual_review", evidence={"context":"ui_control"})
                 fails.append(cand)
                 continue
 
             bg_source = e.get("bg_source") or "solid"
             if bg_source in ("pseudo","gradient","unresolved"):
-                cand = _mk_candidate(
-                    page, url, "1.4.3", "runner:contrast-text", sel,
-                    "Undetermined background (pseudo/gradient) — manual verification required.",
-                    verdict="manual_review", evidence={"bg_source": bg_source}
-                )
+                cand = _mk_candidate(page, url, "1.4.3", "runner:contrast-text", sel,
+                                     "Undetermined background (pseudo/gradient) — manual verification required.",
+                                     verdict="manual_review", evidence={"bg_source": bg_source})
                 fails.append(cand)
                 continue
 
             fr, fg, fb, fa = _parse_rgba_any(e["color"])
-            if fa == 0:
+            if fa == 0:  # fully transparent text? skip
                 continue
             fg_rgb = (fr, fg, fb)
             bg_css = e.get("bg","")
@@ -915,6 +929,7 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
 
             ratio = _contrast_ratio(fg_rgb, bg_rgb)
             fs_px = float(re.findall(r"[\d.]+", e.get("fontSize","16px"))[0])
+            # bold/large rules
             try:
                 fw = page.eval_on_selector(sel, "(el)=>getComputedStyle(el).fontWeight") if sel else "400"
                 is_bold = int(fw) >= 700
@@ -924,12 +939,24 @@ def detect_contrast_text_general(page, url: str, out_dir: pathlib.Path) -> Tuple
             pass_thr = (CONTRAST_MIN_LARGE if is_large else CONTRAST_MIN_NORMAL)
             evidence = {"contrast_ratio": round(ratio,2), "is_large_text": is_large, "role": role}
             note = f"Text contrast {ratio:.2f} {'<' if ratio<pass_thr else '>='} threshold {pass_thr:.1f}."
-            if ratio < pass_thr:
+
+            # --- tolerance-aware decision ---
+            if ratio < pass_thr - 0.2:
+                # CLEAR FAIL
                 cand = _mk_candidate(page, url, "1.4.3", "runner:contrast-text", sel, note, verdict="fail", evidence=evidence)
                 shot = out_dir / "screenshots" / (sanitize_filename(f"contrast_text__{(sel or '')[:60]}") + ".png")
                 cand["screenshot"] = crop_element_screenshot(page, sel, shot, enabled=True)
                 fails.append(cand)
+            elif ratio < pass_thr:
+                # BORDERLINE → MANUAL REVIEW
+                cand = _mk_candidate(page, url, "1.4.3", "runner:contrast-text", sel,
+                                     f"Borderline text contrast {ratio:.2f} vs threshold {pass_thr:.1f} (within 0.2).",
+                                     verdict="manual_review", evidence=evidence)
+                shot = out_dir / "screenshots" / (sanitize_filename(f"contrast_text_border__{(sel or '')[:60]}") + ".png")
+                cand["screenshot"] = crop_element_screenshot(page, sel, shot, enabled=True)
+                fails.append(cand)
             else:
+                # PASS
                 passes.append({"selector": sel, "sc":"1.4.3", "note": note, "evidence": evidence})
     except Exception:
         pass
@@ -987,6 +1014,8 @@ def detect_contrast_on_image_text(page, url: str, out_dir: pathlib.Path) -> Tupl
     return fails, passes
 
 def detect_contrast_nontext_ui(page, url: str, out_dir: pathlib.Path) -> Tuple[List[Dict[str,Any]], List[Dict[str,Any]]]:
+    TOL = 0.2  # tolerance band for 1.4.11 to avoid borderline false fails near 3:1
+
     js = """() => {
       const res = [];
       const isUI = (el) => el.matches('button, input, select, textarea, [role="button"], [role="switch"], [role="checkbox"], [role="radio"], [role="tab"], [role="link"]');
@@ -1038,12 +1067,22 @@ def detect_contrast_nontext_ui(page, url: str, out_dir: pathlib.Path) -> Tuple[L
             outside_rgb = _sample_bg_from_image(im, ring_rect)
             ratio = _contrast_ratio(inside_rgb, outside_rgb)
             evidence = {"contrast_ratio": round(ratio,2), "inside_rgb": inside_rgb, "outside_rgb": outside_rgb}
-            if ratio < CONTRAST_NON_TEXT_UI:
+
+            if ratio < CONTRAST_NON_TEXT_UI - TOL:
                 cand = _mk_candidate(
                     page, url, "1.4.11", "runner:nontext-ui-contrast", sel,
                     f"Non-text contrast {ratio:.2f} < 3.0", verdict="fail", evidence=evidence
                 )
                 shot = out_dir / "screenshots" / (sanitize_filename(f"contrast_nontext__{(sel or '')[:60]}") + ".png")
+                cand["screenshot"] = crop_element_screenshot(page, sel, shot, enabled=True)
+                fails.append(cand)
+            elif ratio < CONTRAST_NON_TEXT_UI:
+                cand = _mk_candidate(
+                    page, url, "1.4.11", "runner:nontext-ui-contrast", sel,
+                    f"Borderline non-text contrast {ratio:.2f} vs 3.0 (within {TOL}).",
+                    verdict="manual_review", evidence=evidence
+                )
+                shot = out_dir / "screenshots" / (sanitize_filename(f"contrast_nontext_border__{(sel or '')[:60]}") + ".png")
                 cand["screenshot"] = crop_element_screenshot(page, sel, shot, enabled=True)
                 fails.append(cand)
             else:
@@ -1268,15 +1307,16 @@ def detect_link_purpose_generic(page, url: str, out_dir: pathlib.Path, screensho
     """
     GENERIC = {"learn more","get started","read more","see more","view more","more","details","click here"}
 
-    def _clean_link_text(s: str) -> str:
+    def _clean_link_text(s:str)->str:
         s = (s or "").lower()
         s = re.sub(r"[\u2190-\u21ff\u25a0-\u25ff\u2700-\u27bf➡️•►»›‹«→]+", "", s)
         s = re.sub(r"\s+", " ", s)
         s = re.sub(r"[^a-z ]", "", s)
         return s.strip()
 
-    def _nearby_heading_text(page, sel: str) -> str:
-        js = """(el) => {
+    def _nearby_heading_text(sel: str) -> str:
+        js = """
+        (el) => {
           if (!el) return "";
           const hs = Array.from(document.querySelectorAll('h1,h2,h3,h4,h5,h6,[role="heading"]'));
           let best = "", bestDist = Infinity;
@@ -1295,7 +1335,7 @@ def detect_link_purpose_generic(page, url: str, out_dir: pathlib.Path, screensho
         }"""
         try:
             t = page.eval_on_selector(sel, js) or ""
-            return re.sub(r"\s+", " ", t).strip().lower()
+            return re.sub(r"\s+"," ", t).strip().lower()
         except Exception:
             return ""
 
@@ -1317,13 +1357,11 @@ def detect_link_purpose_generic(page, url: str, out_dir: pathlib.Path, screensho
             text = _clean_link_text(r["text"])
             if text in GENERIC:
                 sel = r["sel"]
-                ctx = _nearby_heading_text(page, sel)
-                if ctx:
+                ctx = _nearby_heading_text(sel)
+                if ctx:  # heading disambiguates -> OK
                     continue
-                cand = _mk_candidate(
-                    page, url, "2.4.4", "runner:link-purpose-generic", sel,
-                    f'Generic link text: "{text}" without disambiguating context.', verdict="fail"
-                )
+                cand = _mk_candidate(page, url, "2.4.4", "runner:link-purpose-generic", sel,
+                                     f'Generic link text: "{text}" without disambiguating context.', verdict="fail")
                 shot_name = sanitize_filename(f"lp__{(sel or '')[:60]}") + ".png"
                 shot_path = (out_dir / "screenshots" / shot_name)
                 cand["screenshot"] = crop_element_screenshot(page, sel, shot_path, enabled=screenshot_elements)
